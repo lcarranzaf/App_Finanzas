@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { getBlogPosts } from "@/lib/blog-data"
 import { Clock, Calendar } from "lucide-react"
 import type { Metadata } from "next"
+import AdSense from "@/components/AdSense"
 
 export const metadata: Metadata = {
   title: "Blog de Finanzas Personales - FinanzasPro",
@@ -39,12 +40,9 @@ export default function BlogPage() {
           ))}
         </div>
 
-        {/* AdSense Placeholder */}
+        {/* Banner Horizontal AdSense */}
         <div className="mt-12">
-          <div className="bg-muted/30 border-2 border-dashed border-border rounded-lg p-6 text-center">
-            <p className="text-sm text-muted-foreground">Espacio reservado para Google AdSense</p>
-            <p className="text-xs text-muted-foreground mt-1">Banner horizontal - 728x90</p>
-          </div>
+          <AdSense slot="BANNER_SLOT_ID" style={{ display: 'block', width: '100%', height: '90px', margin: '0 auto' }} />
         </div>
 
         {/* Blog Posts Grid */}
@@ -92,12 +90,9 @@ export default function BlogPage() {
           ))}
         </div>
 
-        {/* Sidebar AdSense Placeholder */}
+        {/* Sidebar AdSense */}
         <div className="mt-16">
-          <div className="bg-muted/30 border-2 border-dashed border-border rounded-lg p-6 text-center">
-            <p className="text-sm text-muted-foreground">Espacio reservado para Google AdSense</p>
-            <p className="text-xs text-muted-foreground mt-1">Sidebar - 300x250</p>
-          </div>
+          <AdSense slot="SIDEBAR_SLOT_ID" style={{ display: 'block', width: '300px', height: '250px', margin: '0 auto' }} />
         </div>
       </div>
     </div>

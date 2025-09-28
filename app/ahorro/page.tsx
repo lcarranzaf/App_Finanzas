@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { PiggyBank, Target, Calculator, TrendingUp, Shield } from "lucide-react"
 import type { Metadata } from "next"
+import AdSense from "@/components/AdSense"
 
 export const metadata: Metadata = {
   title: "Estrategias de Ahorro - Guías y Consejos Prácticos",
@@ -42,6 +43,11 @@ export default function AhorroPage() {
   return (
     <div className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* AdSense Arriba */}
+        <div className="mb-12">
+          <AdSense slot="TOP_BANNER_SLOT_ID" style={{ display: 'block', width: '100%', height: '90px', margin: '0 auto' }} />
+        </div>
+
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
           <PiggyBank className="mx-auto h-16 w-16 text-primary mb-6" />
@@ -50,6 +56,11 @@ export default function AhorroPage() {
             Descubre técnicas probadas para ahorrar dinero, construir un fondo de emergencia y alcanzar tus metas
             financieras paso a paso.
           </p>
+        </div>
+
+        {/* AdSense Medio */}
+        <div className="mt-12 mb-12">
+          <AdSense slot="MIDDLE_BANNER_SLOT_ID" style={{ display: 'block', width: '100%', height: '90px', margin: '0 auto' }} />
         </div>
 
         {/* Strategies Grid */}
@@ -90,12 +101,9 @@ export default function AhorroPage() {
           </div>
         </div>
 
-        {/* AdSense Placeholder */}
-        <div className="mt-16">
-          <div className="bg-muted/30 border-2 border-dashed border-border rounded-lg p-6 text-center">
-            <p className="text-sm text-muted-foreground">Espacio reservado para Google AdSense</p>
-            <p className="text-xs text-muted-foreground mt-1">Banner - 728x90</p>
-          </div>
+        {/* AdSense Abajo */}
+        <div className="mt-16 mb-16">
+          <AdSense slot="BOTTOM_BANNER_SLOT_ID" style={{ display: 'block', width: '100%', height: '90px', margin: '0 auto' }} />
         </div>
       </div>
     </div>
