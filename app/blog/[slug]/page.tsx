@@ -6,6 +6,7 @@ import { Calendar, Clock, Share2, Facebook, Twitter, Linkedin } from "lucide-rea
 import Link from "next/link"
 import type { Metadata } from "next"
 import StructuredData from "@/components/structured-data"
+import Image from 'next/image'
 
 interface BlogPostPageProps {
   params: {
@@ -147,18 +148,20 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
           {/* Featured Image */}
           <div className="mb-12">
-            <img
-              src={post.image || "/placeholder.svg"}
+            <Image
+              src={post.image || '/placeholder.svg'}
               alt={post.title}
               className="aspect-video w-full rounded-lg object-cover"
+              width={1200}
+              height={675}
+              sizes="(max-width: 1024px) 100vw, 1200px"
             />
           </div>
 
           {/* AdSense Placeholder - Top of Article */}
           <div className="mb-12">
-            <div className="bg-muted/30 border-2 border-dashed border-border rounded-lg p-6 text-center">
-              <p className="text-sm text-muted-foreground">Espacio reservado para Google AdSense</p>
-              <p className="text-xs text-muted-foreground mt-1">Dentro del artículo - 728x90</p>
+            <div className="bg-gradient-to-r from-primary/5 to-primary/10 border border-primary/20 rounded-lg p-4 text-center">
+              <p className="text-xs text-muted-foreground">Publicidad</p>
             </div>
           </div>
 
@@ -166,22 +169,44 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground">
             <div
               dangerouslySetInnerHTML={{
-                __html: post.content
-                  .replace(/\n/g, "<br />")
-                  .replace(/#{1,6}\s/g, (match) => {
-                    const level = match.trim().length
-                    return `<h${level} class="text-${4 - level}xl font-bold mt-8 mb-4">`
-                  })
-                  .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"),
+                __html: (function markdownToHtml(md: string) {
+                  function escapeHtml(str: string) {
+                    return str
+                      .replace(/&/g, "&amp;")
+                      .replace(/</g, "&lt;")
+                      .replace(/>/g, "&gt;")
+                      .replace(/\"/g, "&quot;")
+                      .replace(/'/g, "&#39;")
+                  }
+
+                  const blocks = md.split(/\n\s*\n/)
+                  const html = blocks
+                    .map((block) => {
+                      const headingMatch = block.match(/^(#{1,6})\s+(.*)/)
+                      if (headingMatch) {
+                        const level = Math.min(6, headingMatch[1].length)
+                        const text = escapeHtml(headingMatch[2].trim())
+                        return `<h${level} class="font-bold mt-8 mb-4">${text}</h${level}>`
+                      }
+
+                      // Inline bold **text**
+                      let paragraph = escapeHtml(block).replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+                      // Keep single newlines inside a paragraph as <br>
+                      paragraph = paragraph.replace(/\n/g, "<br />")
+                      return `<p>${paragraph}</p>`
+                    })
+                    .join("")
+
+                  return html
+                })(post.content || "")
               }}
             />
           </div>
 
           {/* AdSense Placeholder - Middle of Article */}
           <div className="my-12">
-            <div className="bg-muted/30 border-2 border-dashed border-border rounded-lg p-6 text-center">
-              <p className="text-sm text-muted-foreground">Espacio reservado para Google AdSense</p>
-              <p className="text-xs text-muted-foreground mt-1">Medio del artículo - 300x250</p>
+            <div className="bg-gradient-to-r from-primary/5 to-primary/10 border border-primary/20 rounded-lg p-4 text-center">
+              <p className="text-xs text-muted-foreground">Publicidad</p>
             </div>
           </div>
 

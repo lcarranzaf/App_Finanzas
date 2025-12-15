@@ -44,10 +44,10 @@ export default function HomePage() {
   ]
 
   const stats = [
-    { value: "50K+", label: "Lectores mensuales" },
-    { value: "200+", label: "Artículos publicados" },
-    { value: "95%", label: "Satisfacción de usuarios" },
-    { value: "3 años", label: "De experiencia" },
+    { value: "100%", label: "Contenido Original" },
+    { value: "Gratis", label: "Educación Accesible" },
+    { value: "2025", label: "Actualizado Continuamente" },
+    { value: "Real", label: "Ejemplos Verificables" },
   ]
 
   return (
@@ -89,7 +89,7 @@ export default function HomePage() {
                 Confiado por miles de personas
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Únete a nuestra comunidad de lectores que han transformado sus finanzas
+                Educación financiera honesta y confiable para mejorar tus decisiones de dinero
               </p>
             </div>
             <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">

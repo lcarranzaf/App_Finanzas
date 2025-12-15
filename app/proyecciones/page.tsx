@@ -15,33 +15,32 @@ export default function ProyeccionesPage() {
   const [projections, setProjections] = useState<Array<{ year: number; amount: number }>>([])
 
   useEffect(() => {
-    calculateProjections()
-  }, [initialAmount, monthlyContribution, annualReturn, years])
+    const calculateProjections = () => {
+      const rate = annualReturn[0] / 100
+      const monthlyRate = rate / 12
 
-  const calculateProjections = () => {
-    const rate = annualReturn[0] / 100
-    const monthlyRate = rate / 12
-    const totalMonths = years[0] * 12
+      const projectionData: Array<{ year: number; amount: number }> = []
 
-    const projectionData = []
+      for (let year = 1; year <= years[0]; year++) {
+        const months = year * 12
+        let futureValue = initialAmount * Math.pow(1 + monthlyRate, months)
 
-    for (let year = 1; year <= years[0]; year++) {
-      const months = year * 12
-      let futureValue = initialAmount * Math.pow(1 + monthlyRate, months)
+        if (monthlyContribution > 0) {
+          const annuityValue = monthlyContribution * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate)
+          futureValue += annuityValue
+        }
 
-      if (monthlyContribution > 0) {
-        const annuityValue = monthlyContribution * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate)
-        futureValue += annuityValue
+        projectionData.push({
+          year,
+          amount: Math.round(futureValue),
+        })
       }
 
-      projectionData.push({
-        year,
-        amount: Math.round(futureValue),
-      })
+      setProjections(projectionData)
     }
 
-    setProjections(projectionData)
-  }
+    calculateProjections()
+  }, [initialAmount, monthlyContribution, annualReturn, years])
 
   const finalAmount = projections[projections.length - 1]?.amount || 0
   const totalContributed = initialAmount + monthlyContribution * 12 * years[0]
@@ -171,7 +170,7 @@ export default function ProyeccionesPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4 max-h-96 overflow-y-auto">
-                    {projections.map((projection, index) => {
+                    {projections.map((projection) => {
                       const contributed = initialAmount + monthlyContribution * 12 * projection.year
                       const gains = projection.amount - contributed
                       const gainsPercentage = ((gains / contributed) * 100).toFixed(1)
@@ -255,13 +254,12 @@ export default function ProyeccionesPage() {
         </div>
       </section>
 
-      {/* AdSense Placeholder */}
+      {/* AdSense Section */}
       <section className="py-8">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl">
-            <div className="bg-muted/30 border-2 border-dashed border-border rounded-lg p-8 text-center">
-              <p className="text-sm text-muted-foreground">Espacio reservado para Google AdSense</p>
-              <p className="text-xs text-muted-foreground mt-1">Banner inferior - 728x90</p>
+            <div className="bg-gradient-to-r from-primary/5 to-primary/10 border border-primary/20 rounded-lg p-4 text-center">
+              <p className="text-xs text-muted-foreground">Publicidad</p>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from 'next/image'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { getBlogPosts } from "@/lib/blog-data"
@@ -42,7 +43,7 @@ export default function BlogPage() {
 
         {/* Banner Horizontal AdSense */}
         <div className="mt-12">
-          <AdSense slot="BANNER_SLOT_ID" style={{ display: 'block', width: '100%', height: '90px', margin: '0 auto' }} />
+          <AdSense slot="3456789012" style={{ display: 'block', width: '100%', height: '90px', margin: '0 auto' }} />
         </div>
 
         {/* Blog Posts Grid */}
@@ -50,10 +51,13 @@ export default function BlogPage() {
           {posts.map((post) => (
             <Card key={post.slug} className="hover:shadow-lg transition-shadow">
               <div className="aspect-video overflow-hidden rounded-t-lg">
-                <img
-                  src={post.image || "/placeholder.svg"}
+                <Image
+                  src={post.image || '/placeholder.svg'}
                   alt={post.title}
                   className="h-full w-full object-cover transition-transform hover:scale-105"
+                  width={1200}
+                  height={675}
+                  sizes="(max-width: 1024px) 100vw, 33vw"
                 />
               </div>
               <CardHeader>
@@ -92,7 +96,7 @@ export default function BlogPage() {
 
         {/* Sidebar AdSense */}
         <div className="mt-16">
-          <AdSense slot="SIDEBAR_SLOT_ID" style={{ display: 'block', width: '300px', height: '250px', margin: '0 auto' }} />
+          <AdSense slot="4567890123" style={{ display: 'block', width: '300px', height: '250px', margin: '0 auto' }} />
         </div>
       </div>
     </div>

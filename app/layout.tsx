@@ -7,6 +7,7 @@ import Footer from "@/components/footer"
 import StructuredData from "@/components/structured-data"
 import { SpeedInsights } from "@vercel/speed-insights/next"   
 import { Analytics } from "@vercel/analytics/next"
+import Script from 'next/script'
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -96,23 +97,48 @@ export default function RootLayout({
         <StructuredData type="website" />
         <StructuredData type="organization" />
         {/* Google Analytics - Replace with your tracking ID */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'GA_TRACKING_ID');
-            `,
-          }}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"
+          strategy="afterInteractive"
         />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'GA_TRACKING_ID');`}
+        </Script>
         {/* Google AdSense - Replace with your publisher ID */}
-        <script
-          async
+        <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4657042320327960"
+          strategy="afterInteractive"
           crossOrigin="anonymous"
-        ></script>
+        />
+        {/* AdSense verification helper (only for debugging) */}
+        <Script id="adsense-check" strategy="afterInteractive">
+          {`(function(){
+            window.__adsenseStatus = { loaded: false, pushes: 0 };
+            try {
+              if (window.adsbygoogle) {
+                window.__adsenseStatus.loaded = true;
+              }
+            } catch(e){}
+
+            const originalPush = window.adsbygoogle && window.adsbygoogle.push ? window.adsbygoogle.push : null;
+            if (originalPush) {
+              window.adsbygoogle.push = function(){
+                window.__adsenseStatus.pushes = (window.__adsenseStatus.pushes || 0) + 1;
+                return originalPush.apply(this, arguments);
+              }
+            }
+
+            window.__reportAdSenseStatus = function(){
+              try{
+                fetch('/api/adsense-check', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ status: window.__adsenseStatus, url: location.href, userAgent: navigator.userAgent })
+                })
+              }catch(e){ console.debug('report failed', e) }
+            }
+          })();`}
+        </Script>
       </head>
       <body className="min-h-screen bg-background font-sans text-foreground">
         <Navbar />

@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 
 declare global {
   interface Window {
-    adsbygoogle: any[];
+    adsbygoogle?: unknown[];
   }
 }
 
@@ -14,10 +14,30 @@ interface AdSenseProps {
 
 const AdSense = ({ slot, style }: AdSenseProps) => {
   useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {
-      console.error('AdSense error:', e);
+    let mounted = true
+
+    const pushAd = () => {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({})
+        return true
+      } catch (e) {
+        console.debug('AdSense push failed, will retry:', e)
+        return false
+      }
+    }
+
+    // Try immediately, then retry a few times if the script hasn't loaded yet
+    if (!pushAd()) {
+      let attempts = 0
+      const id = setInterval(() => {
+        if (!mounted) return clearInterval(id)
+        attempts += 1
+        if (pushAd() || attempts >= 5) clearInterval(id)
+      }, 500)
+    }
+
+    return () => {
+      mounted = false
     }
   }, []);
 

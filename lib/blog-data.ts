@@ -13,6 +13,661 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "presupuesto-personal-completo",
+    title: "Cómo crear un presupuesto personal completo: Paso a paso",
+    description:
+      "Aprende a crear un presupuesto detallado que te permita controlar tus gastos y alcanzar tus metas financieras. Ejemplos reales y plantillas descargables.",
+    image: "https://images.unsplash.com/photo-1579621970563-ebec642fedbc?w=800&q=80",
+    content: `
+# Cómo crear un presupuesto personal completo: Paso a paso
+
+Un presupuesto es el fundamento de cualquier plan financiero. Sin él, es como navegar sin brújula. En esta guía aprenderás a crear un presupuesto realista que se adapte a tu vida.
+
+## ¿Qué es un presupuesto?
+
+Un presupuesto es un plan que te ayuda a:
+- **Saber a dónde va tu dinero** (conciencia financiera)
+- **Controlar gastos innecesarios** (disciplina)
+- **Ahorrar para tus metas** (progreso)
+
+No es para restringirte, sino para empoderarte.
+
+## Paso 1: Calcula tus ingresos mensuales
+
+Suma TODOS tus ingresos:
+- Sueldo principal
+- Trabajos adicionales
+- Ingresos pasivos (intereses, dividendos, rentas)
+- Bonificaciones esperadas
+
+**Importante**: Usa el ingreso NETO (después de impuestos), no el bruto.
+
+### Ejemplo:
+- Sueldo principal: $3,000
+- Freelance ocasional: $500
+- Intereses de ahorros: $50
+- **Total mensual: $3,550**
+
+## Paso 2: Registra tus gastos fijos
+
+Estos son gastos que ocurren cada mes sin cambio:
+
+| Gasto | Monto |
+|-------|-------|
+| Renta/Hipoteca | $1,200 |
+| Servicios (agua, luz, internet) | $250 |
+| Transporte | $150 |
+| Seguros | $100 |
+| Suscripciones | $30 |
+| **Total fijo** | **$1,730** |
+
+## Paso 3: Registra gastos variables
+
+Estos cambian cada mes:
+
+| Categoría | Promedio |
+|-----------|----------|
+| Alimentos | $400 |
+| Restaurantes | $150 |
+| Entretenimiento | $100 |
+| Ropa | $75 |
+| Medicina/Farmacia | $50 |
+| Otros | $95 |
+| **Total variable** | **$870** |
+
+**Tip**: Revisa tus últimos 3 meses de extractos bancarios para calcular promedios reales.
+
+## Paso 4: Calcula tu presupuesto final
+
+| Concepto | Monto | % de Ingreso |
+|----------|-------|-------------|
+| **Ingresos totales** | $3,550 | 100% |
+| Gastos fijos | -$1,730 | -48% |
+| Gastos variables | -$870 | -24% |
+| **Disponible para ahorrar** | **$950** | **27%** |
+
+## Paso 5: Asigna tu dinero de ahorro
+
+De los $950 disponibles, divídelos así:
+- **50% Fondo de emergencia**: $475 (hasta alcanzar 6 meses de gastos)
+- **30% Metas corto plazo**: $285 (próximas vacaciones, nuevo teléfono)
+- **20% Inversión**: $190 (fondos indexados, acciones)
+
+## Errores comunes en presupuestos
+
+### ❌ Error 1: Ser demasiado restrictivo
+- Presupuesto irreal → lo abandonas en 2 semanas
+- Solución: Reserva dinero para "caprichos"
+
+### ❌ Error 2: No incluir gastos ocasionales
+- Olvidan: dentista, reparaciones, regalos
+- Solución: Crea categoría "Gastos imprevistos" con 5% del ingreso
+
+### ❌ Error 3: No revisar nunca
+- Un presupuesto estático no funciona
+- Solución: Revisa mensualmente y ajusta
+
+### ❌ Error 4: Presupuestar para enero solamente
+- Los gastos cambian con estaciones
+- Solución: Planifica por trimestres
+
+## Herramientas para tu presupuesto
+
+### Apps gratuitas:
+1. **Google Sheets** (plantilla simple)
+2. **Mint** (automático y sincronizado)
+3. **GnuCash** (detallado, gratis)
+
+### Apps de pago:
+1. **YNAB** ($14.99/mes) - Metodología probada
+2. **EveryDollar** ($14.99/mes) - Simple y visual
+
+### Método tradicional:
+Papel + bolígrafo (funciona, es más consciente)
+
+## Tu primer mes: Plan de acción
+
+### Semana 1: Recopilación
+- Descarga extractos de últimos 3 meses
+- Haz lista de gastos fijos
+- Estima gastos variables
+
+### Semana 2: Planificación
+- Crea presupuesto en una hoja
+- Asigna categorías a cada gasto
+- Establece límites realistas
+
+### Semana 3: Seguimiento
+- Registra TODOS los gastos (diarios)
+- Usa app o hoja para trackear
+- No juzgues, solo observa
+
+### Semana 4: Análisis
+- Compara gasto real vs presupuestado
+- ¿Dónde excediste?
+- ¿Dónde ahorraste más?
+- Ajusta para mes 2
+
+## Conclusión
+
+Un presupuesto te da **control**, no restricción. Es tu mapa financiero personal. No existe el presupuesto perfecto; existe el que TÚ mantendrás consistentemente.
+
+Comienza simple. Una vez que domines lo básico, agrega complejidad. El objetivo final es lograr libertad financiera, y eso comienza con un presupuesto claro.
+
+**Recuerda**: Medir es el primer paso para mejorar.
+    `,
+    publishedAt: "2025-03-10",
+    readTime: "10 min",
+    category: "Presupuesto",
+    tags: ["presupuesto", "finanzas personales", "gastos", "control financiero"],
+    image: "https://images.unsplash.com/photo-1579621970563-ebec642fedbc?w=800&q=80",
+    author: "FinanzasPro",
+  },
+  {
+    slug: "acciones-para-principiantes",
+    title: "Acciones para principiantes: ¿Cómo elegir tu primera acción?",
+    description:
+      "Guía práctica para seleccionar acciones como principiante: criterios, métricas básicas y errores comunes a evitar.",
+    content: `
+# Acciones para principiantes: ¿Cómo elegir tu primera acción?
+
+Invertir en acciones puede ser emocionante y rentable, pero también arriesgado si no sabes qué buscar. Esta guía te dará un marco simple para elegir tu primera acción.
+
+## 1. Comprende el negocio
+
+Antes de comprar una acción, entiende cómo la empresa gana dinero. ¿Vende un producto recurrente? ¿Tiene ventaja competitiva?
+
+## 2. Revisa lo básico financiero
+
+- **Ingresos**: ¿Crecen año tras año?
+- **Margen**: ¿Genera beneficio por cada venta?
+- **Deuda**: ¿La deuda es manejable?
+
+## 3. Evalúa valoración
+
+Los múltiplos como P/E (precio/beneficio) y P/S (precio/ventas) ayudan a comparar empresas. No compres solamente por el precio bajo.
+
+## 4. Diversifica y empieza pequeño
+
+Evita poner mucho en una sola acción. Comienza con pequeñas posiciones y aumenta con el tiempo.
+
+## 5. Evita errores comunes
+
+- Comprar por hype sin entender el negocio
+- Vender por pánico en caídas temporales
+
+## Conclusión
+
+Las acciones son una herramienta poderosa para crear riqueza si se usan con disciplina. Aprende constantemente y prioriza la calidad sobre la moda.
+    `,
+    publishedAt: "2025-04-10",
+    readTime: "8 min",
+    category: "Inversiones",
+    tags: ["acciones", "inversiones", "principiantes"],
+    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80",
+    author: "FinanzasPro",
+  },
+  {
+    slug: "bonos-para-principiantes",
+    title: "Bonos para principiantes: seguridad y generación de ingresos",
+    description:
+      "Introducción clara a los bonos: qué son, cómo funcionan, y cómo utilizarlos para equilibrar una cartera.",
+    content: `
+# Bonos para principiantes: seguridad y generación de ingresos
+
+Los bonos son instrumentos de deuda que pueden aportar estabilidad y flujo de caja a una cartera. Aquí tienes lo esencial.
+
+## ¿Qué es un bono?
+
+Un bono es un préstamo que haces a una entidad (gobierno o empresa). A cambio recibes pagos periódicos de interés y la devolución del capital al vencimiento.
+
+## Tipos de bonos
+
+- **Bonos del Estado**: Muy seguros
+- **Bonos corporativos**: Mayor retorno, más riesgo
+- **Bonos municipales**: Pueden ofrecer ventajas fiscales
+
+## ¿Por qué incluir bonos?
+
+- Reducen la volatilidad de la cartera
+- Generan ingresos pasivos
+- Protegen en mercados bajistas
+
+## Cómo empezar
+
+Considera fondos de bonos o ETFs si no quieres seleccionar bonos individuales. Comienza por un porcentaje conservador (20-40%) si eres conservador.
+
+## Conclusión
+
+Los bonos no siempre brillan por retornos altos, pero cumplen un papel clave en la preservación del capital y el equilibrio del riesgo.
+    `,
+    publishedAt: "2025-04-12",
+    readTime: "7 min",
+    category: "Inversiones",
+    tags: ["bonos", "renta fija", "inversiones"],
+    image: "https://images.unsplash.com/photo-1508385082359-f7b3b52b1a8e?w=800&q=80",
+    author: "FinanzasPro",
+  },
+  {
+    slug: "manejo-deuda-personal",
+    title: "Cómo eliminar deuda personal: Estrategias probadas",
+    description:
+      "Guía completa para salir de deudas. Método bola de nieve, avalancha de deuda, negociación y cálculos reales. Toma el control hoy.",
+    content: `
+# Cómo eliminar deuda personal: Estrategias probadas
+
+La deuda es el mayor obstáculo para la libertad financiera. Si estás leyendo esto, probablemente tienes deuda. La buena noticia: **es completamente posible salir de ella**.
+
+## Tipos de deuda (y por qué importa)
+
+### Deuda de alto interés (la mala)
+- **Tarjetas de crédito**: 18-25% anual
+- **Préstamos de día de pago**: 400%+ anual
+- **Crédito de tiendas**: 20-30% anual
+
+**Acción urgente**: Estas deudas destruyen tu patrimonio rápidamente.
+
+### Deuda de bajo interés (tolerable)
+- **Hipotecas**: 3-7% anual
+- **Préstamos de auto**: 5-10% anual
+- **Préstamos estudiantiles**: 4-8% anual
+
+**Estrategia**: Hay que pagarlas, pero no son emergencia.
+
+## Paso 1: Haz tu lista de deudas
+
+Escribe TODAS tus deudas:
+
+| Acreedor | Saldo | Tasa | Pago Mínimo |
+|----------|-------|------|------------|
+| Tarjeta A | $8,000 | 22% | $160 |
+| Tarjeta B | $3,500 | 18% | $70 |
+| Préstamo auto | $25,000 | 6% | $500 |
+| Línea de crédito | $2,000 | 20% | $40 |
+| **Total** | **$38,500** | | **$770** |
+
+Ver todo claramente es el primer paso psicológico.
+
+## Estrategia 1: Método Bola de Nieve
+
+**Cómo funciona**: Paga primero las deudas PEQUEÑAS, sin importar la tasa.
+
+### Ventajas:
+- ✅ Ganancias psicológicas rápidas
+- ✅ Mantiene motivación alta
+- ✅ Reduce número de deudas
+
+### Desventajas:
+- ❌ Pagas más interés total
+- ❌ Toma más tiempo
+
+### Ejemplo:
+Orden: $2,000 → $3,500 → $8,000 → $25,000
+
+Cuando eliminas una deuda, el dinero de su pago se suma a la siguiente (efecto bola de nieve).
+
+### Calculador Bola de Nieve:
+- Mes 1-4: Paga $2,000 línea de crédito (meses 4 = eliminada)
+- Mes 5-11: Paga $70 + $40 = $110 mensual a Tarjeta B
+- Mes 12-36: Paga tarjeta A
+- Mes 37+: Hipoteca
+
+**Tiempo total**: ~5 años
+**Interés pagado**: ~$8,000 extra
+
+## Estrategia 2: Método Avalancha
+
+**Cómo funciona**: Paga primero las deudas con MAYOR TASA, sin importar el saldo.
+
+### Ventajas:
+- ✅ Ahorras interés total
+- ✅ Matemáticamente más eficiente
+- ✅ Más rápido en teoría
+
+### Desventajas:
+- ❌ Menos motivación psicológica
+- ❌ Primer pago grande toma meses
+
+### Ejemplo:
+Orden: $8,000 (22%) → $3,500 (18%) → $2,000 (20%) → $25,000 (6%)
+
+**Tiempo total**: ~4.5 años
+**Interés pagado**: ~$7,000 extra
+
+*Ahorras $1,000 comparado con bola de nieve.*
+
+## Estrategia 3: Consolidación de deuda
+
+Combina múltiples deudas en UN solo préstamo.
+
+### ¿Cuándo funciona?
+Cuando consigues una tasa significativamente MENOR.
+
+### Ejemplo:
+- **Antes**: Tarjeta A ($8,000 @ 22%) + Tarjeta B ($3,500 @ 18%) = $11,500 @ ~20% promedio
+- **Después**: Préstamo consolidación ($11,500 @ 10%)
+- **Ahorro anual en interés**: ~$1,150
+
+### Cuidado:
+- No es "eliminar" deuda, es reorganizarla
+- Riesgo: con tarjetas libres, vuelves a endeudarte
+
+## Paso 2: Negocia con acreedores
+
+**Sí, es posible negociar.**
+
+### 1. Reducción de tasa (llamada simple)
+Llama a tu banco y di:
+'He sido cliente 5 años, pago puntual. Ofrecen 15% en otra tarjeta. ¿Puedo bajar a 18%?'
+Éxito: 30-40%
+
+### 2. Congelación de intereses
+Para deudas grandes, pide:
+'Necesito ayuda. ¿Podemos congelar intereses 6 meses mientras pago capital agresivamente?'
+Éxito: 20-30% (si demuestras dificultad genuina)
+
+### 3. Plan de pago (hardship programs)
+Bancos QUIEREN ser pagados. Si no puedes:
+'Estoy en dificultad financiera. Oferezco $300/mes en lugar de $800. ¿Aceptan?'
+
+## Paso 3: Aumenta pagos mensuales
+
+No basta con pago mínimo. Mínimos = 20+ años de deuda.
+
+### Fuentes para aumentar pago:
+- **Presupuesto**: Corta gastos no esenciales ($100-300)
+- **Ingreso adicional**: Freelance, trabajo part-time ($200-500)
+- **Bono/devoluciones**: Aplica TODO a deuda
+- **Venta de artículos**: Vende lo que no usas
+
+### Impacto de aumentar $100/mes:
+**Sin aumento**: $770/mes → paga en 7 años
+**Con aumento**: $870/mes → paga en 5.5 años
+**Diferencia**: 1.5 años menos + $3,000 menos en interés
+
+## Paso 4: Evita más deuda
+
+Mientras pagas deuda:
+- ❌ NO hagas nuevas compras en tarjeta
+- ❌ NO abras nuevas líneas
+- ✅ Mantén emergencias pequeñas ($500-1,000)
+- ✅ Haz presupuesto estricto
+
+## Calculador rápido: Tiempo para salir de deuda
+
+**Fórmula básica**:
+- Deuda: $10,000
+- Tasa: 18%
+- Pago mensual: $300
+- Tiempo: ~45 meses (3.75 años)
+- Interés total: $3,500
+
+Si aumentas a $400/mes:
+- Tiempo: ~28 meses (2.3 años)
+- Interés total: $2,000
+- **Ahorros**: 1.45 años + $1,500
+
+## Plan de acción de 30 días
+
+### Día 1-5: Recopilación
+- Lista todas las deudas
+- Obtén saldos exactos
+- Anota tasas
+
+### Día 6-10: Planificación
+- Decide: Bola de nieve o Avalancha
+- Calcula tiempo estimado
+- Crea presupuesto de pago
+
+### Día 11-20: Negociación
+- Llama a 2-3 acreedores
+- Solicita reducción de tasa
+- Documenta conversaciones
+
+### Día 21-30: Acción
+- Realiza primer pago aumentado
+- Configura pagos automáticos
+- Celebra el progreso
+
+## Mentalidad ganadora
+
+Salir de deuda es **85% psicología, 15% matemáticas**.
+
+### Verdades que debes creer:
+1. "Puedo salir de esta deuda"
+2. "Cada pago me acerca a libertad"
+3. "Merezco ser financieramente libre"
+4. "Soy más que mis errores pasados"
+
+### Celebra pequeñas victorias:
+- Primer pago extra: 🎉
+- Deuda eliminada: 🚀
+- Cada hito: merece reconocimiento
+
+## Conclusión
+
+La deuda NO define tu futuro. Millones de personas han salido de deuda profunda. Tú también puedes.
+
+**Empieza hoy**. No es sobre perfección, es sobre progreso. Cada peso pagado es un peso de libertad ganado.
+
+Tu yo del futuro (sin deuda) te lo agradecerá.
+    `,
+    publishedAt: "2025-03-08",
+    readTime: "14 min",
+    category: "Deudas",
+    tags: ["deuda", "tarjeta crédito", "finanzas personales", "estrategia"],
+    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf35f?w=800&q=80",
+    author: "FinanzasPro",
+  },
+  {
+    slug: "invertir-primeros-pasos",
+    title: "Inversiones para principiantes: Qué hacer con tus primeros $1,000",
+    description:
+      "Guía paso a paso para invertir tu primer dinero sin miedo. Dónde abrir cuenta, qué instrumentos elegir y cómo empezar con bajo riesgo.",
+    content: `
+# Inversiones para principiantes: Qué hacer con tus primeros $1,000
+
+Tienes $1,000. ¿Y ahora qué? La mayoría de personas se congela. En esta guía te enseñaré exactamente dónde invertir ese dinero para que crezca sin estrés.
+
+## Antes de invertir: Los 3 pilares
+
+NO inviertas dinero si:
+
+### 1. Tienes deuda de alto interés
+- Tarjeta de crédito al 22% > Inversión al 10%
+- Paga deuda primero
+
+### 2. No tienes fondo de emergencia
+- Emergencia = gastos inesperados
+- Mínimo: $1,000-2,000
+- Máximo: 6 meses de gastos
+
+### 3. No entiendes lo que compras
+- "No inviertas en lo que no entiendes" (Warren Buffett)
+- Aprende primero, invierte después
+
+## Opción 1: Fondos indexados (MÁS SIMPLE)
+
+Si tienes 30 segundos de atención, elige esto.
+
+### ¿Qué es?
+Una canasta de ~500 acciones que replica el mercado.
+
+### Cómo funciona:
+1. Abres cuenta en broker (Vanguard, Fidelity, Etoro)
+2. Depositas $1,000
+3. Compras ETF de S&P 500 (VOO, SPY, IVV)
+4. Esperas 10+ años
+5. Vendes cuando tengas 65 años
+6. Lucras $4,000-8,000
+
+### Paso a paso: Cuenta en Vanguard
+1. **Ir a vanguard.com**
+2. **"Open an account"**
+3. **Tipo: Individual/IRA** (IRA = impuestos diferidos)
+4. **Verificación**: Documento + $1,000
+5. **Busca VOO o VTSAX**
+6. **Compra $1,000**
+7. **Olvida que existe** (en serio)
+
+### Costos:
+- Comisión: $0 (compra gratis)
+- Cuota anual: 0.03% ($0.30 en $1,000)
+- Total anual: $0.30
+
+### Rendimiento histórico:
+- **10 años**: 10% anual promedio = $2,594
+- **20 años**: 10% anual promedio = $6,727
+- **30 años**: 10% anual promedio = $17,449
+
+**Tu $1,000 inicial se convierte en $17,449 en 30 años.**
+
+## Opción 2: Acciones individuales (MÁS RIESGO)
+
+Si te gusta investigar y crees saber del mercado.
+
+### Empresas recomendadas para principiantes:
+1. **Apple (AAPL)** - Teléfonos, muy estable
+2. **Microsoft (MSFT)** - Software, crecimiento seguro
+3. **Coca-Cola (KO)** - Dividendos, 60+ años
+4. **Amazon (AMZN)** - E-commerce dominante
+5. **Google/Alphabet (GOOGL)** - Publicidad online
+
+### Cómo empezar:
+1. Elige una empresa que USES y ENTIENDAS
+2. Abre cuenta en Robinhood / E-Trade
+3. Compra 1-2 acciones ($150-300)
+4. Reserva $700 en fondos indexados
+5. Aprende mientras inviertes
+
+### Ejemplo: $1,000 en Apple
+- Precio: $230/acción
+- Compras: 4 acciones = $920
+- Dinero restante: $80 (en fondo indexado)
+
+### Riesgos:
+- ⚠️ Empresa va mal = pierdes dinero
+- ⚠️ Emociones = compras alto, vendes bajo
+- ⚠️ Requiere seguimiento
+
+## Opción 3: Cuentas de ahorro de alto rendimiento
+
+Si quieres SEGURIDAD 100% (sin riesgo de bolsa).
+
+### Dónde:
+- **Marcus** (4.5% anual)
+- **Ally Bank** (4.3% anual)
+- **Wealthfront Cash Account** (5% anual)
+
+### Matemática:
+$1,000 @ 5% anual = $1,050 en 1 año
+
+### Ventaja:
+- ✅ Dinero FDIC asegurado ($250,000)
+- ✅ Sin riesgo
+- ✅ Retirable en 2 días
+
+### Desventaja:
+- ❌ Gana menos que inflación en tiempo
+- ❌ Dinámica = pierdes poder adquisitivo
+
+**Veredicto**: OK para fondo de emergencia, no para crecer riqueza.
+
+## Opción 4: Mi recomendación personal (EQUILIBRIO)
+
+**70% Fondos indexados + 30% Acciones favoritas**
+
+### Ejecución:
+- **$700** → VOO (Vanguard S&P 500)
+- **$200** → 1 acción que uses (Apple, Microsoft, etc.)
+- **$100** → Reserva para agregar mensuales
+
+### Beneficio:
+- Mayoría en piloto automático (70%)
+- Aprendes activamente (30%)
+- Riesgo calculado
+
+## Broker recomendados
+
+| Broker | Comisión | Apps | Educación |
+|--------|----------|------|-----------|
+| Vanguard | $0 | ⭐⭐⭐ | ⭐⭐⭐ |
+| Fidelity | $0 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| Robinhood | $0 | ⭐⭐⭐⭐ | ⭐⭐ |
+| E-Trade | $0 | ⭐⭐⭐ | ⭐⭐⭐ |
+| Etoro | Variable | ⭐⭐⭐⭐ | ⭐⭐⭐ |
+
+## Errores comunes de principiantes
+
+### ❌ Error 1: Buscar "la acción ganadora"
+- "¿Cuál subirá 10x?"
+- Realidad: Nadie sabe
+- Solución: Diversifica en fondos
+
+### ❌ Error 2: Timing el mercado
+- "Voy a esperar a que baje"
+- Realidad: Subes o baja, historicamente sube
+- Solución: Dollar-cost averaging (invertir mensual)
+
+### ❌ Error 3: No reinvertir dividendos
+- Dividendos = dinero extra
+- Solución: Configura "reinversión automática"
+
+### ❌ Error 4: Vender en pánico
+- Mercado cae 20% → "¡VENDO TODO!"
+- Realidad: Después sube 30%
+- Solución: Congelate tu teléfono por 10 años
+
+## Tu plan de 30 días
+
+### Semana 1: Educación
+- Lee este artículo 2x
+- Ve 2-3 videos sobre S&P 500
+- Decide: fondos vs acciones vs ambos
+
+### Semana 2: Preparación
+- Elige broker (recomiendo Vanguard)
+- Prepara documentos (ID, comprobante domicilio)
+- Verifica que tengas $1,000
+
+### Semana 3: Ejecución
+- Abre cuenta
+- Verifica tu identidad
+- Deposita el dinero
+
+### Semana 4: Inversión
+- Compra tu primer ETF / Acción
+- Deja configurado "reinversión de dividendos"
+- Olvida que existe (hablo en serio)
+
+## La verdad sobre inversiones
+
+Si inviertes $1,000 hoy:
+- **Mejor caso**: $17,449 en 30 años (7% promedio)
+- **Peor caso**: $8,000 en 30 años (2% promedio, crisis)
+- **Caso probable**: $12,000 en 30 años (5% promedio)
+
+**Todos ganan si esperas tiempo.**
+
+## Conclusión
+
+Tu primer $1,000 no hará te rico. Pero **$1,000 + consistencia + tiempo = libertad financiera**.
+
+La diferencia entre ser pobre, clase media y rico no es el salario inicial. Es:
+1. **Empezar pronto** (hoy es mejor que mañana)
+2. **Invertir consistentemente** ($100-500/mes)
+3. **No vender en pánico** (mantener 10+ años)
+
+Abre esa cuenta hoy. Tu yo del futuro no lo lamentará.
+    `,
+    publishedAt: "2025-03-05",
+    readTime: "12 min",
+    category: "Inversiones",
+    tags: ["inversiones", "principiantes", "fondos indexados", "bolsa"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    author: "FinanzasPro",
+  },
+  {
     slug: "como-empezar-ahorrar-poco-dinero",
     title: "Cómo empezar a ahorrar con poco dinero: La regla del 50/30/20",
     description:
@@ -92,7 +747,7 @@ El primer paso es siempre el más difícil, pero una vez que desarrolles el háb
     readTime: "8 min",
     category: "Ahorro",
     tags: ["ahorro", "presupuesto", "fondo de emergencia", "finanzas personales"],
-    image: "/piggy-bank-savings-money.jpg",
+    image: "https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80",
     author: "FinanzasPro",
   },
   {
@@ -251,7 +906,7 @@ Recuerda: la tecnología es solo una herramienta. El éxito financiero depende d
     readTime: "12 min",
     category: "Tecnología",
     tags: ["apps", "tecnología", "fintech", "herramientas"],
-    image: "/smartphone-financial-apps-interface.jpg",
+    image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80",
     author: "FinanzasPro",
   },
   {
@@ -429,7 +1084,7 @@ Recuerda: **tiempo en el mercado > timing del mercado**. Empieza hoy, aunque sea
     readTime: "15 min",
     category: "Inversiones",
     tags: ["fondos indexados", "ETF", "S&P 500", "inversiones", "Warren Buffett"],
-    image: "/stock-market-chart-growth-investment.jpg",
+    image: "https://images.unsplash.com/photo-1611432579699-484f7990f956?w=800&q=80",
     author: "FinanzasPro",
   },
   {
@@ -641,7 +1296,7 @@ El crédito es un privilegio que se gana con responsabilidad. Úsalo sabiamente 
     readTime: "12 min",
     category: "Crédito",
     tags: ["tarjetas de crédito", "score crediticio", "deudas", "finanzas personales"],
-    image: "/credit-cards-financial-responsibility.jpg",
+    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
     author: "FinanzasPro",
   },
   {
@@ -967,7 +1622,7 @@ Elige la estrategia que mejor se alinee con tus habilidades y disponibilidad de 
     readTime: "18 min",
     category: "Ingresos Extra",
     tags: ["freelancing", "ingresos online", "emprendimiento", "trabajo remoto"],
-    image: "/online-work-laptop-money-earning.jpg",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
     author: "FinanzasPro",
   },
 ]

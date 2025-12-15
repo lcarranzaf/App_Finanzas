@@ -13,7 +13,7 @@ interface StructuredDataProps {
 }
 
 export default function StructuredData({ type, data }: StructuredDataProps) {
-  let structuredData: any = {}
+  let structuredData: Record<string, unknown> = {}
 
   switch (type) {
     case "website":
