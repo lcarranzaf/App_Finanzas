@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     title: "Cómo crear un presupuesto personal completo: Paso a paso",
     description:
       "Aprende a crear un presupuesto detallado que te permita controlar tus gastos y alcanzar tus metas financieras. Ejemplos reales y plantillas descargables.",
-    image: "https://images.unsplash.com/photo-1579621970563-ebec642fedbc?w=800&q=80",
+    image: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?w=1200&h=630&fit=crop",
     content: `
 # Cómo crear un presupuesto personal completo: Paso a paso
 
@@ -477,7 +477,7 @@ Las acciones son una herramienta poderosa para crear riqueza, pero requieren con
     readTime: "18 min",
     category: "Inversiones",
     tags: ["acciones", "inversiones", "principiantes", "análisis fundamental", "cartera de acciones"],
-    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80",
+    image: "https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?w=1200&h=630&fit=crop",
     author: "FinanzasPro",
   },
   {
@@ -521,10 +521,6 @@ Imagina que compras un bono corporativo con estas características:
 - Cada 6 meses: $20 (4% de $1,000 ÷ 2)
 - Al final de 5 años: $1,000 (capital) + $20 (último cupón)
 - Total recibido: $1,200 ($200 en intereses + $1,000 de capital)
-
-![Estructura de un bono mostrando pagos de cupones y devolución de capital](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80)
-
-*Visualización conceptual de cómo funcionan los pagos de un bono a lo largo del tiempo*
 
 ## Tipos de bonos: Una guía completa
 
@@ -846,7 +842,7 @@ Recuerda: Los bonos no están diseñados para hacerte rico rápidamente, sino pa
     readTime: "20 min",
     category: "Inversiones",
     tags: ["bonos", "renta fija", "inversiones", "estabilidad", "ingresos pasivos"],
-    image: "https://images.unsplash.com/photo-1508385082359-f7b3b52b1a8e?w=1200&q=80",
+    image: "https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?w=1200&h=630&fit=crop",
     author: "FinanzasPro",
   },
   {
@@ -1057,7 +1053,7 @@ Tu yo del futuro (sin deuda) te lo agradecerá.
     readTime: "14 min",
     category: "Deudas",
     tags: ["deuda", "tarjeta crédito", "finanzas personales", "estrategia"],
-    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf35f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf35f?w=1200&h=630&fit=crop",
     author: "FinanzasPro",
   },
   {
@@ -1265,7 +1261,7 @@ Abre esa cuenta hoy. Tu yo del futuro no lo lamentará.
     readTime: "12 min",
     category: "Inversiones",
     tags: ["inversiones", "principiantes", "fondos indexados", "bolsa"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    image: "https://images.pexels.com/photos/7974/pexels-photo.jpeg?w=1200&h=630&fit=crop",
     author: "FinanzasPro",
   },
   {
@@ -1348,7 +1344,7 @@ El primer paso es siempre el más difícil, pero una vez que desarrolles el háb
     readTime: "8 min",
     category: "Ahorro",
     tags: ["ahorro", "presupuesto", "fondo de emergencia", "finanzas personales"],
-    image: "https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80",
+    image: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?w=1200&h=630&fit=crop",
     author: "FinanzasPro",
   },
   {
@@ -1507,7 +1503,7 @@ Recuerda: la tecnología es solo una herramienta. El éxito financiero depende d
     readTime: "12 min",
     category: "Tecnología",
     tags: ["apps", "tecnología", "fintech", "herramientas"],
-    image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80",
+    image: "https://images.pexels.com/photos/34407/next-page-button-white.jpg?w=1200&h=630&fit=crop",
     author: "FinanzasPro",
   },
   {

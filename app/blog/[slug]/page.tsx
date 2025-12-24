@@ -151,7 +151,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
           {/* Featured Image */}
           <div className="mb-10 -mx-6 lg:-mx-8">
-            <div className="relative aspect-video w-full overflow-hidden rounded-lg lg:rounded-xl shadow-2xl">
+            <div className="relative aspect-video w-full overflow-hidden rounded-lg lg:rounded-xl shadow-2xl bg-gradient-to-br from-primary/10 to-primary/5">
               <Image
                 src={post.image || '/placeholder.svg'}
                 alt={post.title}
