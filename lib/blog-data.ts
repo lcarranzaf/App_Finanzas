@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     title: "Cómo crear un presupuesto personal completo: Paso a paso",
     description:
       "Aprende a crear un presupuesto detallado que te permita controlar tus gastos y alcanzar tus metas financieras. Ejemplos reales y plantillas descargables.",
-    image: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?w=1200&h=630&fit=crop",
+    image: "https://images.pexels.com/photos/3958619/pexels-photo-3958619.jpeg?w=1200&h=630&fit=crop",
     content: `
 # Cómo crear un presupuesto personal completo: Paso a paso
 
@@ -477,7 +477,7 @@ Las acciones son una herramienta poderosa para crear riqueza, pero requieren con
     readTime: "18 min",
     category: "Inversiones",
     tags: ["acciones", "inversiones", "principiantes", "análisis fundamental", "cartera de acciones"],
-    image: "https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?w=1200&h=630&fit=crop",
+    image: "https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?w=1200&h=630&fit=crop",
     author: "FinanzasPro",
   },
   {
@@ -842,7 +842,7 @@ Recuerda: Los bonos no están diseñados para hacerte rico rápidamente, sino pa
     readTime: "20 min",
     category: "Inversiones",
     tags: ["bonos", "renta fija", "inversiones", "estabilidad", "ingresos pasivos"],
-    image: "https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?w=1200&h=630&fit=crop",
+    image: "https://images.pexels.com/photos/3808517/pexels-photo-3808517.jpeg?w=1200&h=630&fit=crop",
     author: "FinanzasPro",
   },
   {
