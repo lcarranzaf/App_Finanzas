@@ -144,3 +144,96 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/* Article Content Styles */
+.article-content {
+  @apply text-foreground;
+}
+
+.article-content h1 {
+  @apply text-4xl font-bold tracking-tight text-foreground mt-12 mb-6 pb-4 border-b border-border;
+}
+
+.article-content h2 {
+  @apply text-3xl font-bold tracking-tight text-foreground mt-10 mb-5;
+}
+
+.article-content h3 {
+  @apply text-2xl font-bold tracking-tight text-foreground mt-8 mb-4;
+}
+
+.article-content h4 {
+  @apply text-xl font-bold tracking-tight text-foreground mt-6 mb-3;
+}
+
+.article-content h5 {
+  @apply text-lg font-bold tracking-tight text-foreground mt-5 mb-2;
+}
+
+.article-content h6 {
+  @apply text-base font-bold tracking-tight text-foreground mt-4 mb-2;
+}
+
+.article-content p {
+  @apply text-foreground leading-8 mb-6 text-base font-normal;
+}
+
+.article-content ul {
+  @apply my-6 space-y-3 list-disc list-outside ml-6 text-foreground;
+}
+
+.article-content ol {
+  @apply my-6 space-y-3 list-decimal list-outside ml-6 text-foreground;
+}
+
+.article-content li {
+  @apply text-foreground leading-7 pl-2 mb-2;
+}
+
+.article-content li::marker {
+  @apply text-primary font-semibold;
+}
+
+.article-content strong {
+  @apply font-semibold text-foreground;
+}
+
+.article-content em {
+  @apply italic text-foreground/90;
+}
+
+.article-content code {
+  @apply bg-muted/80 text-sm px-2 py-1 rounded-md font-mono text-foreground border border-border;
+}
+
+.article-content a {
+  @apply text-primary hover:underline font-medium transition-colors;
+}
+
+.article-content blockquote {
+  @apply border-l-4 border-primary pl-6 italic my-6 text-muted-foreground;
+}
+
+.article-content table {
+  @apply w-full my-8 border-collapse;
+}
+
+.article-content th {
+  @apply bg-muted/70 p-4 text-left font-semibold text-foreground border-b-2 border-border;
+}
+
+.article-content td {
+  @apply p-4 text-foreground border-b border-border/30;
+}
+
+.article-content tr:hover {
+  @apply bg-muted/30 transition-colors;
+}
+
+.article-content img {
+  @apply rounded-lg shadow-lg my-8 w-full;
+}
+
+.article-content hr {
+  @apply border-border my-8;
+}

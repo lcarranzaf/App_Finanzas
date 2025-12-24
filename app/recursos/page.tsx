@@ -225,6 +225,30 @@ export default function RecursosPage() {
           </p>
         </div>
 
+        {/* Educational Introduction */}
+        <div className="mt-12">
+          <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground">
+            <h2 className="text-2xl font-bold text-foreground mb-4">Cómo elegir las mejores herramientas financieras</h2>
+            <p className="text-muted-foreground leading-7">
+              En el mundo de las finanzas personales, las herramientas correctas pueden hacer la diferencia entre el éxito 
+              y la frustración. Sin embargo, con cientos de apps, brokers y servicios disponibles, elegir puede ser abrumador. 
+              En esta guía, hemos seleccionado y revisado cuidadosamente las mejores herramientas en cada categoría, basándonos 
+              en criterios como facilidad de uso, costo, seguridad y valor real para el usuario.
+            </p>
+            <p className="text-muted-foreground leading-7 mt-4">
+              <strong>Nuestro proceso de selección:</strong> Cada herramienta en esta lista ha sido evaluada por nuestro equipo 
+              considerando factores clave: (1) Seguridad y regulación apropiada, (2) Costos y comisiones transparentes, 
+              (3) Facilidad de uso para principiantes, (4) Funcionalidades que realmente aportan valor, y (5) Reputación y 
+              reseñas de usuarios reales. Solo incluimos herramientas que usaríamos nosotros mismos o recomendaríamos a familiares.
+            </p>
+            <p className="text-muted-foreground leading-7 mt-4">
+              <strong>Importante:</strong> Las mejores herramientas son las que realmente usarás consistentemente. No necesitas 
+              tener 10 apps diferentes. Empieza con una o dos herramientas en las categorías más relevantes para tu situación 
+              actual, y expande según tus necesidades evolucionen.
+            </p>
+          </div>
+        </div>
+
         {/* Disclaimer */}
         <div className="mt-12 rounded-lg bg-amber-50 border border-amber-200 p-6">
           <div className="flex">

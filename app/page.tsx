@@ -143,6 +143,113 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Educational Content Section */}
+      <section className="py-16 sm:py-20 bg-muted/30">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                ¿Por qué la educación financiera es fundamental?
+              </h2>
+              <p className="mt-4 text-lg leading-8 text-muted-foreground">
+                Comprender tus finanzas personales es el primer paso hacia la libertad económica
+              </p>
+            </div>
+
+            <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">El problema de la falta de educación financiera</h3>
+                <p className="text-muted-foreground leading-7">
+                  Según estudios recientes, más del 60% de las personas no tienen conocimientos básicos sobre finanzas personales.
+                  Esto se traduce en decisiones financieras costosas, deudas innecesarias y oportunidades perdidas de crecimiento patrimonial.
+                  La mayoría de las personas aprenden sobre dinero por prueba y error, lo cual puede resultar en errores costosos que afectan
+                  su futuro financiero durante años.
+                </p>
+                <p className="text-muted-foreground leading-7 mt-4">
+                  En FinanzasPro, creemos que todos merecen acceso a educación financiera de calidad, sin importar su nivel de ingresos
+                  o conocimientos previos. Nuestro objetivo es simplificar conceptos complejos y proporcionar estrategias prácticas que
+                  cualquier persona pueda implementar inmediatamente.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Los tres pilares de la libertad financiera</h3>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-xl font-semibold text-foreground mb-2">1. Ahorro Inteligente</h4>
+                    <p className="text-muted-foreground leading-7">
+                      Ahorrar dinero no se trata solo de guardar lo que sobra al final del mes. Se trata de crear un sistema
+                      que funcione para ti. La regla 50/30/20 es un punto de partida excelente: destina el 50% de tus ingresos
+                      a necesidades esenciales, el 30% a deseos y estilo de vida, y el 20% a ahorros e inversiones. Sin embargo,
+                      cada situación es única, y aprender a adaptar estas proporciones a tu realidad es clave.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-foreground mb-2">2. Inversión Consistente</h4>
+                    <p className="text-muted-foreground leading-7">
+                      Invertir no es solo para los ricos. Con herramientas modernas como fondos indexados y ETFs, puedes
+                      comenzar a invertir con tan solo $100. El secreto no está en elegir la acción perfecta, sino en la
+                      consistencia y el tiempo. El interés compuesto es la octava maravilla del mundo, y cuando lo entiendes,
+                      cambia completamente tu perspectiva sobre el dinero. Invertir $200 mensuales durante 30 años con un
+                      rendimiento del 7% anual puede generar más de $240,000, de los cuales solo $72,000 serían tus aportaciones.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-foreground mb-2">3. Gestión de Deudas</h4>
+                    <p className="text-muted-foreground leading-7">
+                      Las deudas pueden ser tu mayor obstáculo o una herramienta estratégica, dependiendo de cómo las uses.
+                      Las deudas de alto interés (como tarjetas de crédito al 20%+) destruyen tu patrimonio rápidamente.
+                      Por otro lado, deudas de bajo interés (como hipotecas al 3-5%) pueden ser parte de una estrategia
+                      financiera sólida. La clave está en entender la diferencia y priorizar el pago de deudas costosas
+                      mientras inviertes simultáneamente cuando las tasas son bajas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Cómo empezar tu viaje financiero</h3>
+                <p className="text-muted-foreground leading-7">
+                  No necesitas ser un experto en finanzas para comenzar. El primer paso es simplemente empezar. Aquí tienes
+                  un plan de acción de 30 días:
+                </p>
+                <ol className="list-decimal list-inside space-y-3 text-muted-foreground leading-7 mt-4">
+                  <li><strong>Semana 1:</strong> Calcula tu patrimonio neto actual (activos - pasivos) y crea un presupuesto básico
+                    registrando todos tus gastos durante una semana.</li>
+                  <li><strong>Semana 2:</strong> Identifica áreas donde puedes reducir gastos sin sacrificar calidad de vida.
+                    Pequeños cambios como preparar café en casa o cancelar suscripciones no utilizadas pueden liberar $100-300 mensuales.</li>
+                  <li><strong>Semana 3:</strong> Abre una cuenta de ahorros de alto rendimiento y configura una transferencia
+                    automática del 10-20% de tus ingresos. Automatizar es clave porque elimina la necesidad de tomar decisiones
+                    cada mes.</li>
+                  <li><strong>Semana 4:</strong> Investiga opciones de inversión básicas. Lee sobre fondos indexados y ETFs.
+                    No necesitas invertir todavía, solo educarte. El conocimiento es tu mejor inversión inicial.</li>
+                </ol>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Errores comunes que debes evitar</h3>
+                <p className="text-muted-foreground leading-7">
+                  Aprender de los errores de otros es más barato que cometerlos tú mismo. Estos son los errores más costosos
+                  que vemos una y otra vez:
+                </p>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-7 mt-4">
+                  <li><strong>Esperar el momento perfecto:</strong> No existe. El mejor momento para empezar a ahorrar e invertir
+                    fue ayer. El segundo mejor momento es hoy.</li>
+                  <li><strong>No tener un fondo de emergencia:</strong> Sin al menos $1,000-2,000 en efectivo, cualquier
+                    imprevisto te obligará a usar tarjetas de crédito o préstamos costosos.</li>
+                  <li><strong>Intentar hacer timing del mercado:</strong> Incluso los profesionales no pueden predecir
+                    cuándo subirá o bajará el mercado. La estrategia ganadora es invertir consistentemente sin importar
+                    las condiciones del mercado.</li>
+                  <li><strong>Ignorar las comisiones:</strong> Una comisión del 2% anual puede costarte decenas de miles
+                    de dólares a lo largo de 30 años. Siempre busca opciones de bajo costo como fondos indexados con comisiones
+                    menores al 0.2%.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="bg-primary/5 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

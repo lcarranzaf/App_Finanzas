@@ -74,6 +74,55 @@ export default function ContactoPage() {
           </p>
         </div>
 
+        {/* Educational Content */}
+        <div className="mt-12 mb-16">
+          <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground">
+            <h2 className="text-2xl font-bold text-foreground mb-4">¿Necesitas ayuda con tus finanzas personales?</h2>
+            <p className="text-muted-foreground leading-7">
+              En FinanzasPro, estamos comprometidos a ayudarte en tu viaje hacia la libertad financiera. Recibimos cientos 
+              de consultas cada mes y hacemos nuestro mejor esfuerzo para responder a todas. Aquí te explicamos cómo 
+              podemos ayudarte y qué esperar cuando nos contactas.
+            </p>
+            
+            <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Tipos de consultas que atendemos</h3>
+            <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-7">
+              <li><strong>Preguntas sobre artículos:</strong> Si algo en nuestros artículos no está claro o necesitas 
+              más información sobre un tema específico, estamos aquí para ayudar. Nuestros artículos están diseñados para 
+              ser comprensibles, pero sabemos que cada situación financiera es única.</li>
+              <li><strong>Sugerencias de contenido:</strong> ¿Hay un tema financiero que te gustaría que cubramos? 
+              Nuestros lectores son nuestra mejor fuente de ideas. Si muchos de ustedes piden lo mismo, lo priorizamos 
+              en nuestro calendario editorial.</li>
+              <li><strong>Errores o correcciones:</strong> Si encuentras un error en nuestros artículos o información 
+              desactualizada, por favor avísanos. Mantenemos nuestro contenido actualizado y preciso, y tu feedback es 
+              invaluable.</li>
+              <li><strong>Colaboraciones:</strong> Si eres un experto en finanzas, un blogger, o tienes una historia 
+              financiera inspiradora que compartir, nos encantaría escucharte. Consideramos colaboraciones que aporten 
+              valor real a nuestros lectores.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Lo que no podemos hacer</h3>
+            <p className="text-muted-foreground leading-7">
+              Es importante aclarar que <strong>no proporcionamos asesoramiento financiero personalizado</strong>. No podemos 
+              decirte exactamente qué acciones comprar, qué inversiones hacer, o cómo estructurar tu cartera específica. 
+              Lo que sí hacemos es proporcionar educación financiera general, estrategias probadas, y herramientas que 
+              puedes usar para tomar tus propias decisiones informadas.
+            </p>
+            <p className="text-muted-foreground leading-7 mt-4">
+              Si necesitas asesoramiento financiero personalizado, te recomendamos consultar con un asesor financiero 
+              certificado (CFP) o un planificador financiero profesional que pueda analizar tu situación específica y 
+              crear un plan personalizado para ti.
+            </p>
+
+            <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Tiempo de respuesta</h3>
+            <p className="text-muted-foreground leading-7">
+              Respondemos a todos los mensajes dentro de 24-48 horas durante días laborables (lunes a viernes). Si tu 
+              consulta es urgente o relacionada con una decisión financiera importante, intentamos responder más rápido 
+              cuando es posible. Por favor, ten paciencia si tu consulta requiere investigación adicional o si recibimos 
+              un volumen inusualmente alto de mensajes.
+            </p>
+          </div>
+        </div>
+
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Contact Info */}
           <div className="space-y-6">
