@@ -168,11 +168,11 @@ export default function JovenesPage() {
                   riqueza. Aprende a vivir con menos de lo que ganas desde el principio.</li>
                   <li><strong>Ignorar las deudas estudiantiles:</strong> Si tienes préstamos estudiantiles, no los ignores. 
                   Crea un plan de pago agresivo. Cada dólar que pagas en intereses es dinero que no está trabajando para ti.</li>
-                  <li><strong>No invertir porque "no sabes":</strong> La mejor manera de aprender es haciendo. Empieza con 
+                  <li><strong>No invertir porque &ldquo;no sabes&rdquo;:</strong> La mejor manera de aprender es haciendo. Empieza con 
                   pequeñas cantidades en fondos indexados mientras aprendes. No necesitas ser un experto para comenzar.</li>
                   <li><strong>Compararse con otros:</strong> Las redes sociales muestran estilos de vida que muchas veces 
                   están financiados por deudas. Enfócate en tu propio progreso financiero, no en aparentar riqueza.</li>
-                  <li><strong>No negociar tu salario:</strong> Cada aumento de $5,000 anuales que negocies a los 25 años 
+                   <li><strong>No negociar tu salario:</strong> Cada aumento de &quot;$5,000&quot; anuales que negocies a los 25 años
                   puede valer más de $500,000 en ingresos adicionales durante tu carrera. Aprende a negociar desde el principio.</li>
                 </ul>
               </div>

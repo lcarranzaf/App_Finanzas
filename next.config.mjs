@@ -11,6 +11,7 @@ const nextConfig = {
       "placeholder.svg",
       "hebbkx1anhila5yf.public.blob.vercel-storage.com",
       "images.unsplash.com",
+      "images.pexels.com",
     ],
     formats: ["image/webp", "image/avif"],
     unoptimized: true,

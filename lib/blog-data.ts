@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     title: "Cómo crear un presupuesto personal completo: Paso a paso",
     description:
       "Aprende a crear un presupuesto detallado que te permita controlar tus gastos y alcanzar tus metas financieras. Ejemplos reales y plantillas descargables.",
-    image: "https://images.pexels.com/photos/3958619/pexels-photo-3958619.jpeg?w=1200&h=630&fit=crop",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=630&fit=crop",
     content: `
 # Cómo crear un presupuesto personal completo: Paso a paso
 
@@ -476,9 +476,9 @@ Las acciones son una herramienta poderosa para crear riqueza, pero requieren con
     publishedAt: "2025-04-10",
     readTime: "18 min",
     category: "Inversiones",
-    tags: ["acciones", "inversiones", "principiantes", "análisis fundamental", "cartera de acciones"],
-    image: "https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?w=1200&h=630&fit=crop",
-    author: "FinanzasPro",
+     tags: ["acciones", "inversiones", "principiantes", "análisis fundamental", "cartera de acciones"],
+     image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&h=630&fit=crop",
+     author: "FinanzasPro",
   },
   {
     slug: "bonos-para-principiantes",
@@ -841,9 +841,9 @@ Recuerda: Los bonos no están diseñados para hacerte rico rápidamente, sino pa
     publishedAt: "2025-04-12",
     readTime: "20 min",
     category: "Inversiones",
-    tags: ["bonos", "renta fija", "inversiones", "estabilidad", "ingresos pasivos"],
-    image: "https://images.pexels.com/photos/3808517/pexels-photo-3808517.jpeg?w=1200&h=630&fit=crop",
-    author: "FinanzasPro",
+     tags: ["bonos", "renta fija", "inversiones", "estabilidad", "ingresos pasivos"],
+     image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&h=630&fit=crop",
+     author: "FinanzasPro",
   },
   {
     slug: "manejo-deuda-personal",
@@ -1052,9 +1052,9 @@ Tu yo del futuro (sin deuda) te lo agradecerá.
     publishedAt: "2025-03-08",
     readTime: "14 min",
     category: "Deudas",
-    tags: ["deuda", "tarjeta crédito", "finanzas personales", "estrategia"],
-    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf35f?w=1200&h=630&fit=crop",
-    author: "FinanzasPro",
+     tags: ["deuda", "tarjeta crédito", "finanzas personales", "estrategia"],
+     image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=630&fit=crop",
+     author: "FinanzasPro",
   },
   {
     slug: "invertir-primeros-pasos",
@@ -1260,9 +1260,9 @@ Abre esa cuenta hoy. Tu yo del futuro no lo lamentará.
     publishedAt: "2025-03-05",
     readTime: "12 min",
     category: "Inversiones",
-    tags: ["inversiones", "principiantes", "fondos indexados", "bolsa"],
-    image: "https://images.pexels.com/photos/7974/pexels-photo.jpeg?w=1200&h=630&fit=crop",
-    author: "FinanzasPro",
+     tags: ["inversiones", "principiantes", "fondos indexados", "bolsa"],
+     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop",
+     author: "FinanzasPro",
   },
   {
     slug: "como-empezar-ahorrar-poco-dinero",
@@ -1343,9 +1343,9 @@ El primer paso es siempre el más difícil, pero una vez que desarrolles el háb
     publishedAt: "2025-01-15",
     readTime: "8 min",
     category: "Ahorro",
-    tags: ["ahorro", "presupuesto", "fondo de emergencia", "finanzas personales"],
-    image: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?w=1200&h=630&fit=crop",
-    author: "FinanzasPro",
+     tags: ["ahorro", "presupuesto", "fondo de emergencia", "finanzas personales"],
+     image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&h=630&fit=crop",
+     author: "FinanzasPro",
   },
   {
     slug: "mejores-apps-finanzas-personales-2025",
@@ -1502,9 +1502,9 @@ Recuerda: la tecnología es solo una herramienta. El éxito financiero depende d
     publishedAt: "2025-01-12",
     readTime: "12 min",
     category: "Tecnología",
-    tags: ["apps", "tecnología", "fintech", "herramientas"],
-    image: "https://images.pexels.com/photos/34407/next-page-button-white.jpg?w=1200&h=630&fit=crop",
-    author: "FinanzasPro",
+     tags: ["apps", "tecnología", "fintech", "herramientas"],
+     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&h=630&fit=crop",
+     author: "FinanzasPro",
   },
   {
     slug: "invertir-fondos-indexados-principiantes",

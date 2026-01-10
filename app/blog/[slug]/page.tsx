@@ -190,8 +190,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   const lines = md.split('\n')
                   let inList = false
                   let listType = ''
-                  let inTable = false
-                  let tableRows: string[] = []
+                   let inTable = false
 
                   for (let i = 0; i < lines.length; i++) {
                     const line = lines[i].trim()
@@ -275,11 +274,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                           ? 'my-6 space-y-3 list-disc list-outside ml-6 text-foreground'
                           : 'my-6 space-y-3 list-decimal list-outside ml-6 text-foreground'
                         html += `<${listType} class="${listClasses}">`
-                      } else if (listType !== currentType) {
-                        const oldListClasses = listType === 'ul'
-                          ? 'my-6 space-y-3 list-disc list-outside ml-6 text-foreground'
-                          : 'my-6 space-y-3 list-decimal list-outside ml-6 text-foreground'
-                        const newListClasses = currentType === 'ul'
+                       } else if (listType !== currentType) {
+                         const newListClasses = currentType === 'ul'
                           ? 'my-6 space-y-3 list-disc list-outside ml-6 text-foreground'
                           : 'my-6 space-y-3 list-decimal list-outside ml-6 text-foreground'
                         html += `</${listType}><${currentType} class="${newListClasses}">`
