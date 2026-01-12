@@ -14,7 +14,6 @@ const nextConfig = {
       "images.pexels.com",
     ],
     formats: ["image/webp", "image/avif"],
-    unoptimized: true,
   },
   async headers() {
     return [

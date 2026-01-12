@@ -2,6 +2,9 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { TrendingUp, PiggyBank, Target, BookOpen, Users, Shield } from "lucide-react"
+import { generateMetadata } from "@/components/home-metadata"
+
+export const metadata = generateMetadata()
 
 export default function HomePage() {
   const features = [
