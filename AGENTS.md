@@ -1,6 +1,6 @@
 # AGENTS.md - Guía para Agentes de Codificación
 
-Este archivo proporciona instrucciones detalladas para agentes de codificación que operan en el repositorio App_Finanzas. Incluye comandos de build, lint y test, así como guías de estilo de código.
+Guía completa para agentes de codificación en App_Finanzas. Incluye comandos, convenciones de código y mejores prácticas.
 
 ## 1. Comandos de Build, Lint y Test
 
@@ -9,33 +9,30 @@ Este archivo proporciona instrucciones detalladas para agentes de codificación 
 # Construir la aplicación para producción
 npm run build
 
-# Ejecutar el servidor de desarrollo
+# Ejecutar el servidor de desarrollo (puerto automático)
 npm run dev
 
 # Iniciar el servidor en producción
 npm run start
+
+# Construir con análisis de bundle
+ANALYZE=true npm run build
 ```
 
-### Lint Commands
+### Lint y Code Quality
 ```bash
 # Ejecutar ESLint para verificar código
 npm run lint
+
+# Verificar tipos TypeScript (estrict mode enabled)
+npx tsc --noEmit
+
+# Formateo automático (si se configura Prettier)
+npx prettier --write .
 ```
 
 ### Test Commands
-**Nota:** Actualmente no hay suite de pruebas configurada en este proyecto. Es una aplicación de blog Next.js sin tests automatizados.
-
-- **Para ejecutar un test individual:** No aplica, ya que no existen tests.
-- **Para ejecutar todos los tests:** No aplica.
-- **Para ejecutar tests en modo watch:** No aplica.
-
-Si se agregan tests en el futuro (ej. con Jest o Cypress), actualizar esta sección.
-
-### Type Checking
-```bash
-# Verificar tipos TypeScript
-npx tsc --noEmit
-```
+**Estado Actual:** No hay suite de pruebas configurada. El proyecto es una aplicación de blog Next.js sin tests automatizados.
 
 ### Comandos Útiles para Desarrollo
 ```bash
@@ -45,8 +42,8 @@ rm -rf .next
 # Instalar dependencias
 npm install
 
-# Actualizar dependencias
-npm update
+# Verificar tamaños de bundle
+npm run build && npx @next/bundle-analyzer
 ```
 
 ## 2. Guías de Estilo de Código
@@ -54,21 +51,25 @@ npm update
 ### General
 - **Lenguaje:** TypeScript/JavaScript con React
 - **Framework:** Next.js 14 con App Router
-- **Estilos:** Tailwind CSS v4
+- **Estilos:** Tailwind CSS v4 con sistema de temas (oklch colors)
 - **Formateo:** Seguir convenciones de Prettier (implícito en Next.js)
 - **Linter:** ESLint con configuración `next/core-web-vitals`
+- **UI Library:** shadcn/ui con Radix UI primitives
+- **Utilidades:** clsx + tailwind-merge via `cn()` helper
 
 ### Imports
 - Usar imports absolutos con alias `@/` para directorios internos
-- Agrupar imports: React primero, luego bibliotecas externas, luego internos
+- Agrupar imports: React/Next.js primero, luego bibliotecas externas, luego internos
 - Ordenar imports alfabéticamente dentro de cada grupo
+- Usar imports nombrados para componentes UI
 
 ```typescript
 // ✅ Correcto
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/card'
 import { getBlogPosts } from '@/lib/blog-data'
+import { cn } from '@/lib/utils'
 
 // ❌ Incorrecto
 import { getBlogPosts } from '@/lib/blog-data'
@@ -82,13 +83,15 @@ import { Card, CardContent } from '@/components/ui/card'
 - **Variables/Funciones:** camelCase (ej. `userName`, `getPosts`)
 - **Constantes:** UPPER_SNAKE_CASE (ej. `API_URL`, `MAX_RETRIES`)
 - **Archivos:** kebab-case para páginas, camelCase para componentes
-- **Directorios:** kebab-case (ej. `blog-data.ts`, `user-profile.tsx`)
+- **Props:** Interfaces con sufijo `Props` (ej. `BlogCardProps`)
+- **Estados:** Prefijo `is` para booleanos (ej. `isLoading`, `isVisible`)
 
 ### TypeScript
 - Usar tipos estrictos (`strict: true` en tsconfig.json)
-- Preferir interfaces para objetos complejos
-- Usar tipos union cuando sea apropiado
-- Evitar `any`; usar `unknown` si es necesario
+- Preferir interfaces para objetos complejos, tipos para unions
+- Usar `unknown` en lugar de `any` cuando sea posible
+- Definir tipos para props de componentes
+- Usar `React.FC` solo cuando sea necesario (preferir funciones flecha)
 
 ```typescript
 // ✅ Correcto
@@ -101,12 +104,20 @@ interface BlogPost {
 
 type UserRole = 'admin' | 'editor' | 'viewer'
 
+type UserRole = 'admin' | 'editor' | 'viewer'
+
+interface BlogCardProps {
+  post: BlogPost
+  variant?: 'default' | 'featured'
+}
+
 // ❌ Incorrecto
 interface BlogPost {
   title: any
   content: string
   publishedAt: string
   tags: Array<any>
+  author: any
 }
 ```
 
@@ -114,71 +125,15 @@ interface BlogPost {
 - Usar arrow functions para componentes
 - Preferir hooks sobre class components
 - Usar fragmentos `<>` en lugar de divs innecesarios
-- Mantener JSX limpio y legible
-
-```tsx
-// ✅ Correcto
-export default function BlogCard({ post }: { post: BlogPost }) {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>{post.title}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p>{post.description}</p>
-      </CardContent>
-    </Card>
-  )
-}
-
-// ❌ Incorrecto
-export default function BlogCard(props) {
-  return (
-    <div className="card">
-      <h2>{props.post.title}</h2>
-      <p>{props.post.description}</p>
-    </div>
-  )
-}
-```
 
 ### Estilos y CSS
 - Usar Tailwind CSS para estilos
-- Seguir la convención de clases de Tailwind
 - Usar componentes de shadcn/ui cuando sea posible
-- Evitar estilos inline; usar clases de Tailwind
-
-```tsx
-// ✅ Correcto
-<Button variant="outline" size="lg" className="mt-4">
-  Leer más
-</Button>
-
-// ❌ Incorrecto
-<button style={{ marginTop: '16px', padding: '12px 24px' }}>
-  Leer más
-</button>
-```
+- Evitar estilos inline
 
 ### Manejo de Errores
 - Usar try-catch en funciones asíncronas
-- Manejar errores de API apropiadamente
 - Mostrar mensajes de error amigables al usuario
-- Loggear errores para debugging (sin exponer información sensible)
-
-```typescript
-// ✅ Correcto
-async function fetchPosts() {
-  try {
-    const response = await fetch('/api/posts')
-    if (!response.ok) throw new Error('Failed to fetch posts')
-    return await response.json()
-  } catch (error) {
-    console.error('Error fetching posts:', error)
-    throw new Error('Unable to load blog posts')
-  }
-}
-```
 
 ### Seguridad
 - Nunca commitear secrets o keys en el código
@@ -189,22 +144,10 @@ async function fetchPosts() {
 ### Rendimiento
 - Usar Next.js Image component para imágenes optimizadas
 - Implementar lazy loading cuando sea apropiado
-- Optimizar re-renders con React.memo o useMemo
-- Usar dynamic imports para componentes grandes
 
-### Estructura de Archivos
-```
-app/                    # Páginas Next.js
-  blog/
-    page.tsx           # Lista de blogs
-    [slug]/
-      page.tsx         # Página individual del blog
-components/            # Componentes reutilizables
-  ui/                  # Componentes de shadcn/ui
-lib/                   # Utilidades y datos
-  blog-data.ts         # Datos de blogs
-public/                # Assets estáticos
-```
+### Tema Oscuro/Claro
+- Sistema de temas con `next-themes`
+- Toggle de tema en navbar
 
 ### Commit Messages
 - Usar inglés para mensajes de commit
@@ -214,27 +157,16 @@ public/                # Assets estáticos
 ### Reglas Adicionales
 - Mantener funciones pequeñas y enfocadas en una responsabilidad
 - Usar nombres descriptivos para variables y funciones
-- Comentar código complejo, pero preferir código auto-explicativo
-- Seguir DRY (Don't Repeat Yourself) principle
-- Usar Git flow para branches (main, develop, feature/*)
-
-### Configuraciones de Herramientas
-- **TypeScript:** `strict: true`, paths con `@/*`
-- **ESLint:** Extiende `next/core-web-vitals` y `next/typescript`
-- **Next.js:** App Router, imágenes optimizadas
-- **Tailwind:** v4 con configuración estándar
+- Seguir DRY principle
 
 ### Mejores Prácticas para Agentes
-1. Siempre ejecutar `npm run lint` antes de commits
+1. Ejecutar `npm run lint` antes de commits
 2. Verificar tipos con `npx tsc --noEmit`
 3. Probar cambios en `npm run dev`
 4. Mantener consistencia con el código existente
-5. Documentar cambios significativos
 
 ### Notas Especiales
-- Este proyecto es un blog de finanzas personales
-- No hay tests actualmente; considerar agregar Jest para componentes
-- Usar shadcn/ui para componentes consistentes
-- Todas las imágenes externas deben estar en dominios permitidos (next.config.mjs)
-
-Si se agregan nuevas herramientas o cambian las configuraciones, actualizar este archivo.
+- Blog de finanzas personales
+- No hay tests actualmente
+- Usar shadcn/ui para componentes
+- Imágenes optimizadas con Next.js

@@ -1,22 +1,29 @@
+"use client"
+
 import Link from "next/link"
 import Image from 'next/image'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { getBlogPosts } from "@/lib/blog-data"
+import { getBlogPosts, type BlogPost } from "@/lib/blog-data"
 import { Clock, Calendar } from "lucide-react"
-import type { Metadata } from "next"
+import { useState, useMemo } from "react"
 import AdSense from "@/components/AdSense"
-
-export const metadata: Metadata = {
-  title: "Blog de Finanzas Personales - FinanzasPro",
-  description:
-    "Artículos expertos sobre ahorro, inversiones, presupuestos y estrategias financieras. Aprende a construir riqueza paso a paso.",
-  keywords: "blog finanzas, consejos financieros, inversiones, ahorro, presupuesto, dinero",
-}
+import { BlogSearch } from "@/components/blog-search"
 
 export default function BlogPage() {
-  const posts = getBlogPosts()
-  const categories = Array.from(new Set(posts.map((post) => post.category)))
+  const allPosts = getBlogPosts()
+  const categories = Array.from(new Set(allPosts.map((post) => post.category)))
+
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+
+  const filteredPosts = useMemo(() => {
+    if (!selectedCategory) return allPosts
+    return allPosts.filter(post => post.category === selectedCategory)
+  }, [allPosts, selectedCategory])
+
+  const handleCategoryClick = (category: string | null) => {
+    setSelectedCategory(category)
+  }
 
   return (
     <div className="py-16 sm:py-20">
@@ -29,13 +36,27 @@ export default function BlogPage() {
           </p>
         </div>
 
+        {/* Search */}
+        <div className="mt-8 flex justify-center">
+          <BlogSearch />
+        </div>
+
         {/* Categories */}
         <div className="mt-12 flex flex-wrap justify-center gap-2">
-          <Badge variant="secondary" className="text-sm">
+          <Badge
+            variant={selectedCategory === null ? "secondary" : "outline"}
+            className="text-sm cursor-pointer hover:bg-primary/10 transition-colors"
+            onClick={() => handleCategoryClick(null)}
+          >
             Todos los artículos
           </Badge>
           {categories.map((category) => (
-            <Badge key={category} variant="outline" className="text-sm">
+            <Badge
+              key={category}
+              variant={selectedCategory === category ? "secondary" : "outline"}
+              className="text-sm cursor-pointer hover:bg-primary/10 transition-colors"
+              onClick={() => handleCategoryClick(category)}
+            >
               {category}
             </Badge>
           ))}
@@ -47,8 +68,19 @@ export default function BlogPage() {
         </div>
 
         {/* Blog Posts Grid */}
-        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
-          {posts.map((post) => (
+        <div className="mt-16">
+          {filteredPosts.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground text-lg">
+                {selectedCategory
+                  ? `No hay artículos en la categoría "${selectedCategory}"`
+                  : "No hay artículos disponibles"
+                }
+              </p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
+              {filteredPosts.map((post: BlogPost) => (
             <Card key={post.slug} className="hover:shadow-lg transition-shadow">
               <div className="aspect-video overflow-hidden rounded-t-lg">
                 <Image
@@ -92,6 +124,8 @@ export default function BlogPage() {
               </CardContent>
             </Card>
           ))}
+            </div>
+          )}
         </div>
 
         {/* Sidebar AdSense */}

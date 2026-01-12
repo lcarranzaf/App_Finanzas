@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const navigation = [
   { name: "Inicio", href: "/" },
@@ -19,7 +20,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white sticky top-0 z-50 w-full border-b border-border">
+    <header className="bg-background sticky top-0 z-50 w-full border-b border-border">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         {/* Logo */}
         <div className="flex lg:flex-1">
@@ -40,7 +41,7 @@ export default function Navbar() {
           </Button>
         </div>
 
-        {/* Navegación escritorio */}
+        {/* Desktop Navigation and Theme Toggle */}
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
             <Link
@@ -51,7 +52,10 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
+          <ThemeToggle />
         </div>
+
+
       </nav>
 
       {/* Menú móvil */}
@@ -64,7 +68,7 @@ export default function Navbar() {
           ></div>
 
           {/* Panel lateral */}
-          <div className="absolute right-0 top-0 h-full w-72 max-w-full bg-white px-6 py-6 shadow-xl ring-1 ring-border">
+          <div className="absolute right-0 top-0 h-full w-72 max-w-full bg-background px-6 py-6 shadow-xl ring-1 ring-border">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="text-2xl font-bold text-primary">FinanzasPro</span>
@@ -93,6 +97,12 @@ export default function Navbar() {
                       {item.name}
                     </Link>
                   ))}
+                  <div className="py-6 border-t border-border">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-medium text-foreground">Tema</span>
+                      <ThemeToggle />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

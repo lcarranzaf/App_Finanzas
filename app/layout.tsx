@@ -5,7 +5,9 @@ import "./globals.css"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import StructuredData from "@/components/structured-data"
-import { SpeedInsights } from "@vercel/speed-insights/next"   
+import { ThemeProvider } from "@/components/theme-provider"
+import { ServiceWorker } from "@/components/service-worker"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 import Script from 'next/script'
 const inter = Inter({
@@ -142,11 +144,19 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="min-h-screen bg-background font-sans text-foreground">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <SpeedInsights />
-        <Analytics />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ServiceWorker />
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <SpeedInsights />
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   )
