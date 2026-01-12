@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirección M3U8</title>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4657042320327960"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <p>Redirigiendo...</p>
+
+    <script>
+        // Obtener parámetro GET ?id=435
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+
+        if (!id) {
+            document.body.innerHTML = "<h3>Error: falta el parámetro ?id=</h3>";
+        } else {
+            // URL del worker
+            const apiUrl = `https://my-event-worker.per-405.workers.dev/${id}`;
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Error al consultar la API");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.m3u8_link) {
+                        // Redirección directa al m3u8_link
+                        window.location.href = data.m3u8_link;
+                    } else {
+                        document.body.innerHTML = "<h3>Error: m3u8_link no encontrado</h3>";
+                    }
+                })
+                .catch(error => {
+                    document.body.innerHTML = `<h3>Error: ${error.message}</h3>`;
+                });
+        }
+    </script>
+</body>
+</html>
