@@ -10,6 +10,8 @@ import { ServiceWorker } from "@/components/service-worker"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 import Script from 'next/script'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -88,14 +90,17 @@ export const metadata: Metadata = {
   generator: "v0.app",
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const messages = await getMessages()
+
   return (
-    <html lang="es" className={`${inter.variable} antialiased`}>
-      <head>
+    <NextIntlClientProvider messages={messages}>
+      <html lang="es" className={`${inter.variable} antialiased`}>
+        <head>
         <StructuredData type="website" />
         <StructuredData type="organization" />
         {/* Google Analytics - Replace with your tracking ID */}
@@ -159,5 +164,6 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
+    </NextIntlClientProvider>
   )
 }
