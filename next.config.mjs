@@ -18,6 +18,27 @@ const nextConfig = {
   async headers() {
     return [
       {
+        source: "/redireccion-m3u8.html",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=0, must-revalidate"
+          },
+          {
+            key: "X-Robots-Tag",
+            value: "index, follow, max-video-preview: -1, max-image-preview: large, max-snippet: -1"
+          },
+          {
+            key: "X-Target-Audience",
+            value: "US,EU"
+          },
+          {
+            key: "Content-Language",
+            value: "en-US"
+          }
+        ],
+      },
+      {
         source: "/(.*)",
         headers: [
           {
