@@ -1,175 +1,24 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirección M3U8 - Streaming</title>
-    <meta name="description" content="Accede a contenido de streaming en vivo. Redirección automática a contenido M3U8.">
-    <meta name="robots" content="index, follow, max-video-preview: -1, max-image-preview: large, max-snippet: -1">
-    <meta name="distribution" content="global">
-    <meta name="audience" content="us, eu">
-    
-    <!-- Open Graph para redes sociales -->
-    <meta property="og:title" content="Redirección M3U8 - Streaming">
-    <meta property="og:description" content="Accede a contenido de streaming en vivo">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:locale:alternate" content="es_ES">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Redirección M3U8 - Streaming">
-    <meta name="twitter:description" content="Accede a contenido de streaming en vivo">
+    <title>Redirección M3U8</title>
 
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4657042320327960"
             crossorigin="anonymous"></script>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #000000;
-            color: #ffffff;
-        }
-        .ad-container {
-            margin: 20px 0;
-            min-height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .loading {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid #ffffff;
-            border-top: 3px solid #3498db;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .skip-btn {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 20px;
-            transition: background 0.3s;
-        }
-        .skip-btn:hover {
-            background: #2980b9;
-        }
-        .timer {
-            font-size: 48px;
-            margin: 20px 0;
-            color: #3498db;
-        }
-        .progress-bar {
-            width: 300px;
-            height: 4px;
-            background: #333;
-            margin: 20px auto;
-            border-radius: 2px;
-            overflow: hidden;
-        }
-        .progress-fill {
-            height: 100%;
-            background: #3498db;
-            width: 0%;
-            transition: width 0.1s linear;
-        }
-    </style>
 </head>
 <body>
-    <div class="ad-container">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-4657042320327960"
-             data-ad-slot="1234567890"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-    </div>
-    
-    <h2 style="color: #ffffff; margin-bottom: 10px;">Redirigiendo al contenido...</h2>
-    
-    <div class="timer" id="timer">10</div>
-    
-    <div class="progress-bar">
-        <div class="progress-fill" id="progress"></div>
-    </div>
-    
-    <div class="loading"></div>
-    <p style="color: #cccccc; margin-top: 20px;">Por favor espera mientras cargamos los anuncios.</p>
-    
-    <button class="skip-btn" id="skipBtn" onclick="skipAd()">Saltar publicidad (0s)</button>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4657042320327960"
-            crossorigin="anonymous"></script>
+    <p>Redirigiendo...</p>
 
     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <!-- Vercel Analytics -->
-    <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
-
-    <script>
-        // Obtener parámetro GET ?id=
+        // Obtener parámetro GET ?id=435
         const params = new URLSearchParams(window.location.search);
         const id = params.get("id");
-        
-        let redirectUrl = null;
-        let countdown = 10;
-        const progressFill = document.getElementById("progress");
-        const timerDisplay = document.getElementById("timer");
-        const skipBtn = document.getElementById("skipBtn");
-
-        function updateSkipButton() {
-            skipBtn.textContent = `Saltar publicidad (${countdown}s)`;
-        }
-
-        function updateProgress() {
-            const progress = ((10 - countdown) / 10) * 100;
-            progressFill.style.width = progress + "%";
-        }
-
-        function skipAd() {
-            if (redirectUrl) {
-                window.location.href = redirectUrl;
-            }
-        }
-
-        function redirectToContent() {
-            window.location.href = redirectUrl;
-        }
-
-        function startCountdown() {
-            const interval = setInterval(() => {
-                countdown--;
-                timerDisplay.textContent = countdown;
-                updateProgress();
-                updateSkipButton();
-
-                if (countdown <= 0) {
-                    clearInterval(interval);
-                    redirectToContent();
-                }
-            }, 1000);
-        }
 
         if (!id) {
-            document.body.innerHTML = '<div style="color: #ffffff;"><h3 style="color: #ff6b6b;">Error: falta el parámetro ?id=</h3><p>Asegúrate de incluir el ID en la URL como: ?id=435</p></div>';
+            document.body.innerHTML = "<h3>Error: falta el parámetro ?id=</h3>";
         } else {
             // URL del worker
             const apiUrl = `https://my-event-worker.per-405.workers.dev/${id}`;
@@ -183,15 +32,14 @@
                 })
                 .then(data => {
                     if (data.m3u8_link) {
-                        redirectUrl = data.m3u8_link;
-                        // Iniciar contador después de obtener la URL
-                        startCountdown();
+                        // Redirección directa al m3u8_link
+                        window.location.href = data.m3u8_link;
                     } else {
-                        document.body.innerHTML = '<div style="color: #ffffff;"><h3 style="color: #ff6b6b;">Error: m3u8_link no encontrado</h3><p>El contenido solicitado no está disponible.</p></div>';
+                        document.body.innerHTML = "<h3>Error: m3u8_link no encontrado</h3>";
                     }
                 })
                 .catch(error => {
-                    document.body.innerHTML = '<div style="color: #ffffff;"><h3 style="color: #ff6b6b;">Error: ' + error.message + '</h3><p>Inténtalo de nuevo más tarde.</p></div>';
+                    document.body.innerHTML = `<h3>Error: ${error.message}</h3>`;
                 });
         }
     </script>

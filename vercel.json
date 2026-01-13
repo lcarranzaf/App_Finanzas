@@ -1,18 +1,5 @@
 {
   "buildCommand": "pnpm build",
   "installCommand": "pnpm install --frozen-lockfile",
-  "framework": "nextjs",
-  "outputDirectory": ".next",
-  "regions": ["iad1"],
-  "functions": {
-    "app/**/*.js": {
-      "maxDuration": 30
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/redireccion-m3u8.html",
-      "destination": "/redireccion-m3u8.html"
-    }
-  ]
+  "framework": "nextjs"
 }
