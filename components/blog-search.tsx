@@ -127,7 +127,7 @@ export function BlogSearch() {
             </div>
           ) : (
             <div className="p-4 text-center text-muted-foreground">
-              No se encontraron resultados para "{query}"
+              No se encontraron resultados para &quot;{query}&quot;
             </div>
           )}
         </div>
