@@ -1,5 +1,5 @@
 {
-  // Configuración forzada para limpiar cache - deploy fix
+ 
   "buildCommand": "pnpm build",
   "installCommand": "pnpm install --frozen-lockfile",
   "regions": ["iad1"]
