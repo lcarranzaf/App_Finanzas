@@ -6,6 +6,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  distDir: '.next',
   images: {
     domains: [
       "placeholder.svg",
