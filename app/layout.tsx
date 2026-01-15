@@ -99,7 +99,7 @@ export default async function RootLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <html lang="es" className={`${inter.variable} antialiased`}>
+      <html lang="es" className={`${inter.variable} antialiased`} suppressHydrationWarning={true}>
         <head>
         <StructuredData type="website" />
         <StructuredData type="organization" />

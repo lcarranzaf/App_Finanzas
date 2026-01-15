@@ -5,5 +5,31 @@
   "contact": "Contact",
   "newsletter": "Newsletter",
   "title": "FinanzasPro - Your Guide to Financial Success",
-  "description": "Learn to save, invest and build a prosperous future with our expert financial advice. Guides on indexed funds, budgets and financial strategies."
+  "description": "Learn to save, invest and build a prosperous future with our expert financial advice. Guides on indexed funds, budgets and financial strategies.",
+  "features": {
+    "saving": {
+      "title": "Saving Strategies",
+      "description": "Learn proven techniques to save money without sacrificing your quality of life."
+    },
+    "investing": {
+      "title": "Smart Investments",
+      "description": "Discover how to invest in index funds, ETFs and stocks safely."
+    },
+    "planning": {
+      "title": "Financial Planning",
+      "description": "Create a solid financial plan to achieve your short and long term goals."
+    },
+    "education": {
+      "title": "Financial Education",
+      "description": "Complete articles and guides to improve your financial knowledge."
+    },
+    "young": {
+      "title": "For Young People",
+      "description": "Specific advice for students and young professionals."
+    },
+    "security": {
+      "title": "Financial Security",
+      "description": "Protect your finances and prepare for the future."
+    }
+  }
 }

@@ -45,14 +45,48 @@
     <div class="tip-box">
         <strong>Tip Financiero:</strong> Revisa tu presupuesto semanalmente para controlar gastos. <a href="/blog" target="_blank">Guía completa</a>
     </div>
-    <p>Redirigiendo en 3 segundos...</p>
+    <div class="tip-box">
+        <strong>Tip Financiero:</strong> Usa tarjetas de crédito con responsabilidad para acumular recompensas. <a href="/blog" target="_blank">Aprende más</a>
+    </div>
+    <div class="tip-box">
+        <strong>Tip Financiero:</strong> Invierte en educación financiera para tomar mejores decisiones. <a href="/blog" target="_blank">Recursos aquí</a>
+    </div>
+    <div class="tip-box">
+        <strong>Tip Financiero:</strong> Monitorea tu crédito regularmente para detectar fraudes. <a href="/blog" target="_blank">Cómo hacerlo</a>
+    </div>
+    <div class="tip-box">
+        <strong>Tip Financiero:</strong> Crea un fondo de jubilación desde joven para un futuro seguro. <a href="/blog" target="_blank">Planifica ahora</a>
+    </div>
+    <p id="countdown">Redirigiendo en 7 segundos...</p>
+    <button id="redirectBtn" style="display:none;">Redirigir Ahora</button>
 
     <script>
         // Google Analytics events
         gtag('event', 'page_view', { page_title: 'Redirección M3U8' });
 
-        // Delay redirect by 3 seconds to show tips
-        setTimeout(() => {
+        // Countdown timer
+        let countdown = 7;
+        const countdownEl = document.getElementById('countdown');
+        const redirectBtn = document.getElementById('redirectBtn');
+
+        const timer = setInterval(() => {
+            countdown--;
+            countdownEl.textContent = `Redirigiendo en ${countdown} segundos...`;
+            if (countdown <= 3) {
+                redirectBtn.style.display = 'block';
+            }
+            if (countdown <= 0) {
+                clearInterval(timer);
+                performRedirect();
+            }
+        }, 1000);
+
+        redirectBtn.addEventListener('click', () => {
+            clearInterval(timer);
+            performRedirect();
+        });
+
+        function performRedirect() {
             // Obtener parámetro GET ?id=435
             const params = new URLSearchParams(window.location.search);
             const id = params.get("id");
@@ -87,7 +121,7 @@
                         gtag('event', 'error', { event_category: 'redirect', event_label: error.message });
                     });
             }
-        }, 3000); // 3 seconds delay
+        }
     </script>
 </body>
 </html>

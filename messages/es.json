@@ -5,5 +5,31 @@
   "contact": "Contacto",
   "newsletter": "Newsletter",
   "title": "FinanzasPro - Tu Guía para el Éxito Financiero",
-  "description": "Aprende a ahorrar, invertir y construir un futuro próspero con nuestros consejos expertos en finanzas personales. Guías sobre fondos indexados, presupuestos y estrategias financieras."
+  "description": "Aprende a ahorrar, invertir y construir un futuro próspero con nuestros consejos expertos en finanzas personales. Guías sobre fondos indexados, presupuestos y estrategias financieras.",
+  "features": {
+    "saving": {
+      "title": "Estrategias de Ahorro",
+      "description": "Aprende técnicas probadas para ahorrar dinero sin sacrificar tu calidad de vida."
+    },
+    "investing": {
+      "title": "Inversiones Inteligentes",
+      "description": "Descubre cómo invertir en fondos indexados, ETFs y acciones de forma segura."
+    },
+    "planning": {
+      "title": "Planificación Financiera",
+      "description": "Crea un plan financiero sólido para alcanzar tus metas a corto y largo plazo."
+    },
+    "education": {
+      "title": "Educación Financiera",
+      "description": "Artículos y guías completas para mejorar tu conocimiento financiero."
+    },
+    "young": {
+      "title": "Para Jóvenes",
+      "description": "Consejos específicos para estudiantes y jóvenes profesionales."
+    },
+    "security": {
+      "title": "Seguridad Financiera",
+      "description": "Protege tus finanzas y prepárate para el futuro."
+    }
+  }
 }
