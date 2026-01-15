@@ -91,7 +91,7 @@ export function Breadcrumbs({ items, customItems }: BreadcrumbsProps) {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": `https://finanzaspro.com${item.href}`
+      "item": `https://app-finanzas-mu.vercel.app${item.href}`
     }))
   }
 

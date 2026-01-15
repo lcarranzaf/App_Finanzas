@@ -29,10 +29,10 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         name: "FinanzasPro",
         description:
           "Tu guía confiable para el éxito financiero. Aprende a ahorrar, invertir y construir un futuro próspero.",
-        url: "https://finanzaspro.com",
+        url: "https://app-finanzas-mu.vercel.app",
         potentialAction: {
           "@type": "SearchAction",
-          target: "https://finanzaspro.com/blog?q={search_term_string}",
+          target: "https://app-finanzas-mu.vercel.app/blog?q={search_term_string}",
           "query-input": "required name=search_term_string",
         },
         publisher: {
@@ -40,7 +40,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           name: "FinanzasPro",
           logo: {
             "@type": "ImageObject",
-            url: "https://finanzaspro.com/logo.png",
+            url: "https://app-finanzas-mu.vercel.app/logo.png",
           },
         },
       }
@@ -72,12 +72,12 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
               name: "FinanzasPro",
               logo: {
                 "@type": "ImageObject",
-                url: "https://finanzaspro.com/logo.png",
+                url: "https://app-finanzas-mu.vercel.app/logo.png",
               },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://finanzaspro.com/blog/${post.slug}`,
+              "@id": `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
             },
             keywords: post.tags.join(", "),
             articleSection: post.category,
@@ -147,12 +147,12 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         "@type": "Organization",
         name: "FinanzasPro",
         description: "Plataforma educativa especializada en finanzas personales, inversiones y estrategias de ahorro.",
-        url: "https://finanzaspro.com",
-        logo: "https://finanzaspro.com/logo.png",
+        url: "https://app-finanzas-mu.vercel.app",
+        logo: "https://app-finanzas-mu.vercel.app/logo.png",
         contactPoint: {
           "@type": "ContactPoint",
           contactType: "customer service",
-          email: "contacto@finanzaspro.com",
+          email: "contacto@app-finanzas-mu.vercel.app",
         },
         sameAs: [
           "https://twitter.com/finanzaspro",

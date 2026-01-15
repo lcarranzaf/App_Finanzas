@@ -18,7 +18,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://finanzaspro.com"),
+  metadataBase: new URL("https://app-finanzas-mu.vercel.app"),
   title: {
     default: "FinanzasPro - Tu Guía para el Éxito Financiero",
     template: "%s | FinanzasPro",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "ETF",
     "bolsa de valores",
   ],
-  authors: [{ name: "FinanzasPro", url: "https://finanzaspro.com" }],
+  authors: [{ name: "FinanzasPro", url: "https://app-finanzas-mu.vercel.app" }],
   creator: "FinanzasPro",
   publisher: "FinanzasPro",
   robots: {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://finanzaspro.com",
+    url: "https://app-finanzas-mu.vercel.app",
     title: "FinanzasPro - Tu Guía para el Éxito Financiero",
     description:
       "Aprende a ahorrar, invertir y construir un futuro próspero con nuestros consejos expertos en finanzas personales.",
@@ -81,9 +81,9 @@ export const metadata: Metadata = {
     yandex: "yandex-verification-code-here",
   },
   alternates: {
-    canonical: "https://finanzaspro.com",
+    canonical: "https://app-finanzas-mu.vercel.app",
     languages: {
-      "es-ES": "https://finanzaspro.com",
+      "es-ES": "https://app-finanzas-mu.vercel.app",
     },
   },
   category: "finance",

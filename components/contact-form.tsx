@@ -133,7 +133,7 @@ export default function ContactForm() {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">contacto@finanzaspro.com</p>
+                <p className="text-muted-foreground">contacto@app-finanzas-mu.vercel.app</p>
                 <p className="text-sm text-muted-foreground mt-2">Para consultas generales y colaboraciones</p>
               </CardContent>
             </Card>

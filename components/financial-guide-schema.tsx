@@ -17,12 +17,12 @@ export function FinancialGuideSchema({ post }: { post: any }) {
       name: "FinanzasPro",
       logo: {
         "@type": "ImageObject",
-        url: "https://finanzaspro.com/logo.png",
+        url: "https://app-finanzas-mu.vercel.app/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://finanzaspro.com/blog/${post.slug}`,
+      "@id": `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
     },
     about: [
       "https://schema.org/PersonalFinance",

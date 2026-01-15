@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     title: post.title,
     description: post.description,
     keywords: post.tags.join(", "),
-    authors: [{ name: post.author, url: "https://finanzaspro.com" }],
+    authors: [{ name: post.author, url: "https://app-finanzas-mu.vercel.app" }],
     creator: post.author,
     publisher: "FinanzasPro",
     robots: {
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
           alt: post.title,
         },
       ],
-      url: `https://finanzaspro.com/blog/${post.slug}`,
+      url: `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
       siteName: "FinanzasPro",
       type: "article",
       publishedTime: post.publishedAt,
@@ -80,9 +80,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       site: "@finanzaspro",
     },
     alternates: {
-      canonical: `https://finanzaspro.com/blog/${post.slug}`,
+      canonical: `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
       languages: {
-        "es-ES": `https://finanzaspro.com/blog/${post.slug}`,
+        "es-ES": `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
       },
     },
   }
@@ -95,7 +95,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     notFound()
   }
 
-  const shareUrl = `https://finanzaspro.com/blog/${post.slug}`
+  const shareUrl = `https://app-finanzas-mu.vercel.app/blog/${post.slug}`
 
   const contentLower = post.content.toLowerCase()
   
@@ -322,7 +322,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <DisqusComments
             postSlug={post.slug}
             postTitle={post.title}
-            postUrl={`https://finanzaspro.com/blog/${post.slug}`}
+            postUrl={`https://app-finanzas-mu.vercel.app/blog/${post.slug}`}
           />
         </LazyLoad>
       </div>

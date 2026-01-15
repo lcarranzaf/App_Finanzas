@@ -2,7 +2,7 @@ import { blogPosts } from "@/lib/blog-data"
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://finanzaspro.com"
+  const baseUrl = "https://app-finanzas-mu.vercel.app"
 
   const staticPages = [
     { path: "", priority: 1.0, frequency: "weekly" as const },

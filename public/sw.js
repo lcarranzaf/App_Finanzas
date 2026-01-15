@@ -51,7 +51,7 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') return
 
   // Skip external requests
-  if (!url.origin.includes('finanzaspro.com') && !url.origin.includes('localhost')) return
+  if (!url.origin.includes('app-finanzas-mu.vercel.app') && !url.origin.includes('localhost')) return
 
   // Handle different types of requests
   if (url.pathname.startsWith('/api/')) {

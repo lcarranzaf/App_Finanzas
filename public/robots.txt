@@ -23,7 +23,7 @@ User-agent: Bingbot
 Allow: /
 
 # Sitemap location
-Sitemap: https://finanzaspro.com/sitemap.xml
+Sitemap: https://app-finanzas-mu.vercel.app/sitemap.xml
 
 # Crawl delay (be respectful to server)
 Crawl-delay: 1
