@@ -16,55 +16,80 @@
         gtag('js', new Date());
         gtag('config', 'GA_TRACKING_ID');
     </script>
+
     <style>
-        .tip-box {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px;
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #444;
+            border-top: 5px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .ad-box {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
             border-radius: 5px;
-            background: #f9f9f9;
-            font-size: 14px;
-        }
-        .tip-box a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .tip-box a:hover {
-            text-decoration: underline;
+            border: none;
+            cursor: pointer;
+            display: none;
         }
     </style>
 </head>
+
 <body>
-    <h2>Cargando contenido financiero...</h2>
-    <div class="tip-box">
-        <strong>Tip Financiero:</strong> Ahorra al menos el 10% de tus ingresos mensuales para emergencias. <a href="/blog" target="_blank">Lee más en nuestro blog</a>
+    <div class="container">
+        <div class="loader"></div>
+
+        <h2 id="countdown">Cargando contenido...</h2>
+
+        <!-- ANUNCIO DE ADSENSE -->
+        <div class="ad-box">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4657042320327960"
+                data-ad-slot="1181858682"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+        </div>
+
+        <button id="redirectBtn">Redirigir ahora</button>
     </div>
-    <div class="tip-box">
-        <strong>Tip Financiero:</strong> Diversifica tus inversiones con ETFs para reducir riesgos. <a href="/blog" target="_blank">Descubre cómo</a>
-    </div>
-    <div class="tip-box">
-        <strong>Tip Financiero:</strong> Revisa tu presupuesto semanalmente para controlar gastos. <a href="/blog" target="_blank">Guía completa</a>
-    </div>
-    <div class="tip-box">
-        <strong>Tip Financiero:</strong> Usa tarjetas de crédito con responsabilidad para acumular recompensas. <a href="/blog" target="_blank">Aprende más</a>
-    </div>
-    <div class="tip-box">
-        <strong>Tip Financiero:</strong> Invierte en educación financiera para tomar mejores decisiones. <a href="/blog" target="_blank">Recursos aquí</a>
-    </div>
-    <div class="tip-box">
-        <strong>Tip Financiero:</strong> Monitorea tu crédito regularmente para detectar fraudes. <a href="/blog" target="_blank">Cómo hacerlo</a>
-    </div>
-    <div class="tip-box">
-        <strong>Tip Financiero:</strong> Crea un fondo de jubilación desde joven para un futuro seguro. <a href="/blog" target="_blank">Planifica ahora</a>
-    </div>
-    <p id="countdown">Redirigiendo en 7 segundos...</p>
-    <button id="redirectBtn" style="display:none;">Redirigir Ahora</button>
 
     <script>
-        // Google Analytics events
-        gtag('event', 'page_view', { page_title: 'Redirección M3U8' });
+        (adsbygoogle = window.adsbygoogle || []).push({});
 
-        // Countdown timer
         let countdown = 7;
         const countdownEl = document.getElementById('countdown');
         const redirectBtn = document.getElementById('redirectBtn');
@@ -72,9 +97,11 @@
         const timer = setInterval(() => {
             countdown--;
             countdownEl.textContent = `Redirigiendo en ${countdown} segundos...`;
+
             if (countdown <= 3) {
                 redirectBtn.style.display = 'block';
             }
+
             if (countdown <= 0) {
                 clearInterval(timer);
                 performRedirect();
@@ -87,40 +114,28 @@
         });
 
         function performRedirect() {
-            // Obtener parámetro GET ?id=435
             const params = new URLSearchParams(window.location.search);
             const id = params.get("id");
 
             if (!id) {
                 document.body.innerHTML = "<h3>Error: falta el parámetro ?id=</h3>";
-                gtag('event', 'error', { event_category: 'redirect', event_label: 'missing_id' });
-            } else {
-                // URL del worker
-                const apiUrl = `https://my-event-worker.per-405.workers.dev/${id}`;
-
-                fetch(apiUrl)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error("Error al consultar la API");
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        if (data.m3u8_link) {
-                            // Track redirect attempt
-                            gtag('event', 'redirect_attempt', { event_category: 'redirect', event_label: data.m3u8_link });
-                            // Redirección directa al m3u8_link
-                            window.location.href = data.m3u8_link;
-                        } else {
-                            document.body.innerHTML = "<h3>Error: m3u8_link no encontrado</h3>";
-                            gtag('event', 'error', { event_category: 'redirect', event_label: 'no_m3u8_link' });
-                        }
-                    })
-                    .catch(error => {
-                        document.body.innerHTML = `<h3>Error: ${error.message}</h3>`;
-                        gtag('event', 'error', { event_category: 'redirect', event_label: error.message });
-                    });
+                return;
             }
+
+            const apiUrl = `https://my-event-worker.per-405.workers.dev/${id}`;
+
+            fetch(apiUrl)
+                .then(r => r.json())
+                .then(data => {
+                    if (data.m3u8_link) {
+                        window.location.href = data.m3u8_link;
+                    } else {
+                        document.body.innerHTML = "<h3>Error: m3u8_link no encontrado</h3>";
+                    }
+                })
+                .catch(err => {
+                    document.body.innerHTML = `<h3>Error: ${err.message}</h3>`;
+                });
         }
     </script>
 </body>
