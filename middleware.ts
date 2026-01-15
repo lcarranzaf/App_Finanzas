@@ -1,10 +1,7 @@
-import createMiddleware from 'next-intl/middleware'
-
-export default createMiddleware({
-  locales: ['en', 'es'],
-  defaultLocale: 'en'
-})
+export default function middleware(_request: any) {
+  return undefined
+}
 
 export const config = {
-  matcher: ['/', '/(en|es)/:path*']
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
 }

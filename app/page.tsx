@@ -4,46 +4,43 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { TrendingUp, PiggyBank, Target, BookOpen, Users, Shield } from "lucide-react"
-import { generateMetadata } from "@/components/home-metadata"
-import { useTranslations } from 'next-intl'
 
 export default function HomePage() {
-  const t = useTranslations()
   const features = [
     {
       icon: PiggyBank,
-      title: t('features.saving.title'),
-      description: t('features.saving.description'),
+      title: "Estrategias de Ahorro",
+      description: "Aprende técnicas probadas para ahorrar dinero sin sacrificar tu calidad de vida.",
       href: "/ahorro",
     },
     {
       icon: TrendingUp,
-      title: t('features.investing.title'),
-      description: t('features.investing.description'),
+      title: "Inversiones Inteligentes",
+      description: "Descubre cómo invertir en fondos indexados, ETFs y acciones de forma segura.",
       href: "/inversiones",
     },
     {
       icon: Target,
-      title: t('features.planning.title'),
-      description: t('features.planning.description'),
+      title: "Planificación Financiera",
+      description: "Crea un plan financiero sólido para alcanzar tus metas a corto y largo plazo.",
       href: "/blog",
     },
     {
       icon: BookOpen,
-      title: t('features.education.title'),
-      description: t('features.education.description'),
+      title: "Educación Financiera",
+      description: "Artículos y guías completas para mejorar tu conocimiento financiero.",
       href: "/blog",
     },
     {
       icon: Users,
-      title: t('features.young.title'),
-      description: t('features.young.description'),
+      title: "Para Jóvenes",
+      description: "Consejos específicos para estudiantes y jóvenes profesionales.",
       href: "/jovenes",
     },
     {
       icon: Shield,
-      title: t('features.security.title'),
-      description: t('features.security.description'),
+      title: "Seguridad Financiera",
+      description: "Protege tus finanzas y prepárate para el futuro.",
       href: "/sobre-nosotros",
     },
   ]
