@@ -5,19 +5,22 @@ import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
+import LanguageToggle from "@/components/language-toggle"
+import { useTranslations } from 'next-intl'
 
 const navigation = [
-  { name: "Inicio", href: "/" },
+  { key: "home", href: "/" },
   { name: "Ahorro", href: "/ahorro" },
   { name: "Inversiones", href: "/inversiones" },
   { name: "Finanzas para Jóvenes", href: "/jovenes" },
-  { name: "Blog", href: "/blog" },
+  { key: "blog", href: "/blog" },
   { name: "Recursos", href: "/recursos" },
   { name: "Proyecciones", href: "/proyecciones" },
 ]
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const t = useTranslations()
 
   return (
     <header className="bg-background sticky top-0 z-50 w-full border-b border-border">
@@ -45,14 +48,15 @@ export default function Navbar() {
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
             <Link
-              key={item.name}
+              key={item.key || item.name}
               href={item.href}
               className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
             >
-              {item.name}
+              {item.key ? t(item.key) : item.name}
             </Link>
           ))}
           <ThemeToggle />
+          <LanguageToggle />
         </div>
 
 
@@ -86,23 +90,27 @@ export default function Navbar() {
             {/* Links */}
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-border">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-muted"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                  <div className="py-6 border-t border-border">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-foreground">Tema</span>
-                      <ThemeToggle />
-                    </div>
-                  </div>
+                 <div className="space-y-2 py-6">
+                   {navigation.map((item) => (
+                     <Link
+                       key={item.key || item.name}
+                       href={item.href}
+                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-muted"
+                       onClick={() => setMobileMenuOpen(false)}
+                     >
+                       {item.key ? t(item.key) : item.name}
+                     </Link>
+                   ))}
+                   <div className="py-6 border-t border-border space-y-4">
+                     <div className="flex items-center justify-between">
+                       <span className="text-sm font-medium text-foreground">Tema</span>
+                       <ThemeToggle />
+                     </div>
+                     <div className="flex items-center justify-between">
+                       <span className="text-sm font-medium text-foreground">Idioma</span>
+                       <LanguageToggle />
+                     </div>
+                   </div>
                 </div>
               </div>
             </div>
