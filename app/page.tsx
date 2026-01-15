@@ -3,7 +3,8 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { TrendingUp, PiggyBank, Target, BookOpen, Users, Shield } from "lucide-react"
+import { TrendingUp, PiggyBank, Target, BookOpen, Users, Shield, Zap } from "lucide-react"
+import { OptimizedImage } from "@/components/optimized-image"
 
 export default function HomePage() {
   const features = [

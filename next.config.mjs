@@ -18,6 +18,9 @@ const nextConfig = {
       "images.pexels.com",
     ],
     formats: ["image/webp", "image/avif"],
+    minimumCacheTTL: 86400, // Cache images for 24 hours
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   async headers() {
     return [

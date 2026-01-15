@@ -1,7 +1,7 @@
 import { getBlogPost } from "@/lib/blog-data"
 
 interface StructuredDataProps {
-  type: "website" | "article" | "organization"
+  type: "website" | "article" | "organization" | "financeguide" | "faqpage" | "howto"
   data?: {
     slug?: string
     title?: string
@@ -9,6 +9,12 @@ interface StructuredDataProps {
     image?: string
     publishedAt?: string
     author?: string
+    category?: string
+    tags?: string[]
+    faqs?: { question: string; answer: string }[]
+    steps?: { name: string; text: string; image?: string }[]
+    totalTime?: string
+    estimatedCost?: string
   }
 }
 
@@ -46,10 +52,15 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         if (post) {
           structuredData = {
             "@context": "https://schema.org",
-            "@type": "Article",
+            "@type": "NewsArticle",
             headline: post.title,
             description: post.description,
-            image: post.image,
+            image: {
+              "@type": "ImageObject",
+              url: post.image,
+              width: 1200,
+              height: 630,
+            },
             datePublished: post.publishedAt,
             dateModified: post.publishedAt,
             author: {
@@ -71,7 +82,61 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
             keywords: post.tags.join(", "),
             articleSection: post.category,
             wordCount: post.content.split(" ").length,
+            inLanguage: "es-ES",
+            isAccessibleForFree: true,
+            about: {
+              "@type": "Thing",
+              name: post.category,
+            },
           }
+        }
+      }
+      break
+
+    case "faqpage":
+      if (data?.faqs && data.faqs.length > 0) {
+        structuredData = {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: data.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer,
+            },
+          })),
+        }
+      }
+      break
+
+    case "howto":
+      if (data?.steps && data.steps.length > 0) {
+        structuredData = {
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          name: data.title,
+          description: data.description,
+          image: data.image,
+          totalTime: data.totalTime,
+          estimatedCost: data.estimatedCost,
+          step: data.steps.map((step, index) => ({
+            "@type": "HowToStep",
+            name: step.name,
+            text: step.text,
+            position: index + 1,
+            image: step.image,
+          })),
+          tool: [
+            {
+              "@type": "HowToTool",
+              name: "Calculadora financiera",
+            },
+            {
+              "@type": "HowToTool",
+              name: "Hoja de cálculo",
+            },
+          ],
         }
       }
       break
@@ -102,6 +167,9 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           "Presupuestos",
           "Fondos Indexados",
           "Educación Financiera",
+          "ETFs",
+          "Bolsa de Valores",
+          "Planificación Financiera",
         ],
       }
       break

@@ -1,19 +1,29 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://finanzaspro.com/sitemap.xml
+# Prioritize important content
+Allow: /blog/
+Allow: /ahorro/
+Allow: /inversiones/
+Allow: /jovenes/
+Allow: /recursos/
+Allow: /proyecciones/
 
-# Disallow admin or private areas (if any in the future)
+# Block unnecessary paths
+Disallow: /api/
+Disallow: /_next/
 Disallow: /admin/
 Disallow: /private/
+Disallow: /ads.txt
 
-# Allow all search engines to crawl
+# Specific user agents
 User-agent: Googlebot
 Allow: /
-
 User-agent: Bingbot
 Allow: /
 
-# Crawl delay (optional)
+# Sitemap location
+Sitemap: https://finanzaspro.com/sitemap.xml
+
+# Crawl delay (be respectful to server)
 Crawl-delay: 1

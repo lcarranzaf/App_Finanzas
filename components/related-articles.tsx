@@ -20,28 +20,34 @@ export function RelatedArticles({ currentPostSlug, currentTags, currentCategory 
   const relatedPosts = allPosts
     .filter(post => post.slug !== currentPostSlug)
     .map(post => {
-      let score = 0
+      let relevanceScore = 0
 
       // Same category gets high score
       if (post.category === currentCategory) {
-        score += 10
+        relevanceScore += 10
       }
 
       // Shared tags get points
       const sharedTags = post.tags.filter(tag => currentTags.includes(tag))
-      score += sharedTags.length * 5
+      relevanceScore += sharedTags.length * 5
 
       // Recent posts get slight boost
       const postDate = new Date(post.publishedAt)
       const daysSincePublished = (Date.now() - postDate.getTime()) / (1000 * 60 * 60 * 24)
       if (daysSincePublished < 30) {
-        score += 2
+        relevanceScore += 2
       }
 
-      return { post, score }
+      // SEO boost for posts with "guía", "completo", "paso a paso" in title
+      const titleLower = post.title.toLowerCase()
+      if (titleLower.includes('guía') || titleLower.includes('completo') || titleLower.includes('paso')) {
+        relevanceScore += 3
+      }
+
+      return { post, relevanceScore }
     })
-    .filter(item => item.score > 0)
-    .sort((a, b) => b.score - a.score)
+    .filter(item => item.relevanceScore > 0)
+    .sort((a, b) => b.relevanceScore - a.relevanceScore)
     .slice(0, 3)
     .map(item => item.post)
 
@@ -63,6 +69,9 @@ export function RelatedArticles({ currentPostSlug, currentTags, currentCategory 
                 width={400}
                 height={225}
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwC2gAH/2Q=="
               />
             </div>
             <CardHeader className="pb-3">
@@ -72,7 +81,12 @@ export function RelatedArticles({ currentPostSlug, currentTags, currentCategory 
                 </Badge>
               </div>
               <CardTitle className="line-clamp-2 text-lg">
-                <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
+                <Link 
+                  href={`/blog/${post.slug}`} 
+                  className="hover:text-primary transition-colors"
+                  title={`Lee más sobre ${post.title}`}
+                  aria-label={`Artículo sobre ${post.title}`}
+                >
                   {post.title}
                 </Link>
               </CardTitle>

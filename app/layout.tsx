@@ -103,14 +103,35 @@ export default async function RootLayout({
         <head>
         <StructuredData type="website" />
         <StructuredData type="organization" />
-        {/* Google Analytics - Replace with your tracking ID */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'GA_TRACKING_ID');`}
-        </Script>
+        {/* Google Analytics - Replace GA_TRACKING_ID with your actual tracking ID */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                  page_title: document.title,
+                  page_location: window.location.href,
+                  content_group1: 'finance',
+                  content_group2: 'blog',
+                  custom_map: {'custom_parameter_1': 'author'}
+                });
+                
+                // Enhanced ecommerce tracking for finance content
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                  'anonymize_ip': true,
+                  'allow_google_signals': false
+                });
+              `}
+            </Script>
+          </>
+        )}
         {/* Google AdSense - Replace with your publisher ID */}
         <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4657042320327960"

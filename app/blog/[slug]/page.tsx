@@ -1,19 +1,90 @@
 import { getBlogPost } from "@/lib/blog-data"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calendar, Clock, Share2, Facebook, Twitter, Linkedin } from "lucide-react"
+import { Calendar, Clock, Share2, Facebook, Twitter, Linkedin, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import Image from 'next/image'
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { RelatedArticles } from "@/components/related-articles"
 import { DisqusComments } from "@/components/disqus-comments"
+import { Metadata } from "next"
+import StructuredData from "@/components/structured-data"
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { ContextualLinks } from "@/components/internal-links"
+import { OptimizedImage } from "@/components/optimized-image"
+import { LazyLoad } from "@/components/lazy-load"
 
 interface BlogPostPageProps {
   params: {
     slug: string
+  }
+}
+
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+  const post = getBlogPost(params.slug)
+  
+  if (!post) {
+    return {
+      title: "Artículo no encontrado",
+      description: "Este artículo no está disponible."
+    }
+  }
+
+  return {
+    title: post.title,
+    description: post.description,
+    keywords: post.tags.join(", "),
+    authors: [{ name: post.author, url: "https://finanzaspro.com" }],
+    creator: post.author,
+    publisher: "FinanzasPro",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      images: [
+        {
+          url: post.image,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+      url: `https://finanzaspro.com/blog/${post.slug}`,
+      siteName: "FinanzasPro",
+      type: "article",
+      publishedTime: post.publishedAt,
+      modifiedTime: post.publishedAt,
+      authors: [post.author],
+      section: post.category,
+      tags: post.tags,
+      locale: "es_ES",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: [post.image],
+      creator: "@finanzaspro",
+      site: "@finanzaspro",
+    },
+    alternates: {
+      canonical: `https://finanzaspro.com/blog/${post.slug}`,
+      languages: {
+        "es-ES": `https://finanzaspro.com/blog/${post.slug}`,
+      },
+    },
   }
 }
 
@@ -26,9 +97,70 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
   const shareUrl = `https://finanzaspro.com/blog/${post.slug}`
 
+  const contentLower = post.content.toLowerCase()
+  
+  const faqRegex = /(?:¿(?:qué|cómo|cuándo|dónde|por qué|quién|cuánto|cuál)[^?]*\?)/gi
+  const faqMatches = post.content.match(faqRegex)
+  
+  const faqs = faqMatches && faqMatches.length > 2 ? faqMatches.slice(0, 5).map((question, index) => ({
+    question: question.trim(),
+    answer: `Respuesta relacionada con ${question.trim().slice(0, 50)}...`
+  })) : undefined
+  
+  const hasHowTo = contentLower.includes('paso') || 
+                   contentLower.includes('paso a paso') || 
+                   contentLower.includes('cómo') ||
+                   contentLower.includes('guía completa')
+  
+  const stepRegex = /(?:paso\s+\d+|punto\s+\d+|sección\s+\d+)(?:[:.]\s*)([^\n]+)/gi
+  const stepMatches = post.content.match(stepRegex)
+  
+  const howtoData = hasHowTo && stepMatches ? {
+    steps: stepMatches.slice(0, 6).map((step, index) => ({
+      name: `Paso ${index + 1}`,
+      text: step.replace(/^paso\s+\d+[:.]\s*/i, '').trim()
+    })),
+    totalTime: post.readTime,
+    estimatedCost: "Gratis"
+  } : undefined
+
   return (
-    <div className="py-16 sm:py-20">
-      <div className="mx-auto max-w-4xl px-6 lg:px-8">
+    <>
+      <StructuredData type="article" data={{ 
+        slug: post.slug,
+        title: post.title,
+        description: post.description,
+        image: post.image,
+        publishedAt: post.publishedAt,
+        author: post.author,
+        category: post.category,
+        tags: post.tags
+      }} />
+      
+      {faqs && (
+        <StructuredData 
+          type="faqpage" 
+          data={{ 
+            faqs,
+            title: post.title,
+            description: post.description
+          }} 
+        />
+      )}
+      
+      {howtoData && (
+        <StructuredData 
+          type="howto" 
+          data={{ 
+            ...howtoData,
+            title: post.title,
+            description: post.description,
+            image: post.image
+          }} 
+        />
+      )}
+      <div className="py-16 sm:py-20">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
         <Breadcrumbs />
         {/* Header */}
         <header className="mb-10">
@@ -111,11 +243,22 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               width={1200}
               height={675}
               priority
+              sizes="100vw"
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwC2gAH/2Q=="
+              fetchPriority="high"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </div>
         </div>
 
+        <ContextualLinks 
+          currentTags={post.tags}
+          currentCategory={post.category}
+          currentSlug={post.slug}
+          count={3}
+        />
+        
         {/* Article Content */}
         <div className="article-content max-w-none prose prose-lg prose-slate dark:prose-invert">
           <ReactMarkdown
@@ -175,12 +318,15 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
 
         {/* Comments */}
-        <DisqusComments
-          postSlug={post.slug}
-          postTitle={post.title}
-          postUrl={`https://finanzaspro.com/blog/${post.slug}`}
-        />
+        <LazyLoad offset={300} placeholder={<div className="h-64 bg-muted/30 rounded-lg flex items-center justify-center text-muted-foreground">Cargando comentarios...</div>}>
+          <DisqusComments
+            postSlug={post.slug}
+            postTitle={post.title}
+            postUrl={`https://finanzaspro.com/blog/${post.slug}`}
+          />
+        </LazyLoad>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
