@@ -2,80 +2,226 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Redirección M3U8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparando tu contenido - FinanzasPro</title>
+    <meta name="description" content="Tu contenido se está preparando. Mientras esperas, descubre consejos financieros de FinanzasPro.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://app-finanzas-mu.vercel.app">
 
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4657042320327960"
             crossorigin="anonymous"></script>
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMSEL1C9HK"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'GA_TRACKING_ID');
+        gtag('config', 'G-FMSEL1C9HK');
     </script>
 
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            margin: 0;
-            height: 100vh;
-            background-color: black;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            text-align: center;
+            min-height: 100vh;
+            background: #0a0a0a;
+            color: #e5e5e5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
         }
 
-        .container {
+        /* Header */
+        .header {
+            background: #111;
+            border-bottom: 1px solid #222;
+            padding: 16px 20px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            gap: 15px;
-            width: 90%;
-            max-width: 400px;
+        }
+        .logo { color: #3b82f6; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
+        .header-links a { color: #888; text-decoration: none; font-size: 0.85rem; margin-left: 16px; }
+        .header-links a:hover { color: #3b82f6; }
+
+        /* Main content */
+        .main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        /* Loading section */
+        .loading-section {
+            background: #151515;
+            border: 1px solid #252525;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .loader {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #444;
-            border-top: 5px solid #fff;
+            width: 40px;
+            height: 40px;
+            border: 3px solid #333;
+            border-top: 3px solid #3b82f6;
             border-radius: 50%;
-            animation: spin 1s linear infinite;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
         }
-
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
 
-        .ad-box {
+        .loading-section h2 { font-size: 1.1rem; font-weight: 500; color: #ccc; margin-bottom: 8px; }
+        .loading-section .countdown-text { font-size: 0.9rem; color: #888; }
+
+        .progress-bar {
             width: 100%;
-            margin-top: 10px;
+            height: 4px;
+            background: #252525;
+            border-radius: 4px;
+            margin-top: 16px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: #3b82f6;
+            border-radius: 4px;
+            width: 0%;
+            transition: width 1s linear;
         }
 
-        button {
-            padding: 10px 20px;
-            border-radius: 5px;
+        #redirectBtn {
+            padding: 10px 24px;
+            border-radius: 8px;
             border: none;
             cursor: pointer;
+            background: #3b82f6;
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-top: 16px;
             display: none;
+            transition: background 0.2s;
         }
+        #redirectBtn:hover { background: #2563eb; }
+
+        /* Ad section */
+        .ad-section {
+            margin: 24px 0;
+        }
+
+        /* Content section */
+        .content-section {
+            margin-top: 30px;
+        }
+        .content-section h3 {
+            font-size: 1.15rem;
+            color: #e5e5e5;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #222;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+        @media (min-width: 600px) {
+            .tips-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .tip-card {
+            background: #151515;
+            border: 1px solid #252525;
+            border-radius: 10px;
+            padding: 18px;
+            transition: border-color 0.2s;
+        }
+        .tip-card:hover { border-color: #3b82f6; }
+        .tip-card h4 { color: #3b82f6; font-size: 0.95rem; margin-bottom: 6px; }
+        .tip-card p { color: #999; font-size: 0.85rem; line-height: 1.5; }
+
+        .tip-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #3b82f6;
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+        .tip-card a:hover { text-decoration: underline; }
+
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid #222;
+            text-align: center;
+        }
+        .footer p { color: #555; font-size: 0.75rem; }
+        .footer a { color: #3b82f6; text-decoration: none; }
+
+        /* Cookie banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #1a1a1a;
+            border-top: 1px solid #333;
+            padding: 14px 20px;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            z-index: 100;
+            flex-wrap: wrap;
+        }
+        .cookie-banner p { color: #aaa; font-size: 0.8rem; flex: 1; min-width: 200px; }
+        .cookie-banner a { color: #3b82f6; }
+        .cookie-btns { display: flex; gap: 8px; }
+        .cookie-btns button {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid #333;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        .btn-accept { background: #3b82f6; color: white; border-color: #3b82f6; }
+        .btn-reject { background: transparent; color: #aaa; }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="loader"></div>
+    <!-- Header -->
+    <header class="header">
+        <a href="https://app-finanzas-mu.vercel.app" class="logo">FinanzasPro</a>
+        <div class="header-links">
+            <a href="https://app-finanzas-mu.vercel.app/blog">Blog</a>
+            <a href="https://app-finanzas-mu.vercel.app/inversiones">Inversiones</a>
+            <a href="https://app-finanzas-mu.vercel.app/ahorro">Ahorro</a>
+        </div>
+    </header>
 
-        <h2 id="countdown">Cargando contenido...</h2>
+    <div class="main">
+        <!-- Loading -->
+        <div class="loading-section">
+            <div class="loader"></div>
+            <h2>Preparando tu contenido</h2>
+            <p class="countdown-text" id="countdown">Estará listo en unos segundos...</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <button id="redirectBtn">Continuar al contenido</button>
+        </div>
 
-        <!-- ANUNCIO DE ADSENSE -->
-        <div class="ad-box">
+        <!-- Ad -->
+        <div class="ad-section">
             <ins class="adsbygoogle"
                 style="display:block"
                 data-ad-client="ca-pub-4657042320327960"
@@ -84,57 +230,130 @@
                 data-full-width-responsive="true"></ins>
         </div>
 
-        <button id="redirectBtn">Redirigir ahora</button>
+        <!-- Real content -->
+        <div class="content-section">
+            <h3>Mientras esperas, mejora tus finanzas</h3>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h4>El poder del interés compuesto</h4>
+                    <p>$100 al mes al 8% anual se convierten en $149,000 en 30 años. Empieza hoy y deja que el tiempo trabaje para ti.</p>
+                    <a href="https://app-finanzas-mu.vercel.app/blog/interes-compuesto-como-funciona">Leer más &rarr;</a>
+                </div>
+                <div class="tip-card">
+                    <h4>Regla 50/30/20</h4>
+                    <p>Destina 50% a necesidades, 30% a deseos y 20% a ahorro e inversión. Simple pero efectivo.</p>
+                    <a href="https://app-finanzas-mu.vercel.app/blog/presupuesto-personal-completo">Leer más &rarr;</a>
+                </div>
+                <div class="tip-card">
+                    <h4>Tu primera inversión</h4>
+                    <p>Los fondos indexados son la mejor opción para principiantes. Bajas comisiones y diversificación automática.</p>
+                    <a href="https://app-finanzas-mu.vercel.app/blog/invertir-fondos-indexados-principiantes">Leer más &rarr;</a>
+                </div>
+                <div class="tip-card">
+                    <h4>Ahorra para tu casa</h4>
+                    <p>Con un plan claro puedes reunir el enganche en 2-3 años. Automatiza tu ahorro el día de pago.</p>
+                    <a href="https://app-finanzas-mu.vercel.app/blog/como-ahorrar-para-comprar-casa">Leer más &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second ad -->
+        <div class="ad-section" style="margin-top: 30px;">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4657042320327960"
+                data-ad-slot="7561827917"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2026 <a href="https://app-finanzas-mu.vercel.app">FinanzasPro</a> - Tu guía para el éxito financiero.
+            <a href="https://app-finanzas-mu.vercel.app/privacidad">Privacidad</a></p>
+        </div>
+    </div>
+
+    <!-- Cookie consent -->
+    <div class="cookie-banner" id="cookieBanner">
+        <p>Usamos cookies y servicios de terceros (Google AdSense, Analytics) para mejorar tu experiencia.
+        <a href="https://app-finanzas-mu.vercel.app/privacidad">Más info</a></p>
+        <div class="cookie-btns">
+            <button class="btn-reject" onclick="closeCookies()">Rechazar</button>
+            <button class="btn-accept" onclick="acceptCookies()">Aceptar</button>
+        </div>
     </div>
 
     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+        // Cookie consent
+        if (!localStorage.getItem('cookie-consent')) {
+            document.getElementById('cookieBanner').style.display = 'flex';
+        }
+        function acceptCookies() {
+            localStorage.setItem('cookie-consent', 'accepted');
+            document.getElementById('cookieBanner').style.display = 'none';
+        }
+        function closeCookies() {
+            localStorage.setItem('cookie-consent', 'rejected');
+            document.getElementById('cookieBanner').style.display = 'none';
+        }
 
+        // AdSense
+        try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
+        try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
+
+        // Countdown and redirect
         let countdown = 7;
+        const totalTime = 7;
         const countdownEl = document.getElementById('countdown');
         const redirectBtn = document.getElementById('redirectBtn');
+        const progressFill = document.getElementById('progressFill');
 
         const timer = setInterval(() => {
             countdown--;
-            countdownEl.textContent = `Redirigiendo en ${countdown} segundos...`;
+            const progress = ((totalTime - countdown) / totalTime) * 100;
+            progressFill.style.width = progress + '%';
+            countdownEl.textContent = 'Estará listo en ' + countdown + ' segundos...';
 
-            if (countdown <= 1) {
-                redirectBtn.style.display = 'block';
+            if (countdown <= 2) {
+                redirectBtn.style.display = 'inline-block';
             }
 
             if (countdown <= 0) {
                 clearInterval(timer);
+                progressFill.style.width = '100%';
+                countdownEl.textContent = '¡Listo!';
                 performRedirect();
             }
         }, 1000);
 
-        redirectBtn.addEventListener('click', () => {
+        redirectBtn.addEventListener('click', function() {
             clearInterval(timer);
             performRedirect();
         });
 
         function performRedirect() {
-            const params = new URLSearchParams(window.location.search);
-            const id = params.get("id");
+            var params = new URLSearchParams(window.location.search);
+            var id = params.get("id");
 
             if (!id) {
-                document.body.innerHTML = "<h3>Error: falta el parámetro ?id=</h3>";
+                countdownEl.textContent = 'Error: enlace inválido';
                 return;
             }
 
-            const apiUrl = `https://my-event-worker.per-405.workers.dev/${id}`;
+            var apiUrl = 'https://my-event-worker.per-405.workers.dev/' + id;
 
             fetch(apiUrl)
-                .then(r => r.json())
-                .then(data => {
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
                     if (data.m3u8_link) {
                         window.location.href = data.m3u8_link;
                     } else {
-                        document.body.innerHTML = "<h3>Error: m3u8_link no encontrado</h3>";
+                        countdownEl.textContent = 'Contenido no disponible';
                     }
                 })
-                .catch(err => {
-                    document.body.innerHTML = `<h3>Error: ${err.message}</h3>`;
+                .catch(function() {
+                    countdownEl.textContent = 'Error al cargar. Intenta de nuevo.';
                 });
         }
     </script>
