@@ -14,7 +14,6 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
 Disallow: /private/
-Disallow: /ads.txt
 
 # Specific user agents
 User-agent: Googlebot
