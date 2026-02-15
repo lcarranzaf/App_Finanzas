@@ -64,7 +64,7 @@ export default function BlogPage() {
 
         {/* Banner Horizontal AdSense */}
         <div className="mt-12">
-          <AdSense slot="3456789012" style={{ display: 'block', width: '100%', height: '90px', margin: '0 auto' }} />
+          <AdSense slot="7561827917" format="horizontal" />
         </div>
 
         {/* Blog Posts Grid */}
@@ -130,7 +130,7 @@ export default function BlogPage() {
 
         {/* Sidebar AdSense */}
         <div className="mt-16">
-          <AdSense slot="4567890123" style={{ display: 'block', width: '300px', height: '250px', margin: '0 auto' }} />
+          <AdSense slot="1562571362" />
         </div>
       </div>
     </div>

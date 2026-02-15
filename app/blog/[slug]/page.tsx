@@ -15,6 +15,7 @@ import remarkGfm from 'remark-gfm'
 import { ContextualLinks } from "@/components/internal-links"
 import { OptimizedImage } from "@/components/optimized-image"
 import { LazyLoad } from "@/components/lazy-load"
+import AdSense from "@/components/AdSense"
 
 interface BlogPostPageProps {
   params: {
@@ -252,13 +253,18 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </div>
 
-        <ContextualLinks 
+        <ContextualLinks
           currentTags={post.tags}
           currentCategory={post.category}
           currentSlug={post.slug}
           count={3}
         />
-        
+
+        {/* Ad - Antes del contenido */}
+        <div className="my-8">
+          <AdSense slot="7561827917" format="horizontal" />
+        </div>
+
         {/* Article Content */}
         <div className="article-content max-w-none prose prose-lg prose-slate dark:prose-invert">
           <ReactMarkdown
@@ -291,6 +297,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </ReactMarkdown>
         </div>
 
+        {/* Ad - Después del contenido */}
+        <div className="my-8">
+          <AdSense slot="5745358955" format="horizontal" />
+        </div>
+
         {/* Tags */}
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-wrap items-center gap-3">
@@ -301,6 +312,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               </Badge>
             ))}
           </div>
+        </div>
+
+        {/* Ad - Antes de artículos relacionados */}
+        <div className="my-8">
+          <AdSense slot="9249489692" format="horizontal" />
         </div>
 
         {/* Related Articles */}
