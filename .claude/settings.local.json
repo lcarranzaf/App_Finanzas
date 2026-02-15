@@ -3,7 +3,8 @@
     "allow": [
       "Bash(curl:*)",
       "Bash(find:*)",
-      "Bash(npx next build:*)"
+      "Bash(npx next build:*)",
+      "WebFetch(domain:app-finanzas-mu.vercel.app)"
     ]
   }
 }

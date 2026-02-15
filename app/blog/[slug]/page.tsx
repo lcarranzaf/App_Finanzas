@@ -16,6 +16,7 @@ import { ContextualLinks } from "@/components/internal-links"
 import { OptimizedImage } from "@/components/optimized-image"
 import { LazyLoad } from "@/components/lazy-load"
 import AdSense from "@/components/AdSense"
+import { TableOfContents } from "@/components/table-of-contents"
 
 interface BlogPostPageProps {
   params: {
@@ -97,6 +98,28 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const shareUrl = `https://app-finanzas-mu.vercel.app/blog/${post.slug}`
+
+  // Helper to generate heading IDs for TOC navigation
+  const generateId = (text: string) => {
+    const str = typeof text === 'string' ? text : ''
+    return str
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+      .trim()
+  }
+
+  const getTextFromChildren = (children: React.ReactNode): string => {
+    if (typeof children === 'string') return children
+    if (Array.isArray(children)) return children.map(getTextFromChildren).join('')
+    if (children && typeof children === 'object' && 'props' in children) {
+      return getTextFromChildren((children as any).props.children)
+    }
+    return ''
+  }
 
   const contentLower = post.content.toLowerCase()
   
@@ -260,6 +283,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           count={3}
         />
 
+        {/* Tabla de contenidos */}
+        <TableOfContents content={post.content} />
+
         {/* Ad - Antes del contenido */}
         <div className="my-8">
           <AdSense slot="7561827917" format="horizontal" />
@@ -270,11 +296,33 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
-              h1: ({children}) => <h1 className="text-4xl font-bold tracking-tight text-foreground mt-12 mb-6 pb-4 border-b border-border">{children}</h1>,
-              h2: ({children}) => <h2 className="text-3xl font-bold tracking-tight text-foreground mt-10 mb-5">{children}</h2>,
-              h3: ({children}) => <h3 className="text-2xl font-bold tracking-tight text-foreground mt-8 mb-4">{children}</h3>,
-              h4: ({children}) => <h4 className="text-xl font-bold tracking-tight text-foreground mt-6 mb-3">{children}</h4>,
-              p: ({children}) => <p className="text-foreground leading-8 mb-6 text-base font-normal">{children}</p>,
+              h1: ({children}) => {
+                const id = generateId(getTextFromChildren(children))
+                return <h1 id={id} className="text-4xl font-bold tracking-tight text-foreground mt-12 mb-6 pb-4 border-b border-border scroll-mt-24">{children}</h1>
+              },
+              h2: ({children}) => {
+                const id = generateId(getTextFromChildren(children))
+                return <h2 id={id} className="text-3xl font-bold tracking-tight text-foreground mt-14 mb-5 pb-3 border-b border-border/50 scroll-mt-24">{children}</h2>
+              },
+              h3: ({children}) => {
+                const id = generateId(getTextFromChildren(children))
+                return <h3 id={id} className="text-2xl font-bold tracking-tight text-foreground mt-10 mb-4 scroll-mt-24">{children}</h3>
+              },
+              h4: ({children}) => <h4 className="text-xl font-bold tracking-tight text-foreground mt-8 mb-3">{children}</h4>,
+              p: ({children}) => {
+                const text = getTextFromChildren(children)
+                // Style "Tip:", "Importante:", "Nota:" as callout boxes
+                if (text.startsWith('Tip:') || text.startsWith('**Tip**:') || text.startsWith('**Tip:**')) {
+                  return <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4 my-6 text-foreground leading-7">{children}</div>
+                }
+                if (text.startsWith('Importante:') || text.startsWith('**Importante**:') || text.startsWith('**Importante:**')) {
+                  return <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4 my-6 text-foreground leading-7">{children}</div>
+                }
+                if (text.startsWith('La buena noticia') || text.startsWith('**La buena noticia')) {
+                  return <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4 my-6 text-foreground leading-7">{children}</div>
+                }
+                return <p className="text-foreground leading-8 mb-6 text-base font-normal">{children}</p>
+              },
               ul: ({children}) => <ul className="my-6 space-y-3 list-disc list-outside ml-6 text-foreground">{children}</ul>,
               ol: ({children}) => <ol className="my-6 space-y-3 list-decimal list-outside ml-6 text-foreground">{children}</ol>,
               li: ({children}) => <li className="text-foreground leading-7 pl-2 mb-2">{children}</li>,
@@ -282,15 +330,26 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               em: ({children}) => <em className="italic text-foreground/90">{children}</em>,
               code: ({children}) => <code className="bg-muted/80 text-sm px-2 py-1 rounded-md font-mono text-foreground border border-border">{children}</code>,
               a: ({children, href}) => <a href={href} className="text-primary hover:underline font-medium transition-colors">{children}</a>,
-              blockquote: ({children}) => <blockquote className="border-l-4 border-primary pl-6 italic my-6 text-muted-foreground">{children}</blockquote>,
-              table: ({children}) => <table>{children}</table>,
-              th: ({children}) => <th>{children}</th>,
-              td: ({children}) => <td>{children}</td>,
-              tr: ({children}) => <tr>{children}</tr>,
-              thead: ({children}) => <thead>{children}</thead>,
-              tbody: ({children}) => <tbody>{children}</tbody>,
-              img: ({src, alt}) => <Image src={src || '/placeholder.svg'} alt={alt || ''} width={800} height={400} className="rounded-xl shadow-xl my-10 w-full border border-border/20" />, 
-              hr: () => <hr className="border-border my-8" />
+              blockquote: ({children}) => (
+                <blockquote className="border-l-4 border-primary bg-primary/5 pl-6 pr-4 py-4 italic my-8 text-muted-foreground rounded-r-lg">{children}</blockquote>
+              ),
+              table: ({children}) => (
+                <div className="my-8 overflow-x-auto rounded-lg border border-border">
+                  <table className="w-full text-sm">{children}</table>
+                </div>
+              ),
+              thead: ({children}) => <thead className="bg-muted/50 border-b border-border">{children}</thead>,
+              tbody: ({children}) => <tbody className="divide-y divide-border">{children}</tbody>,
+              tr: ({children}) => <tr className="hover:bg-muted/30 transition-colors">{children}</tr>,
+              th: ({children}) => <th className="px-4 py-3 text-left font-semibold text-foreground">{children}</th>,
+              td: ({children}) => <td className="px-4 py-3 text-muted-foreground">{children}</td>,
+              img: ({src, alt}) => (
+                <figure className="my-10">
+                  <Image src={src || '/placeholder.svg'} alt={alt || ''} width={800} height={400} className="rounded-xl shadow-lg w-full border border-border/20" />
+                  {alt && <figcaption className="mt-3 text-center text-sm text-muted-foreground italic">{alt}</figcaption>}
+                </figure>
+              ),
+              hr: () => <hr className="border-border my-10" />
             }}
           >
             {post.content || ""}
@@ -300,6 +359,27 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Ad - Después del contenido */}
         <div className="my-8">
           <AdSense slot="5745358955" format="horizontal" />
+        </div>
+
+        {/* CTA al final del artículo */}
+        <div className="mt-12 rounded-xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 p-8">
+          <h3 className="text-2xl font-bold text-foreground mb-3">
+            ¿Te fue útil este artículo?
+          </h3>
+          <p className="text-muted-foreground mb-6">
+            Explora más contenido sobre {post.category.toLowerCase()} y mejora tu situación financiera hoy mismo.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Button asChild>
+              <Link href="/blog">
+                Ver más artículos
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <Link href="/proyecciones">Calcular mis proyecciones</Link>
+            </Button>
+          </div>
         </div>
 
         {/* Tags */}
@@ -327,10 +407,31 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         />
 
         {/* Back Link */}
-        <div className="mt-10 pt-8 border-t border-border">
+        <div className="mt-10 pt-8 border-t border-border flex justify-between items-center">
           <Button variant="outline" asChild>
             <Link href="/blog">← Volver al Blog</Link>
           </Button>
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-muted-foreground hidden sm:inline">Compartir:</span>
+            <Button variant="ghost" size="sm" className="h-9 w-9 p-0" asChild>
+              <Link
+                href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${encodeURIComponent(post.title)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Twitter className="h-4 w-4" />
+              </Link>
+            </Button>
+            <Button variant="ghost" size="sm" className="h-9 w-9 p-0" asChild>
+              <Link
+                href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook className="h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
         </div>
 
         {/* Comments */}

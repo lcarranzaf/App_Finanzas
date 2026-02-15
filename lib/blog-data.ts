@@ -156,7 +156,7 @@ Comienza simple. Una vez que domines lo básico, agrega complejidad. El objetivo
 
 **Recuerda**: Medir es el primer paso para mejorar.
     `,
-    publishedAt: "2025-03-10",
+    publishedAt: "2026-01-15",
     readTime: "10 min",
     category: "Presupuesto",
     tags: ["presupuesto", "finanzas personales", "gastos", "control financiero"],
@@ -473,7 +473,7 @@ Invertir en acciones individuales puede ser gratificante tanto financiera como i
 
 Las acciones son una herramienta poderosa para crear riqueza, pero requieren conocimiento, paciencia y disciplina. Empieza pequeño, aprende constantemente, y con el tiempo podrás construir una cartera de acciones que te acerque a tus objetivos financieros.
     `,
-    publishedAt: "2025-04-10",
+    publishedAt: "2026-02-05",
     readTime: "18 min",
     category: "Inversiones",
      tags: ["acciones", "inversiones", "principiantes", "análisis fundamental", "cartera de acciones"],
@@ -651,9 +651,6 @@ Imagina que compraste un bono al 4% cuando las tasas de mercado eran 4%. Si las 
 
 **La buena noticia**: Si mantienes el bono hasta el vencimiento, recibirás el valor nominal completo ($1,000) sin importar las fluctuaciones de precio.
 
-![Gráfico explicando la relación inversa entre precios de bonos y tasas de interés](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80)
-
-*La relación precio-tasa de interés es fundamental para entender el comportamiento de los bonos*
 
 ### Duración: Medida de sensibilidad
 
@@ -713,9 +710,6 @@ Para la mayoría de inversores, los fondos de bonos o ETFs son más prácticos q
 - **AGG** (iShares Core U.S. Aggregate Bond): Similar a BND
 - **TLT** (iShares 20+ Year Treasury Bond): Bonos del gobierno a largo plazo
 
-![Diversificación de cartera mostrando la combinación de bonos y acciones](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80)
-
-*Los fondos de bonos ofrecen diversificación instantánea con una sola inversión*
 
 ### Estrategia 3: Asignación por edad
 
@@ -838,7 +832,7 @@ Los bonos pueden no ser tan emocionantes como las acciones, pero son fundamental
 
 Recuerda: Los bonos no están diseñados para hacerte rico rápidamente, sino para proteger y estabilizar tu riqueza mientras generas ingresos predecibles. En una cartera bien construida, los bonos son el ancla que mantiene tu barco estable mientras las acciones proporcionan el viento para hacerlo avanzar.
     `,
-    publishedAt: "2025-04-12",
+    publishedAt: "2026-02-10",
     readTime: "20 min",
     category: "Inversiones",
      tags: ["bonos", "renta fija", "inversiones", "estabilidad", "ingresos pasivos"],
@@ -1049,7 +1043,7 @@ La deuda NO define tu futuro. Millones de personas han salido de deuda profunda.
 
 Tu yo del futuro (sin deuda) te lo agradecerá.
     `,
-    publishedAt: "2025-03-08",
+    publishedAt: "2026-01-20",
     readTime: "14 min",
     category: "Deudas",
      tags: ["deuda", "tarjeta crédito", "finanzas personales", "estrategia"],
@@ -1257,7 +1251,7 @@ La diferencia entre ser pobre, clase media y rico no es el salario inicial. Es:
 
 Abre esa cuenta hoy. Tu yo del futuro no lo lamentará.
     `,
-    publishedAt: "2025-03-05",
+    publishedAt: "2026-01-10",
     readTime: "12 min",
     category: "Inversiones",
      tags: ["inversiones", "principiantes", "fondos indexados", "bolsa"],
@@ -1340,7 +1334,7 @@ Ahorrar con poco dinero es posible si tienes la estrategia correcta. Comienza co
 
 El primer paso es siempre el más difícil, pero una vez que desarrolles el hábito, ahorrar se volverá automático. Tu yo del futuro te lo agradecerá.
     `,
-    publishedAt: "2025-01-15",
+    publishedAt: "2026-01-05",
     readTime: "8 min",
     category: "Ahorro",
      tags: ["ahorro", "presupuesto", "fondo de emergencia", "finanzas personales"],
@@ -1349,11 +1343,11 @@ El primer paso es siempre el más difícil, pero una vez que desarrolles el háb
   },
   {
     slug: "mejores-apps-finanzas-personales-2025",
-    title: "Las 7 mejores apps de finanzas personales en 2025",
+    title: "Las 7 mejores apps de finanzas personales en 2026",
     description:
       "Análisis completo de Fintonic, Revolut, Nubank y otras apps que revolucionarán tu gestión financiera este año.",
     content: `
-# Las 7 mejores apps de finanzas personales en 2025
+# Las 7 mejores apps de finanzas personales en 2026
 
 La tecnología financiera ha revolucionado la forma en que gestionamos nuestro dinero. En 2025, estas aplicaciones destacan por su funcionalidad, seguridad y facilidad de uso.
 
@@ -1499,7 +1493,7 @@ La mejor app de finanzas es la que realmente usas. Comienza con una gratuita com
 
 Recuerda: la tecnología es solo una herramienta. El éxito financiero depende de tus hábitos y decisiones consistentes.
     `,
-    publishedAt: "2025-01-12",
+    publishedAt: "2026-01-08",
     readTime: "12 min",
     category: "Tecnología",
      tags: ["apps", "tecnología", "fintech", "herramientas"],
@@ -1967,7 +1961,7 @@ Los fondos indexados son la forma más simple y efectiva de construir riqueza a 
 
 Recuerda: **tiempo en el mercado > timing del mercado**. Empieza hoy, aunque sea con $50.
     `,
-    publishedAt: "2025-01-10",
+    publishedAt: "2026-01-03",
     readTime: "15 min",
     category: "Inversiones",
     tags: ["fondos indexados", "ETF", "S&P 500", "inversiones", "Warren Buffett"],
@@ -2179,7 +2173,7 @@ Las tarjetas de crédito son herramientas poderosas cuando se usan correctamente
 
 El crédito es un privilegio que se gana con responsabilidad. Úsalo sabiamente y será tu aliado hacia la libertad financiera.
     `,
-    publishedAt: "2025-01-08",
+    publishedAt: "2026-01-12",
     readTime: "12 min",
     category: "Crédito",
     tags: ["tarjetas de crédito", "score crediticio", "deudas", "finanzas personales"],
@@ -2188,11 +2182,11 @@ El crédito es un privilegio que se gana con responsabilidad. Úsalo sabiamente 
   },
   {
     slug: "5-formas-ganar-dinero-extra-online",
-    title: "5 formas comprobadas de ganar dinero extra online en 2025",
+    title: "5 formas comprobadas de ganar dinero extra online en 2026",
     description:
       "Freelancing, print-on-demand, marketing de afiliados y más. Estrategias reales para generar ingresos adicionales desde casa.",
     content: `
-# 5 formas comprobadas de ganar dinero extra online en 2025
+# 5 formas comprobadas de ganar dinero extra online en 2026
 
 En la economía digital actual, generar ingresos adicionales desde casa es más accesible que nunca. Estas 5 estrategias han sido probadas por miles de personas y pueden generar desde **$200 hasta $5,000+ mensuales** dependiendo de tu dedicación.
 
@@ -2505,7 +2499,7 @@ Elige la estrategia que mejor se alinee con tus habilidades y disponibilidad de 
 
 ¡Empieza hoy mismo con pequeños pasos y construye tu futuro financiero digital!
     `,
-    publishedAt: "2025-01-05",
+    publishedAt: "2026-01-18",
     readTime: "18 min",
     category: "Ingresos Extra",
     tags: ["freelancing", "ingresos online", "emprendimiento", "trabajo remoto"],
