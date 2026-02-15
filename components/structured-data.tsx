@@ -40,7 +40,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           name: "FinanzasPro",
           logo: {
             "@type": "ImageObject",
-            url: "https://app-finanzas-mu.vercel.app/logo.png",
+            url: "https://app-finanzas-mu.vercel.app/og-image.jpg",
           },
         },
       }
@@ -52,7 +52,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         if (post) {
           structuredData = {
             "@context": "https://schema.org",
-            "@type": "NewsArticle",
+            "@type": "Article",
             headline: post.title,
             description: post.description,
             image: {
@@ -72,7 +72,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
               name: "FinanzasPro",
               logo: {
                 "@type": "ImageObject",
-                url: "https://app-finanzas-mu.vercel.app/logo.png",
+                url: "https://app-finanzas-mu.vercel.app/og-image.jpg",
               },
             },
             mainEntityOfPage: {
@@ -148,17 +148,13 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         name: "FinanzasPro",
         description: "Plataforma educativa especializada en finanzas personales, inversiones y estrategias de ahorro.",
         url: "https://app-finanzas-mu.vercel.app",
-        logo: "https://app-finanzas-mu.vercel.app/logo.png",
+        logo: "https://app-finanzas-mu.vercel.app/og-image.jpg",
         contactPoint: {
           "@type": "ContactPoint",
           contactType: "customer service",
           email: "contacto@app-finanzas-mu.vercel.app",
         },
-        sameAs: [
-          "https://twitter.com/finanzaspro",
-          "https://linkedin.com/company/finanzaspro",
-          "https://facebook.com/finanzaspro",
-        ],
+        sameAs: [],
         foundingDate: "2022",
         knowsAbout: [
           "Finanzas Personales",

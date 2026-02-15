@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { GraduationCap, Briefcase, Home, Car } from "lucide-react"
 import type { Metadata } from "next"
 import AdSense from "@/components/AdSense"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export const metadata: Metadata = {
   title: "Finanzas para Jóvenes - Guía Completa para Estudiantes",
@@ -63,6 +64,9 @@ export default function JovenesPage() {
   return (
     <div className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Breadcrumbs */}
+        <Breadcrumbs />
+
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
           <GraduationCap className="mx-auto h-16 w-16 text-primary mb-6" />

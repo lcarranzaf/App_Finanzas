@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { ExternalLink, Star, Smartphone, CreditCard, TrendingUp, BookOpen, Calculator, Shield } from "lucide-react"
 import type { Metadata } from "next"
 import AdSense from "@/components/AdSense"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export const metadata: Metadata = {
   title: "Recursos Financieros - Herramientas y Apps Recomendadas",
@@ -215,6 +216,9 @@ export default function RecursosPage() {
   return (
     <div className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Breadcrumbs */}
+        <Breadcrumbs />
+
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">

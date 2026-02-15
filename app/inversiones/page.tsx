@@ -11,6 +11,7 @@ import {
 } from "lucide-react"
 import type { Metadata } from "next"
 import AdSense from "@/components/AdSense"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export const metadata: Metadata = {
   title: "Guía de Inversiones - Comienza a Invertir tu Dinero",
@@ -175,6 +176,11 @@ export default function InversionesPage() {
 
   return (
     <div className="flex flex-col">
+      {/* Breadcrumbs */}
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-6">
+        <Breadcrumbs />
+      </div>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-background via-background to-emerald-500/5 py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

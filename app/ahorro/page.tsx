@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { PiggyBank, Target, Calculator, Zap, CheckCircle2 } from "lucide-react"
 import type { Metadata } from "next"
 import AdSense from "@/components/AdSense"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export const metadata: Metadata = {
   title: "Estrategias de Ahorro - Guías y Consejos Prácticos",
@@ -114,6 +115,11 @@ export default function AhorroPage() {
 
   return (
     <div className="flex flex-col">
+      {/* Breadcrumbs */}
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-6">
+        <Breadcrumbs />
+      </div>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-background via-background to-blue-500/5 py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
