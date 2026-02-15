@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { TrendingUp, PiggyBank, Target, BookOpen, Users, Shield, Zap } from "lucide-react"
 import { OptimizedImage } from "@/components/optimized-image"
+import AdSense from "@/components/AdSense"
 
 export default function HomePage() {
   const features = [
@@ -49,7 +50,7 @@ export default function HomePage() {
   const stats = [
     { value: "100%", label: "Contenido Original" },
     { value: "Gratis", label: "Educación Accesible" },
-    { value: "2025", label: "Actualizado Continuamente" },
+    { value: "2026", label: "Actualizado Continuamente" },
     { value: "Real", label: "Ejemplos Verificables" },
   ]
 
@@ -61,7 +62,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-2xl text-center">
             <div className="mb-8">
               <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary ring-1 ring-inset ring-primary/20">
-                Nuevo: Guía de Inversiones 2025
+                Nuevo: Guía de Inversiones 2026
               </span>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl text-balance">
@@ -275,15 +276,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* AdSense Placeholder */}
+      {/* AdSense */}
       <section className="py-8">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl">
-            <div className="bg-muted/30 border-2 border-dashed border-border rounded-lg p-8 text-center">
-              <p className="text-sm text-muted-foreground">Espacio reservado para Google AdSense</p>
-              <p className="text-xs text-muted-foreground mt-1">Banner superior - 728x90</p>
-            </div>
-          </div>
+          <AdSense slot="1562571362" />
         </div>
       </section>
     </div>

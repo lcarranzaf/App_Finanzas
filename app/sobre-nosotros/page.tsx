@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Users, Target, Award, Mail } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import AdSense from "@/components/AdSense"
 
 export const metadata: Metadata = {
   title: "Sobre Nosotros - FinanzasPro",
@@ -57,7 +58,7 @@ export default function SobreNosotrosPage() {
             <p>
               Hoy, más de 50,000 personas confían en FinanzasPro para tomar decisiones financieras informadas. Nuestros
               lectores han ahorrado millones de euros en comisiones innecesarias, han construido fondos de emergencia
-              sólidos y han comenzado sus journeys de inversión con confianza.
+              sólidos y han comenzado su camino en la inversión con confianza.
             </p>
           </div>
         </div>
@@ -74,7 +75,7 @@ export default function SobreNosotrosPage() {
               <CardContent className="text-center">
                 <CardDescription>
                   Siempre revelamos nuestros enlaces afiliados y nunca recomendamos productos que no hemos investigado
-                  thoroughly o que no usaríamos nosotros mismos.
+                  exhaustivamente o que no usaríamos nosotros mismos.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -147,6 +148,11 @@ export default function SobreNosotrosPage() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* AdSense */}
+        <div className="mt-16">
+          <AdSense slot="1562571362" />
         </div>
 
         {/* Contact CTA */}

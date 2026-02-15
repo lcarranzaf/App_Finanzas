@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { GraduationCap, Briefcase, Home, Car } from "lucide-react"
 import type { Metadata } from "next"
+import AdSense from "@/components/AdSense"
 
 export const metadata: Metadata = {
   title: "Finanzas para Jóvenes - Guía Completa para Estudiantes",
@@ -253,12 +254,9 @@ export default function JovenesPage() {
           </div>
         </div>
 
-        {/* AdSense Placeholder */}
+        {/* AdSense */}
         <div className="mt-16">
-          <div className="bg-muted/30 border-2 border-dashed border-border rounded-lg p-6 text-center">
-            <p className="text-sm text-muted-foreground">Espacio reservado para Google AdSense</p>
-            <p className="text-xs text-muted-foreground mt-1">Banner - 728x90</p>
-          </div>
+          <AdSense slot="9249489692" format="horizontal" />
         </div>
       </div>
     </div>

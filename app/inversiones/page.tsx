@@ -10,6 +10,7 @@ import {
   AlertCircle,
 } from "lucide-react"
 import type { Metadata } from "next"
+import AdSense from "@/components/AdSense"
 
 export const metadata: Metadata = {
   title: "Guía de Inversiones - Comienza a Invertir tu Dinero",
@@ -316,6 +317,13 @@ export default function InversionesPage() {
         </div>
       </section>
 
+      {/* AdSense */}
+      <section className="py-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <AdSense slot="1562571362" />
+        </div>
+      </section>
+
       {/* Comparison Table */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -428,6 +436,13 @@ export default function InversionesPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* AdSense */}
+      <section className="py-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <AdSense slot="9249489692" format="horizontal" />
         </div>
       </section>
 

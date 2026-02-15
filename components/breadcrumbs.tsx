@@ -63,9 +63,6 @@ export function Breadcrumbs({ items, customItems }: BreadcrumbsProps) {
         case 'privacidad':
           label = 'Privacidad'
           break
-        case 'newsletter':
-          label = 'Newsletter'
-          break
         default:
           // For blog slugs, we might want to fetch the title, but for now use as-is
           label = segment.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())

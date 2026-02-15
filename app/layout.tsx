@@ -10,6 +10,7 @@ import { ServiceWorker } from "@/components/service-worker"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 import Script from 'next/script'
+import { CookieConsent } from '@/components/cookie-consent'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 const inter = Inter({
@@ -105,9 +106,9 @@ export default async function RootLayout({
         {/* Google Analytics - Replace GA_TRACKING_ID with your actual tracking ID */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FMSEL1C9HK"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
-        <Script id="gtag-init" strategy="lazyOnload">
+        <Script id="gtag-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -168,6 +169,7 @@ export default async function RootLayout({
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
+          <CookieConsent />
           <SpeedInsights />
           <Analytics />
         </ThemeProvider>

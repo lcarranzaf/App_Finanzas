@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { PiggyBank, Target, Calculator, Zap, CheckCircle2 } from "lucide-react"
 import type { Metadata } from "next"
+import AdSense from "@/components/AdSense"
 
 export const metadata: Metadata = {
   title: "Estrategias de Ahorro - Guías y Consejos Prácticos",
@@ -206,6 +207,13 @@ export default function AhorroPage() {
         </div>
       </section>
 
+      {/* AdSense */}
+      <section className="py-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <AdSense slot="7561827917" format="horizontal" />
+        </div>
+      </section>
+
       {/* Saving Tips */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -275,6 +283,13 @@ export default function AhorroPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* AdSense */}
+      <section className="py-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <AdSense slot="5745358955" format="horizontal" />
         </div>
       </section>
 

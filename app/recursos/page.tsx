@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Star, Smartphone, CreditCard, TrendingUp, BookOpen, Calculator, Shield } from "lucide-react"
 import type { Metadata } from "next"
+import AdSense from "@/components/AdSense"
 
 export const metadata: Metadata = {
   title: "Recursos Financieros - Herramientas y Apps Recomendadas",
@@ -261,19 +262,16 @@ export default function RecursosPage() {
                 <p>
                   Algunos enlaces en esta página son afiliados, lo que significa que podemos recibir una comisión si
                   realizas una compra. Esto no afecta el precio que pagas y nos ayuda a mantener el contenido gratuito.
-                  Solo recomendamos productos que hemos probado o investigado thoroughly.
+                  Solo recomendamos productos que hemos probado o investigado exhaustivamente.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* AdSense Placeholder */}
+        {/* AdSense */}
         <div className="mt-12">
-          <div className="bg-muted/30 border-2 border-dashed border-border rounded-lg p-6 text-center">
-            <p className="text-sm text-muted-foreground">Espacio reservado para Google AdSense</p>
-            <p className="text-xs text-muted-foreground mt-1">Banner horizontal - 728x90</p>
-          </div>
+          <AdSense slot="7561827917" format="horizontal" />
         </div>
 
         {/* Categories */}
@@ -352,10 +350,7 @@ export default function RecursosPage() {
 
         {/* Bottom AdSense */}
         <div className="mt-16">
-          <div className="bg-muted/30 border-2 border-dashed border-border rounded-lg p-6 text-center">
-            <p className="text-sm text-muted-foreground">Espacio reservado para Google AdSense</p>
-            <p className="text-xs text-muted-foreground mt-1">Banner inferior - 728x90</p>
-          </div>
+          <AdSense slot="5745358955" format="horizontal" />
         </div>
 
         {/* CTA */}
