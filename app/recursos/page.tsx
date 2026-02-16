@@ -8,10 +8,13 @@ import AdSense from "@/components/AdSense"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export const metadata: Metadata = {
-  title: "Recursos Financieros - Herramientas y Apps Recomendadas",
+  title: "Mejores Apps y Herramientas Financieras 2025 - Recursos Recomendados",
   description:
-    "Descubre las mejores apps, brokers, bancos digitales y herramientas para gestionar tus finanzas personales. Enlaces afiliados verificados.",
-  keywords: "recursos financieros, apps finanzas, brokers, bancos digitales, herramientas financieras",
+    "Las mejores apps de presupuesto, brokers para invertir, bancos digitales y herramientas financieras gratuitas. Comparativa actualizada con pros, contras y calificaciones para gestionar tu dinero.",
+  keywords: ["apps financieras", "mejores brokers", "bancos digitales", "herramientas presupuesto", "apps para ahorrar", "plataformas inversión", "Mint", "YNAB", "Acorns"],
+  alternates: {
+    canonical: "https://app-finanzas-mu.vercel.app/recursos",
+  },
 }
 
 export default function RecursosPage() {

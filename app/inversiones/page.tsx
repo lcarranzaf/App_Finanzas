@@ -12,12 +12,17 @@ import {
 import type { Metadata } from "next"
 import AdSense from "@/components/AdSense"
 import { Breadcrumbs } from "@/components/breadcrumbs"
+import { FAQSection, type FAQItem } from "@/components/faq-section"
+import { CategoryArticles } from "@/components/category-articles"
 
 export const metadata: Metadata = {
-  title: "Guía de Inversiones - Comienza a Invertir tu Dinero",
+  title: "Guía de Inversiones para Principiantes 2025 - Fondos Indexados, ETFs y Acciones",
   description:
-    "Aprende a invertir desde cero. Fondos indexados, ETFs, acciones y bonos explicados de manera simple. Estrategias para principiantes.",
-  keywords: "inversiones, fondos indexados, ETFs, acciones, bolsa, inversión principiantes",
+    "Aprende a invertir desde cero con nuestra guía completa. Compara fondos indexados, ETFs, acciones y bonos. Descubre cuánto necesitas para empezar y qué estrategia se adapta a tu perfil de riesgo.",
+  keywords: ["inversiones para principiantes", "fondos indexados", "ETFs", "acciones", "bonos", "cómo invertir", "bolsa de valores", "S&P 500", "inversión a largo plazo"],
+  alternates: {
+    canonical: "https://app-finanzas-mu.vercel.app/inversiones",
+  },
 }
 
 export default function InversionesPage() {
@@ -171,6 +176,33 @@ export default function InversionesPage() {
       focus: "Acciones selectivas si lo deseas",
       action: "90% pasivo, 10% acciones activas",
       investment: "Variable",
+    },
+  ]
+
+  const inversionesFAQs: FAQItem[] = [
+    {
+      question: "¿Cuánto dinero necesito para empezar a invertir?",
+      answer: "Puedes empezar a invertir con tan solo $50-100. Muchas plataformas como Fidelity, Charles Schwab o apps como Acorns permiten invertir con montos mínimos. Lo importante no es la cantidad inicial sino la consistencia: invertir $100 mensuales durante 20 años al 8% genera más de $58,000.",
+    },
+    {
+      question: "¿Qué son los fondos indexados y por qué son recomendados?",
+      answer: "Los fondos indexados son fondos de inversión que replican un índice de mercado como el S&P 500. Son recomendados porque ofrecen diversificación automática (inviertes en cientos de empresas a la vez), tienen comisiones muy bajas (0.03-0.20% anual) y históricamente generan retornos del 7-10% anual a largo plazo.",
+    },
+    {
+      question: "¿Cuál es la diferencia entre ETFs y fondos indexados?",
+      answer: "Ambos ofrecen diversificación y bajas comisiones. La principal diferencia es que los ETFs se compran y venden como acciones durante el horario de mercado, mientras los fondos indexados se compran al precio de cierre del día. Para inversores a largo plazo, el resultado es prácticamente igual.",
+    },
+    {
+      question: "¿Es seguro invertir en la bolsa de valores?",
+      answer: "Toda inversión conlleva riesgos. Sin embargo, históricamente el mercado de valores ha generado retornos positivos a largo plazo (10+ años). La clave es diversificar tu cartera, invertir a largo plazo y no entrar en pánico durante las caídas. Los fondos indexados reducen el riesgo al distribuir tu inversión entre cientos de empresas.",
+    },
+    {
+      question: "¿Debo invertir o ahorrar primero?",
+      answer: "Primero construye un fondo de emergencia de 3-6 meses de gastos en una cuenta de ahorros. Una vez tengas esa base de seguridad, comienza a invertir el dinero adicional. El ahorro protege tu presente, la inversión construye tu futuro. Ambos son complementarios.",
+    },
+    {
+      question: "¿Cuánto tiempo debo mantener mis inversiones?",
+      answer: "El horizonte mínimo recomendado para inversiones en bolsa es de 5 años, pero idealmente 10-20+ años. A mayor plazo, menor riesgo de pérdidas. Históricamente, no ha existido un periodo de 20 años donde el S&P 500 haya dado rendimientos negativos. La paciencia es tu mejor aliada.",
     },
   ]
 
@@ -451,6 +483,21 @@ export default function InversionesPage() {
           <AdSense slot="9249489692" format="horizontal" />
         </div>
       </section>
+
+      {/* Artículos Relacionados */}
+      <CategoryArticles
+        category="Inversiones"
+        title="Artículos sobre Inversiones"
+        subtitle="Guías completas para convertirte en inversor"
+        tags={["inversiones", "fondos indexados", "ETFs", "acciones", "bolsa", "bonos"]}
+      />
+
+      {/* FAQ Section */}
+      <FAQSection
+        title="Preguntas Frecuentes sobre Inversiones"
+        subtitle="Las dudas más comunes de quienes empiezan a invertir"
+        faqs={inversionesFAQs}
+      />
 
       {/* CTA Section */}
       <section className="py-16 sm:py-20">

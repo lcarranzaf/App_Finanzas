@@ -5,12 +5,17 @@ import { PiggyBank, Target, Calculator, Zap, CheckCircle2 } from "lucide-react"
 import type { Metadata } from "next"
 import AdSense from "@/components/AdSense"
 import { Breadcrumbs } from "@/components/breadcrumbs"
+import { FAQSection, type FAQItem } from "@/components/faq-section"
+import { CategoryArticles } from "@/components/category-articles"
 
 export const metadata: Metadata = {
-  title: "Estrategias de Ahorro - Guías y Consejos Prácticos",
+  title: "Estrategias de Ahorro 2025 - Métodos Probados para Ahorrar Dinero",
   description:
-    "Aprende a ahorrar dinero con estrategias probadas. Desde la regla 50/30/20 hasta fondos de emergencia y metas financieras.",
-  keywords: "ahorro, estrategias ahorro, fondo emergencia, presupuesto, finanzas personales",
+    "Descubre cómo ahorrar dinero con el método 50/30/20, ahorro automático y el reto 52 semanas. Guía paso a paso para crear tu fondo de emergencia desde cero, incluso con ingresos bajos.",
+  keywords: ["ahorro", "cómo ahorrar dinero", "método 50/30/20", "fondo de emergencia", "presupuesto personal", "estrategias de ahorro", "reto 52 semanas", "finanzas personales"],
+  alternates: {
+    canonical: "https://app-finanzas-mu.vercel.app/ahorro",
+  },
 }
 
 export default function AhorroPage() {
@@ -110,6 +115,33 @@ export default function AhorroPage() {
       goal: "Inversión y crecimiento",
       action: "Invierte en fondos indexados",
       milestone: "Crecimiento del 7-10% anual",
+    },
+  ]
+
+  const ahorroFAQs: FAQItem[] = [
+    {
+      question: "¿Cuánto dinero debo ahorrar cada mes?",
+      answer: "La regla general es ahorrar al menos el 20% de tus ingresos netos. Si ganas $2,000 al mes, intenta ahorrar $400. Sin embargo, si estás empezando, incluso $50-100 al mes es un excelente comienzo. Lo más importante es crear el hábito de ahorro consistente.",
+    },
+    {
+      question: "¿Qué es un fondo de emergencia y cuánto necesito?",
+      answer: "Un fondo de emergencia es dinero reservado para gastos inesperados como reparaciones del auto, facturas médicas o pérdida de empleo. Se recomienda tener entre 3 y 6 meses de gastos básicos. Para empezar, una meta de $1,000-2,000 es suficiente para cubrir la mayoría de emergencias menores.",
+    },
+    {
+      question: "¿Cuál es el mejor método de ahorro para principiantes?",
+      answer: "El método 50/30/20 es ideal para principiantes: destina 50% de tus ingresos a necesidades, 30% a deseos y 20% a ahorro. Combínalo con ahorro automático (transferencias programadas el día de pago) para que el dinero se ahorre antes de que lo veas.",
+    },
+    {
+      question: "¿Dónde debo guardar mis ahorros?",
+      answer: "Para tu fondo de emergencia, usa una cuenta de ahorros de alto rendimiento que ofrezca fácil acceso. Para ahorros a largo plazo (más de 1 año), considera certificados de depósito (CDs) o fondos del mercado monetario que ofrecen mejores tasas de interés.",
+    },
+    {
+      question: "¿Cómo puedo ahorrar si gano poco dinero?",
+      answer: "Empieza con montos pequeños: incluso $10-20 semanales suman $520-1,040 al año. Revisa tus suscripciones, reduce gastos hormiga (café diario, comida fuera), y busca ingresos extra. El reto de las 52 semanas es excelente para empezar poco a poco e ir incrementando.",
+    },
+    {
+      question: "¿Ahorro o pago deudas primero?",
+      answer: "Primero ahorra un mini fondo de emergencia de $500-1,000. Luego enfócate en pagar deudas con tasas de interés altas (tarjetas de crédito). Una vez eliminadas las deudas de alto interés, construye tu fondo de emergencia completo de 3-6 meses de gastos.",
     },
   ]
 
@@ -298,6 +330,21 @@ export default function AhorroPage() {
           <AdSense slot="5745358955" format="horizontal" />
         </div>
       </section>
+
+      {/* Artículos Relacionados */}
+      <CategoryArticles
+        category="Ahorro"
+        title="Artículos sobre Ahorro"
+        subtitle="Profundiza con nuestras guías y consejos prácticos"
+        tags={["ahorro", "presupuesto", "fondo de emergencia", "gastos"]}
+      />
+
+      {/* FAQ Section */}
+      <FAQSection
+        title="Preguntas Frecuentes sobre Ahorro"
+        subtitle="Resolvemos las dudas más comunes sobre cómo empezar a ahorrar"
+        faqs={ahorroFAQs}
+      />
 
       {/* CTA Section */}
       <section className="py-16 sm:py-20">

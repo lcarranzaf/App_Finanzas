@@ -4,7 +4,10 @@
       "Bash(curl:*)",
       "Bash(find:*)",
       "Bash(npx next build:*)",
-      "WebFetch(domain:app-finanzas-mu.vercel.app)"
+      "WebFetch(domain:app-finanzas-mu.vercel.app)",
+      "Bash(ls:*)",
+      "Bash(grep:*)",
+      "WebSearch"
     ]
   }
 }

@@ -5,12 +5,17 @@ import { GraduationCap, Briefcase, Home, Car } from "lucide-react"
 import type { Metadata } from "next"
 import AdSense from "@/components/AdSense"
 import { Breadcrumbs } from "@/components/breadcrumbs"
+import { FAQSection, type FAQItem } from "@/components/faq-section"
+import { CategoryArticles } from "@/components/category-articles"
 
 export const metadata: Metadata = {
-  title: "Finanzas para Jóvenes - Guía Completa para Estudiantes",
+  title: "Finanzas para Jóvenes 2025 - Guía para Estudiantes y Primer Sueldo",
   description:
-    "Consejos financieros específicos para jóvenes, estudiantes y recién graduados. Aprende a manejar tu primer sueldo y planificar tu futuro.",
-  keywords: "finanzas jóvenes, estudiantes, primer sueldo, recién graduados, planificación financiera",
+    "Guía financiera completa para jóvenes, estudiantes y recién graduados. Aprende a manejar tu primer sueldo con la regla 50/30/20, construir historial crediticio y empezar a invertir desde $50 al mes.",
+  keywords: ["finanzas para jóvenes", "primer sueldo", "estudiantes universitarios", "recién graduados", "cómo ahorrar siendo joven", "historial crediticio", "inversión jóvenes"],
+  alternates: {
+    canonical: "https://app-finanzas-mu.vercel.app/jovenes",
+  },
 }
 
 export default function JovenesPage() {
@@ -58,6 +63,33 @@ export default function JovenesPage() {
         "Considera autos usados certificados",
         "No comprometas más del 28% de ingresos en vivienda",
       ],
+    },
+  ]
+
+  const jovenesFAQs: FAQItem[] = [
+    {
+      question: "¿A qué edad debo empezar a ahorrar e invertir?",
+      answer: "Lo ideal es empezar lo antes posible, incluso desde los 18 años. Si inviertes $100 mensuales desde los 20 años al 7% anual, tendrás más de $400,000 a los 65. Si empiezas a los 30, tendrás menos de $200,000. Cada año que esperas tiene un costo significativo por el efecto del interés compuesto.",
+    },
+    {
+      question: "¿Cómo manejar mi primer sueldo correctamente?",
+      answer: "Aplica la regla 50/30/20: destina 50% a gastos esenciales (renta, comida, transporte), 30% a gastos personales (entretenimiento, ropa) y 20% a ahorro e inversión. Automatiza las transferencias de ahorro el mismo día que recibes tu pago para no gastar ese dinero.",
+    },
+    {
+      question: "¿Necesito una tarjeta de crédito siendo joven?",
+      answer: "Tener una tarjeta de crédito es útil para construir historial crediticio, que necesitarás para alquilar un departamento, comprar auto o casa. La clave es usarla responsablemente: gasta solo lo que puedes pagar completo cada mes y nunca la uses como extensión de tu ingreso.",
+    },
+    {
+      question: "¿Cuánto debo tener ahorrado a los 25 años?",
+      answer: "Una meta razonable es tener un fondo de emergencia de 3 meses de gastos ($3,000-6,000 según tu situación) y haber comenzado a invertir aunque sea pequeñas cantidades. No te compares con otros: lo importante es tener el hábito establecido y una dirección clara.",
+    },
+    {
+      question: "¿Debería pagar mis préstamos estudiantiles rápido o invertir?",
+      answer: "Depende de la tasa de interés. Si tus préstamos tienen tasas superiores al 6-7%, prioriza pagarlos. Si las tasas son bajas (3-4%), puedes hacer pagos mínimos e invertir el resto, ya que el mercado históricamente rinde 7-10% anual. Siempre ten un fondo de emergencia primero.",
+    },
+    {
+      question: "¿Cómo puedo generar ingresos extra siendo estudiante?",
+      answer: "Hay muchas opciones: freelancing en plataformas como Fiverr o Upwork, tutorías, trabajo de medio tiempo, venta de productos en línea, creación de contenido digital, o trabajos en campus universitario. Busca opciones que complementen tus estudios y te den experiencia profesional.",
     },
   ]
 
@@ -263,6 +295,21 @@ export default function JovenesPage() {
           <AdSense slot="9249489692" format="horizontal" />
         </div>
       </div>
+
+      {/* Artículos Relacionados */}
+      <CategoryArticles
+        category="Planificación"
+        title="Artículos para Jóvenes"
+        subtitle="Contenido especial para quienes están empezando"
+        tags={["jóvenes", "primer sueldo", "ahorro", "presupuesto", "inversión principiantes", "tarjeta de crédito"]}
+      />
+
+      {/* FAQ Section */}
+      <FAQSection
+        title="Preguntas Frecuentes para Jóvenes"
+        subtitle="Dudas comunes sobre finanzas cuando estás empezando"
+        faqs={jovenesFAQs}
+      />
     </div>
   )
 }

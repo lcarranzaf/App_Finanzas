@@ -6,10 +6,13 @@ import type { Metadata } from "next"
 import AdSense from "@/components/AdSense"
 
 export const metadata: Metadata = {
-  title: "Sobre Nosotros - FinanzasPro",
+  title: "Sobre Nosotros - Quiénes Somos en FinanzasPro",
   description:
-    "Conoce la misión de FinanzasPro: democratizar la educación financiera y ayudar a miles de personas a alcanzar la libertad financiera.",
-  keywords: "sobre nosotros, misión, educación financiera, equipo FinanzasPro",
+    "Conoce al equipo detrás de FinanzasPro. Nuestra misión es democratizar la educación financiera en español con guías prácticas, herramientas gratuitas y contenido confiable para alcanzar tu libertad financiera.",
+  keywords: ["sobre FinanzasPro", "educación financiera", "equipo", "misión", "finanzas personales en español"],
+  alternates: {
+    canonical: "https://app-finanzas-mu.vercel.app/sobre-nosotros",
+  },
 }
 
 export default function SobreNosotrosPage() {
