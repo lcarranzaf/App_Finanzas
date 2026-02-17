@@ -19,7 +19,7 @@ export default function PrivacyPage() {
             Política de Privacidad
           </h1>
           <p className="text-lg text-muted-foreground">
-            Última actualización: {new Date().toLocaleDateString("es-ES", { year: "numeric", month: "long", day: "numeric" })}
+            Última actualización: 17 de febrero de 2026
           </p>
         </div>
 
