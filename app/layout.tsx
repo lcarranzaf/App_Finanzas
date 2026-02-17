@@ -13,6 +13,7 @@ import Script from 'next/script'
 import { CookieConsent } from '@/components/cookie-consent'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
+import { ClientOnly } from '@/components/client-only'
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -186,7 +187,9 @@ export default async function RootLayout({
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
-          <CookieConsent />
+          <ClientOnly>
+            <CookieConsent />
+          </ClientOnly>
           <SpeedInsights />
           <Analytics />
         </ThemeProvider>
