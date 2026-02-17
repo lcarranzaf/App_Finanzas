@@ -10,14 +10,14 @@ interface LazyLoadProps {
 
 export function LazyLoad({ children, offset = 200, placeholder }: LazyLoadProps) {
   const [isInView, setIsInView] = useState(false)
-  const [isClient, setIsClient] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setIsClient(true)
+    setMounted(true)
   }, [])
 
   useEffect(() => {
-    if (!isClient) return
+    if (!mounted) return
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -37,10 +37,10 @@ export function LazyLoad({ children, offset = 200, placeholder }: LazyLoadProps)
     }
 
     return () => observer.disconnect()
-  }, [offset, isClient])
+  }, [offset, mounted])
 
-  if (!isClient) {
-    return <>{placeholder || children}</>
+  if (!mounted) {
+    return <>{placeholder || null}</>
   }
 
   return (

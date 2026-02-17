@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 
 declare global {
@@ -15,11 +16,12 @@ interface AdSenseProps {
 }
 
 const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [viewportSize, setViewportSize] = useState<'mobile' | 'tablet' | 'desktop'>('desktop');
 
   useEffect(() => {
-    // Detect viewport size for dynamic ad formats
+    setMounted(true);
+    
     const updateViewportSize = () => {
       const width = window.innerWidth;
       if (width < 640) setViewportSize('mobile');
@@ -34,7 +36,9 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
   }, []);
 
   useEffect(() => {
-    let mounted = true;
+    if (!mounted) return;
+
+    let mountedEffect = true;
 
     const pushAd = () => {
       try {
@@ -49,32 +53,31 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
       }
     };
 
-    // Try to push ad immediately (even if not visible yet)
     if (!pushAd()) {
       let attempts = 0;
       const id = setInterval(() => {
-        if (!mounted) return clearInterval(id);
+        if (!mountedEffect) return clearInterval(id);
         attempts += 1;
         if (pushAd() || attempts >= 10) clearInterval(id);
       }, 300);
       
       return () => {
         clearInterval(id);
-        mounted = false;
+        mountedEffect = false;
       };
     }
 
     return () => {
-      mounted = false;
+      mountedEffect = false;
     };
-  }, []);
+  }, [mounted]);
 
-  // Use Intersection Observer only for analytics/lazy loading, not for ad initialization
   useEffect(() => {
+    if (!mounted) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          setIsVisible(true);
           observer.disconnect();
         }
       },
@@ -88,9 +91,8 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
     }
 
     return () => observer.disconnect();
-  }, [slot]);
+  }, [slot, mounted]);
 
-  // Dynamic format based on viewport and prop
   const getAdFormat = () => {
     if (format !== 'auto') return format;
 
@@ -106,7 +108,7 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
     }
   };
 
-  const adFormat = getAdFormat();
+  const adFormat = mounted ? getAdFormat() : 'auto';
 
   return (
     <div className={`ad-container ${className || ''}`}>

@@ -6,13 +6,20 @@ import { Button } from '@/components/ui/button'
 
 export function CookieConsent() {
   const [show, setShow] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!mounted) return
+    
     const consent = localStorage.getItem('cookie-consent')
     if (!consent) {
       setShow(true)
     }
-  }, [])
+  }, [mounted])
 
   const accept = () => {
     localStorage.setItem('cookie-consent', 'accepted')
@@ -22,6 +29,10 @@ export function CookieConsent() {
   const reject = () => {
     localStorage.setItem('cookie-consent', 'rejected')
     setShow(false)
+  }
+
+  if (!mounted) {
+    return null
   }
 
   if (!show) return null
