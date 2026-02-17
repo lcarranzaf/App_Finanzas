@@ -137,12 +137,16 @@ export default async function RootLayout({
         {/* Google AdSense - Replace with your publisher ID */}
         <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4657042320327960"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           crossOrigin="anonymous"
-          async
+          suppressHydrationWarning
         />
         {/* AdSense verification helper (only for debugging) */}
-        <Script id="adsense-check" strategy="afterInteractive">
+        <Script 
+          id="adsense-check" 
+          strategy="beforeInteractive"
+          suppressHydrationWarning
+        >
           {`(function(){
             window.__adsenseStatus = { loaded: false, pushes: 0 };
             try {

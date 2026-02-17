@@ -38,33 +38,38 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
 
     const pushAd = () => {
       try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-        return true;
+        if (window.adsbygoogle && Array.isArray(window.adsbygoogle)) {
+          window.adsbygoogle.push({});
+          return true;
+        }
+        return false;
       } catch (e) {
         console.debug('AdSense push failed, will retry:', e);
         return false;
       }
     };
 
-    // Only load ad if component is visible and AdSense script is loaded
-    if (isVisible) {
-      // Try immediately, then retry a few times if the script hasn't loaded yet
-      if (!pushAd()) {
-        let attempts = 0;
-        const id = setInterval(() => {
-          if (!mounted) return clearInterval(id);
-          attempts += 1;
-          if (pushAd() || attempts >= 5) clearInterval(id);
-        }, 500);
-      }
+    // Try to push ad immediately (even if not visible yet)
+    if (!pushAd()) {
+      let attempts = 0;
+      const id = setInterval(() => {
+        if (!mounted) return clearInterval(id);
+        attempts += 1;
+        if (pushAd() || attempts >= 10) clearInterval(id);
+      }, 300);
+      
+      return () => {
+        clearInterval(id);
+        mounted = false;
+      };
     }
 
     return () => {
       mounted = false;
     };
-  }, [isVisible]);
+  }, []);
 
-  // Use Intersection Observer to load ads only when visible
+  // Use Intersection Observer only for analytics/lazy loading, not for ad initialization
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -76,7 +81,8 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
       { threshold: 0.1 }
     );
 
-    const element = document.querySelector(`[data-ad-slot="${slot}"]`);
+    const selector = `[data-ad-slot="${slot}"]`;
+    const element = document.querySelector(selector);
     if (element) {
       observer.observe(element);
     }

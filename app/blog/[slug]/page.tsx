@@ -1,3 +1,5 @@
+'use client'
+
 import { getBlogPost } from "@/lib/blog-data"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"

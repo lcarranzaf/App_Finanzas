@@ -171,5 +171,11 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
       break
   }
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      suppressHydrationWarning
+    />
+  )
 }
