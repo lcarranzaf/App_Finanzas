@@ -286,11 +286,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Tabla de contenidos */}
         <TableOfContents content={post.content} />
 
-        {/* Ad - Antes del contenido */}
-        <div className="my-8">
-          <AdSense slot="7561827917" format="horizontal" />
-        </div>
-
         {/* Article Content - Split in two halves with mid-content ad */}
         {(() => {
           const contentLines = (post.content || "").split("\n")

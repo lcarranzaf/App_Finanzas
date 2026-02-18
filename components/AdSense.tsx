@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 declare global {
   interface Window {
@@ -18,10 +18,11 @@ interface AdSenseProps {
 const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
   const [mounted, setMounted] = useState(false);
   const [viewportSize, setViewportSize] = useState<'mobile' | 'tablet' | 'desktop'>('desktop');
+  const pushedRef = useRef(false);
 
   useEffect(() => {
     setMounted(true);
-    
+
     const updateViewportSize = () => {
       const width = window.innerWidth;
       if (width < 640) setViewportSize('mobile');
@@ -38,12 +39,14 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
   useEffect(() => {
     if (!mounted) return;
 
-    let mountedEffect = true;
+    let intervalId: ReturnType<typeof setInterval> | null = null;
 
     const pushAd = () => {
+      if (pushedRef.current) return true;
       try {
         if (window.adsbygoogle && Array.isArray(window.adsbygoogle)) {
           window.adsbygoogle.push({});
+          pushedRef.current = true;
           return true;
         }
         return false;
@@ -53,44 +56,43 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
       }
     };
 
-    if (!pushAd()) {
-      let attempts = 0;
-      const id = setInterval(() => {
-        if (!mountedEffect) return clearInterval(id);
-        attempts += 1;
-        if (pushAd() || attempts >= 10) clearInterval(id);
-      }, 300);
-      
-      return () => {
-        clearInterval(id);
-        mountedEffect = false;
-      };
+    const startPush = () => {
+      if (!pushAd()) {
+        let attempts = 0;
+        intervalId = setInterval(() => {
+          attempts += 1;
+          if (pushAd() || attempts >= 10) {
+            if (intervalId) clearInterval(intervalId);
+          }
+        }, 300);
+      }
+    };
+
+    const selector = `[data-ad-slot="${slot}"]`;
+    const element = document.querySelector(selector);
+
+    if (!element) {
+      startPush();
+      return () => { if (intervalId) clearInterval(intervalId); };
     }
 
-    return () => {
-      mountedEffect = false;
-    };
-  }, [mounted]);
-
-  useEffect(() => {
-    if (!mounted) return;
-
+    // Lazy loading: el anuncio se empuja solo cuando entra al viewport
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
           observer.disconnect();
+          startPush();
         }
       },
       { threshold: 0.1 }
     );
 
-    const selector = `[data-ad-slot="${slot}"]`;
-    const element = document.querySelector(selector);
-    if (element) {
-      observer.observe(element);
-    }
+    observer.observe(element);
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (intervalId) clearInterval(intervalId);
+    };
   }, [slot, mounted]);
 
   const getAdFormat = () => {

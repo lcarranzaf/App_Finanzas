@@ -142,39 +142,49 @@ export default async function RootLayout({
           crossOrigin="anonymous"
           suppressHydrationWarning
         />
-        {/* AdSense verification helper (only for debugging) */}
-        <Script 
-          id="adsense-check" 
-          strategy="afterInteractive"
-          suppressHydrationWarning
-        >
-          {`(function(){
-            window.__adsenseStatus = { loaded: false, pushes: 0 };
-            try {
-              if (window.adsbygoogle) {
-                window.__adsenseStatus.loaded = true;
-              }
-            } catch(e){}
+        {/* AdSense verification helper (solo en desarrollo) */}
+        {process.env.NODE_ENV !== 'production' && (
+          <Script
+            id="adsense-check"
+            strategy="afterInteractive"
+            suppressHydrationWarning
+          >
+            {`(function(){
+              window.__adsenseStatus = { loaded: false, pushes: 0 };
 
-            const originalPush = window.adsbygoogle && window.adsbygoogle.push ? window.adsbygoogle.push : null;
-            if (originalPush) {
-              window.adsbygoogle.push = function(){
-                window.__adsenseStatus.pushes = (window.__adsenseStatus.pushes || 0) + 1;
-                return originalPush.apply(this, arguments);
+              function tryPatch() {
+                var ags = window.adsbygoogle;
+                if (ags && typeof ags.push === 'function') {
+                  window.__adsenseStatus.loaded = true;
+                  var orig = ags.push.bind(ags);
+                  ags.push = function() {
+                    window.__adsenseStatus.pushes++;
+                    return orig.apply(this, arguments);
+                  };
+                  return true;
+                }
+                return false;
               }
-            }
 
-            window.__reportAdSenseStatus = function(){
-              try{
-                fetch('/api/adsense-check', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ status: window.__adsenseStatus, url: location.href, userAgent: navigator.userAgent })
-                })
-              }catch(e){ console.debug('report failed', e) }
-            }
-          })();`}
-        </Script>
+              if (!tryPatch()) {
+                var n = 0;
+                var t = setInterval(function() {
+                  if (tryPatch() || ++n >= 20) clearInterval(t);
+                }, 250);
+              }
+
+              window.__reportAdSenseStatus = function() {
+                try {
+                  fetch('/api/adsense-check', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ status: window.__adsenseStatus, url: location.href, userAgent: navigator.userAgent })
+                  });
+                } catch(e) { console.debug('report failed', e); }
+              };
+            })();`}
+          </Script>
+        )}
       </head>
       <body className="min-h-screen bg-background font-sans text-foreground">
         <ThemeProvider

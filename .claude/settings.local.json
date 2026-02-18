@@ -10,7 +10,8 @@
       "WebSearch",
       "Bash(npx tsc:*)",
       "Bash(node_modules/.bin/tsc:*)",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash(dir:*)"
     ]
   }
 }
