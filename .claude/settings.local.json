@@ -7,7 +7,10 @@
       "WebFetch(domain:app-finanzas-mu.vercel.app)",
       "Bash(ls:*)",
       "Bash(grep:*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(npx tsc:*)",
+      "Bash(node_modules/.bin/tsc:*)",
+      "Bash(echo:*)"
     ]
   }
 }

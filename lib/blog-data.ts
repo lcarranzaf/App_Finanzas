@@ -206,7 +206,6 @@ Recuerda: no se trata de cuánto inviertes, sino de cuánto tiempo dejas que el 
     readTime: "15 min",
     category: "Educación Financiera",
     tags: ["interés compuesto", "inversiones", "ahorro", "crecimiento patrimonial", "largo plazo", "fondos indexados"],
-    image: "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=1200&h=630&fit=crop",
     author: "FinanzasPro",
   },
   {
@@ -411,7 +410,6 @@ Cada dólar que ahorras hoy te acerca un paso más a las llaves de tu propia cas
     readTime: "18 min",
     category: "Ahorro",
     tags: ["comprar casa", "enganche", "ahorro", "hipoteca", "primer comprador", "vivienda", "planificación financiera"],
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=630&fit=crop",
     author: "FinanzasPro",
   },
   {
@@ -639,7 +637,6 @@ Las criptomonedas no son un atajo para hacerte rico. Son una herramienta de inve
     readTime: "20 min",
     category: "Inversiones",
     tags: ["criptomonedas", "bitcoin", "ethereum", "inversiones", "blockchain", "principiantes", "trading"],
-    image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=1200&h=630&fit=crop",
     author: "FinanzasPro",
   },
   {
@@ -3290,7 +3287,6 @@ No necesitas ser experto en tecnología. Solo necesitas dar el primer paso: desc
     readTime: "16 min",
     category: "Tecnología Financiera",
     tags: ["inteligencia artificial", "apps financieras", "roboadvisors", "ahorro automático", "fintech"],
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
     author: "FinanzasPro",
   },
   {
@@ -3447,7 +3443,6 @@ El mejor momento para empezar fue hace 10 años. El segundo mejor momento es hoy
     readTime: "20 min",
     category: "Planificación",
     tags: ["movimiento FIRE", "independencia financiera", "retiro temprano", "libertad financiera", "inversiones"],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
     author: "FinanzasPro",
   },
   {
@@ -3592,7 +3587,6 @@ El futuro del real estate es digital, fraccionado y accesible para todos. La pre
     readTime: "17 min",
     category: "Inversiones",
     tags: ["inversión inmobiliaria", "tokenización", "bienes raíces", "crowdfunding", "ingresos pasivos"],
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
     author: "FinanzasPro",
   },
   {
@@ -3745,7 +3739,6 @@ Compra un cuaderno hoy. Tu versión futura con más dinero en el banco te lo agr
     readTime: "15 min",
     category: "Ahorro",
     tags: ["método kakebo", "ahorro", "presupuesto", "gastos", "finanzas personales", "hábitos financieros"],
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
     author: "FinanzasPro",
   },
   {
@@ -3906,7 +3899,6 @@ No esperes a ser víctima para actuar. Dedica hoy 30 minutos a revisar tu seguri
     readTime: "18 min",
     category: "Planificación",
     tags: ["ciberseguridad", "fraude financiero", "protección", "banca digital", "seguridad online"],
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800&q=80",
     author: "FinanzasPro",
   },
   {
@@ -4082,7 +4074,6 @@ Tengan esa primera conversación financiera hoy. No tiene que ser perfecta, solo
     readTime: "16 min",
     category: "Planificación",
     tags: ["finanzas en pareja", "presupuesto familiar", "dinero y relaciones", "planificación financiera", "ahorro en pareja"],
-    image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&q=80",
     author: "FinanzasPro",
   },
   {
@@ -4222,7 +4213,6 @@ Tu futuro financiero no depende de cuánto sabes de inversiones. Depende de cuá
     readTime: "17 min",
     category: "Inversiones",
     tags: ["roboadvisors", "inversión automatizada", "fondos indexados", "inversión principiantes", "fintech"],
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80",
     author: "FinanzasPro",
   },
 ]
