@@ -127,6 +127,7 @@ export default function BlogPage() {
                           year: "numeric",
                           month: "long",
                           day: "numeric",
+                          timeZone: "UTC",
                         })}
                       </div>
                     </div>
