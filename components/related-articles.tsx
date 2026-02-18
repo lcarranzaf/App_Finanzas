@@ -31,13 +31,6 @@ export function RelatedArticles({ currentPostSlug, currentTags, currentCategory 
       const sharedTags = post.tags.filter(tag => currentTags.includes(tag))
       relevanceScore += sharedTags.length * 5
 
-      // Recent posts get slight boost
-      const postDate = new Date(post.publishedAt)
-      const daysSincePublished = (Date.now() - postDate.getTime()) / (1000 * 60 * 60 * 24)
-      if (daysSincePublished < 30) {
-        relevanceScore += 2
-      }
-
       // SEO boost for posts with "guía", "completo", "paso a paso" in title
       const titleLower = post.title.toLowerCase()
       if (titleLower.includes('guía') || titleLower.includes('completo') || titleLower.includes('paso')) {

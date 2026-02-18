@@ -14,7 +14,6 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
 Disallow: /private/
-Disallow: /redireccion-m3u8.html
 
 # Specific user agents
 User-agent: Googlebot

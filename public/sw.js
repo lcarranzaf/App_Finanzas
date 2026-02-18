@@ -1,23 +1,28 @@
 // Service Worker for caching static assets and improving performance
 
-const CACHE_NAME = 'finanzaspro-v1'
-const STATIC_CACHE = 'finanzaspro-static-v1'
-const DYNAMIC_CACHE = 'finanzaspro-dynamic-v1'
+const CACHE_NAME = 'finanzaspro-v3'
+const STATIC_CACHE = 'finanzaspro-static-v3'
+const DYNAMIC_CACHE = 'finanzaspro-dynamic-v3'
 
-// Assets to cache immediately
+// Only cache truly static assets that are guaranteed to exist
+// Do NOT cache HTML pages here — they must be served fresh to avoid hydration mismatches
 const STATIC_ASSETS = [
-  '/',
-  '/blog',
-  '/manifest.json',
-  // Add other important routes
+  '/placeholder.svg',
+  '/og-image.jpg',
 ]
 
-// Install event - cache static assets
+// Install event - cache static assets individually so one failure doesn't break install
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        return cache.addAll(STATIC_ASSETS)
+        return Promise.allSettled(
+          STATIC_ASSETS.map((url) =>
+            cache.add(url).catch((err) => {
+              console.debug('SW: failed to cache', url, err)
+            })
+          )
+        )
       })
       .then(() => {
         return self.skipWaiting()
@@ -25,13 +30,14 @@ self.addEventListener('install', (event) => {
   )
 })
 
-// Activate event - clean up old caches
+// Activate event - clean up ALL old caches and claim clients immediately
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+            console.debug('SW: deleting old cache', cacheName)
             return caches.delete(cacheName)
           }
         })
@@ -87,20 +93,10 @@ self.addEventListener('fetch', (event) => {
           })
         })
     )
-  } else if (url.pathname.startsWith('/blog/')) {
-    // Blog posts - network first for fresh content
+  } else if (request.headers.get('accept') && request.headers.get('accept').includes('text/html')) {
+    // HTML pages - always network first, never cache to avoid hydration mismatches
     event.respondWith(
-      fetch(request)
-        .then((response) => {
-          const responseClone = response.clone()
-          caches.open(DYNAMIC_CACHE).then((cache) => {
-            cache.put(request, responseClone)
-          })
-          return response
-        })
-        .catch(() => {
-          return caches.match(request)
-        })
+      fetch(request).catch(() => caches.match(request))
     )
   } else {
     // Static assets - cache first
