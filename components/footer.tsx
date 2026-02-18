@@ -48,7 +48,7 @@ export default function Footer() {
               <ul role="list" className="mt-6 space-y-4">
                 {quickLinks.map((item) => (
                   <li key={item.name}>
-                    <Link href={item.href} className="text-sm leading-6 text-muted-foreground hover:text-foreground">
+                    <Link href={item.href} prefetch={false} className="text-sm leading-6 text-muted-foreground hover:text-foreground">
                       {item.name}
                     </Link>
                   </li>

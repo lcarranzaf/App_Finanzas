@@ -98,6 +98,7 @@ export function Breadcrumbs({ items, customItems }: BreadcrumbsProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        suppressHydrationWarning
       />
 
       {/* Breadcrumb Navigation */}

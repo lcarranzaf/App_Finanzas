@@ -108,7 +108,16 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
     }
   };
 
-  const adFormat = mounted ? getAdFormat() : 'auto';
+  // Don't render <ins> during SSR or first client render.
+  // Ad blockers remove <ins class="adsbygoogle"> from the DOM before React
+  // hydrates, which causes hydration mismatch errors (#418/#425).
+  // Rendering only after mount means hydration completes first, then the ad
+  // element is inserted client-side where the ad blocker can remove it safely.
+  if (!mounted) {
+    return <div className={`ad-container ${className || ''}`} style={{ minHeight: '90px', margin: '20px 0' }} />;
+  }
+
+  const adFormat = getAdFormat();
 
   return (
     <div className={`ad-container ${className || ''}`}>
