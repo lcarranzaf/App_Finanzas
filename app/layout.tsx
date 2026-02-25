@@ -134,10 +134,10 @@ export default async function RootLayout({
             });
           `}
         </Script>
-        {/* Google AdSense — script nativo para evitar data-nscript de Next.js */}
-        <script
-          async
+        {/* Google AdSense */}
+        <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4657042320327960"
+          strategy="afterInteractive"
           crossOrigin="anonymous"
           suppressHydrationWarning
         />

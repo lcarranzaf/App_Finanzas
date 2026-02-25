@@ -13,7 +13,8 @@
       "Bash(echo:*)",
       "Bash(dir:*)",
       "Bash(node:*)",
-      "Bash(tail:*)"
+      "Bash(tail:*)",
+      "Bash(Remove-Item:*)"
     ]
   }
 }
