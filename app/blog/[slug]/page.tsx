@@ -13,10 +13,12 @@ import StructuredData from "@/components/structured-data"
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { ContextualLinks } from "@/components/internal-links"
-import { OptimizedImage } from "@/components/optimized-image"
 import { LazyLoad } from "@/components/lazy-load"
 import AdSense from "@/components/AdSense"
 import { TableOfContents } from "@/components/table-of-contents"
+import { InvestmentDisclaimer } from "@/components/investment-disclaimer"
+
+export const revalidate = 3600
 
 interface BlogPostPageProps {
   params: {
@@ -66,8 +68,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       url: `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
       siteName: "FinanzasPro",
       type: "article",
-      publishedTime: post.publishedAt,
-      modifiedTime: post.publishedAt,
+      publishedTime: `${post.publishedAt}T00:00:00+00:00`,
+      modifiedTime: `${post.publishedAt}T00:00:00+00:00`,
       authors: [post.author],
       section: post.category,
       tags: post.tags,
@@ -84,7 +86,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     alternates: {
       canonical: `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
       languages: {
-        "es-ES": `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
+        "es": `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
+        "x-default": `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
       },
     },
   }
@@ -121,36 +124,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     return ''
   }
 
-  const contentLower = post.content.toLowerCase()
-  
-  const faqRegex = /(?:¿(?:qué|cómo|cuándo|dónde|por qué|quién|cuánto|cuál)[^?]*\?)/gi
-  const faqMatches = post.content.match(faqRegex)
-  
-  const faqs = faqMatches && faqMatches.length > 2 ? faqMatches.slice(0, 5).map((question, index) => ({
-    question: question.trim(),
-    answer: `Respuesta relacionada con ${question.trim().slice(0, 50)}...`
-  })) : undefined
-  
-  const hasHowTo = contentLower.includes('paso') || 
-                   contentLower.includes('paso a paso') || 
-                   contentLower.includes('cómo') ||
-                   contentLower.includes('guía completa')
-  
-  const stepRegex = /(?:paso\s+\d+|punto\s+\d+|sección\s+\d+)(?:[:.]\s*)([^\n]+)/gi
-  const stepMatches = post.content.match(stepRegex)
-  
-  const howtoData = hasHowTo && stepMatches ? {
-    steps: stepMatches.slice(0, 6).map((step, index) => ({
-      name: `Paso ${index + 1}`,
-      text: step.replace(/^paso\s+\d+[:.]\s*/i, '').trim()
-    })),
-    totalTime: post.readTime,
-    estimatedCost: "Gratis"
-  } : undefined
-
   return (
     <>
-      <StructuredData type="article" data={{ 
+      <StructuredData type="article" data={{
         slug: post.slug,
         title: post.title,
         description: post.description,
@@ -160,32 +136,15 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         category: post.category,
         tags: post.tags
       }} />
-      
-      {faqs && (
-        <StructuredData 
-          type="faqpage" 
-          data={{ 
-            faqs,
-            title: post.title,
-            description: post.description
-          }} 
-        />
-      )}
-      
-      {howtoData && (
-        <StructuredData 
-          type="howto" 
-          data={{ 
-            ...howtoData,
-            title: post.title,
-            description: post.description,
-            image: post.image
-          }} 
-        />
-      )}
       <div className="py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
-        <Breadcrumbs />
+        <Breadcrumbs
+          customItems={[
+            { label: "Inicio", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: post.title, href: `/blog/${post.slug}`, isActive: true },
+          ]}
+        />
         {/* Header */}
         <header className="mb-10">
           <div className="mb-8">
@@ -214,7 +173,13 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 <Clock className="h-4 w-4" />
                 <span>{post.readTime}</span>
               </div>
-              <span className="text-foreground font-medium">Por {post.author}</span>
+              <Link
+                href="/autores/equipo-finanzaspro"
+                className="text-foreground font-medium hover:text-primary transition-colors"
+                rel="author"
+              >
+                Por {post.author}
+              </Link>
             </div>
 
             {/* Social Share */}
@@ -285,6 +250,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* Tabla de contenidos */}
         <TableOfContents content={post.content} />
+
+        {/* Aviso legal de inversión */}
+        <InvestmentDisclaimer />
 
         {/* Article Content - Split in two halves with mid-content ad */}
         {(() => {

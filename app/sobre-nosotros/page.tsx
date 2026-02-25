@@ -16,7 +16,26 @@ export const metadata: Metadata = {
 }
 
 export default function SobreNosotrosPage() {
+  const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://app-finanzas-mu.vercel.app/sobre-nosotros",
+    name: "Sobre FinanzasPro",
+    description:
+      "Conoce al equipo detrás de FinanzasPro. Nuestra misión es democratizar la educación financiera en español.",
+    url: "https://app-finanzas-mu.vercel.app/sobre-nosotros",
+    inLanguage: "es",
+    isPartOf: { "@id": "https://app-finanzas-mu.vercel.app/#website" },
+    about: { "@id": "https://app-finanzas-mu.vercel.app/#organization" },
+  }
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
+        suppressHydrationWarning
+      />
     <div className="py-16 sm:py-20">
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
         {/* Header */}
@@ -122,14 +141,23 @@ export default function SobreNosotrosPage() {
                 </div>
                 <h3 className="text-xl font-bold text-foreground">Equipo FinanzasPro</h3>
                 <p className="text-muted-foreground mt-2">
-                  Somos un equipo de profesionales financieros, escritores y desarrolladores apasionados por
-                  democratizar la educación financiera. Nuestro equipo combina experiencia en finanzas corporativas,
-                  planificación financiera personal y comunicación digital.
+                  Somos un equipo de especialistas en finanzas personales, planificación financiera e inversión.
+                  Combinamos experiencia en análisis de mercados, educación económica y comunicación digital para
+                  ofrecerte contenido riguroso y fácil de aplicar.
                 </p>
                 <p className="text-muted-foreground mt-4">
-                  Aunque preferimos mantener el foco en el contenido más que en personalidades, puedes estar seguro de
-                  que cada artículo es revisado por profesionales con años de experiencia en el sector financiero.
+                  Cada artículo es investigado, redactado y revisado por personas con experiencia práctica en el
+                  sector financiero. Nuestro compromiso es la precisión, la independencia editorial y la utilidad real
+                  para tu situación financiera.
                 </p>
+                <div className="mt-6">
+                  <Link
+                    href="/autores/equipo-finanzaspro"
+                    className="text-primary hover:underline text-sm font-medium"
+                  >
+                    Ver perfil del equipo editorial →
+                  </Link>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -137,13 +165,13 @@ export default function SobreNosotrosPage() {
 
         {/* Stats */}
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-foreground text-center mb-8">Nuestro Impacto</h2>
+          <h2 className="text-3xl font-bold text-foreground text-center mb-8">FinanzasPro en números</h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-4">
             {[
-              { value: "50K+", label: "Lectores mensuales" },
-              { value: "200+", label: "Artículos publicados" },
-              { value: "95%", label: "Satisfacción de usuarios" },
-              { value: "€2M+", label: "Ahorrado por lectores" },
+              { value: "2022", label: "Año de fundación" },
+              { value: "20+", label: "Artículos publicados" },
+              { value: "Gratis", label: "Acceso a todo el contenido" },
+              { value: "100%", label: "Contenido en español" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-3xl font-bold text-primary">{stat.value}</div>
@@ -172,5 +200,6 @@ export default function SobreNosotrosPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

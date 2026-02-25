@@ -3746,7 +3746,7 @@ Compra un cuaderno hoy. Tu versión futura con más dinero en el banco te lo agr
     title: "Ciberseguridad Financiera: 10 Formas en que los Hackers Roban tu Dinero (y Cómo Protegerte)",
     description:
       "Los fraudes financieros digitales crecieron un 40% en 2025. Aprende a proteger tus cuentas bancarias, tarjetas y apps de inversión con esta guía completa de ciberseguridad financiera.",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=1200&h=630&fit=crop",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&h=630&fit=crop",
     content: `
 # Ciberseguridad Financiera: Protege tu Dinero en la Era Digital
 

@@ -1,0 +1,46 @@
+# FinanzasPro — Guía para rastreadores IA
+# Plataforma educativa de finanzas personales en español
+# Sitio web: https://app-finanzas-mu.vercel.app
+
+## Sobre este sitio
+FinanzasPro es una plataforma educativa de finanzas personales en español fundada en 2022.
+Cubre ahorro, inversión, fondos indexados, ETFs, planificación financiera y libertad financiera.
+Todo el contenido es de carácter educativo y no constituye asesoramiento financiero.
+
+## Páginas principales
+- https://app-finanzas-mu.vercel.app/ — Inicio
+- https://app-finanzas-mu.vercel.app/blog — Blog completo de finanzas personales
+- https://app-finanzas-mu.vercel.app/ahorro — Guía de ahorro y métodos probados
+- https://app-finanzas-mu.vercel.app/inversiones — Guía de inversión para principiantes
+- https://app-finanzas-mu.vercel.app/jovenes — Finanzas para jóvenes y estudiantes
+- https://app-finanzas-mu.vercel.app/proyecciones — Calculadora de interés compuesto
+- https://app-finanzas-mu.vercel.app/recursos — Apps y herramientas financieras recomendadas
+- https://app-finanzas-mu.vercel.app/sobre-nosotros — Sobre el equipo editorial
+
+## Artículos destacados (contenido de mayor autoridad)
+- https://app-finanzas-mu.vercel.app/blog/interes-compuesto-como-funciona
+- https://app-finanzas-mu.vercel.app/blog/invertir-fondos-indexados-principiantes
+- https://app-finanzas-mu.vercel.app/blog/presupuesto-personal-completo
+- https://app-finanzas-mu.vercel.app/blog/acciones-para-principiantes
+- https://app-finanzas-mu.vercel.app/blog/bonos-para-principiantes
+- https://app-finanzas-mu.vercel.app/blog/manejo-deuda-personal
+- https://app-finanzas-mu.vercel.app/blog/movimiento-fire-retiro-temprano
+- https://app-finanzas-mu.vercel.app/blog/criptomonedas-para-principiantes-guia
+- https://app-finanzas-mu.vercel.app/blog/roboadvisors-guia-completa-inversion-automatizada
+- https://app-finanzas-mu.vercel.app/blog/inteligencia-artificial-finanzas-personales
+
+## Política de uso para IA
+- GPTBot: permitido (ver robots.txt)
+- ClaudeBot: permitido
+- PerplexityBot: permitido
+- Todo el contenido es accesible sin JavaScript (SSR con Next.js)
+- Sitemap: https://app-finanzas-mu.vercel.app/sitemap.xml
+
+## Idioma y audiencia
+- Idioma: Español (es)
+- Audiencia: Hispanohablantes en España y Latinoamérica
+- Nivel: Principiantes a intermedio en finanzas personales
+
+## Descargo de responsabilidad
+El contenido de FinanzasPro es exclusivamente educativo. No constituye asesoramiento
+financiero, de inversión, fiscal ni legal. Consulta con un profesional antes de invertir.

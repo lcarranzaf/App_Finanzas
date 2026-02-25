@@ -19,6 +19,18 @@ export const metadata: Metadata = {
 }
 
 export default function AhorroPage() {
+  const ahorroPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://app-finanzas-mu.vercel.app/ahorro",
+    name: "Estrategias de Ahorro - FinanzasPro",
+    description:
+      "Descubre cómo ahorrar dinero con el método 50/30/20, ahorro automático y el reto 52 semanas.",
+    url: "https://app-finanzas-mu.vercel.app/ahorro",
+    inLanguage: "es",
+    isPartOf: { "@id": "https://app-finanzas-mu.vercel.app/#website" },
+  }
+
   const savingMethods = [
     {
       title: "Método 50/30/20",
@@ -146,6 +158,12 @@ export default function AhorroPage() {
   ]
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ahorroPageSchema) }}
+        suppressHydrationWarning
+      />
     <div className="flex flex-col">
       {/* Breadcrumbs */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-6">
@@ -369,5 +387,6 @@ export default function AhorroPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }

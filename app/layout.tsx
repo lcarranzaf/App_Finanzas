@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | FinanzasPro",
   },
   description:
-    "Aprende a ahorrar, invertir y construir un futuro próspero con nuestros consejos expertos en finanzas personales. Guías sobre fondos indexados, presupuestos y estrategias financieras.",
+    "Aprende a ahorrar, invertir y gestionar tu dinero. Guías prácticas sobre fondos indexados, presupuestos, ETFs y libertad financiera en español.",
   keywords: [
     "finanzas personales",
     "ahorro",
@@ -86,11 +86,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://app-finanzas-mu.vercel.app",
     languages: {
-      "es-ES": "https://app-finanzas-mu.vercel.app",
+      "es": "https://app-finanzas-mu.vercel.app",
+      "x-default": "https://app-finanzas-mu.vercel.app",
     },
   },
   category: "finance",
-  generator: "v0.app",
 }
 
 export default async function RootLayout({
@@ -113,7 +113,6 @@ export default async function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="" />
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
         <StructuredData type="website" />
         <StructuredData type="organization" />
@@ -135,10 +134,10 @@ export default async function RootLayout({
             });
           `}
         </Script>
-        {/* Google AdSense - Replace with your publisher ID */}
-        <Script
+        {/* Google AdSense — script nativo para evitar data-nscript de Next.js */}
+        <script
+          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4657042320327960"
-          strategy="afterInteractive"
           crossOrigin="anonymous"
           suppressHydrationWarning
         />

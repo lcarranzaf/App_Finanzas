@@ -38,20 +38,19 @@ export function CookieConsent() {
   if (!show) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-background border-t border-border shadow-lg p-4 sm:p-6">
-      <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-muted-foreground text-center sm:text-left">
-          Utilizamos cookies propias y de terceros (Google AdSense, Google Analytics) para mejorar tu experiencia y mostrar anuncios personalizados.
-          Puedes leer más en nuestra{' '}
-          <Link href="/privacidad" className="text-primary underline">
-            Política de Privacidad
-          </Link>.
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-t border-border shadow-lg px-4 py-3 sm:px-6 sm:py-4">
+      <div className="mx-auto max-w-7xl flex flex-row items-center justify-between gap-3">
+        <p className="text-xs sm:text-sm text-muted-foreground leading-5">
+          Usamos cookies para mejorar tu experiencia y mostrar anuncios.{' '}
+          <Link href="/privacidad" className="text-primary underline whitespace-nowrap">
+            Ver política
+          </Link>
         </p>
-        <div className="flex gap-3 flex-shrink-0">
-          <Button variant="outline" size="sm" onClick={reject}>
+        <div className="flex gap-2 flex-shrink-0">
+          <Button variant="outline" size="sm" onClick={reject} className="h-8 px-3 text-xs">
             Rechazar
           </Button>
-          <Button size="sm" onClick={accept}>
+          <Button size="sm" onClick={accept} className="h-8 px-3 text-xs">
             Aceptar
           </Button>
         </div>

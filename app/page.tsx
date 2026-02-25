@@ -57,10 +57,10 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-background via-background to-muted/30 py-24 sm:py-32">
+      <section className="relative bg-gradient-to-br from-background via-background to-muted/30 py-14 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <div className="mb-8">
+            <div className="mb-6">
               <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary ring-1 ring-inset ring-primary/20">
                 Nuevo: Guía de Inversiones 2026
               </span>
@@ -68,11 +68,11 @@ export default function HomePage() {
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl text-balance">
               Construye tu <span className="text-primary">Futuro Financiero</span> con Confianza
             </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground text-pretty">
+            <p className="mt-5 text-lg leading-8 text-muted-foreground text-pretty">
               Aprende a ahorrar, invertir y gestionar tu dinero con estrategias probadas. Desde fondos indexados hasta
               presupuestos personales, te guiamos paso a paso hacia la libertad financiera.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-8 flex items-center justify-center gap-x-6">
               <Button asChild size="lg">
                 <Link href="/blog">Comenzar Ahora</Link>
               </Button>
@@ -147,8 +147,69 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Educational Content Section */}
+      {/* Featured Articles — enlaces directos a artículos individuales */}
       <section className="py-16 sm:py-20 bg-muted/30">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Artículos más leídos
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-muted-foreground">
+              Guías prácticas para empezar a construir tu libertad financiera
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                href: "/blog/interes-compuesto-como-funciona",
+                title: "Interés compuesto: cómo funciona y cómo te hace rico",
+                category: "Inversiones",
+                readTime: "8 min",
+              },
+              {
+                href: "/blog/invertir-fondos-indexados-principiantes",
+                title: "Invertir en fondos indexados: guía completa para principiantes",
+                category: "Inversiones",
+                readTime: "10 min",
+              },
+              {
+                href: "/blog/presupuesto-personal-completo",
+                title: "Cómo crear un presupuesto personal completo paso a paso",
+                category: "Ahorro",
+                readTime: "7 min",
+              },
+              {
+                href: "/blog/como-empezar-ahorrar-poco-dinero",
+                title: "Cómo empezar a ahorrar con poco dinero: la regla 50/30/20",
+                category: "Ahorro",
+                readTime: "6 min",
+              },
+            ].map((article) => (
+              <Link
+                key={article.href}
+                href={article.href}
+                className="group block rounded-lg border border-foreground/10 bg-card p-5 hover:shadow-md hover:border-primary/30 transition-all"
+              >
+                <span className="inline-block text-xs font-semibold text-primary bg-primary/10 rounded-full px-2 py-0.5 mb-3">
+                  {article.category}
+                </span>
+                <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors leading-snug mb-3">
+                  {article.title}
+                </p>
+                <span className="text-xs text-muted-foreground">{article.readTime} lectura →</span>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Button variant="outline" asChild>
+              <Link href="/blog">Ver todos los artículos</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Educational Content Section */}
+      <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
             <div className="text-center mb-12">

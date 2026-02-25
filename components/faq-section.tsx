@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
-import StructuredData from "@/components/structured-data"
 
 export interface FAQItem {
   question: string
@@ -24,7 +23,6 @@ export function FAQSection({ title = "Preguntas Frecuentes", subtitle, faqs }: F
 
   return (
     <section className="py-16 sm:py-20">
-      <StructuredData type="faqpage" data={{ faqs }} />
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground">{title}</h2>

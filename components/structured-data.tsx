@@ -1,7 +1,17 @@
 import { getBlogPost } from "@/lib/blog-data"
 
+const BASE_URL = "https://app-finanzas-mu.vercel.app"
+const ORG_ID = `${BASE_URL}/#organization`
+
+/** Convierte "2026-02-12" → "2026-02-12T00:00:00+00:00" */
+function toISODateTime(dateStr: string): string {
+  if (!dateStr) return dateStr
+  if (dateStr.includes("T")) return dateStr
+  return `${dateStr}T00:00:00+00:00`
+}
+
 interface StructuredDataProps {
-  type: "website" | "article" | "organization" | "financeguide" | "faqpage" | "howto"
+  type: "website" | "article" | "organization" | "financeguide" | "faqpage"
   data?: {
     slug?: string
     title?: string
@@ -12,9 +22,6 @@ interface StructuredDataProps {
     category?: string
     tags?: string[]
     faqs?: { question: string; answer: string }[]
-    steps?: { name: string; text: string; image?: string }[]
-    totalTime?: string
-    estimatedCost?: string
   }
 }
 
@@ -26,23 +33,55 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
       structuredData = {
         "@context": "https://schema.org",
         "@type": "WebSite",
+        "@id": `${BASE_URL}/#website`,
         name: "FinanzasPro",
         description:
           "Tu guía confiable para el éxito financiero. Aprende a ahorrar, invertir y construir un futuro próspero.",
-        url: "https://app-finanzas-mu.vercel.app",
+        url: BASE_URL,
         potentialAction: {
           "@type": "SearchAction",
-          target: "https://app-finanzas-mu.vercel.app/blog?q={search_term_string}",
+          target: `${BASE_URL}/blog?q={search_term_string}`,
           "query-input": "required name=search_term_string",
         },
-        publisher: {
-          "@type": "Organization",
-          name: "FinanzasPro",
-          logo: {
-            "@type": "ImageObject",
-            url: "https://app-finanzas-mu.vercel.app/og-image.jpg",
-          },
+        publisher: { "@id": ORG_ID },
+      }
+      break
+
+    case "organization":
+      structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": ORG_ID,
+        name: "FinanzasPro",
+        description:
+          "Plataforma educativa especializada en finanzas personales, inversiones y estrategias de ahorro.",
+        url: BASE_URL,
+        logo: {
+          "@type": "ImageObject",
+          "@id": `${BASE_URL}/#logo`,
+          url: `${BASE_URL}/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          caption: "FinanzasPro",
         },
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer service",
+          email: "contacto@app-finanzas-mu.vercel.app",
+          availableLanguage: { "@type": "Language", name: "Spanish", alternateName: "es" },
+        },
+        foundingDate: "2022",
+        knowsAbout: [
+          "Finanzas Personales",
+          "Inversiones",
+          "Ahorro",
+          "Presupuestos",
+          "Fondos Indexados",
+          "Educación Financiera",
+          "ETFs",
+          "Bolsa de Valores",
+          "Planificación Financiera",
+        ],
       }
       break
 
@@ -52,7 +91,8 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         if (post) {
           structuredData = {
             "@context": "https://schema.org",
-            "@type": "Article",
+            "@type": "BlogPosting",
+            "@id": `${BASE_URL}/blog/${post.slug}#article`,
             headline: post.title,
             description: post.description,
             image: {
@@ -61,32 +101,31 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
               width: 1200,
               height: 630,
             },
-            datePublished: post.publishedAt,
-            dateModified: post.publishedAt,
+            datePublished: toISODateTime(post.publishedAt),
+            dateModified: toISODateTime(post.publishedAt),
             author: {
-              "@type": "Person",
-              name: post.author,
-            },
-            publisher: {
               "@type": "Organization",
+              "@id": ORG_ID,
               name: "FinanzasPro",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://app-finanzas-mu.vercel.app/og-image.jpg",
-              },
             },
+            publisher: { "@id": ORG_ID },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
+              "@id": `${BASE_URL}/blog/${post.slug}`,
             },
+            url: `${BASE_URL}/blog/${post.slug}`,
             keywords: post.tags.join(", "),
             articleSection: post.category,
             wordCount: post.content.split(" ").length,
-            inLanguage: "es-ES",
+            inLanguage: "es",
             isAccessibleForFree: true,
             about: {
               "@type": "Thing",
               name: post.category,
+            },
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: ["h1", ".article-content p:first-of-type"],
             },
           }
         }
@@ -110,65 +149,6 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
       }
       break
 
-    case "howto":
-      if (data?.steps && data.steps.length > 0) {
-        structuredData = {
-          "@context": "https://schema.org",
-          "@type": "HowTo",
-          name: data.title,
-          description: data.description,
-          image: data.image,
-          totalTime: data.totalTime,
-          estimatedCost: data.estimatedCost,
-          step: data.steps.map((step, index) => ({
-            "@type": "HowToStep",
-            name: step.name,
-            text: step.text,
-            position: index + 1,
-            image: step.image,
-          })),
-          tool: [
-            {
-              "@type": "HowToTool",
-              name: "Calculadora financiera",
-            },
-            {
-              "@type": "HowToTool",
-              name: "Hoja de cálculo",
-            },
-          ],
-        }
-      }
-      break
-
-    case "organization":
-      structuredData = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        name: "FinanzasPro",
-        description: "Plataforma educativa especializada en finanzas personales, inversiones y estrategias de ahorro.",
-        url: "https://app-finanzas-mu.vercel.app",
-        logo: "https://app-finanzas-mu.vercel.app/og-image.jpg",
-        contactPoint: {
-          "@type": "ContactPoint",
-          contactType: "customer service",
-          email: "contacto@app-finanzas-mu.vercel.app",
-        },
-        sameAs: [],
-        foundingDate: "2022",
-        knowsAbout: [
-          "Finanzas Personales",
-          "Inversiones",
-          "Ahorro",
-          "Presupuestos",
-          "Fondos Indexados",
-          "Educación Financiera",
-          "ETFs",
-          "Bolsa de Valores",
-          "Planificación Financiera",
-        ],
-      }
-      break
   }
 
   return (

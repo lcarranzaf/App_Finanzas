@@ -26,6 +26,18 @@ export const metadata: Metadata = {
 }
 
 export default function InversionesPage() {
+  const inversionesPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://app-finanzas-mu.vercel.app/inversiones",
+    name: "Guía de Inversiones para Principiantes - FinanzasPro",
+    description:
+      "Aprende a invertir desde cero: compara fondos indexados, ETFs, acciones y bonos. Estrategias para todos los perfiles de riesgo.",
+    url: "https://app-finanzas-mu.vercel.app/inversiones",
+    inLanguage: "es",
+    isPartOf: { "@id": "https://app-finanzas-mu.vercel.app/#website" },
+  }
+
   const investmentOptions = [
     {
       title: "Fondos Indexados",
@@ -207,6 +219,12 @@ export default function InversionesPage() {
   ]
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(inversionesPageSchema) }}
+        suppressHydrationWarning
+      />
     <div className="flex flex-col">
       {/* Breadcrumbs */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-6">
@@ -522,5 +540,6 @@ export default function InversionesPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }

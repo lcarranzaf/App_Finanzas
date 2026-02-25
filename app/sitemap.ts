@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/sobre-nosotros", priority: 0.6, frequency: "monthly" as const },
     { path: "/contacto", priority: 0.5, frequency: "monthly" as const },
     { path: "/privacidad", priority: 0.3, frequency: "yearly" as const },
+    { path: "/terminos", priority: 0.3, frequency: "yearly" as const },
   ]
 
   const blogPages = blogPosts.map((post) => {
