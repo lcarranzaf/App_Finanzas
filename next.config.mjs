@@ -46,12 +46,40 @@ const nextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} https://www.googletagmanager.com https://pagead2.googlesyndication.com https://securepubads.g.doubleclick.net https://va.vercel-scripts.com https://*.adtrafficquality.google`,
+
+              // Scripts (JS)
+              `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} 
+                https://www.googletagmanager.com 
+                https://pagead2.googlesyndication.com 
+                https://securepubads.g.doubleclick.net 
+                https://fundingchoicesmessages.google.com
+                https://va.vercel-scripts.com 
+                https://*.adtrafficquality.google`,
+
+              // IMPORTANTE para AdSense moderno
+              `script-src-elem 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} 
+                https://www.googletagmanager.com 
+                https://pagead2.googlesyndication.com 
+                https://securepubads.g.doubleclick.net 
+                https://fundingchoicesmessages.google.com
+                https://va.vercel-scripts.com 
+                https://*.adtrafficquality.google`,
+
+              // CSS
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+
+              // Fonts
               "font-src 'self' https://fonts.gstatic.com",
+
+              // Imágenes
               "img-src 'self' data: blob: https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.adtrafficquality.google https://images.unsplash.com https://images.pexels.com https://hebbkx1anhila5yf.public.blob.vercel-storage.com",
+
+              // Fetch / XHR / Analytics
               "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com https://pagead2.googlesyndication.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net https://tpc.googlesyndication.com",
+
+              // Iframes (anuncios)
               "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://*.adtrafficquality.google",
+
               "object-src 'none'",
               "base-uri 'self'",
             ].join("; "),
