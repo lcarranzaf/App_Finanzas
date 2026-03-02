@@ -88,6 +88,11 @@ const nextConfig = {
         destination: "/blog/movimiento-fire-retiro-temprano",
         permanent: true,
       },
+      {
+        source: "/curso",
+        destination: "/",
+        permanent: false,
+      },
     ];
   },
 };
