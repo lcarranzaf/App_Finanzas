@@ -6,10 +6,15 @@ export interface CursoData {
   title: string
   description: string
   createdAt: string
+  // Campos opcionales para enriquecer la página
+  couponCode?: string     // auto-extraído de la URL
+  instructor?: string
+  level?: string          // "Principiante" | "Intermedio" | "Avanzado" | "Todos los niveles"
+  originalPrice?: string  // ej: "$89.99"
+  category?: string       // ej: "Desarrollo Web", "Marketing"
+  highlights?: string[]   // hasta 6 puntos de "qué aprenderás"
 }
 
-// Inicialización lazy: el cliente se crea la primera vez que se usa,
-// no al cargar el módulo. Esto permite capturar errores de env vars correctamente.
 let _redis: Redis | null = null
 
 function getRedis(): Redis {
@@ -17,9 +22,7 @@ function getRedis(): Redis {
     const url = process.env.KV_REST_API_URL
     const token = process.env.KV_REST_API_TOKEN
     if (!url || !token) {
-      throw new Error(
-        'Faltan variables de entorno: KV_REST_API_URL y/o KV_REST_API_TOKEN'
-      )
+      throw new Error('Faltan variables de entorno: KV_REST_API_URL y/o KV_REST_API_TOKEN')
     }
     _redis = new Redis({ url, token })
   }
