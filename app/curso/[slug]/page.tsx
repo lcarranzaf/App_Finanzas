@@ -2,10 +2,11 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { getCurso } from '@/lib/kv-storage'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { ExternalLink, BookOpen, Tag } from 'lucide-react'
 import { Breadcrumbs } from '@/components/breadcrumbs'
+import AdSense from '@/components/AdSense'
+import { CourseButton } from './_components/course-button'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const curso = await getCurso(slug)
   if (!curso) return {}
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://app-finanzas-mu.vercel.app/'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://app-finanzas-mu.vercel.app'
   const pageUrl = `${siteUrl}/curso/${slug}`
 
   return {
@@ -28,7 +29,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: curso.description,
       url: pageUrl,
       type: 'website',
-      // Telegram usa la primera imagen og:image disponible para el preview
       images: [
         {
           url: `${siteUrl}/og-image.png`,
@@ -82,32 +82,25 @@ export default async function CursoPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Card principal */}
-        <Card className="mt-10">
+        {/* Banner AdSense superior */}
+        <div className="mt-8">
+          <AdSense slot="7561827917" format="horizontal" />
+        </div>
+
+        {/* Card principal con botón countdown */}
+        <Card className="mt-6">
           <CardHeader>
             <CardTitle className="text-lg">Accede al curso</CardTitle>
             <CardDescription>
-              Haz clic en el botón para ir a Udemy con el cupón ya aplicado en el enlace.
+              El enlace se activará en 10 segundos con el cupón ya incluido.
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col items-center gap-4">
-            <Button asChild size="lg" className="w-full max-w-sm text-base">
-              <a
-                href={curso.udemyUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-              >
-                Ir al curso en Udemy
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <p className="text-xs text-muted-foreground text-center">
-              Serás dirigido a Udemy. Los cupones tienen disponibilidad limitada.
-            </p>
+            <CourseButton udemyUrl={curso.udemyUrl} />
           </CardContent>
         </Card>
 
-        {/* Aviso de afiliado / transparencia */}
+        {/* Aviso de transparencia */}
         <div className="mt-8 rounded-lg bg-amber-50 border border-amber-200 p-4">
           <div className="flex gap-3">
             <ExternalLink className="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5" />
@@ -119,6 +112,11 @@ export default async function CursoPage({ params }: Props) {
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Banner AdSense inferior */}
+        <div className="mt-8">
+          <AdSense slot="5745358955" format="horizontal" />
         </div>
 
         <p className="mt-6 text-center text-xs text-muted-foreground">
