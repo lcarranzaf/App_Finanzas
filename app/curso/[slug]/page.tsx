@@ -139,32 +139,6 @@ export default async function CursoPage({ params }: Props) {
           </div>
         )}
 
-        {/* ── CARD: CTA ── */}
-        <Card className="mt-6 border-green-200 bg-green-50 dark:bg-green-950/20 dark:border-green-900">
-          <CardHeader>
-            <CardTitle className="text-lg flex items-center gap-2">
-              <TrendingUp className="h-5 w-5 text-green-600" />
-              Curso gratuito por tiempo limitado
-            </CardTitle>
-            <CardDescription>
-              Accede ahora con el 100% de descuento aplicado. Los cupones tienen disponibilidad
-              limitada.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            <div className="flex items-center gap-3">
-              <span className="text-3xl font-bold text-green-600">$0</span>
-              {curso.originalPrice && (
-                <span className="text-muted-foreground line-through text-lg">
-                  {curso.originalPrice}
-                </span>
-              )}
-              <Badge className="bg-green-600 hover:bg-green-600 text-white">100% OFF</Badge>
-            </div>
-            <CourseButton udemyUrl={curso.udemyUrl} />
-          </CardContent>
-        </Card>
-
         {/* ── CARD: QUÉ APRENDERÁS ── */}
         <Card className="mt-6">
           <CardHeader>
@@ -188,6 +162,32 @@ export default async function CursoPage({ params }: Props) {
                 </li>
               ))}
             </ul>
+          </CardContent>
+        </Card>
+
+        {/* ── CARD: CTA ── */}
+        <Card className="mt-6 border-green-200 bg-green-50 dark:bg-green-950/20 dark:border-green-900">
+          <CardHeader>
+            <CardTitle className="text-lg flex items-center gap-2">
+              <TrendingUp className="h-5 w-5 text-green-600" />
+              Curso gratuito por tiempo limitado
+            </CardTitle>
+            <CardDescription>
+              Accede ahora con el 100% de descuento aplicado. Los cupones tienen disponibilidad
+              limitada.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <div className="flex items-center gap-3">
+              <span className="text-3xl font-bold text-green-600">$0</span>
+              {curso.originalPrice && (
+                <span className="text-muted-foreground line-through text-lg">
+                  {curso.originalPrice}
+                </span>
+              )}
+              <Badge className="bg-green-600 hover:bg-green-600 text-white">100% OFF</Badge>
+            </div>
+            <CourseButton udemyUrl={curso.udemyUrl} />
           </CardContent>
         </Card>
 
