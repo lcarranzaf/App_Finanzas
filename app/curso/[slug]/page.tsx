@@ -84,7 +84,7 @@ export default async function CursoPage({ params }: Props) {
 
         {/* Banner AdSense superior */}
         <div className="mt-8">
-          <AdSense slot="7561827917" format="horizontal" />
+          <AdSense slot="1562571362" format="horizontal" />
         </div>
 
         {/* Card principal con botón countdown */}
