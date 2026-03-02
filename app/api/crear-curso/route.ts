@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'URL de Udemy no válida' }, { status: 400 })
     }
 
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://finanzaspro.com'
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://app-finanzas-mu.vercel.app/'
 
     const cursoData: CursoData = {
       slug: courseSlug,

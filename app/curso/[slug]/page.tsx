@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const curso = await getCurso(slug)
   if (!curso) return {}
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://finanzaspro.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://app-finanzas-mu.vercel.app/'
   const pageUrl = `${siteUrl}/curso/${slug}`
 
   return {
