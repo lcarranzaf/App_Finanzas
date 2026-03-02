@@ -192,14 +192,29 @@ def build_group_message(title: str, bridge_url: str, parsed: dict) -> str:
     return "\n".join(lines)
 
 
+def extract_button_urls(message) -> list[str]:
+    """
+    Extrae todas las URLs de los botones inline del mensaje.
+    Funciona con mensajes reenviados que tienen botones "Ver", "Ir al curso", etc.
+    """
+    urls = []
+    if message.reply_markup and hasattr(message.reply_markup, "inline_keyboard"):
+        for row in message.reply_markup.inline_keyboard:
+            for button in row:
+                if getattr(button, "url", None):
+                    urls.append(button.url)
+    return urls
+
+
 async def handle_private_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     message = update.message
-    if not message or not message.text:
+    if not message:
         return
 
-    text = message.text
+    # Acepta texto plano Y mensajes con foto/video/caption (mensajes reenviados de canales)
+    text = message.text or message.caption or ""
 
-    # ── Paso 1: buscar link directo de Udemy ──
+    # ── Paso 1: buscar link directo de Udemy en el texto ──
     udemy_match = UDEMY_PATTERN.search(text)
 
     if udemy_match:
@@ -207,19 +222,27 @@ async def handle_private_message(update: Update, context: ContextTypes.DEFAULT_T
         parsed = parse_text_fields(text, udemy_url)
 
     else:
-        # ── Paso 2: buscar cualquier URL y extraer Udemy desde esa página ──
+        # ── Paso 2: buscar URL en el texto o en los botones inline ──
         url_match = ANY_URL_PATTERN.search(text)
-        if not url_match:
+        button_urls = extract_button_urls(message)
+
+        # Preferir URL del texto; si no hay, usar el primer botón inline
+        bridge_url_ajena = None
+        if url_match:
+            bridge_url_ajena = url_match.group(0).rstrip(".,)")
+        elif button_urls:
+            bridge_url_ajena = button_urls[0]
+
+        if not bridge_url_ajena:
             await message.reply_text(
                 "No encontré ningún link.\n\n"
                 "Puedes enviarme:\n"
                 "• Un link directo de Udemy\n"
-                "• El link de una página puente de otro canal (yo extraigo el link de Udemy automáticamente)"
+                "• El link o mensaje reenviado de una página puente ajena"
             )
             return
 
-        bridge_url_ajena = url_match.group(0).rstrip(".,)")
-        await message.reply_text(f"No es un link de Udemy directo. Visitando la página para extraer el link...")
+        await message.reply_text("Visitando la página para extraer el link de Udemy...")
 
         udemy_url = await extract_udemy_from_page(bridge_url_ajena)
 
@@ -231,6 +254,7 @@ async def handle_private_message(update: Update, context: ContextTypes.DEFAULT_T
             return
 
         await message.reply_text(f"Link de Udemy encontrado:\n{udemy_url}")
+        # Usar el caption/texto del mensaje reenviado como base para el título
         parsed = parse_text_fields(text, udemy_url)
 
     # ── Paso 3: llamar a la API de Next.js ──
@@ -280,8 +304,12 @@ async def handle_private_message(update: Update, context: ContextTypes.DEFAULT_T
 
 def main() -> None:
     app = Application.builder().token(BOT_TOKEN).build()
+    # Escucha texto, fotos con caption y cualquier mensaje reenviado en privado
     app.add_handler(
-        MessageHandler(filters.TEXT & filters.ChatType.PRIVATE, handle_private_message)
+        MessageHandler(
+            filters.ChatType.PRIVATE & ~filters.COMMAND,
+            handle_private_message,
+        )
     )
     logger.info("Bot iniciado. Esperando mensajes...")
     app.run_polling(allowed_updates=Update.ALL_TYPES)
