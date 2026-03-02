@@ -14,7 +14,9 @@
       "Bash(dir:*)",
       "Bash(node:*)",
       "Bash(tail:*)",
-      "Bash(Remove-Item:*)"
+      "Bash(Remove-Item:*)",
+      "Bash(cd:*)",
+      "Bash(head:*)"
     ]
   }
 }
