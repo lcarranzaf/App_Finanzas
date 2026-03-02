@@ -19,6 +19,8 @@ const nextConfig = {
       "hebbkx1anhila5yf.public.blob.vercel-storage.com",
       "images.unsplash.com",
       "images.pexels.com",
+      "img-c.udemycdn.com",
+      "img.udemycdn.com",
     ],
     formats: ["image/webp", "image/avif"],
     minimumCacheTTL: 86400, // Cache images for 24 hours
@@ -50,7 +52,7 @@ const nextConfig = {
               `script-src-elem 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com https://pagead2.googlesyndication.com https://securepubads.g.doubleclick.net https://fundingchoicesmessages.google.com https://va.vercel-scripts.com https://*.adtrafficquality.google`,
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com",
-              "img-src 'self' data: blob: https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.adtrafficquality.google https://images.unsplash.com https://images.pexels.com https://hebbkx1anhila5yf.public.blob.vercel-storage.com",
+              "img-src 'self' data: blob: https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.adtrafficquality.google https://images.unsplash.com https://images.pexels.com https://hebbkx1anhila5yf.public.blob.vercel-storage.com https://img-c.udemycdn.com https://img.udemycdn.com",
               "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com https://pagead2.googlesyndication.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://fundingchoicesmessages.google.com",
               "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://*.adtrafficquality.google",
               "object-src 'none'",

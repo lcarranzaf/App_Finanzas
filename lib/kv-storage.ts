@@ -13,6 +13,7 @@ export interface CursoData {
   originalPrice?: string  // ej: "$89.99"
   category?: string       // ej: "Desarrollo Web", "Marketing"
   highlights?: string[]   // hasta 6 puntos de "qué aprenderás"
+  imageUrl?: string       // og:image de la página de Udemy (obtenida automáticamente)
 }
 
 let _redis: Redis | null = null

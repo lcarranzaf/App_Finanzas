@@ -14,6 +14,24 @@ function extractCouponCode(url: string): string | undefined {
   }
 }
 
+// Obtiene la imagen og:image de la página pública del curso en Udemy
+// Usa solo la URL base sin cupón para acceder a la página pública
+async function fetchUdemyOgImage(courseSlug: string): Promise<string | undefined> {
+  try {
+    const url = `https://www.udemy.com/course/${courseSlug}/`
+    const response = await fetch(url, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1)' },
+      signal: AbortSignal.timeout(6000),
+    })
+    const html = await response.text()
+    const match = html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/)
+      ?? html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/)
+    return match?.[1] ?? undefined
+  } catch {
+    return undefined
+  }
+}
+
 function slugToTitle(slug: string): string {
   return slug
     .split('-')
@@ -57,6 +75,9 @@ export async function POST(request: NextRequest) {
 
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://app-finanzas-mu.vercel.app'
 
+    // Intentar obtener imagen del curso desde Udemy (og:image)
+    const imageUrl = await fetchUdemyOgImage(courseSlug)
+
     const cursoData: CursoData = {
       slug: courseSlug,
       udemyUrl,
@@ -69,6 +90,7 @@ export async function POST(request: NextRequest) {
       originalPrice: originalPrice || undefined,
       category: category || undefined,
       highlights: highlights?.length ? highlights : undefined,
+      imageUrl: imageUrl || undefined,
     }
 
     await saveCurso(cursoData)

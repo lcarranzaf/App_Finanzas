@@ -22,7 +22,6 @@ import { Breadcrumbs } from '@/components/breadcrumbs'
 import AdSense from '@/components/AdSense'
 import { CourseButton } from './_components/course-button'
 
-// Cachear la página 1 hora para que AdSense pueda crawlearla
 export const revalidate = 3600
 
 interface Props {
@@ -46,7 +45,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: curso.description,
       url: pageUrl,
       type: 'website',
-      images: [{ url: `${siteUrl}/og-image.png`, width: 1200, height: 630, alt: curso.title }],
+      images: [
+        {
+          url: curso.imageUrl || `${siteUrl}/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: curso.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
@@ -56,7 +62,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-// 4 posts destacados para la sección de blog (estáticos para SEO)
 const FEATURED_POSTS = blogPosts.slice(0, 4)
 
 export default async function CursoPage({ params }: Props) {
@@ -115,12 +120,26 @@ export default async function CursoPage({ params }: Props) {
           </div>
         </div>
 
-        {/* ── ADSENSE 1 — encima del CTA ── */}
+        {/* ── ADSENSE 1 ── */}
         <div className="mt-8">
           <AdSense slot="1562571362" format="horizontal" />
         </div>
 
-        {/* ── CARD: CTA PRINCIPAL ── */}
+        {/* ── IMAGEN DEL CURSO (si existe) ── */}
+        {curso.imageUrl && (
+          <div className="mt-6 overflow-hidden rounded-xl border border-border shadow-sm">
+            <Image
+              src={curso.imageUrl}
+              alt={curso.title}
+              width={800}
+              height={450}
+              className="w-full object-cover"
+              priority
+            />
+          </div>
+        )}
+
+        {/* ── CARD: CTA ── */}
         <Card className="mt-6 border-green-200 bg-green-50 dark:bg-green-950/20 dark:border-green-900">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
@@ -128,8 +147,8 @@ export default async function CursoPage({ params }: Props) {
               Curso gratuito por tiempo limitado
             </CardTitle>
             <CardDescription>
-              Accede ahora a Udemy con el 100% de descuento aplicado. Los cupones tienen
-              disponibilidad limitada.
+              Accede ahora con el 100% de descuento aplicado. Los cupones tienen disponibilidad
+              limitada.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">
@@ -172,12 +191,12 @@ export default async function CursoPage({ params }: Props) {
           </CardContent>
         </Card>
 
-        {/* ── ADSENSE 2 — entre secciones ── */}
+        {/* ── ADSENSE 2 ── */}
         <div className="mt-8">
           <AdSense slot="5745358955" format="horizontal" />
         </div>
 
-        {/* ── SECCIÓN BLOG ── */}
+        {/* ── SECCIÓN BLOG (casi al final) ── */}
         <div className="mt-10">
           <div className="flex items-center justify-between mb-6">
             <div>
@@ -229,7 +248,7 @@ export default async function CursoPage({ params }: Props) {
           </div>
         </div>
 
-        {/* ── ADSENSE 3 — después del blog ── */}
+        {/* ── ADSENSE 3 ── */}
         <div className="mt-8">
           <AdSense slot="9249489692" format="horizontal" />
         </div>
@@ -260,8 +279,8 @@ export default async function CursoPage({ params }: Props) {
             <ExternalLink className="h-4 w-4 text-amber-500 flex-shrink-0 mt-0.5" />
             <p className="text-sm text-amber-700">
               <span className="font-medium text-amber-800">Aviso: </span>
-              Los cupones son recopilados de fuentes públicas y pueden caducar en cualquier
-              momento. El enlace puede incluir código de afiliado sin costo adicional para ti.
+              Los cupones son recopilados de fuentes públicas y pueden caducar en cualquier momento.
+              El enlace puede incluir código de afiliado sin costo adicional para ti.
             </p>
           </div>
         </div>
