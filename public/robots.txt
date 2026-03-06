@@ -1,26 +1,33 @@
 User-agent: *
 Allow: /
-
-# Prioritize important content
-Allow: /blog/
-Allow: /ahorro/
-Allow: /inversiones/
-Allow: /jovenes/
-Allow: /recursos/
-Allow: /proyecciones/
-
-# Block unnecessary paths
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
 Disallow: /private/
 
-# Specific user agents
 User-agent: Googlebot
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+
 User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+
+# AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
 Allow: /
 
 # Sitemap location
 Sitemap: https://app-finanzas-mu.vercel.app/sitemap.xml
-

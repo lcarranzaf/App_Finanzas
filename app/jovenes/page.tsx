@@ -9,7 +9,7 @@ import { FAQSection, type FAQItem } from "@/components/faq-section"
 import { CategoryArticles } from "@/components/category-articles"
 
 export const metadata: Metadata = {
-  title: "Finanzas para Jóvenes 2025 - Guía para Estudiantes y Primer Sueldo",
+  title: `Finanzas para Jóvenes ${new Date().getFullYear()} - Guía para Estudiantes y Primer Sueldo`,
   description:
     "Guía financiera completa para jóvenes, estudiantes y recién graduados. Aprende a manejar tu primer sueldo con la regla 50/30/20, construir historial crediticio y empezar a invertir desde $50 al mes.",
   keywords: ["finanzas para jóvenes", "primer sueldo", "estudiantes universitarios", "recién graduados", "cómo ahorrar siendo joven", "historial crediticio", "inversión jóvenes"],
@@ -19,6 +19,18 @@ export const metadata: Metadata = {
 }
 
 export default function JovenesPage() {
+  const jovenesPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://app-finanzas-mu.vercel.app/jovenes",
+    name: "Finanzas para Jóvenes - FinanzasPro",
+    description:
+      "Guía financiera completa para jóvenes, estudiantes y recién graduados.",
+    url: "https://app-finanzas-mu.vercel.app/jovenes",
+    inLanguage: "es",
+    isPartOf: { "@id": "https://app-finanzas-mu.vercel.app/#website" },
+  }
+
   const lifeStages = [
     {
       title: "Estudiante Universitario",
@@ -95,6 +107,11 @@ export default function JovenesPage() {
 
   return (
     <div className="py-16 sm:py-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jovenesPageSchema) }}
+        suppressHydrationWarning
+      />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Breadcrumbs */}
         <Breadcrumbs />

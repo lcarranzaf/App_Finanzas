@@ -48,26 +48,6 @@ export default function ProjectionCalculator() {
 
   return (
     <div className="flex flex-col">
-      {/* Header */}
-      <section className="bg-gradient-to-br from-background via-background to-muted/30 py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <div className="flex justify-center mb-6">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                <Calculator className="h-8 w-8 text-primary" />
-              </div>
-            </div>
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
-              Calculadora de Proyecciones de Ingresos
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground text-pretty">
-              Visualiza cómo pueden crecer tus inversiones a lo largo del tiempo con nuestro calculador interactivo.
-              Ajusta los parámetros y descubre el poder del interés compuesto.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Calculator Section */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

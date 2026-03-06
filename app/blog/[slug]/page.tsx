@@ -1,7 +1,7 @@
 import { getBlogPost } from "@/lib/blog-data"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calendar, Clock, Share2, Facebook, Twitter, Linkedin, ArrowRight } from "lucide-react"
+import { Calendar, Clock, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import Image from 'next/image'
@@ -17,6 +17,9 @@ import { LazyLoad } from "@/components/lazy-load"
 import AdSense from "@/components/AdSense"
 import { TableOfContents } from "@/components/table-of-contents"
 import { InvestmentDisclaimer } from "@/components/investment-disclaimer"
+import { AuthorBox } from "@/components/author-box"
+import { ArticleSources } from "@/components/article-sources"
+import { getAuthorByName } from "@/lib/authors-data"
 
 export const revalidate = 3600
 
@@ -80,8 +83,6 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       title: post.title,
       description: post.description,
       images: [post.image],
-      creator: "@finanzaspro",
-      site: "@finanzaspro",
     },
     alternates: {
       canonical: `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
@@ -101,6 +102,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const shareUrl = `https://app-finanzas-mu.vercel.app/blog/${post.slug}`
+  const postAuthor = getAuthorByName(post.author)
+  const authorSlug = postAuthor?.slug ?? "equipo-finanzaspro"
 
   // Helper to generate heading IDs for TOC navigation
   const generateId = (text: string) => {
@@ -161,6 +164,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
+                <span className="text-xs text-muted-foreground">Actualizado:</span>
                 <time dateTime={post.publishedAt}>
                   {new Date(post.publishedAt).toLocaleDateString("es-ES", {
                     year: "numeric",
@@ -174,7 +178,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 <span>{post.readTime}</span>
               </div>
               <Link
-                href="/autores/equipo-finanzaspro"
+                href={`/autores/${authorSlug}`}
                 className="text-foreground font-medium hover:text-primary transition-colors"
                 rel="author"
               >
@@ -182,43 +186,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               </Link>
             </div>
 
-            {/* Social Share */}
-            <div className="flex items-center gap-2">
-              <Share2 className="h-4 w-4 text-muted-foreground" />
-              <Button variant="ghost" size="sm" className="h-9 w-9 p-0" asChild>
-                <Link
-                  href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${encodeURIComponent(post.title)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:bg-primary/10"
-                >
-                  <Twitter className="h-4 w-4" />
-                  <span className="sr-only">Compartir en Twitter</span>
-                </Link>
-              </Button>
-              <Button variant="ghost" size="sm" className="h-9 w-9 p-0" asChild>
-                <Link
-                  href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:bg-primary/10"
-                >
-                  <Facebook className="h-4 w-4" />
-                  <span className="sr-only">Compartir en Facebook</span>
-                </Link>
-              </Button>
-              <Button variant="ghost" size="sm" className="h-9 w-9 p-0" asChild>
-                <Link
-                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:bg-primary/10"
-                >
-                  <Linkedin className="h-4 w-4" />
-                  <span className="sr-only">Compartir en LinkedIn</span>
-                </Link>
-              </Button>
-            </div>
           </div>
         </header>
 
@@ -397,32 +364,17 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           currentCategory={post.category}
         />
 
+        {/* Article Sources */}
+        <ArticleSources category={post.category} />
+
+        {/* Author Box */}
+        <AuthorBox authorName={post.author} />
+
         {/* Back Link */}
-        <div className="mt-10 pt-8 border-t border-border flex justify-between items-center">
+        <div className="mt-10 pt-8 border-t border-border">
           <Button variant="outline" asChild>
             <Link href="/blog">← Volver al Blog</Link>
           </Button>
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-muted-foreground hidden sm:inline">Compartir:</span>
-            <Button variant="ghost" size="sm" className="h-9 w-9 p-0" asChild>
-              <Link
-                href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${encodeURIComponent(post.title)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Twitter className="h-4 w-4" />
-              </Link>
-            </Button>
-            <Button variant="ghost" size="sm" className="h-9 w-9 p-0" asChild>
-              <Link
-                href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Facebook className="h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
         </div>
 
         {/* Comments */}

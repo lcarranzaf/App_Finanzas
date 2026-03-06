@@ -9,7 +9,7 @@ import { FAQSection, type FAQItem } from "@/components/faq-section"
 import { CategoryArticles } from "@/components/category-articles"
 
 export const metadata: Metadata = {
-  title: "Estrategias de Ahorro 2025 - Métodos Probados para Ahorrar Dinero",
+  title: `Estrategias de Ahorro ${new Date().getFullYear()} - Métodos Probados para Ahorrar Dinero`,
   description:
     "Descubre cómo ahorrar dinero con el método 50/30/20, ahorro automático y el reto 52 semanas. Guía paso a paso para crear tu fondo de emergencia desde cero, incluso con ingresos bajos.",
   keywords: ["ahorro", "cómo ahorrar dinero", "método 50/30/20", "fondo de emergencia", "presupuesto personal", "estrategias de ahorro", "reto 52 semanas", "finanzas personales"],

@@ -1,4 +1,5 @@
 import { getBlogPost } from "@/lib/blog-data"
+import { getAuthorByName } from "@/lib/authors-data"
 
 const BASE_URL = "https://app-finanzas-mu.vercel.app"
 const ORG_ID = `${BASE_URL}/#organization`
@@ -59,16 +60,10 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         logo: {
           "@type": "ImageObject",
           "@id": `${BASE_URL}/#logo`,
-          url: `${BASE_URL}/og-image.jpg`,
-          width: 1200,
-          height: 630,
+          url: `${BASE_URL}/logo.png`,
+          width: 1408,
+          height: 768,
           caption: "FinanzasPro",
-        },
-        contactPoint: {
-          "@type": "ContactPoint",
-          contactType: "customer service",
-          email: "contacto@app-finanzas-mu.vercel.app",
-          availableLanguage: { "@type": "Language", name: "Spanish", alternateName: "es" },
         },
         foundingDate: "2022",
         knowsAbout: [
@@ -103,11 +98,20 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
             },
             datePublished: toISODateTime(post.publishedAt),
             dateModified: toISODateTime(post.publishedAt),
-            author: {
-              "@type": "Organization",
-              "@id": ORG_ID,
-              name: "FinanzasPro",
-            },
+            author: (() => {
+              const authorData = getAuthorByName(post.author)
+              return authorData ? {
+                "@type": "Person",
+                name: authorData.name,
+                url: `${BASE_URL}/autores/${authorData.slug}`,
+                jobTitle: authorData.role,
+                worksFor: { "@id": ORG_ID },
+              } : {
+                "@type": "Organization",
+                "@id": ORG_ID,
+                name: "FinanzasPro",
+              }
+            })(),
             publisher: { "@id": ORG_ID },
             mainEntityOfPage: {
               "@type": "WebPage",

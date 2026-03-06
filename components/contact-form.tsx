@@ -128,19 +128,6 @@ export default function ContactForm() {
             <Card>
               <CardHeader>
                 <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-primary" />
-                  <CardTitle className="text-lg">Email</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">contacto@app-finanzas-mu.vercel.app</p>
-                <p className="text-sm text-muted-foreground mt-2">Para consultas generales y colaboraciones</p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <div className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-primary" />
                   <CardTitle className="text-lg">Tiempo de Respuesta</CardTitle>
                 </div>

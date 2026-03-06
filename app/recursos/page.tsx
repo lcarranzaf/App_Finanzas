@@ -8,16 +8,28 @@ import AdSense from "@/components/AdSense"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export const metadata: Metadata = {
-  title: "Mejores Apps y Herramientas Financieras 2025 - Recursos Recomendados",
+  title: `Mejores Apps y Herramientas Financieras ${new Date().getFullYear()} - Recursos Recomendados`,
   description:
     "Las mejores apps de presupuesto, brokers para invertir, bancos digitales y herramientas financieras gratuitas. Comparativa actualizada con pros, contras y calificaciones para gestionar tu dinero.",
-  keywords: ["apps financieras", "mejores brokers", "bancos digitales", "herramientas presupuesto", "apps para ahorrar", "plataformas inversión", "Mint", "YNAB", "Acorns"],
+  keywords: ["apps financieras", "mejores brokers", "bancos digitales", "herramientas presupuesto", "apps para ahorrar", "plataformas inversión", "YNAB", "Fintonic", "Mobills"],
   alternates: {
     canonical: "https://app-finanzas-mu.vercel.app/recursos",
   },
 }
 
 export default function RecursosPage() {
+  const recursosPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://app-finanzas-mu.vercel.app/recursos",
+    name: "Recursos Financieros Recomendados - FinanzasPro",
+    description:
+      "Las mejores apps de presupuesto, brokers para invertir, bancos digitales y herramientas financieras gratuitas.",
+    url: "https://app-finanzas-mu.vercel.app/recursos",
+    inLanguage: "es",
+    isPartOf: { "@id": "https://app-finanzas-mu.vercel.app/#website" },
+  }
+
   const categories = [
     {
       title: "Apps de Finanzas Personales",
@@ -34,13 +46,13 @@ export default function RecursosPage() {
           features: ["Agregación bancaria", "Categorización automática", "Alertas personalizadas"],
         },
         {
-          name: "Mint",
-          description: "La app de presupuesto más popular en Estados Unidos.",
+          name: "Mobills",
+          description: "App de control financiero muy popular en Brasil y Latinoamérica.",
           rating: 4.3,
-          price: "Gratis",
-          affiliate: true,
-          link: "https://mint.com?ref=finanzaspro",
-          features: ["Seguimiento de gastos", "Score crediticio", "Alertas de facturas"],
+          price: "Gratis / Premium",
+          affiliate: false,
+          link: "https://mobills.com.br",
+          features: ["Control de gastos", "Presupuestos por categoría", "Reportes mensuales"],
         },
         {
           name: "YNAB",
@@ -161,31 +173,31 @@ export default function RecursosPage() {
       description: "Utilidades para planificar y calcular tus finanzas",
       resources: [
         {
-          name: "Personal Capital",
-          description: "Seguimiento de patrimonio neto y planificación de jubilación.",
+          name: "Wallet by BudgetBakers",
+          description: "Gestor de patrimonio disponible en toda Latinoamérica y España.",
           rating: 4.4,
-          price: "Gratis",
-          affiliate: true,
-          link: "https://personalcapital.com?ref=finanzaspro",
-          features: ["Tracking de inversiones", "Análisis de fees", "Planificación jubilación"],
-        },
-        {
-          name: "Tiller",
-          description: "Hojas de cálculo automatizadas para presupuestos.",
-          rating: 4.2,
-          price: "$79/año",
-          affiliate: true,
-          link: "https://tillerhq.com?ref=finanzaspro",
-          features: ["Google Sheets", "Datos automáticos", "Templates personalizables"],
-        },
-        {
-          name: "FidSafe",
-          description: "Almacenamiento seguro de documentos financieros importantes.",
-          rating: 4.1,
-          price: "Gratis",
+          price: "Gratis / €2.99/mes",
           affiliate: false,
-          link: "https://fidsafe.com",
-          features: ["Almacenamiento seguro", "Organización automática", "Acceso familiar"],
+          link: "https://budgetbakers.com",
+          features: ["Seguimiento de inversiones", "Conexión bancaria", "Múltiples monedas"],
+        },
+        {
+          name: "Spendee",
+          description: "App de presupuesto con conexión bancaria disponible en España y Latinoamérica.",
+          rating: 4.3,
+          price: "Gratis / €2.99/mes",
+          affiliate: false,
+          link: "https://www.spendee.com",
+          features: ["Conexión bancaria", "Presupuestos compartidos", "Análisis de gastos"],
+        },
+        {
+          name: "Money Lover",
+          description: "App de seguimiento de gastos con más de 14 millones de usuarios en Latinoamérica.",
+          rating: 4.3,
+          price: "Gratis / Premium",
+          affiliate: false,
+          link: "https://moneylover.me",
+          features: ["Seguimiento de gastos", "Metas de ahorro", "Reportes detallados"],
         },
       ],
     },
@@ -195,22 +207,22 @@ export default function RecursosPage() {
       description: "Protege tu patrimonio y tu familia",
       resources: [
         {
-          name: "Lemonade",
-          description: "Seguros de hogar y vida con IA y proceso 100% digital.",
-          rating: 4.3,
-          price: "Desde $5/mes",
-          affiliate: true,
-          link: "https://lemonade.com?ref=finanzaspro",
-          features: ["Proceso digital", "Claims rápidos", "Precios transparentes"],
+          name: "MAPFRE Seguros",
+          description: "Aseguradora líder en España y Latinoamérica con amplia cobertura para particulares.",
+          rating: 4.2,
+          price: "Desde €15/mes",
+          affiliate: false,
+          link: "https://www.mapfre.es",
+          features: ["Cobertura en España y LATAM", "Atención 24/7", "App móvil"],
         },
         {
-          name: "PolicyGenius",
-          description: "Comparador de seguros de vida y discapacidad.",
-          rating: 4.6,
+          name: "ComparaOnline",
+          description: "Comparador de seguros líder en Latinoamérica (Chile, Colombia, México, Brasil).",
+          rating: 4.4,
           price: "Gratis (comparación)",
-          affiliate: true,
-          link: "https://policygenius.com?ref=finanzaspro",
-          features: ["Comparación gratuita", "Asesores expertos", "Proceso simplificado"],
+          affiliate: false,
+          link: "https://www.comparaonline.com",
+          features: ["Comparación gratuita", "Múltiples aseguradoras", "Cotización instantánea"],
         },
       ],
     },
@@ -218,6 +230,11 @@ export default function RecursosPage() {
 
   return (
     <div className="py-16 sm:py-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(recursosPageSchema) }}
+        suppressHydrationWarning
+      />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Breadcrumbs */}
         <Breadcrumbs />
@@ -341,7 +358,11 @@ export default function RecursosPage() {
                           ))}
                         </ul>
                         <Button asChild className="w-full">
-                          <Link href={resource.link} target="_blank" rel="noopener noreferrer">
+                          <Link
+                            href={resource.link}
+                            target="_blank"
+                            rel={resource.affiliate ? "noopener noreferrer nofollow sponsored" : "noopener noreferrer"}
+                          >
                             Ver {resource.name}
                             <ExternalLink className="ml-2 h-4 w-4" />
                           </Link>

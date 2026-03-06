@@ -16,7 +16,12 @@
       "Bash(tail:*)",
       "Bash(Remove-Item:*)",
       "Bash(cd:*)",
-      "Bash(head:*)"
+      "Bash(head:*)",
+      "Bash(cd /c/App_Finanzas && pnpm exec tsc --noEmit 2>&1)",
+      "Bash(file:*)",
+      "Bash(python3:*)",
+      "Bash(python --version 2>&1 || py --version 2>&1 || where python 2>&1 || where py 2>&1)",
+      "Bash(python:*)"
     ]
   }
 }

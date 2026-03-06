@@ -4,7 +4,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Política de Privacidad | FinanzasPro",
   description: "Política de privacidad de FinanzasPro. Cómo protegemos tus datos personales.",
-  robots: "index, follow",
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "https://app-finanzas-mu.vercel.app/privacidad",
   },
@@ -127,7 +127,7 @@ export default function PrivacyPage() {
             <li>Descargar tus datos en formato portátil</li>
           </ul>
           <p>
-            Para ejercer estos derechos, contáctanos en: <strong>contacto@app-finanzas-mu.vercel.app</strong>
+            Para ejercer estos derechos, usa el <a href="/contacto" className="text-primary underline">formulario de contacto</a>.
           </p>
 
           <h2>10. Retención de datos</h2>
@@ -149,10 +149,7 @@ export default function PrivacyPage() {
           </p>
           <ul>
             <li>
-              <strong>Email:</strong> contacto@app-finanzas-mu.vercel.app
-            </li>
-            <li>
-              <strong>Sitio web:</strong> https://app-finanzas-mu.vercel.app
+              <strong>Sitio web:</strong> https://app-finanzas-mu.vercel.app/contacto
             </li>
           </ul>
 

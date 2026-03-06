@@ -6,7 +6,6 @@ export default function Footer() {
     { name: "Política de Privacidad", href: "/privacidad" },
     { name: "Términos y Condiciones", href: "/terminos" },
     { name: "Sobre Nosotros", href: "/sobre-nosotros" },
-    { name: "Contacto", href: "/contacto" },
   ]
 
   const categories = [

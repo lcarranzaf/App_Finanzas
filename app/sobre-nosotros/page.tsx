@@ -1,9 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Users, Target, Award, Mail } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import type { Metadata } from "next"
 import AdSense from "@/components/AdSense"
+import { getAllAuthors } from "@/lib/authors-data"
 
 export const metadata: Metadata = {
   title: "Sobre Nosotros - Quiénes Somos en FinanzasPro",
@@ -16,6 +18,7 @@ export const metadata: Metadata = {
 }
 
 export default function SobreNosotrosPage() {
+  const authors = getAllAuthors()
   const aboutPageSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
@@ -133,34 +136,38 @@ export default function SobreNosotrosPage() {
         {/* Team */}
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-foreground text-center mb-8">Nuestro Equipo</h2>
-          <Card>
-            <CardContent className="pt-6">
-              <div className="text-center">
-                <div className="mx-auto h-24 w-24 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <Users className="h-12 w-12 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">Equipo FinanzasPro</h3>
-                <p className="text-muted-foreground mt-2">
-                  Somos un equipo de especialistas en finanzas personales, planificación financiera e inversión.
-                  Combinamos experiencia en análisis de mercados, educación económica y comunicación digital para
-                  ofrecerte contenido riguroso y fácil de aplicar.
-                </p>
-                <p className="text-muted-foreground mt-4">
-                  Cada artículo es investigado, redactado y revisado por personas con experiencia práctica en el
-                  sector financiero. Nuestro compromiso es la precisión, la independencia editorial y la utilidad real
-                  para tu situación financiera.
-                </p>
-                <div className="mt-6">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+            {authors.map((author) => (
+              <Card key={author.slug} className="hover:shadow-lg transition-shadow">
+                <CardHeader className="text-center pb-2">
+                  <div className="mx-auto h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 mb-3">
+                    <span className="text-2xl font-bold text-primary">{author.name.charAt(0)}</span>
+                  </div>
+                  <CardTitle className="text-lg">
+                    <Link href={`/autores/${author.slug}`} className="hover:text-primary transition-colors">
+                      {author.name}
+                    </Link>
+                  </CardTitle>
+                  <p className="text-sm text-primary font-medium">{author.role}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{author.credentials}</p>
+                </CardHeader>
+                <CardContent className="text-center pt-2">
+                  <CardDescription className="line-clamp-3 text-left">{author.bio}</CardDescription>
+                  <div className="mt-4 flex flex-wrap gap-1.5 justify-center">
+                    {author.expertise.slice(0, 3).map((skill) => (
+                      <Badge key={skill} variant="secondary" className="text-xs">{skill}</Badge>
+                    ))}
+                  </div>
                   <Link
-                    href="/autores/equipo-finanzaspro"
-                    className="text-primary hover:underline text-sm font-medium"
+                    href={`/autores/${author.slug}`}
+                    className="mt-4 inline-block text-xs text-primary hover:underline font-medium"
                   >
-                    Ver perfil del equipo editorial →
+                    Ver artículos →
                   </Link>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
 
         {/* Stats */}

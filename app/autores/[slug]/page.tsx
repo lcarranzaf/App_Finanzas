@@ -79,6 +79,9 @@ export default function AuthorPage({ params }: AuthorPageProps) {
                 {author.slug === "equipo-finanzaspro" ? "Equipo Editorial FinanzasPro" : author.name}
               </h1>
               <p className="mt-1 text-lg text-primary font-medium">{author.role}</p>
+              {author.credentials && (
+                <p className="mt-1 text-sm text-muted-foreground">{author.credentials}</p>
+              )}
               <p className="mt-4 text-muted-foreground leading-7">{author.bio}</p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {author.expertise.map((skill) => (

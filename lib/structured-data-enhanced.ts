@@ -113,11 +113,6 @@ export const generateStructuredData = (article: {
         width: 1200,
         height: 630
       },
-      sameAs: [
-        'https://twitter.com/finanzaspro',
-        'https://facebook.com/finanzaspro',
-        'https://instagram.com/finanzaspro'
-      ]
     }
   }
 
@@ -301,8 +296,6 @@ export const generateMetaTags = (article: {
       title: enhancedTitle,
       description: article.description,
       images: [article.image],
-      site: '@finanzaspro',
-      creator: '@finanzaspro'
     },
     robots: {
       index: true,

@@ -122,7 +122,7 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
   const adFormat = getAdFormat();
 
   return (
-    <div className={`ad-container ${className || ''}`}>
+    <div className={`ad-container ${className || ''}`} style={{ minHeight: adFormat === 'vertical' ? '250px' : '90px' }}>
       <ins
         className="adsbygoogle"
         style={style || {

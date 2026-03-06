@@ -1,21 +1,21 @@
 import { blogPosts } from "@/lib/blog-data"
+import { getAllAuthors } from "@/lib/authors-data"
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://app-finanzas-mu.vercel.app"
 
+  // Nota: /privacidad y /terminos tienen noindex → no deben estar en el sitemap
   const staticPages = [
-    { path: "", priority: 1.0, frequency: "weekly" as const },
-    { path: "/blog", priority: 0.9, frequency: "daily" as const },
-    { path: "/ahorro", priority: 0.8, frequency: "weekly" as const },
-    { path: "/inversiones", priority: 0.8, frequency: "weekly" as const },
-    { path: "/jovenes", priority: 0.8, frequency: "weekly" as const },
-    { path: "/recursos", priority: 0.7, frequency: "monthly" as const },
-    { path: "/proyecciones", priority: 0.7, frequency: "monthly" as const },
-    { path: "/sobre-nosotros", priority: 0.6, frequency: "monthly" as const },
-    { path: "/contacto", priority: 0.5, frequency: "monthly" as const },
-    { path: "/privacidad", priority: 0.3, frequency: "yearly" as const },
-    { path: "/terminos", priority: 0.3, frequency: "yearly" as const },
+    { path: "", priority: 1.0, frequency: "weekly" as const, date: "2026-02-01" },
+    { path: "/blog", priority: 0.9, frequency: "daily" as const, date: "2026-03-01" },
+    { path: "/ahorro", priority: 0.8, frequency: "weekly" as const, date: "2026-02-01" },
+    { path: "/inversiones", priority: 0.8, frequency: "weekly" as const, date: "2026-02-01" },
+    { path: "/jovenes", priority: 0.8, frequency: "weekly" as const, date: "2026-02-01" },
+    { path: "/recursos", priority: 0.7, frequency: "monthly" as const, date: "2026-03-06" },
+    { path: "/proyecciones", priority: 0.7, frequency: "monthly" as const, date: "2026-02-01" },
+    { path: "/sobre-nosotros", priority: 0.6, frequency: "monthly" as const, date: "2026-03-06" },
+    { path: "/contacto", priority: 0.5, frequency: "monthly" as const, date: "2026-02-01" },
   ]
 
   const blogPages = blogPosts.map((post) => {
@@ -44,12 +44,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   })
 
-  const staticEntries = staticPages.map(({ path, priority, frequency }) => ({
+  const staticEntries = staticPages.map(({ path, priority, frequency, date }) => ({
     url: `${baseUrl}${path}`,
-    lastModified: new Date(),
+    lastModified: new Date(date),
     changeFrequency: frequency,
     priority,
   }))
 
-  return [...staticEntries, ...blogPages]
+  const authorEntries = getAllAuthors().map((author) => ({
+    url: `${baseUrl}/autores/${author.slug}`,
+    lastModified: new Date("2026-03-06"),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }))
+
+  return [...staticEntries, ...blogPages, ...authorEntries]
 }

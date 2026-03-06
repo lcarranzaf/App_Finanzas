@@ -35,11 +35,31 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
     })),
   }
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": "https://app-finanzas-mu.vercel.app/blog#blog",
+    name: "Blog de FinanzasPro",
+    description: "Artículos sobre ahorro, inversiones y educación financiera en español.",
+    url: "https://app-finanzas-mu.vercel.app/blog",
+    inLanguage: "es",
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://app-finanzas-mu.vercel.app/#organization",
+      name: "FinanzasPro",
+    },
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        suppressHydrationWarning
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
         suppressHydrationWarning
       />
       {children}

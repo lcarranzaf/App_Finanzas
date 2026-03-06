@@ -78,7 +78,6 @@ export const metadata: Metadata = {
     description:
       "Aprende a ahorrar, invertir y construir un futuro próspero con nuestros consejos expertos en finanzas personales.",
     images: ["/og-image.jpg"],
-    creator: "@finanzaspro",
   },
   verification: {
     google: "iEJ6MlVtNjqHEUl7GbUfm-q8mzcHCTXNEA7_7hzwVPU",
@@ -137,7 +136,7 @@ export default async function RootLayout({
         {/* Google AdSense */}
         <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4657042320327960"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           crossOrigin="anonymous"
           suppressHydrationWarning
         />

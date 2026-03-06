@@ -4,7 +4,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Términos y Condiciones | FinanzasPro",
   description: "Términos y condiciones de uso de FinanzasPro. Información sobre el uso del sitio y sus contenidos.",
-  robots: "index, follow",
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "https://app-finanzas-mu.vercel.app/terminos",
   },
@@ -130,10 +130,7 @@ export default function TerminosPage() {
           </p>
           <ul>
             <li>
-              <strong>Email:</strong> contacto@app-finanzas-mu.vercel.app
-            </li>
-            <li>
-              <strong>Sitio web:</strong> https://app-finanzas-mu.vercel.app
+              <strong>Sitio web:</strong> https://app-finanzas-mu.vercel.app/contacto
             </li>
           </ul>
 

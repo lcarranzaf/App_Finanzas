@@ -206,7 +206,7 @@ Recuerda: no se trata de cuánto inviertes, sino de cuánto tiempo dejas que el 
     readTime: "15 min",
     category: "Educación Financiera",
     tags: ["interés compuesto", "inversiones", "ahorro", "crecimiento patrimonial", "largo plazo", "fondos indexados"],
-    author: "FinanzasPro",
+    author: "Carlos Sánchez",
   },
   {
     slug: "como-ahorrar-para-comprar-casa",
@@ -410,7 +410,7 @@ Cada dólar que ahorras hoy te acerca un paso más a las llaves de tu propia cas
     readTime: "18 min",
     category: "Ahorro",
     tags: ["comprar casa", "enganche", "ahorro", "hipoteca", "primer comprador", "vivienda", "planificación financiera"],
-    author: "FinanzasPro",
+    author: "María López",
   },
   {
     slug: "criptomonedas-para-principiantes-guia",
@@ -637,7 +637,7 @@ Las criptomonedas no son un atajo para hacerte rico. Son una herramienta de inve
     readTime: "20 min",
     category: "Inversiones",
     tags: ["criptomonedas", "bitcoin", "ethereum", "inversiones", "blockchain", "principiantes", "trading"],
-    author: "FinanzasPro",
+    author: "Alejandro Torres",
   },
   {
     slug: "presupuesto-personal-completo",
@@ -787,7 +787,7 @@ Comienza simple. Una vez que domines lo básico, agrega complejidad. El objetivo
     readTime: "10 min",
     category: "Presupuesto",
     tags: ["presupuesto", "finanzas personales", "gastos", "control financiero"],
-    author: "FinanzasPro",
+    author: "María López",
   },
   {
     slug: "acciones-para-principiantes",
@@ -1105,7 +1105,7 @@ Las acciones son una herramienta poderosa para crear riqueza, pero requieren con
     category: "Inversiones",
      tags: ["acciones", "inversiones", "principiantes", "análisis fundamental", "cartera de acciones"],
      image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&h=630&fit=crop",
-     author: "FinanzasPro",
+     author: "Carlos Sánchez",
   },
   {
     slug: "bonos-para-principiantes",
@@ -1464,7 +1464,7 @@ Recuerda: Los bonos no están diseñados para hacerte rico rápidamente, sino pa
     category: "Inversiones",
      tags: ["bonos", "renta fija", "inversiones", "estabilidad", "ingresos pasivos"],
      image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&h=630&fit=crop",
-     author: "FinanzasPro",
+     author: "Carlos Sánchez",
   },
   {
     slug: "manejo-deuda-personal",
@@ -1675,7 +1675,7 @@ Tu yo del futuro (sin deuda) te lo agradecerá.
     category: "Deudas",
      tags: ["deuda", "tarjeta crédito", "finanzas personales", "estrategia"],
      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=630&fit=crop",
-     author: "FinanzasPro",
+     author: "María López",
   },
   {
     slug: "invertir-primeros-pasos",
@@ -1883,7 +1883,7 @@ Abre esa cuenta hoy. Tu yo del futuro no lo lamentará.
     category: "Inversiones",
      tags: ["inversiones", "principiantes", "fondos indexados", "bolsa"],
      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop",
-     author: "FinanzasPro",
+     author: "Carlos Sánchez",
   },
   {
     slug: "como-empezar-ahorrar-poco-dinero",
@@ -1966,7 +1966,7 @@ El primer paso es siempre el más difícil, pero una vez que desarrolles el háb
     category: "Ahorro",
      tags: ["ahorro", "presupuesto", "fondo de emergencia", "finanzas personales"],
      image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&h=630&fit=crop",
-     author: "FinanzasPro",
+     author: "María López",
   },
   {
     slug: "mejores-apps-finanzas-personales-2025",
@@ -2125,7 +2125,7 @@ Recuerda: la tecnología es solo una herramienta. El éxito financiero depende d
     category: "Tecnología",
      tags: ["apps", "tecnología", "fintech", "herramientas"],
      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&h=630&fit=crop",
-     author: "FinanzasPro",
+     author: "Alejandro Torres",
   },
   {
     slug: "invertir-fondos-indexados-principiantes",
@@ -2593,7 +2593,7 @@ Recuerda: **tiempo en el mercado > timing del mercado**. Empieza hoy, aunque sea
     category: "Inversiones",
     tags: ["fondos indexados", "ETF", "S&P 500", "inversiones", "Warren Buffett"],
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80",
-    author: "FinanzasPro",
+    author: "Carlos Sánchez",
   },
   {
     slug: "usar-tarjeta-credito-sin-endeudarse",
@@ -2805,7 +2805,7 @@ El crédito es un privilegio que se gana con responsabilidad. Úsalo sabiamente 
     category: "Crédito",
     tags: ["tarjetas de crédito", "score crediticio", "deudas", "finanzas personales"],
     image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-    author: "FinanzasPro",
+    author: "María López",
   },
   {
     slug: "5-formas-ganar-dinero-extra-online",
@@ -3131,7 +3131,7 @@ Elige la estrategia que mejor se alinee con tus habilidades y disponibilidad de 
     category: "Ingresos Extra",
     tags: ["freelancing", "ingresos online", "emprendimiento", "trabajo remoto"],
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
-    author: "FinanzasPro",
+    author: "Alejandro Torres",
   },
   {
     slug: "inteligencia-artificial-finanzas-personales",
@@ -3287,7 +3287,7 @@ No necesitas ser experto en tecnología. Solo necesitas dar el primer paso: desc
     readTime: "16 min",
     category: "Tecnología Financiera",
     tags: ["inteligencia artificial", "apps financieras", "roboadvisors", "ahorro automático", "fintech"],
-    author: "FinanzasPro",
+    author: "Alejandro Torres",
   },
   {
     slug: "movimiento-fire-retiro-temprano",
@@ -3443,7 +3443,7 @@ El mejor momento para empezar fue hace 10 años. El segundo mejor momento es hoy
     readTime: "20 min",
     category: "Planificación",
     tags: ["movimiento FIRE", "independencia financiera", "retiro temprano", "libertad financiera", "inversiones"],
-    author: "FinanzasPro",
+    author: "Carlos Sánchez",
   },
   {
     slug: "inversion-inmobiliaria-fraccionada",
@@ -3587,7 +3587,7 @@ El futuro del real estate es digital, fraccionado y accesible para todos. La pre
     readTime: "17 min",
     category: "Inversiones",
     tags: ["inversión inmobiliaria", "tokenización", "bienes raíces", "crowdfunding", "ingresos pasivos"],
-    author: "FinanzasPro",
+    author: "Carlos Sánchez",
   },
   {
     slug: "metodo-kakebo-ahorrar-dinero",
@@ -3739,7 +3739,7 @@ Compra un cuaderno hoy. Tu versión futura con más dinero en el banco te lo agr
     readTime: "15 min",
     category: "Ahorro",
     tags: ["método kakebo", "ahorro", "presupuesto", "gastos", "finanzas personales", "hábitos financieros"],
-    author: "FinanzasPro",
+    author: "María López",
   },
   {
     slug: "ciberseguridad-financiera-proteger-dinero",
@@ -3899,7 +3899,7 @@ No esperes a ser víctima para actuar. Dedica hoy 30 minutos a revisar tu seguri
     readTime: "18 min",
     category: "Planificación",
     tags: ["ciberseguridad", "fraude financiero", "protección", "banca digital", "seguridad online"],
-    author: "FinanzasPro",
+    author: "Alejandro Torres",
   },
   {
     slug: "finanzas-parejas-dinero-sin-peleas",
@@ -4074,7 +4074,7 @@ Tengan esa primera conversación financiera hoy. No tiene que ser perfecta, solo
     readTime: "16 min",
     category: "Planificación",
     tags: ["finanzas en pareja", "presupuesto familiar", "dinero y relaciones", "planificación financiera", "ahorro en pareja"],
-    author: "FinanzasPro",
+    author: "María López",
   },
   {
     slug: "roboadvisors-guia-completa-inversion-automatizada",
@@ -4213,7 +4213,7 @@ Tu futuro financiero no depende de cuánto sabes de inversiones. Depende de cuá
     readTime: "17 min",
     category: "Inversiones",
     tags: ["roboadvisors", "inversión automatizada", "fondos indexados", "inversión principiantes", "fintech"],
-    author: "FinanzasPro",
+    author: "Carlos Sánchez",
   },
 ]
 
