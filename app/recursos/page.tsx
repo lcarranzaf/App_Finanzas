@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -6,6 +5,7 @@ import { ExternalLink, Star, Smartphone, CreditCard, TrendingUp, BookOpen, Calcu
 import type { Metadata } from "next"
 import AdSense from "@/components/AdSense"
 import { Breadcrumbs } from "@/components/breadcrumbs"
+import { TrackedLink } from "@/components/tracked-link"
 
 export const metadata: Metadata = {
   title: `Mejores Apps y Herramientas Financieras ${new Date().getFullYear()} - Recursos Recomendados`,
@@ -358,14 +358,20 @@ export default function RecursosPage() {
                           ))}
                         </ul>
                         <Button asChild className="w-full">
-                          <Link
+                          <TrackedLink
                             href={resource.link}
                             target="_blank"
                             rel={resource.affiliate ? "noopener noreferrer nofollow sponsored" : "noopener noreferrer"}
+                            eventName={resource.affiliate ? "affiliate_click" : "resource_click"}
+                            eventParams={{
+                              resource_name: resource.name,
+                              resource_category: category.title,
+                              placement: "resource_card",
+                            }}
                           >
                             Ver {resource.name}
                             <ExternalLink className="ml-2 h-4 w-4" />
-                          </Link>
+                          </TrackedLink>
                         </Button>
                       </CardContent>
                     </Card>
@@ -388,10 +394,11 @@ export default function RecursosPage() {
             Envíanos tus sugerencias y las evaluaremos para incluirlas en nuestra lista.
           </p>
           <Button className="mt-6" asChild>
-            <Link href="/contacto">Sugerir Recurso</Link>
+            <TrackedLink href="/contacto" eventName="cta_click" eventParams={{ cta: "sugerir_recurso", location: "recursos" }}>Sugerir Recurso</TrackedLink>
           </Button>
         </div>
       </div>
     </div>
   )
 }
+

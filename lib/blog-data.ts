@@ -4222,9 +4222,10 @@ export function getBlogPost(slug: string): BlogPost | undefined {
 }
 
 export function getBlogPosts(): BlogPost[] {
-  return blogPosts.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+  return [...blogPosts].sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
 }
 
 export function getBlogPostsByCategory(category: string): BlogPost[] {
   return blogPosts.filter((post) => post.category === category)
 }
+

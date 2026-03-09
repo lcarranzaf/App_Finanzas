@@ -21,7 +21,8 @@
       "Bash(file:*)",
       "Bash(python3:*)",
       "Bash(python --version 2>&1 || py --version 2>&1 || where python 2>&1 || where py 2>&1)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(cd /c/App_Finanzas && git push origin main 2>&1)"
     ]
   }
 }

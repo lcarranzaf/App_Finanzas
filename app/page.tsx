@@ -3,9 +3,9 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { TrendingUp, PiggyBank, Target, BookOpen, Users, Shield, Zap } from "lucide-react"
-import { OptimizedImage } from "@/components/optimized-image"
+import { TrendingUp, PiggyBank, Target, BookOpen, Users, Shield } from "lucide-react"
 import AdSense from "@/components/AdSense"
+import { trackEvent } from "@/lib/analytics"
 
 export default function HomePage() {
   const features = [
@@ -74,10 +74,10 @@ export default function HomePage() {
             </p>
             <div className="mt-8 flex items-center justify-center gap-x-6">
               <Button asChild size="lg">
-                <Link href="/blog">Comenzar Ahora</Link>
+                <Link href="/blog" onClick={() => trackEvent("cta_click", { cta: "home_hero_comenzar", location: "home_hero" })}>Comenzar Ahora</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link href="/sobre-nosotros">Conoce Más</Link>
+                <Link href="/sobre-nosotros" onClick={() => trackEvent("cta_click", { cta: "home_hero_conoce_mas", location: "home_hero" })}>Conoce Más</Link>
               </Button>
             </div>
           </div>
@@ -327,10 +327,10 @@ export default function HomePage() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Button size="lg" asChild>
-                <Link href="/blog">Explorar Artículos</Link>
+                <Link href="/blog" onClick={() => trackEvent("cta_click", { cta: "home_bottom_explorar", location: "home_bottom" })}>Explorar Artículos</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link href="/recursos">Ver Recursos</Link>
+                <Link href="/recursos" onClick={() => trackEvent("cta_click", { cta: "home_bottom_recursos", location: "home_bottom" })}>Ver Recursos</Link>
               </Button>
             </div>
           </div>
@@ -346,3 +346,4 @@ export default function HomePage() {
     </div>
   )
 }
+
