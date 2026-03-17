@@ -13,7 +13,7 @@ const navigation = [
   { name: "Finanzas para Jóvenes", href: "/jovenes" },
   { name: "Blog", href: "/blog" },
   { name: "Recursos", href: "/recursos" },
-  { name: "Proyecciones", href: "/proyecciones" },
+  { name: "Calculadoras", href: "/calculadoras" },
 ]
 
 export default function Navbar() {

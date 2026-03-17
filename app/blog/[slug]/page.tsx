@@ -20,6 +20,7 @@ import { InvestmentDisclaimer } from "@/components/investment-disclaimer"
 import { AuthorBox } from "@/components/author-box"
 import { ArticleSources } from "@/components/article-sources"
 import { getAuthorByName } from "@/lib/authors-data"
+import { FAQSection } from "@/components/faq-section"
 
 export const revalidate = 3600
 
@@ -351,6 +352,18 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             ))}
           </div>
         </div>
+
+        {/* FAQs */}
+        {post.faqs && post.faqs.length > 0 && (
+          <>
+            <StructuredData type="faqpage" data={{ faqs: post.faqs }} />
+            <FAQSection
+              title="Preguntas Frecuentes"
+              subtitle="Resolvemos las dudas más comunes sobre este tema"
+              faqs={post.faqs}
+            />
+          </>
+        )}
 
         {/* Ad - Antes de artículos relacionados */}
         <div className="my-8">

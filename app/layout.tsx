@@ -11,8 +11,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 import Script from 'next/script'
 import { CookieConsent } from '@/components/cookie-consent'
-import { NextIntlClientProvider } from 'next-intl'
-import { getMessages } from 'next-intl/server'
 import { ClientOnly } from '@/components/client-only'
 const inter = Inter({
   subsets: ["latin"],
@@ -92,16 +90,13 @@ export const metadata: Metadata = {
   category: "finance",
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const messages = await getMessages()
-
   return (
-    <NextIntlClientProvider messages={messages}>
-      <html lang="es" className={`${inter.variable} antialiased`} suppressHydrationWarning={true}>
+    <html lang="es" className={`${inter.variable} antialiased`} suppressHydrationWarning={true}>
         <head>
         {/* DNS Prefetch & Preconnect para dominios externos */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -203,6 +198,5 @@ export default async function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-    </NextIntlClientProvider>
   )
 }

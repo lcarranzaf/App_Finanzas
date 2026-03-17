@@ -14,6 +14,7 @@ export default function Footer() {
     { name: "Finanzas para Jóvenes", href: "/jovenes" },
     { name: "Blog", href: "/blog" },
     { name: "Recursos", href: "/recursos" },
+    { name: "Calculadoras", href: "/calculadoras" },
   ]
 
   return (

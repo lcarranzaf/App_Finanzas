@@ -1,3 +1,5 @@
+import type { FAQItem } from "@/components/faq-section"
+
 export interface BlogPost {
   slug: string
   title: string
@@ -9,6 +11,7 @@ export interface BlogPost {
   tags: string[]
   image: string
   author: string
+  faqs?: FAQItem[]
 }
 
 export const blogPosts: BlogPost[] = [
@@ -207,6 +210,28 @@ Recuerda: no se trata de cuánto inviertes, sino de cuánto tiempo dejas que el 
     category: "Educación Financiera",
     tags: ["interés compuesto", "inversiones", "ahorro", "crecimiento patrimonial", "largo plazo", "fondos indexados"],
     author: "Carlos Sánchez",
+    faqs: [
+      {
+        question: "¿Qué es el interés compuesto y por qué es tan poderoso?",
+        answer: "El interés compuesto es el proceso por el que los intereses generados se suman al capital y a su vez generan nuevos intereses. A diferencia del interés simple, el crecimiento es exponencial: cada año ganas más que el anterior sin aportar nada extra. Por eso Einstein lo llamó 'la octava maravilla del mundo'.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre interés simple e interés compuesto?",
+        answer: "Con el interés simple solo ganas intereses sobre el capital original. Con el interés compuesto ganas intereses sobre el capital más todos los intereses acumulados. En 30 años, $10,000 al 8% con interés simple crecen a $34,000; con interés compuesto llegan a $100,627.",
+      },
+      {
+        question: "¿Cuándo empieza a notarse el efecto del interés compuesto?",
+        answer: "El efecto se acelera de forma significativa a partir del año 10-15. Los primeros años el crecimiento parece modesto, pero gracias a la curva exponencial la mayor parte de las ganancias ocurre en la segunda mitad del período de inversión. Por eso empezar pronto marca una diferencia enorme.",
+      },
+      {
+        question: "¿Con qué frecuencia debo capitalizar para maximizar el interés compuesto?",
+        answer: "Cuanto más frecuente sea la capitalización, mayor será el resultado final. La capitalización mensual genera más que la anual. Sin embargo, la diferencia entre capitalización mensual y diaria es pequeña. Lo más importante es mantener las aportaciones constantes y no retirar el capital.",
+      },
+      {
+        question: "¿Qué tasa de interés es realista para calcular el interés compuesto?",
+        answer: "Para inversiones diversificadas en fondos indexados que replican el S&P 500, la tasa histórica es del 7-10% anual en términos reales. Para cuentas de ahorro o depósitos, las tasas son menores (1-5%). Es recomendable usar un 7% como escenario moderado para proyecciones a largo plazo.",
+      },
+    ],
   },
   {
     slug: "como-ahorrar-para-comprar-casa",
@@ -788,6 +813,28 @@ Comienza simple. Una vez que domines lo básico, agrega complejidad. El objetivo
     category: "Presupuesto",
     tags: ["presupuesto", "finanzas personales", "gastos", "control financiero"],
     author: "María López",
+    faqs: [
+      {
+        question: "¿Qué es un presupuesto personal y para qué sirve?",
+        answer: "Un presupuesto personal es un plan que asigna tus ingresos a diferentes categorías de gastos y ahorro. Sirve para saber exactamente adónde va tu dinero, evitar gastar más de lo que ganas, priorizar metas financieras y reducir el estrés económico. Sin presupuesto, es difícil mejorar tu situación financiera.",
+      },
+      {
+        question: "¿Qué es la regla del 50/30/20 y cómo aplicarla?",
+        answer: "La regla 50/30/20 propone destinar el 50% de tus ingresos netos a necesidades (vivienda, comida, transporte), el 30% a deseos (entretenimiento, viajes, restaurantes) y el 20% a ahorro e inversiones. Es un punto de partida flexible: si tienes deudas, puedes ajustar el 30% para amortizarlas más rápido.",
+      },
+      {
+        question: "¿Cuánto debería ahorrar cada mes según mi salario?",
+        answer: "Como mínimo, el 10% de tu ingreso neto. Lo ideal es el 20% o más. Si ganas $2,000 al mes, ahorra al menos $200-400. Si no puedes llegar a ese porcentaje, empieza con lo que puedas (incluso $50) y aumenta gradualmente cada 3-6 meses.",
+      },
+      {
+        question: "¿Cómo controlo mis gastos si tengo ingresos variables?",
+        answer: "Usa el mes de menor ingreso como base para tu presupuesto fijo. Los meses con más ingresos, destina el excedente a ahorro o pago de deudas. También es útil crear un fondo de nivelación: acumula 2-3 meses de gastos para cubrir los meses de bajos ingresos sin tocar tus ahorros.",
+      },
+      {
+        question: "¿Cada cuánto debo revisar mi presupuesto personal?",
+        answer: "Revisa tu presupuesto al menos una vez al mes para ver si cumpliste los objetivos de cada categoría. Haz una revisión más profunda cada 3-6 meses o cuando haya cambios importantes: aumento de sueldo, nueva deuda, cambio de vivienda. Un presupuesto estático no refleja tu realidad financiera actual.",
+      },
+    ],
   },
   {
     slug: "acciones-para-principiantes",
@@ -1106,6 +1153,28 @@ Las acciones son una herramienta poderosa para crear riqueza, pero requieren con
      tags: ["acciones", "inversiones", "principiantes", "análisis fundamental", "cartera de acciones"],
      image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&h=630&fit=crop",
      author: "Carlos Sánchez",
+     faqs: [
+      {
+        question: "¿Qué son las acciones y cómo funcionan?",
+        answer: "Una acción es una fracción de la propiedad de una empresa. Al comprar acciones, te conviertes en socio y puedes ganar de dos formas: por la apreciación del precio (capital gain) y por los dividendos que la empresa reparte a sus accionistas. Su valor sube o baja según los resultados de la empresa y el mercado en general.",
+      },
+      {
+        question: "¿Cuánto dinero necesito para comprar mis primeras acciones?",
+        answer: "Con plataformas modernas como Interactive Brokers, eToro o Degiro puedes empezar con $100 o menos, ya que muchos brókers ofrecen acciones fraccionadas. Lo importante no es la cantidad inicial sino la consistencia: invertir pequeñas cantidades con regularidad supera a una gran inversión puntual.",
+      },
+      {
+        question: "¿Cómo elijo en qué acciones invertir como principiante?",
+        answer: "Para principiantes, lo más recomendable es empezar con empresas que conoces y entiendes, con ingresos estables y larga trayectoria. Evalúa el PER (precio/beneficio), la deuda y el crecimiento de ingresos. Sin embargo, para la mayoría de inversores principiantes, los fondos indexados o ETFs son una opción más segura y diversificada que seleccionar acciones individuales.",
+      },
+      {
+        question: "¿Cuál es el riesgo de invertir en acciones?",
+        answer: "El principal riesgo es la volatilidad: el precio puede caer significativamente en el corto plazo. También existe el riesgo de que la empresa quiebre y pierdas toda tu inversión si solo tienes acciones de una o pocas empresas. Para mitigar el riesgo, diversifica entre sectores, geografías y tipos de activos, y mantén un horizonte de largo plazo.",
+      },
+      {
+        question: "¿Es mejor invertir en acciones individuales o en un ETF?",
+        answer: "Para la mayoría de personas, un ETF (fondo cotizado que replica un índice como el S&P 500) es mejor opción que seleccionar acciones individuales. Los ETFs ofrecen diversificación instantánea, costos bajos y rendimientos históricos que superan al 80% de los gestores profesionales. Las acciones individuales tienen mayor potencial de ganancia, pero también mayor riesgo.",
+      },
+    ],
   },
   {
     slug: "bonos-para-principiantes",
@@ -1676,6 +1745,28 @@ Tu yo del futuro (sin deuda) te lo agradecerá.
      tags: ["deuda", "tarjeta crédito", "finanzas personales", "estrategia"],
      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=630&fit=crop",
      author: "María López",
+     faqs: [
+      {
+        question: "¿Cuál es la mejor estrategia para pagar deudas: bola de nieve o avalancha?",
+        answer: "La avalancha (pagar primero la deuda con mayor tasa de interés) ahorra más dinero matemáticamente. La bola de nieve (pagar primero la deuda más pequeña) genera victorias rápidas y mayor motivación psicológica. Si tienes autodisciplina, usa la avalancha. Si necesitas motivación para mantenerte constante, prueba la bola de nieve. Ambas funcionan: lo importante es empezar.",
+      },
+      {
+        question: "¿Es mejor pagar la deuda o invertir al mismo tiempo?",
+        answer: "Depende de las tasas. Si tu deuda tiene una tasa superior al 7-8% (tarjetas de crédito, préstamos personales), prioriza pagarla antes de invertir, ya que difícilmente obtendrás rendimientos superiores a esa tasa. Si la tasa es baja (hipoteca al 3-4%), tiene sentido invertir en paralelo mientras pagas el mínimo de la deuda.",
+      },
+      {
+        question: "¿Cómo afecta una deuda impagada a mi historial crediticio?",
+        answer: "Un retraso en el pago de más de 30 días queda registrado en tu historial crediticio y puede reducir tu puntuación significativamente. Las deudas en mora permanecen en tu historial durante 5-7 años según el país. Un mal historial crediticio aumenta las tasas de interés que te ofrecerán en futuros préstamos e incluso puede afectar el alquiler de viviendas.",
+      },
+      {
+        question: "¿Qué hago si no puedo pagar mis deudas?",
+        answer: "Primero, contacta al acreedor antes de entrar en mora: muchos ofrecen planes de pago o pausas temporales. Segundo, prioriza las deudas aseguradas (hipoteca, auto) sobre las no aseguradas. Tercero, evalúa consolidar deudas en un préstamo con menor tasa. Si la situación es crítica, consulta a un asesor financiero o revisa las opciones de reestructuración disponibles en tu país.",
+      },
+      {
+        question: "¿Cuánto tiempo tarda en mejorar mi historial crediticio tras pagar deudas?",
+        answer: "Una vez pagada la deuda, la puntuación crediticia empieza a mejorar en 1-3 meses. Sin embargo, las marcas negativas (moras, impagos) tardan en eliminarse del historial entre 3 y 7 años dependiendo de la legislación local. Para acelerar la recuperación: paga todas las deudas a tiempo, mantén el uso de crédito por debajo del 30% y no abras demasiadas cuentas nuevas.",
+      },
+    ],
   },
   {
     slug: "invertir-primeros-pasos",
@@ -1967,6 +2058,28 @@ El primer paso es siempre el más difícil, pero una vez que desarrolles el háb
      tags: ["ahorro", "presupuesto", "fondo de emergencia", "finanzas personales"],
      image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&h=630&fit=crop",
      author: "María López",
+     faqs: [
+      {
+        question: "¿Es posible ahorrar con un salario mínimo?",
+        answer: "Sí, aunque requiere más planificación. La clave es empezar con cantidades pequeñas y automatizar el ahorro el mismo día que cobras. Incluso ahorrar $20-50 al mes crea el hábito y genera un colchón de emergencia. Reducir gastos hormiga (suscripciones, comidas fuera, compras impulsivas) puede liberar más dinero del que imaginas sin afectar tu calidad de vida.",
+      },
+      {
+        question: "¿Cuánto dinero debo tener en mi fondo de emergencia?",
+        answer: "Lo ideal es entre 3 y 6 meses de gastos esenciales (alquiler, comida, transporte, servicios). Si tienes trabajo estable, 3 meses puede ser suficiente. Si eres autónomo, freelance o tienes ingresos variables, apunta a 6-12 meses. Este fondo debe estar en una cuenta de fácil acceso, no invertido en activos volátiles.",
+      },
+      {
+        question: "¿Qué es el método de ahorro de las 52 semanas?",
+        answer: "El método 52 semanas consiste en ahorrar $1 la primera semana, $2 la segunda, $3 la tercera, y así sucesivamente. Al final del año habrás ahorrado $1,378 en total. Es un método gradual que hace que el ahorro sea progresivo y menos intimidante. Puedes hacerlo al revés (empezando con $52 la primera semana) para tener lo difícil al inicio.",
+      },
+      {
+        question: "¿Dónde guardar mis ahorros para que no pierdan valor?",
+        answer: "Para el fondo de emergencia, usa cuentas de ahorro de alto rendimiento o cuentas remuneradas que ofrezcan intereses por encima de la inflación. Para metas a mediano plazo (1-3 años), considera depósitos a plazo o fondos de renta fija de bajo riesgo. Para el largo plazo (más de 5 años), los fondos indexados superan históricamente a las cuentas de ahorro.",
+      },
+      {
+        question: "¿Cómo evito gastar mis ahorros ante un impulso?",
+        answer: "La estrategia más efectiva es la fricción: pon tus ahorros en una cuenta separada, en otro banco, sin tarjeta de débito vinculada. Automatiza la transferencia justo después de cobrar para no 'ver' ese dinero. Define reglas claras sobre cuándo puedes usar el fondo (solo emergencias reales, no caprichos) y visualiza la meta que persigues con ese ahorro.",
+      },
+    ],
   },
   {
     slug: "mejores-apps-finanzas-personales-2025",
@@ -2594,6 +2707,28 @@ Recuerda: **tiempo en el mercado > timing del mercado**. Empieza hoy, aunque sea
     tags: ["fondos indexados", "ETF", "S&P 500", "inversiones", "Warren Buffett"],
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80",
     author: "Carlos Sánchez",
+    faqs: [
+      {
+        question: "¿Qué son los fondos indexados y cómo funcionan?",
+        answer: "Un fondo indexado es un fondo de inversión que replica automáticamente el comportamiento de un índice bursátil, como el S&P 500. En lugar de intentar 'ganarle al mercado', simplemente compra todas las acciones del índice en las mismas proporciones. Esto reduce costos de gestión y, estadísticamente, supera al 80% de los fondos activos a largo plazo.",
+      },
+      {
+        question: "¿Cuánto dinero necesito para empezar a invertir en fondos indexados?",
+        answer: "Con brókers modernos puedes empezar con tan solo $1-10 comprando ETFs fraccionados (como Vanguard VTI, iShares CSPX o Amundi MSCI World). Muchos fondos indexados tradicionales tienen mínimos de $100-1,000. Lo más importante no es el monto inicial sino invertir con regularidad, aprovechando el promedio del costo en dólares.",
+      },
+      {
+        question: "¿Son seguros los fondos indexados?",
+        answer: "Son relativamente seguros a largo plazo, pero no están exentos de volatilidad. En el corto plazo pueden perder un 30-50% de su valor (como ocurrió en 2008 o 2020). Sin embargo, históricamente el mercado siempre se ha recuperado y ha marcado nuevos máximos. La clave es mantener la inversión sin vender en los momentos de pánico.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre un ETF y un fondo indexado?",
+        answer: "Ambos replican índices, pero con diferencias operativas: los ETFs cotizan en bolsa en tiempo real como acciones y puedes comprar desde una sola participación. Los fondos indexados tradicionales se valoran una vez al día y suelen requerir un mínimo de inversión. Para pequeños inversores, los ETFs son más accesibles; para grandes capitales, los fondos indexados pueden tener menores gastos.",
+      },
+      {
+        question: "¿Cuándo es el mejor momento para empezar a invertir en fondos indexados?",
+        answer: "El mejor momento fue hace 10 años; el segundo mejor momento es hoy. Intentar adivinar el 'momento perfecto' para entrar al mercado (market timing) generalmente perjudica el rendimiento. Estudios demuestran que invertir una cantidad fija mensual (dollar-cost averaging) independientemente del mercado produce mejores resultados que esperar el momento ideal en el largo plazo.",
+      },
+    ],
   },
   {
     slug: "usar-tarjeta-credito-sin-endeudarse",

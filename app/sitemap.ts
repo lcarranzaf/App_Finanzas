@@ -14,6 +14,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/jovenes", priority: 0.8, frequency: "weekly" as const, date: "2026-02-01" },
     { path: "/recursos", priority: 0.7, frequency: "monthly" as const, date: "2026-03-06" },
     { path: "/proyecciones", priority: 0.7, frequency: "monthly" as const, date: "2026-02-01" },
+    { path: "/calculadoras", priority: 0.8, frequency: "monthly" as const, date: "2026-03-16" },
+    { path: "/calculadoras/meta-ahorro", priority: 0.7, frequency: "monthly" as const, date: "2026-03-16" },
+    { path: "/calculadoras/pago-deuda", priority: 0.7, frequency: "monthly" as const, date: "2026-03-16" },
+    { path: "/calculadoras/divisas", priority: 0.8, frequency: "daily" as const, date: "2026-03-16" },
     { path: "/sobre-nosotros", priority: 0.6, frequency: "monthly" as const, date: "2026-03-06" },
     { path: "/contacto", priority: 0.5, frequency: "monthly" as const, date: "2026-02-01" },
   ]
