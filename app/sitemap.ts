@@ -3,7 +3,7 @@ import { getAllAuthors } from "@/lib/authors-data"
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://app-finanzas-mu.vercel.app"
+  const baseUrl = "https://www.finanzasdigitales.es"
 
   // Nota: /privacidad y /terminos tienen noindex → no deben estar en el sitemap
   const staticPages = [

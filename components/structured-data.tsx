@@ -1,7 +1,7 @@
 import { getBlogPost } from "@/lib/blog-data"
 import { getAuthorByName } from "@/lib/authors-data"
 
-const BASE_URL = "https://app-finanzas-mu.vercel.app"
+const BASE_URL = "https://www.finanzasdigitales.es"
 const ORG_ID = `${BASE_URL}/#organization`
 
 /** Convierte "2026-02-12" → "2026-02-12T00:00:00+00:00" */

@@ -20,7 +20,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://app-finanzas-mu.vercel.app"),
+  metadataBase: new URL("https://www.finanzasdigitales.es"),
   title: {
     default: "FinanzasPro - Tu Guía para el Éxito Financiero",
     template: "%s | FinanzasPro",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "ETF",
     "bolsa de valores",
   ],
-  authors: [{ name: "FinanzasPro", url: "https://app-finanzas-mu.vercel.app" }],
+  authors: [{ name: "FinanzasPro", url: "https://www.finanzasdigitales.es" }],
   creator: "FinanzasPro",
   publisher: "FinanzasPro",
   robots: {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://app-finanzas-mu.vercel.app",
+    url: "https://www.finanzasdigitales.es",
     title: "FinanzasPro - Tu Guía para el Éxito Financiero",
     description:
       "Aprende a ahorrar, invertir y construir un futuro próspero con nuestros consejos expertos en finanzas personales.",
@@ -81,10 +81,10 @@ export const metadata: Metadata = {
     google: "iEJ6MlVtNjqHEUl7GbUfm-q8mzcHCTXNEA7_7hzwVPU",
   },
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app",
+    canonical: "https://www.finanzasdigitales.es",
     languages: {
-      "es": "https://app-finanzas-mu.vercel.app",
-      "x-default": "https://app-finanzas-mu.vercel.app",
+      "es": "https://www.finanzasdigitales.es",
+      "x-default": "https://www.finanzasdigitales.es",
     },
   },
   category: "finance",

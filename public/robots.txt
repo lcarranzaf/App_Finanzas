@@ -30,4 +30,4 @@ User-agent: PerplexityBot
 Allow: /
 
 # Sitemap location
-Sitemap: https://app-finanzas-mu.vercel.app/sitemap.xml
+Sitemap: https://www.finanzasdigitales.es/sitemap.xml
