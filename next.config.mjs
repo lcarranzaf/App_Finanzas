@@ -1,5 +1,3 @@
-const isDev = process.env.NODE_ENV === 'development'
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
@@ -39,21 +37,6 @@ const nextConfig = {
           {
             key: "Referrer-Policy",
             value: "origin-when-cross-origin",
-          },
-          {
-            key: "Content-Security-Policy",
-            value: [
-              "default-src 'self'",
-              `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com https://pagead2.googlesyndication.com https://securepubads.g.doubleclick.net https://fundingchoicesmessages.google.com https://va.vercel-scripts.com https://*.adtrafficquality.google https://disqus.com https://*.disqus.com https://*.disquscdn.com`,
-              `script-src-elem 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com https://pagead2.googlesyndication.com https://securepubads.g.doubleclick.net https://fundingchoicesmessages.google.com https://va.vercel-scripts.com https://*.adtrafficquality.google https://disqus.com https://*.disqus.com https://*.disquscdn.com`,
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.disquscdn.com",
-              "font-src 'self' https://fonts.gstatic.com https://*.disquscdn.com",
-              "img-src 'self' data: blob: https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.adtrafficquality.google https://images.unsplash.com https://images.pexels.com https://hebbkx1anhila5yf.public.blob.vercel-storage.com https://img-c.udemycdn.com https://img.udemycdn.com https://referrer.disqus.com https://*.disquscdn.com https://*.gravatar.com",
-              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com https://pagead2.googlesyndication.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://fundingchoicesmessages.google.com https://open.er-api.com https://disqus.com https://*.disqus.com",
-              "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://*.adtrafficquality.google https://disqus.com https://*.disqus.com",
-              "object-src 'none'",
-              "base-uri 'self'"
-            ].join("; "),
           },
           {
             key: "Permissions-Policy",
