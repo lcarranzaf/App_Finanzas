@@ -46,6 +46,14 @@ const nextConfig = {
             key: "Strict-Transport-Security",
             value: "max-age=63072000; includeSubDomains; preload",
           },
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "https://finanzasdigitales.es",
+          },
+          {
+            key: "Access-Control-Allow-Headers",
+            value: "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Url, Content-Type",
+          },
         ],
       },
       {
