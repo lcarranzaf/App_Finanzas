@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import Link from "next/link"
 import { Calculator, PiggyBank, CreditCard, TrendingUp, ArrowLeftRight } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "simulador financiero",
   ],
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app/calculadoras",
+    canonical: "https://www.finanzasdigitales.es/calculadoras",
   },
 }
 
@@ -72,11 +72,11 @@ export default function CalculadorasPage() {
     name: "Calculadoras Financieras Gratuitas",
     description:
       "Calculadoras financieras interactivas para planificar tu ahorro, inversiones y pago de deudas.",
-    url: "https://app-finanzas-mu.vercel.app/calculadoras",
+    url: "https://www.finanzasdigitales.es/calculadoras",
     inLanguage: "es",
     publisher: {
       "@type": "Organization",
-      "@id": "https://app-finanzas-mu.vercel.app/#organization",
+      "@id": "https://www.finanzasdigitales.es/#organization",
       name: "FinanzasPro",
     },
   }

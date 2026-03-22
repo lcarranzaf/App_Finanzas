@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+﻿import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Star, Smartphone, CreditCard, TrendingUp, BookOpen, Calculator, Shield } from "lucide-react"
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Las mejores apps de presupuesto, brokers para invertir, bancos digitales y herramientas financieras gratuitas. Comparativa actualizada con pros, contras y calificaciones para gestionar tu dinero.",
   keywords: ["apps financieras", "mejores brokers", "bancos digitales", "herramientas presupuesto", "apps para ahorrar", "plataformas inversión", "YNAB", "Fintonic", "Mobills"],
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app/recursos",
+    canonical: "https://www.finanzasdigitales.es/recursos",
   },
 }
 
@@ -21,13 +21,13 @@ export default function RecursosPage() {
   const recursosPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://app-finanzas-mu.vercel.app/recursos",
+    "@id": "https://www.finanzasdigitales.es/recursos",
     name: "Recursos Financieros Recomendados - FinanzasPro",
     description:
       "Las mejores apps de presupuesto, brokers para invertir, bancos digitales y herramientas financieras gratuitas.",
-    url: "https://app-finanzas-mu.vercel.app/recursos",
+    url: "https://www.finanzasdigitales.es/recursos",
     inLanguage: "es",
-    isPartOf: { "@id": "https://app-finanzas-mu.vercel.app/#website" },
+    isPartOf: { "@id": "https://www.finanzasdigitales.es/#website" },
   }
 
   const categories = [

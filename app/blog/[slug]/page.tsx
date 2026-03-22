@@ -1,4 +1,4 @@
-import { getBlogPost } from "@/lib/blog-data"
+﻿import { getBlogPost } from "@/lib/blog-data"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     title: post.title,
     description: post.description,
     keywords: post.tags.join(", "),
-    authors: [{ name: post.author, url: "https://app-finanzas-mu.vercel.app" }],
+    authors: [{ name: post.author, url: "https://www.finanzasdigitales.es" }],
     creator: post.author,
     publisher: "FinanzasPro",
     robots: {
@@ -69,7 +69,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
           alt: post.title,
         },
       ],
-      url: `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
+      url: `https://www.finanzasdigitales.es/blog/${post.slug}`,
       siteName: "FinanzasPro",
       type: "article",
       publishedTime: `${post.publishedAt}T00:00:00+00:00`,
@@ -86,10 +86,10 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       images: [post.image],
     },
     alternates: {
-      canonical: `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
+      canonical: `https://www.finanzasdigitales.es/blog/${post.slug}`,
       languages: {
-        "es": `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
-        "x-default": `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
+        "es": `https://www.finanzasdigitales.es/blog/${post.slug}`,
+        "x-default": `https://www.finanzasdigitales.es/blog/${post.slug}`,
       },
     },
   }
@@ -102,7 +102,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     notFound()
   }
 
-  const shareUrl = `https://app-finanzas-mu.vercel.app/blog/${post.slug}`
+  const shareUrl = `https://www.finanzasdigitales.es/blog/${post.slug}`
   const postAuthor = getAuthorByName(post.author)
   const authorSlug = postAuthor?.slug ?? "equipo-finanzaspro"
 
@@ -240,7 +240,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           const markdownComponents = {
             h1: ({children}: any) => {
               const id = generateId(getTextFromChildren(children))
-              return <h1 id={id} className="text-4xl font-bold tracking-tight text-foreground mt-12 mb-6 pb-4 border-b border-border scroll-mt-24">{children}</h1>
+              return <h2 id={id} className="text-4xl font-bold tracking-tight text-foreground mt-12 mb-6 pb-4 border-b border-border scroll-mt-24">{children}</h2>
             },
             h2: ({children}: any) => {
               const id = generateId(getTextFromChildren(children))
@@ -395,7 +395,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <DisqusComments
             postSlug={post.slug}
             postTitle={post.title}
-            postUrl={`https://app-finanzas-mu.vercel.app/blog/${post.slug}`}
+            postUrl={`https://www.finanzasdigitales.es/blog/${post.slug}`}
           />
         </LazyLoad>
       </div>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import dynamic from "next/dynamic"
 import { CreditCard } from "lucide-react"
 import { Breadcrumbs } from "@/components/breadcrumbs"
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "simulador deuda",
   ],
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app/calculadoras/pago-deuda",
+    canonical: "https://www.finanzasdigitales.es/calculadoras/pago-deuda",
   },
 }
 

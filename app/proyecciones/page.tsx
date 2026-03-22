@@ -1,4 +1,4 @@
-import dynamic from "next/dynamic"
+﻿import dynamic from "next/dynamic"
 import type { Metadata } from "next"
 import { Calculator } from "lucide-react"
 
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description: "Calcula gratis cómo crecerán tus inversiones con el interés compuesto. Simula aportes mensuales, tasas de retorno y plazos. Herramienta interactiva para planificar tu retiro y metas financieras.",
   keywords: ["calculadora inversiones", "interés compuesto calculadora", "proyecciones financieras", "simulador inversión", "planificación retiro", "calculadora ahorro"],
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app/proyecciones",
+    canonical: "https://www.finanzasdigitales.es/proyecciones",
   },
 }
 

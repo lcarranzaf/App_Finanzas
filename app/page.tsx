@@ -54,7 +54,26 @@ export default function HomePage() {
     { value: "Real", label: "Ejemplos Verificables" },
   ]
 
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Artículos más leídos de FinanzasPro",
+    numberOfItems: 4,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, url: "https://www.finanzasdigitales.es/blog/interes-compuesto-como-funciona", name: "Interés compuesto: cómo funciona y cómo te hace rico" },
+      { "@type": "ListItem", position: 2, url: "https://www.finanzasdigitales.es/blog/invertir-fondos-indexados-principiantes", name: "Invertir en fondos indexados: guía completa para principiantes" },
+      { "@type": "ListItem", position: 3, url: "https://www.finanzasdigitales.es/blog/presupuesto-personal-completo", name: "Cómo crear un presupuesto personal completo paso a paso" },
+      { "@type": "ListItem", position: 4, url: "https://www.finanzasdigitales.es/blog/como-empezar-ahorrar-poco-dinero", name: "Cómo empezar a ahorrar con poco dinero: la regla 50/30/20" },
+    ],
+  }
+
   return (
+    <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      suppressHydrationWarning
+    />
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-background via-background to-muted/30 py-14 sm:py-20">
@@ -66,7 +85,7 @@ export default function HomePage() {
               </span>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl text-balance">
-              Construye tu <span className="text-primary">Futuro Financiero</span> con Confianza
+              Educación Financiera en Español: <span className="text-primary">Ahorra, Invierte</span> y Alcanza la Libertad Financiera
             </h1>
             <p className="mt-5 text-lg leading-8 text-muted-foreground text-pretty">
               Aprende a ahorrar, invertir y gestionar tu dinero con estrategias probadas. Desde fondos indexados hasta
@@ -136,7 +155,7 @@ export default function HomePage() {
                     <CardContent>
                       <CardDescription className="text-base leading-7">{feature.description}</CardDescription>
                       <Button variant="ghost" className="mt-4 p-0 h-auto" asChild>
-                        <Link href={feature.href}>Explorar →</Link>
+                        <Link href={feature.href} className="min-h-[48px] inline-flex items-center px-2">Explorar →</Link>
                       </Button>
                     </CardContent>
                   </Card>
@@ -344,6 +363,7 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

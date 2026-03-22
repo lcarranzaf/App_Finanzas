@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import dynamic from "next/dynamic"
 import { ArrowLeftRight } from "lucide-react"
 import { Breadcrumbs } from "@/components/breadcrumbs"
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "tipo de cambio hoy",
   ],
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app/calculadoras/divisas",
+    canonical: "https://www.finanzasdigitales.es/calculadoras/divisas",
   },
 }
 

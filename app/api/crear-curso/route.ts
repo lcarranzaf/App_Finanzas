@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server'
+﻿import { NextRequest, NextResponse } from 'next/server'
 import { saveCurso, type CursoData } from '@/lib/kv-storage'
 
 function extractUdemySlug(url: string): string | null {
@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'URL de Udemy no válida' }, { status: 400 })
     }
 
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://app-finanzas-mu.vercel.app'
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.finanzasdigitales.es'
 
     // Intentar obtener imagen del curso desde Udemy (og:image)
     const imageUrl = await fetchUdemyOgImage(courseSlug)

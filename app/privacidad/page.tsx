@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Política de privacidad de FinanzasPro. Cómo protegemos tus datos personales.",
   robots: { index: false, follow: true },
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app/privacidad",
+    canonical: "https://www.finanzasdigitales.es/privacidad",
   },
 }
 
@@ -149,7 +149,7 @@ export default function PrivacyPage() {
           </p>
           <ul>
             <li>
-              <strong>Sitio web:</strong> https://app-finanzas-mu.vercel.app/contacto
+              <strong>Sitio web:</strong> https://www.finanzasdigitales.es/contacto
             </li>
           </ul>
 

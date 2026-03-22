@@ -1,4 +1,4 @@
-import Link from "next/link"
+﻿import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "Aprende a invertir desde cero con nuestra guía completa. Compara fondos indexados, ETFs, acciones y bonos. Descubre cuánto necesitas para empezar y qué estrategia se adapta a tu perfil de riesgo.",
   keywords: ["inversiones para principiantes", "fondos indexados", "ETFs", "acciones", "bonos", "cómo invertir", "bolsa de valores", "S&P 500", "inversión a largo plazo"],
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app/inversiones",
+    canonical: "https://www.finanzasdigitales.es/inversiones",
   },
 }
 
@@ -29,13 +29,13 @@ export default function InversionesPage() {
   const inversionesPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://app-finanzas-mu.vercel.app/inversiones",
+    "@id": "https://www.finanzasdigitales.es/inversiones",
     name: "Guía de Inversiones para Principiantes - FinanzasPro",
     description:
       "Aprende a invertir desde cero: compara fondos indexados, ETFs, acciones y bonos. Estrategias para todos los perfiles de riesgo.",
-    url: "https://app-finanzas-mu.vercel.app/inversiones",
+    url: "https://www.finanzasdigitales.es/inversiones",
     inLanguage: "es",
-    isPartOf: { "@id": "https://app-finanzas-mu.vercel.app/#website" },
+    isPartOf: { "@id": "https://www.finanzasdigitales.es/#website" },
   }
 
   const investmentOptions = [

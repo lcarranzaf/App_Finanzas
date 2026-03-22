@@ -116,20 +116,20 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
   // Rendering only after mount means hydration completes first, then the ad
   // element is inserted client-side where the ad blocker can remove it safely.
   if (!mounted) {
-    return <div className={`ad-container ${className || ''}`} style={{ minHeight: '90px', margin: '20px 0' }} />;
+    return <div className={`ad-container ${className || ''}`} style={{ width: '100%', minHeight: '90px', margin: '20px 0' }} />;
   }
 
   const adFormat = getAdFormat();
 
   return (
-    <div className={`ad-container ${className || ''}`} style={{ minHeight: adFormat === 'vertical' ? '250px' : '90px' }}>
+    <div className={`ad-container ${className || ''}`} style={{ width: '100%', minHeight: adFormat === 'vertical' ? '250px' : '90px', margin: '20px 0' }}>
       <ins
         className="adsbygoogle"
         style={style || {
           display: 'block',
           textAlign: 'center',
-          margin: '20px 0',
-          minHeight: adFormat === 'vertical' ? '250px' : '90px'
+          minHeight: adFormat === 'vertical' ? '250px' : '90px',
+          width: '100%',
         }}
         data-ad-client="ca-pub-4657042320327960"
         data-ad-slot={slot}

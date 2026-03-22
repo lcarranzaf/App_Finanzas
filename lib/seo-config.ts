@@ -1,4 +1,4 @@
-// Enhanced SEO Configuration for Financial Content
+﻿// Enhanced SEO Configuration for Financial Content
 // Save as: /lib/seo-config.ts
 
 export const seoConfig = {
@@ -30,7 +30,7 @@ export const seoConfig = {
     "provider": {
       "@type": "Organization",
       "name": "FinanzasPro",
-      "url": "https://app-finanzas-mu.vercel.app"
+      "url": "https://www.finanzasdigitales.es"
     },
     "serviceType": "Financial Planning Service",
     "areaServed": "ES",
@@ -97,14 +97,14 @@ export const seoConfig = {
     "author": {
       "@type": "Person",
       "name": author,
-      "url": "https://app-finanzas-mu.vercel.app"
+      "url": "https://www.finanzasdigitales.es"
     },
     "publisher": {
       "@type": "Organization",
       "name": "FinanzasPro",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://app-finanzas-mu.vercel.app/og-image.jpg"
+        "url": "https://www.finanzasdigitales.es/og-image.jpg"
       }
     },
     "datePublished": publishedAt,

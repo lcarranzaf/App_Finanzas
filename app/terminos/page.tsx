@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Términos y condiciones de uso de FinanzasPro. Información sobre el uso del sitio y sus contenidos.",
   robots: { index: false, follow: true },
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app/terminos",
+    canonical: "https://www.finanzasdigitales.es/terminos",
   },
 }
 
@@ -130,7 +130,7 @@ export default function TerminosPage() {
           </p>
           <ul>
             <li>
-              <strong>Sitio web:</strong> https://app-finanzas-mu.vercel.app/contacto
+              <strong>Sitio web:</strong> https://www.finanzasdigitales.es/contacto
             </li>
           </ul>
 

@@ -1,4 +1,4 @@
-// Additional structured data components for finance-specific content
+﻿// Additional structured data components for finance-specific content
 export function FinancialGuideSchema({ post }: { post: any }) {
   const structuredData = {
     "@context": "https://schema.org",
@@ -17,12 +17,12 @@ export function FinancialGuideSchema({ post }: { post: any }) {
       name: "FinanzasPro",
       logo: {
         "@type": "ImageObject",
-        url: "https://app-finanzas-mu.vercel.app/logo.png",
+        url: "https://www.finanzasdigitales.es/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
+      "@id": `https://www.finanzasdigitales.es/blog/${post.slug}`,
     },
     about: [
       "https://schema.org/PersonalFinance",

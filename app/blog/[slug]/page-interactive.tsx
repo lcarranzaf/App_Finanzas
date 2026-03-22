@@ -1,4 +1,4 @@
-import { getBlogPost } from '@/lib/blog-data'
+﻿import { getBlogPost } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
 import Script from 'next/script'
 import Link from 'next/link'
@@ -42,13 +42,13 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           "publisher": {
             "@type": "Organization",
             "name": "FinanzasPro",
-            "url": "https://app-finanzas-mu.vercel.app"
+            "url": "https://www.finanzasdigitales.es"
           },
           "datePublished": post.publishedAt,
           "dateModified": post.publishedAt,
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": `https://app-finanzas-mu.vercel.app/blog/${post.slug}`
+            "@id": `https://www.finanzasdigitales.es/blog/${post.slug}`
           }
         })}
       </Script>

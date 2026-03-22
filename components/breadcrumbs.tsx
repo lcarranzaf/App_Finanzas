@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Link from "next/link"
 import { ChevronRight, Home } from "lucide-react"
@@ -88,7 +88,7 @@ export function Breadcrumbs({ items, customItems }: BreadcrumbsProps) {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": `https://app-finanzas-mu.vercel.app${item.href}`
+      "item": `https://www.finanzasdigitales.es${item.href}`
     }))
   }
 

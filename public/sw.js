@@ -1,4 +1,4 @@
-// Service Worker for caching static assets and improving performance
+﻿// Service Worker for caching static assets and improving performance
 
 const CACHE_NAME = 'finanzaspro-v3'
 const STATIC_CACHE = 'finanzaspro-static-v3'
@@ -57,7 +57,7 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') return
 
   // Skip external requests
-  if (!url.origin.includes('app-finanzas-mu.vercel.app') && !url.origin.includes('localhost')) return
+  if (!url.origin.includes('finanzasdigitales.es') && !url.origin.includes('localhost')) return
 
   // Handle different types of requests
   if (url.pathname.startsWith('/api/')) {

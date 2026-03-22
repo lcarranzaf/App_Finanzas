@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import dynamic from "next/dynamic"
 import { PiggyBank } from "lucide-react"
 import { Breadcrumbs } from "@/components/breadcrumbs"
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "meta financiera",
   ],
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app/calculadoras/meta-ahorro",
+    canonical: "https://www.finanzasdigitales.es/calculadoras/meta-ahorro",
   },
 }
 

@@ -1,4 +1,4 @@
-import ContactForm from "@/components/contact-form"
+﻿import ContactForm from "@/components/contact-form"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "¿Tienes preguntas sobre ahorro, inversiones o presupuestos? Contáctanos para consultas financieras, sugerencias de contenido o propuestas de colaboración. Respondemos en 24-48 horas.",
   keywords: ["contacto FinanzasPro", "consulta financiera", "preguntas finanzas", "colaboraciones", "educación financiera"],
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app/contacto",
+    canonical: "https://www.finanzasdigitales.es/contacto",
   },
 }
 

@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+﻿import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Users, Target, Award, Mail } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Conoce al equipo detrás de FinanzasPro. Nuestra misión es democratizar la educación financiera en español con guías prácticas, herramientas gratuitas y contenido confiable para alcanzar tu libertad financiera.",
   keywords: ["sobre FinanzasPro", "educación financiera", "equipo", "misión", "finanzas personales en español"],
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app/sobre-nosotros",
+    canonical: "https://www.finanzasdigitales.es/sobre-nosotros",
   },
 }
 
@@ -22,14 +22,14 @@ export default function SobreNosotrosPage() {
   const aboutPageSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "@id": "https://app-finanzas-mu.vercel.app/sobre-nosotros",
+    "@id": "https://www.finanzasdigitales.es/sobre-nosotros",
     name: "Sobre FinanzasPro",
     description:
       "Conoce al equipo detrás de FinanzasPro. Nuestra misión es democratizar la educación financiera en español.",
-    url: "https://app-finanzas-mu.vercel.app/sobre-nosotros",
+    url: "https://www.finanzasdigitales.es/sobre-nosotros",
     inLanguage: "es",
-    isPartOf: { "@id": "https://app-finanzas-mu.vercel.app/#website" },
-    about: { "@id": "https://app-finanzas-mu.vercel.app/#organization" },
+    isPartOf: { "@id": "https://www.finanzasdigitales.es/#website" },
+    about: { "@id": "https://www.finanzasdigitales.es/#organization" },
   }
 
   return (

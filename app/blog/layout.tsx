@@ -1,4 +1,4 @@
-import type React from "react"
+﻿import type React from "react"
 import type { Metadata } from "next"
 import { getBlogPosts } from "@/lib/blog-data"
 
@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   description:
     "Artículos expertos sobre ahorro, inversión, ETFs y libertad financiera en español. Guías prácticas para mejorar tu situación financiera.",
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app/blog",
+    canonical: "https://www.finanzasdigitales.es/blog",
   },
   openGraph: {
-    url: "https://app-finanzas-mu.vercel.app/blog",
+    url: "https://www.finanzasdigitales.es/blog",
     title: "Blog de Finanzas Personales | FinanzasPro",
     description:
       "Artículos expertos sobre ahorro, inversión, ETFs y libertad financiera en español.",
@@ -25,12 +25,12 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
     "@type": "ItemList",
     name: "Blog de Finanzas Personales",
     description: "Artículos sobre ahorro, inversión y libertad financiera en español",
-    url: "https://app-finanzas-mu.vercel.app/blog",
+    url: "https://www.finanzasdigitales.es/blog",
     numberOfItems: posts.length,
     itemListElement: posts.slice(0, 10).map((post, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      url: `https://app-finanzas-mu.vercel.app/blog/${post.slug}`,
+      url: `https://www.finanzasdigitales.es/blog/${post.slug}`,
       name: post.title,
     })),
   }
@@ -38,14 +38,14 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "@id": "https://app-finanzas-mu.vercel.app/blog#blog",
+    "@id": "https://www.finanzasdigitales.es/blog#blog",
     name: "Blog de FinanzasPro",
     description: "Artículos sobre ahorro, inversiones y educación financiera en español.",
-    url: "https://app-finanzas-mu.vercel.app/blog",
+    url: "https://www.finanzasdigitales.es/blog",
     inLanguage: "es",
     publisher: {
       "@type": "Organization",
-      "@id": "https://app-finanzas-mu.vercel.app/#organization",
+      "@id": "https://www.finanzasdigitales.es/#organization",
       name: "FinanzasPro",
     },
   }

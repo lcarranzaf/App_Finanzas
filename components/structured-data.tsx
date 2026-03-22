@@ -60,9 +60,9 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         logo: {
           "@type": "ImageObject",
           "@id": `${BASE_URL}/#logo`,
-          url: `${BASE_URL}/logo.png`,
-          width: 1408,
-          height: 768,
+          url: `${BASE_URL}/logo-square.png`,
+          width: 512,
+          height: 512,
           caption: "FinanzasPro",
         },
         foundingDate: "2022",

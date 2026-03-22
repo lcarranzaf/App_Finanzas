@@ -1,4 +1,4 @@
-import Link from "next/link"
+﻿import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { GraduationCap, Briefcase, Home, Car } from "lucide-react"
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Guía financiera completa para jóvenes, estudiantes y recién graduados. Aprende a manejar tu primer sueldo con la regla 50/30/20, construir historial crediticio y empezar a invertir desde $50 al mes.",
   keywords: ["finanzas para jóvenes", "primer sueldo", "estudiantes universitarios", "recién graduados", "cómo ahorrar siendo joven", "historial crediticio", "inversión jóvenes"],
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app/jovenes",
+    canonical: "https://www.finanzasdigitales.es/jovenes",
   },
 }
 
@@ -22,13 +22,13 @@ export default function JovenesPage() {
   const jovenesPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://app-finanzas-mu.vercel.app/jovenes",
+    "@id": "https://www.finanzasdigitales.es/jovenes",
     name: "Finanzas para Jóvenes - FinanzasPro",
     description:
       "Guía financiera completa para jóvenes, estudiantes y recién graduados.",
-    url: "https://app-finanzas-mu.vercel.app/jovenes",
+    url: "https://www.finanzasdigitales.es/jovenes",
     inLanguage: "es",
-    isPartOf: { "@id": "https://app-finanzas-mu.vercel.app/#website" },
+    isPartOf: { "@id": "https://www.finanzasdigitales.es/#website" },
   }
 
   const lifeStages = [

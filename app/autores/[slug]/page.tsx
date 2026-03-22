@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation"
+﻿import { notFound } from "next/navigation"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { getAuthor, getAllAuthors } from "@/lib/authors-data"
@@ -82,7 +82,7 @@ export default function AuthorPage({ params }: AuthorPageProps) {
               {author.credentials && (
                 <p className="mt-1 text-sm text-muted-foreground">{author.credentials}</p>
               )}
-              <p className="mt-4 text-muted-foreground leading-7">{author.bio}</p>
+              {(author.bioFull ?? author.bio).split("\n\n").map((para, i) => (<p key={i} className="mt-4 text-muted-foreground leading-7">{para}</p>))}
               <div className="mt-6 flex flex-wrap gap-2">
                 {author.expertise.map((skill) => (
                   <Badge key={skill} variant="secondary" className="text-xs">

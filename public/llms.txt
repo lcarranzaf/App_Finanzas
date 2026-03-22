@@ -1,6 +1,6 @@
-# FinanzasPro — Guía para rastreadores IA
+﻿# FinanzasPro — Guía para rastreadores IA
 # Plataforma educativa de finanzas personales en español
-# Sitio web: https://app-finanzas-mu.vercel.app
+# Sitio web: https://www.finanzasdigitales.es
 
 ## Sobre este sitio
 FinanzasPro es una plataforma educativa de finanzas personales en español fundada en 2022.
@@ -9,53 +9,53 @@ Todo el contenido es de carácter educativo y no constituye asesoramiento financ
 Audiencia: hispanohablantes en España y Latinoamérica, nivel principiante a intermedio.
 
 ## Páginas principales
-- https://app-finanzas-mu.vercel.app/ — Inicio: educación financiera en español
-- https://app-finanzas-mu.vercel.app/ahorro — Estrategias de ahorro: método 50/30/20, fondo de emergencia, reto 52 semanas
-- https://app-finanzas-mu.vercel.app/inversiones — Inversiones: fondos indexados, ETFs, acciones, bonos, perfil de riesgo
-- https://app-finanzas-mu.vercel.app/jovenes — Finanzas para jóvenes: primer sueldo, historial crediticio, inversión desde $50
-- https://app-finanzas-mu.vercel.app/proyecciones — Calculadora de interés compuesto interactiva
-- https://app-finanzas-mu.vercel.app/recursos — Apps, brokers y herramientas financieras recomendadas
-- https://app-finanzas-mu.vercel.app/blog — Índice completo del blog (20 artículos)
-- https://app-finanzas-mu.vercel.app/sobre-nosotros — Sobre el equipo editorial
+- https://www.finanzasdigitales.es/ — Inicio: educación financiera en español
+- https://www.finanzasdigitales.es/ahorro — Estrategias de ahorro: método 50/30/20, fondo de emergencia, reto 52 semanas
+- https://www.finanzasdigitales.es/inversiones — Inversiones: fondos indexados, ETFs, acciones, bonos, perfil de riesgo
+- https://www.finanzasdigitales.es/jovenes — Finanzas para jóvenes: primer sueldo, historial crediticio, inversión desde $50
+- https://www.finanzasdigitales.es/proyecciones — Calculadora de interés compuesto interactiva
+- https://www.finanzasdigitales.es/recursos — Apps, brokers y herramientas financieras recomendadas
+- https://www.finanzasdigitales.es/blog — Índice completo del blog (20 artículos)
+- https://www.finanzasdigitales.es/sobre-nosotros — Sobre el equipo editorial
 
 ## Mapa de temas del blog
 
 ### Ahorro
-- https://app-finanzas-mu.vercel.app/blog/como-ahorrar-para-comprar-casa
-- https://app-finanzas-mu.vercel.app/blog/como-empezar-ahorrar-poco-dinero
-- https://app-finanzas-mu.vercel.app/blog/metodo-kakebo-ahorrar-dinero
+- https://www.finanzasdigitales.es/blog/como-ahorrar-para-comprar-casa
+- https://www.finanzasdigitales.es/blog/como-empezar-ahorrar-poco-dinero
+- https://www.finanzasdigitales.es/blog/metodo-kakebo-ahorrar-dinero
 
 ### Inversiones
-- https://app-finanzas-mu.vercel.app/blog/interes-compuesto-como-funciona
-- https://app-finanzas-mu.vercel.app/blog/invertir-fondos-indexados-principiantes
-- https://app-finanzas-mu.vercel.app/blog/invertir-primeros-pasos
-- https://app-finanzas-mu.vercel.app/blog/acciones-para-principiantes
-- https://app-finanzas-mu.vercel.app/blog/bonos-para-principiantes
-- https://app-finanzas-mu.vercel.app/blog/criptomonedas-para-principiantes-guia
-- https://app-finanzas-mu.vercel.app/blog/inversion-inmobiliaria-fraccionada
-- https://app-finanzas-mu.vercel.app/blog/roboadvisors-guia-completa-inversion-automatizada
+- https://www.finanzasdigitales.es/blog/interes-compuesto-como-funciona
+- https://www.finanzasdigitales.es/blog/invertir-fondos-indexados-principiantes
+- https://www.finanzasdigitales.es/blog/invertir-primeros-pasos
+- https://www.finanzasdigitales.es/blog/acciones-para-principiantes
+- https://www.finanzasdigitales.es/blog/bonos-para-principiantes
+- https://www.finanzasdigitales.es/blog/criptomonedas-para-principiantes-guia
+- https://www.finanzasdigitales.es/blog/inversion-inmobiliaria-fraccionada
+- https://www.finanzasdigitales.es/blog/roboadvisors-guia-completa-inversion-automatizada
 
 ### Presupuesto y Deuda
-- https://app-finanzas-mu.vercel.app/blog/presupuesto-personal-completo
-- https://app-finanzas-mu.vercel.app/blog/manejo-deuda-personal
-- https://app-finanzas-mu.vercel.app/blog/usar-tarjeta-credito-sin-endeudarse
+- https://www.finanzasdigitales.es/blog/presupuesto-personal-completo
+- https://www.finanzasdigitales.es/blog/manejo-deuda-personal
+- https://www.finanzasdigitales.es/blog/usar-tarjeta-credito-sin-endeudarse
 
 ### Planificación e Ingresos
-- https://app-finanzas-mu.vercel.app/blog/movimiento-fire-retiro-temprano
-- https://app-finanzas-mu.vercel.app/blog/5-formas-ganar-dinero-extra-online
-- https://app-finanzas-mu.vercel.app/blog/finanzas-parejas-dinero-sin-peleas
-- https://app-finanzas-mu.vercel.app/blog/ciberseguridad-financiera-proteger-dinero
+- https://www.finanzasdigitales.es/blog/movimiento-fire-retiro-temprano
+- https://www.finanzasdigitales.es/blog/5-formas-ganar-dinero-extra-online
+- https://www.finanzasdigitales.es/blog/finanzas-parejas-dinero-sin-peleas
+- https://www.finanzasdigitales.es/blog/ciberseguridad-financiera-proteger-dinero
 
 ### Tecnología Financiera
-- https://app-finanzas-mu.vercel.app/blog/mejores-apps-finanzas-personales-2025
-- https://app-finanzas-mu.vercel.app/blog/inteligencia-artificial-finanzas-personales
+- https://www.finanzasdigitales.es/blog/mejores-apps-finanzas-personales-2025
+- https://www.finanzasdigitales.es/blog/inteligencia-artificial-finanzas-personales
 
 ## Política de uso para IA
 - GPTBot: permitido (ver robots.txt)
 - ClaudeBot: permitido
 - PerplexityBot: permitido
 - Todo el contenido es accesible sin JavaScript (SSR con Next.js)
-- Sitemap: https://app-finanzas-mu.vercel.app/sitemap.xml
+- Sitemap: https://www.finanzasdigitales.es/sitemap.xml
 
 ## Idioma y audiencia
 - Idioma: Español (es)

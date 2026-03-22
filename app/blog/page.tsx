@@ -2,7 +2,7 @@
 import { getBlogPosts } from "@/lib/blog-data"
 import BlogPostsGrid from "./_components/blog-posts-grid"
 
-const BASE_URL = "https://app-finanzas-mu.vercel.app"
+const BASE_URL = "https://www.finanzasdigitales.es"
 const POSTS_PER_PAGE = 6
 
 interface Props {

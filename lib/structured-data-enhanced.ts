@@ -1,4 +1,4 @@
-// Enhanced Structured Data for Featured Snippets
+﻿// Enhanced Structured Data for Featured Snippets
 // Save as: /lib/structured-data.ts
 
 import { seoConfig } from './seo-config'
@@ -14,7 +14,7 @@ export const generateStructuredData = (article: {
   category: string
   tags: string[]
 }) => {
-  const baseUrl = 'https://app-finanzas-mu.vercel.app'
+  const baseUrl = 'https://www.finanzasdigitales.es'
   const url = `${baseUrl}/blog/${article.slug}`
   
   // Financial Service Schema
@@ -263,7 +263,7 @@ export const generateMetaTags = (article: {
   category: string
   tags: string[]
 }) => {
-  const baseUrl = 'https://app-finanzas-mu.vercel.app'
+  const baseUrl = 'https://www.finanzasdigitales.es'
   const url = `${baseUrl}/blog/${article.slug}`
   const currentYear = new Date().getFullYear()
   

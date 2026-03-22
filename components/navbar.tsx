@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className="flex lg:hidden">
           <Button
             variant="ghost"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 min-h-[48px] min-w-[48px]"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Abrir menú principal</span>
@@ -75,7 +75,7 @@ export default function Navbar() {
               </Link>
               <Button
                 variant="ghost"
-                className="-m-2.5 rounded-md p-2.5"
+                className="-m-2.5 rounded-md p-2.5 min-h-[48px] min-w-[48px]"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Cerrar menú</span>

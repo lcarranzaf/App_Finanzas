@@ -1,4 +1,4 @@
-import Link from "next/link"
+﻿import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { PiggyBank, Target, Calculator, Zap, CheckCircle2 } from "lucide-react"
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Descubre cómo ahorrar dinero con el método 50/30/20, ahorro automático y el reto 52 semanas. Guía paso a paso para crear tu fondo de emergencia desde cero, incluso con ingresos bajos.",
   keywords: ["ahorro", "cómo ahorrar dinero", "método 50/30/20", "fondo de emergencia", "presupuesto personal", "estrategias de ahorro", "reto 52 semanas", "finanzas personales"],
   alternates: {
-    canonical: "https://app-finanzas-mu.vercel.app/ahorro",
+    canonical: "https://www.finanzasdigitales.es/ahorro",
   },
 }
 
@@ -22,13 +22,13 @@ export default function AhorroPage() {
   const ahorroPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://app-finanzas-mu.vercel.app/ahorro",
+    "@id": "https://www.finanzasdigitales.es/ahorro",
     name: "Estrategias de Ahorro - FinanzasPro",
     description:
       "Descubre cómo ahorrar dinero con el método 50/30/20, ahorro automático y el reto 52 semanas.",
-    url: "https://app-finanzas-mu.vercel.app/ahorro",
+    url: "https://www.finanzasdigitales.es/ahorro",
     inLanguage: "es",
-    isPartOf: { "@id": "https://app-finanzas-mu.vercel.app/#website" },
+    isPartOf: { "@id": "https://www.finanzasdigitales.es/#website" },
   }
 
   const savingMethods = [
