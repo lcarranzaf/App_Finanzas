@@ -2056,7 +2056,7 @@ El primer paso es siempre el más difícil, pero una vez que desarrolles el háb
     readTime: "8 min",
     category: "Ahorro",
      tags: ["ahorro", "presupuesto", "fondo de emergencia", "finanzas personales"],
-     image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&h=630&fit=crop",
+     image: "https://images.unsplash.com/photo-1468254095679-bbcba94a7066?w=1200&h=630&fit=crop",
      author: "María López",
      faqs: [
       {
@@ -3585,7 +3585,7 @@ El mejor momento para empezar fue hace 10 años. El segundo mejor momento es hoy
     title: "Inversión Inmobiliaria desde $50: Cómo Funciona la Propiedad Fraccionada",
     description:
       "Ya no necesitas miles de dólares para invertir en bienes raíces. Descubre las plataformas de inversión inmobiliaria fraccionada y tokenizada que están revolucionando el mercado en 2026.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=630&fit=crop",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=630&fit=crop",
     content: `
 # Inversión Inmobiliaria Fraccionada: Bienes Raíces al Alcance de Todos
 
@@ -3729,7 +3729,7 @@ El futuro del real estate es digital, fraccionado y accesible para todos. La pre
     title: "Método Kakebo: El Secreto Japonés que Te Hará Ahorrar un 35% Más",
     description:
       "El método Kakebo lleva más de 100 años ayudando a los japoneses a controlar sus gastos. Aprende esta técnica ancestral paso a paso y transforma tu relación con el dinero en solo 30 días.",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=630&fit=crop",
+    image: "https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?w=1200&h=630&fit=crop",
     content: `
 # Método Kakebo: El Arte Japonés de Ahorrar Dinero
 
@@ -4216,7 +4216,7 @@ Tengan esa primera conversación financiera hoy. No tiene que ser perfecta, solo
     title: "Roboadvisors: Invierte como un Experto sin Saber Nada de Bolsa",
     description:
       "Los roboadvisors gestionan tu dinero con inteligencia artificial por una fracción del costo de un asesor tradicional. Comparativa completa de plataformas, rendimientos y cómo elegir el mejor para ti.",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=630&fit=crop",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=630&fit=crop",
     content: `
 # Roboadvisors: Tu Asesor Financiero por una Fracción del Precio
 
@@ -4355,7 +4355,7 @@ Tu futuro financiero no depende de cuánto sabes de inversiones. Depende de cuá
     title: "Mejores fondos monetarios en España 2026: guía completa para el ahorrador",
     description:
       "Descubre qué son los fondos monetarios, cómo funcionan, cuáles son los mejores disponibles en España en 2026 y si son mejor opción que los depósitos bancarios.",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=630&fit=crop",
+    image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=1200&h=630&fit=crop",
     content: `
 # Mejores fondos monetarios en España 2026: rentabilidad sin riesgo
 
@@ -4534,7 +4534,7 @@ No te van a hacer rico. Pero sí van a hacer que tu dinero no pierda valor frent
     title: "Alquilar o comprar vivienda en España 2026: análisis financiero completo",
     description:
       "¿Comprar o alquilar en España en 2026? Analizamos los números reales, la rentabilidad de cada opción, el coste de oportunidad y cuándo compensa cada alternativa según tu situación.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=630&fit=crop",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=630&fit=crop",
     content: `
 # Alquilar o comprar vivienda en España 2026: la respuesta honesta con números reales
 
@@ -4905,7 +4905,7 @@ Si el banco te recomienda un plan de pensiones con comisiones del 1,5% como úni
     title: "Cómo proteger tus ahorros de la inflación en España: guía práctica 2026",
     description:
       "La inflación destruye silenciosamente el valor de tu dinero. Descubre las estrategias más efectivas para proteger y hacer crecer tus ahorros por encima de la inflación en España.",
-    image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&h=630&fit=crop",
+    image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=1200&h=630&fit=crop",
     content: `
 # Cómo proteger tus ahorros de la inflación en España: estrategias que realmente funcionan
 
@@ -5090,6 +5090,651 @@ El único requisito es empezar. Hoy, no mañana.
       {
         question: "¿Es buena idea comprar oro para protegerse de la inflación?",
         answer: "El oro es un depósito de valor histórico pero con alta volatilidad a corto plazo. Puede tener sentido como un 5-10% de una cartera diversificada, pero no como estrategia principal. Los fondos indexados han demostrado ser más efectivos para batir la inflación a largo plazo.",
+      },
+    ],
+  },
+  {
+    slug: "tipos-de-inflacion-guia-completa",
+    title: "Tipos de inflación: qué son, cómo se diferencian y cómo afectan tu dinero en 2026",
+    description:
+      "Descubre los 5 tipos de inflación con ejemplos reales de España: demanda, costes, estanflación y más. Guía completa para entender qué mueve los precios.",
+    image: "https://images.unsplash.com/photo-1604594849809-dfedbc827105?w=1200&h=630&fit=crop",
+    content: `
+# Tipos de inflación: qué son, cómo se diferencian y cómo afectan tu dinero
+
+La inflación no es solo "que todo sube". Hay distintos tipos de inflación con causas, comportamientos y consecuencias muy diferentes. Entender cuál está operando en cada momento es clave para tomar mejores decisiones financieras: desde si es buen momento para pedir una hipoteca hasta qué activos protegen mejor tus ahorros.
+
+En España, en 2025 convivieron al menos tres tipos de inflación a la vez. Por eso el IPC general bajó, pero los servicios seguían disparados. Este artículo te explica exactamente qué está pasando y por qué.
+
+## ¿Qué es la inflación? Definición rápida
+
+La inflación es el aumento sostenido y generalizado del nivel de precios de bienes y servicios en una economía durante un período de tiempo. Se mide a través del Índice de Precios al Consumo (IPC), que publica mensualmente el INE en España.
+
+**Dato clave:** El Banco Central Europeo (BCE) considera saludable una inflación del 2% anual. Por encima, el dinero pierde valor demasiado rápido. Por debajo, existe riesgo de deflación (que también es peligrosa).
+
+## Los 5 tipos de inflación principales
+
+### 1. Inflación por demanda (Demand-Pull)
+
+**Qué es:** Ocurre cuando la demanda de bienes y servicios supera la capacidad productiva de la economía. Demasiado dinero persiguiendo demasiados pocos productos.
+
+**Causa típica:** Bajadas de tipos de interés, estímulos fiscales del gobierno, aumento del empleo o del crédito.
+
+**Ejemplo real en España:** El boom del turismo tras la pandemia en 2022-2023 disparó los precios del alojamiento, la hostelería y los servicios turísticos. La demanda superó con creces la oferta disponible.
+
+**Cómo afecta tu economía:**
+- Subida de precios en sectores con alta demanda (turismo, tecnología, vivienda)
+- Los salarios tienden a subir más tarde que los precios
+- Buena época para vender activos (inmuebles, acciones)
+
+### 2. Inflación de costes (Cost-Push)
+
+**Qué es:** Los precios suben porque los costes de producción aumentan — no porque haya más demanda. Las empresas trasladan esos costes mayores al precio final.
+
+**Causa típica:** Subida del precio del petróleo, materias primas, energía eléctrica o salarios.
+
+**Ejemplo real en España:** La crisis energética de 2021-2023 por el conflicto en Ucrania disparó los costes de producción de prácticamente todos los sectores. El aceite de oliva en 2024-2025 es otro ejemplo: sequías → cosecha mínima → precio se triplica → toda la industria alimentaria sube precios.
+
+**Cómo afecta tu economía:**
+- Pérdida de poder adquisitivo sin crecimiento económico
+- Los márgenes empresariales se comprimen (riesgo de desempleo)
+- Los activos reales (oro, inmuebles, materias primas) suelen comportarse bien
+
+### 3. Inflación estructural
+
+**Qué es:** Inflación crónica y persistente causada por deficiencias estructurales de la economía: mercado laboral rígido, poca competencia, dependencia energética exterior, oligopolios en sectores clave.
+
+**Ejemplo real en España:** El sector servicios en España lleva años con una inflación subyacente por encima del 3%, muy por encima de la media europea. No es coyuntural — refleja problemas estructurales de productividad y competencia.
+
+**Cómo afecta tu economía:**
+- Difícil de combatir con política monetaria
+- Erosiona el poder adquisitivo de forma silenciosa y constante
+- Especialmente dañina para rentas fijas y ahorradores conservadores
+
+### 4. Estanflación (Stagflation)
+
+**Qué es:** La combinación más peligrosa: inflación alta + estancamiento económico + desempleo elevado. Es rara, pero devastadora.
+
+**Por qué es tan dañina:** El BCE no puede bajar tipos para reactivar la economía (eso empeoraría la inflación), ni subir tipos para controlar la inflación (eso hundiría más el crecimiento).
+
+**Ejemplo histórico:** Crisis del petróleo de los años 70. En España: el período 1975-1985 con inflaciones del 15-25% y desempleo del 20%.
+
+**Señales de alerta actuales:** Algunos economistas advierten de riesgo de estanflación en Europa si las tensiones geopolíticas persisten y el BCE mantiene tipos restrictivos demasiado tiempo.
+
+**Cómo afecta tu economía:**
+- Colapso del poder adquisitivo
+- Mercados bursátiles muy volátiles
+- El oro y las materias primas son los activos que mejor resisten
+
+### 5. Inflación incorporada o inercial (Built-In)
+
+**Qué es:** La inflación se perpetúa a sí misma a través de las expectativas. Los trabajadores piden subidas salariales porque esperan más inflación → las empresas suben precios para compensar los mayores costes salariales → la inflación se cumple.
+
+**El ciclo salario-precio:**
+Expectativa de inflación → negociación de salarios más altos → costes empresariales suben → precios suben → expectativa se confirma → nuevo ciclo.
+
+**Cómo afecta tu economía:**
+- Muy difícil de romper sin una recesión fuerte
+- El BCE necesita subir tipos agresivamente para "romper" las expectativas
+- Malas noticias para hipotecas variables y deudas a tipo flotante
+
+## Comparativa de los 5 tipos de inflación
+
+| Tipo | Causa principal | Velocidad | Cómo combatirla | Impacto en ahorros |
+|------|----------------|-----------|-----------------|-------------------|
+| Por demanda | Exceso de consumo | Media | Subir tipos BCE | Moderado |
+| De costes | Materias primas/energía | Rápida | Política de oferta | Alto |
+| Estructural | Deficiencias económicas | Lenta y constante | Reformas estructurales | Muy alto (silencioso) |
+| Estanflación | Choque externo + rigideces | Variable | Muy difícil | Devastador |
+| Inercial | Expectativas | Persistente | Credibilidad del BCE | Alto |
+
+## La inflación en España en 2025: ¿qué tipo era?
+
+España cerró 2025 con una inflación media del **2,7%**, la más alta entre las grandes economías de la UE. Pero ese número esconde una realidad más compleja:
+
+- **Energía:** Desinflacionaria en la segunda mitad del año (bajó los precios)
+- **Alimentos elaborados:** +2,1% anual, muy influenciado por el aceite de oliva
+- **Servicios:** +3,7% anual — este es el problema. Seguros, transporte, hostelería
+
+Lo que vivimos en España es principalmente una combinación de **inflación de costes** (aceite, energía pasada) e **inflación estructural** en servicios. Eso explica por qué bajar los tipos del BCE no la elimina del todo: los problemas están en la estructura de la economía española.
+
+## ¿Cómo protegerte según el tipo de inflación?
+
+Dependiendo del tipo de inflación predominante, las estrategias de protección son diferentes:
+
+**Inflación por demanda:** Los fondos indexados y las acciones suelen comportarse bien porque la economía crece.
+
+**Inflación de costes:** Materias primas, energía (ETFs de commodities), oro y acciones de empresas con poder de fijación de precios.
+
+**Inflación estructural:** Activos reales (inmuebles, fondos indexados globales) y [letras del Tesoro o fondos monetarios](/blog/mejores-fondos-monetarios-espana) para el corto plazo.
+
+**Estanflación:** Oro, materias primas y efectivo de calidad. Momento de reducir deuda variable.
+
+Para una guía completa sobre cómo proteger tus ahorros de la inflación en el contexto español, consulta nuestro artículo [Cómo proteger tus ahorros de la inflación en España](/blog/como-proteger-ahorros-inflacion-espana).
+
+## Conclusión: el tipo importa tanto como el dato
+
+Cuando lees que "la inflación en España es del 2,7%", ese número no te dice qué tipo de inflación es, si está subiendo o bajando, ni qué sectores están más afectados. Para tomar buenas decisiones financieras necesitas entender el contexto.
+
+Lo que sí es universal: el dinero parado en cuenta corriente pierde valor con cualquier tipo de inflación. La respuesta siempre pasa por invertir en activos que la superen. Y para eso, entender qué tipo de inflación estás combatiendo marca la diferencia.
+    `,
+    publishedAt: "2026-03-25",
+    readTime: "12 min",
+    category: "Inversiones",
+    tags: ["tipos de inflación", "inflación por demanda", "inflación de costes", "estanflación", "IPC", "economía España", "inflación 2026"],
+    author: "Alejandro Torres",
+    faqs: [
+      {
+        question: "¿Cuántos tipos de inflación existen?",
+        answer: "Los economistas identifican principalmente 5 tipos: inflación por demanda (demand-pull), inflación de costes (cost-push), inflación estructural, estanflación y inflación inercial o incorporada. En la práctica, varios tipos pueden coexistir simultáneamente, como ocurrió en España en 2025.",
+      },
+      {
+        question: "¿Qué tipo de inflación es más peligrosa para el ahorrador?",
+        answer: "La inflación estructural es la más peligrosa para los ahorradores porque es silenciosa, persistente y difícil de combatir. No hace titulares como una inflación del 10%, pero un 3-4% sostenido durante 10 años destruye el 30-40% del poder adquisitivo del dinero parado en cuenta.",
+      },
+      {
+        question: "¿Qué es la estanflación y por qué es tan temida?",
+        answer: "La estanflación es la combinación de inflación alta con estancamiento económico y desempleo elevado. Es la peor situación posible porque los bancos centrales no pueden usar sus herramientas habituales: subir tipos frena la inflación pero hunde más la economía; bajar tipos reactiva la economía pero dispara la inflación.",
+      },
+      {
+        question: "¿Qué tipo de inflación vivió España en 2025?",
+        answer: "España experimentó principalmente inflación de costes (aceite de oliva, energía) e inflación estructural en servicios (+3,7%). La inflación energética se moderó en la segunda mitad del año, pero la inflación en servicios se mantuvo persistente, explicando por qué España cerró 2025 como la peor gran economía de la UE en inflación (2,7% de media).",
+      },
+    ],
+  },
+  {
+    slug: "causas-consecuencias-inflacion-espana",
+    title: "10 causas de la inflación en España y sus consecuencias reales en tu economía",
+    description:
+      "España cerró 2025 con la inflación más alta de la UE. Analizamos las 10 causas reales y cómo afectan a tu hipoteca, ahorro y poder adquisitivo.",
+    image: "https://images.unsplash.com/photo-1618044619888-009e412ff12a?w=1200&h=630&fit=crop",
+    content: `
+# 10 causas de la inflación en España y sus consecuencias reales en tu economía
+
+España cerró 2025 con una inflación media del **2,7%**, la más alta entre las grandes economías de la Unión Europea. Alemania registró un 2,2%, Francia un 1,7% y la media de la eurozona quedó en el 2,3%. ¿Por qué España es siempre la peor alumna de inflación?
+
+La respuesta no es simple. Hay causas globales que afectan a todos los países y causas específicas que hacen a España especialmente vulnerable. En este artículo analizamos las 10 causas principales y, sobre todo, qué consecuencias concretas tienen en tu bolsillo.
+
+## Las 10 causas de la inflación en España
+
+### 1. Exceso de demanda interna
+
+Cuando la economía crece rápido y hay más dinero circulando (más empleo, más crédito, más turismo), la demanda de bienes y servicios supera la capacidad productiva. Los vendedores pueden subir precios porque los compradores siguen comprando.
+
+**En España:** El turismo récord (94 millones de visitantes en 2024) presiona especialmente los precios del alojamiento, la restauración y los servicios. Madrid y Barcelona son dos de las ciudades donde más han subido los precios de servicios de toda la UE.
+
+### 2. Subida del coste de la energía
+
+España importa el 70% de la energía que consume. Cuando sube el precio del petróleo o el gas a nivel global, los costes de producción de prácticamente todas las empresas aumentan y ese coste se traslada al consumidor final.
+
+**Impacto en 2025:** La electricidad experimentó subidas puntuales por la dependencia del mercado marginalista. Los carburantes moderaron la inflación en diciembre, pero generaron presión durante buena parte del año.
+
+### 3. Encarecimiento de alimentos específicos
+
+La inflación de alimentos no es uniforme. En España, el **aceite de oliva** se convirtió en el factor más disruptivo: dos años consecutivos de sequía redujeron la cosecha al mínimo histórico, disparando el precio del aceite de oliva virgen un 300% entre 2022 y 2024. Aunque moderó en 2025, la inflación de alimentos elaborados se mantuvo en el 2,1%.
+
+### 4. Política monetaria expansiva previa
+
+La política de tipos de interés cero del BCE entre 2015 y 2022 inundó de liquidez la economía. Ese dinero barato se tradujo en crédito fácil, aumento del consumo y presiones inflacionarias que tardaron años en manifestarse.
+
+**La paradoja:** El BCE tardó en reaccionar porque inicialmente consideró la inflación "transitoria". Cuando actuó en 2022, los precios ya llevaban meses disparados.
+
+### 5. Disrupciones en la cadena de suministro global
+
+La pandemia de COVID-19 desorganizó las cadenas de producción globales: fábricas cerradas, puertos colapsados, escasez de semiconductores, contenedores en los lugares equivocados. Aunque el efecto directo ya se ha disipado, dejó una estructura de costes más alta en muchos sectores.
+
+### 6. Conflictos geopolíticos y materias primas
+
+La invasión de Ucrania en 2022 disparó los precios del gas, el trigo y los fertilizantes. España, como gran importadora de cereales y dependiente del gas natural licuado, acusó especialmente este shock externo. El conflicto se extendió durante 2023-2025, manteniendo la presión sobre las materias primas.
+
+### 7. Subidas salariales en espiral
+
+Cuando los sindicatos negocian subidas salariales por encima de la productividad para compensar la inflación pasada, las empresas suben precios para mantener sus márgenes. Eso genera más inflación, que a su vez justifica nuevas subidas salariales.
+
+**En España:** El salario mínimo interprofesional (SMI) pasó de 950€ en 2020 a 1.134€ en 2025, una subida acumulada del 19%. Para muchos sectores de hostelería, comercio y servicios, ese es el principal coste variable.
+
+### 8. Inflación en el sector servicios (la más persistente)
+
+Este es el factor clave que diferencia a España del resto de Europa. Los servicios representan el 75% de la economía española y su inflación es estructuralmente alta:
+
+| Sector | Inflación 2025 |
+|--------|---------------|
+| Seguros | +8,2% |
+| Transporte aéreo | +6,7% |
+| Hostelería | +5,1% |
+| Servicios médicos | +3,8% |
+| Reparaciones | +4,2% |
+
+Los servicios son intensivos en mano de obra (no se pueden importar más baratos) y tienen poca competencia en muchos segmentos.
+
+### 9. Efecto base y comparativas interanuales
+
+La inflación se mide comparando con el mismo mes del año anterior. Cuando los precios ya estaban muy bajos (por ejemplo, en recesión o con energía barata), el efecto base hace que la inflación interanual parezca alta aunque los precios no estén subiendo mucho en términos absolutos.
+
+### 10. Expectativas de inflación ancladas al alza
+
+Una vez que la inflación se instala en la mente de consumidores y empresas, se convierte en una profecía autocumplida. Si todos esperan que los precios suban un 3%, actúan en consecuencia (piden subidas, suben precios) y efectivamente suben el 3%.
+
+**Según el BCE:** Las expectativas de inflación en España en 2025 estaban ancladas por encima del 2%, lo que hace más difícil que la inflación baje al objetivo.
+
+## Las consecuencias reales en tu economía
+
+### Pérdida de poder adquisitivo: los números reales
+
+Una inflación del 2,7% puede parecer pequeña, pero el efecto acumulado es devastador:
+
+| Período | Pérdida de poder adquisitivo |
+|---------|------------------------------|
+| 1 año al 2,7% | -2,7% |
+| 5 años al 2,7% | -12,6% |
+| 10 años al 2,7% | -23,5% |
+| 20 años al 2,7% | -41,6% |
+
+**Ejemplo concreto:** 10.000€ guardados en cuenta corriente hoy valdrán el equivalente a 7.650€ en poder adquisitivo dentro de 15 años si la inflación se mantiene en el 2,7%.
+
+### Impacto en hipotecas variables
+
+Para los 3,5 millones de hipotecas variables en España referenciadas al Euríbor, la inflación tiene un efecto directo: el BCE sube tipos para combatirla → el Euríbor sube → las cuotas mensuales suben.
+
+**Ejemplo:** Una hipoteca de 200.000€ a 25 años. Con Euríbor al 0% pagabas ~800€/mes. Con Euríbor al 3,6% (máximo 2023) pagabas ~1.100€/mes. Eso son 300€ más al mes o 3.600€ más al año.
+
+### Erosión de los ahorros en cuenta corriente
+
+El dinero en cuenta corriente genera en el mejor de los casos un 0,1% anual. Con una inflación del 2,7%, la pérdida de poder adquisitivo real es del **-2,6% anual**. Cada 100.000€ parados en cuenta pierden 2.600€ de valor real al año.
+
+### Impacto especial en jubilados y rentas fijas
+
+Las pensiones en España se revalorizan con el IPC, lo que protege parcialmente. Pero los gastos de los jubilados (medicamentos, servicios médicos, alimentación) suelen subir más que el IPC general, con lo que en la práctica muchos jubilados pierden poder adquisitivo cada año.
+
+### El efecto sobre las inversiones
+
+La inflación cambia por completo qué inversiones son rentables y cuáles no:
+
+- **Rentabilidad nominal vs real:** Un depósito al 2% con inflación del 2,7% tiene rentabilidad real del **-0,7%**. Estás perdiendo dinero aunque te paguen intereses.
+- **Acciones:** A largo plazo, las empresas trasladan la inflación a sus precios, protegiendo al accionista. Son el mejor activo anti-inflación a largo plazo.
+- **Bonos de renta fija a largo plazo:** Sufren cuando sube la inflación (y por tanto los tipos de interés). Sus precios bajan en mercado secundario.
+- **Inmuebles:** Históricamente se revalorizan con la inflación, aunque la accesibilidad se reduce por la subida de hipotecas.
+
+## Qué puedes hacer ahora mismo
+
+1. **No dejes dinero parado en cuenta corriente.** Muévelo a [fondos monetarios](/blog/mejores-fondos-monetarios-espana) o letras del Tesoro que ofrecen rentabilidades cercanas o superiores a la inflación actual.
+
+2. **Revisa tu hipoteca.** Si tienes hipoteca variable, considera negociar el cambio a tipo fijo si el diferencial es razonable.
+
+3. **Invierte a largo plazo.** Los [fondos indexados](/blog/invertir-fondos-indexados-principiantes) han demostrado batir la inflación consistentemente en períodos de 10+ años.
+
+4. **Protege tu cartera de la inflación de servicios.** Considera ETFs de empresas de servicios con poder de fijación de precios.
+
+Para una estrategia completa de protección, consulta nuestra guía [Cómo proteger tus ahorros de la inflación en España](/blog/como-proteger-ahorros-inflacion-espana).
+
+## Conclusión
+
+La inflación en España no es un fenómeno simple ni uniforme. Es el resultado de al menos 10 factores que interactúan entre sí, algunos globales y algunos específicos de nuestra economía. Entender sus causas te permite anticiparte a sus consecuencias y tomar mejores decisiones financieras.
+
+Lo que no puedes hacer es ignorarla. El dinero parado pierde valor de forma silenciosa pero implacable. La respuesta está en entender el fenómeno y actuar en consecuencia.
+    `,
+    publishedAt: "2026-03-25",
+    readTime: "13 min",
+    category: "Ahorro",
+    tags: ["causas inflación", "consecuencias inflación", "IPC España", "inflación España 2026", "poder adquisitivo", "economía", "hipoteca Euribor"],
+    author: "Carlos Sánchez",
+    faqs: [
+      {
+        question: "¿Cuál es la principal causa de la inflación en España en 2026?",
+        answer: "La inflación en servicios es el factor más persistente, con un +3,7% en 2025. A diferencia de la inflación energética, que puede bajar rápido, la inflación en servicios (hostelería, seguros, transporte) refleja problemas estructurales de la economía española: alta intensidad de mano de obra, poca competencia y fuertes subidas del SMI.",
+      },
+      {
+        question: "¿Cuánto dinero pierdo si tengo 10.000€ en cuenta corriente con una inflación del 2,7%?",
+        answer: "En términos de poder adquisitivo, perderías unos 270€ al año. En 5 años, tus 10.000€ tendrían el mismo poder adquisitivo que unos 8.740€ actuales. Es una pérdida real aunque el número en tu cuenta no cambie.",
+      },
+      {
+        question: "¿Cómo afecta la inflación a mi hipoteca?",
+        answer: "Si tienes hipoteca variable, la inflación alta hace que el BCE suba tipos de interés → sube el Euríbor → sube tu cuota mensual. Si tienes hipoteca fija, la inflación en realidad te beneficia a largo plazo: pagas con un dinero que vale menos. Por eso muchos expertos recomiendan hipoteca fija en entornos inflacionarios.",
+      },
+      {
+        question: "¿Por qué España tiene más inflación que Alemania o Francia?",
+        answer: "Varios factores: mayor dependencia del turismo (inflaciona los servicios), estructura de servicios con menor competencia, mayor peso del SMI en sectores intensivos en mano de obra, mayor dependencia energética exterior y el impacto específico del aceite de oliva (España es el mayor productor mundial).",
+      },
+    ],
+  },
+  {
+    slug: "como-controla-bce-inflacion-espana",
+    title: "Cómo controla el BCE la inflación: tipos de interés y qué significa para tu hipoteca y ahorro",
+    description:
+      "El BCE bajó tipos al 2,5% en 2025. Descubre cómo la política monetaria afecta tu hipoteca, depósitos e inversiones, explicado sin tecnicismos.",
+    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&h=630&fit=crop",
+    content: `
+# Cómo controla el BCE la inflación: tipos de interés y qué significa para ti
+
+Cuando el BCE anuncia una subida o bajada de tipos de interés, los titulares de los periódicos económicos se llenan de jerga técnica. Pero lo que realmente importa es sencillo: esa decisión afecta directamente a tu hipoteca, a lo que te pagan por tus ahorros y a la rentabilidad de tus inversiones.
+
+En este artículo te explico exactamente cómo funciona el mecanismo, qué ha hecho el BCE en los últimos años y qué puedes esperar en 2026.
+
+## ¿Qué es el BCE y cuál es su misión?
+
+El Banco Central Europeo (BCE), con sede en Fráncfort (Alemania), es el banco central de los 20 países que usan el euro. Su mandato principal, establecido en el Tratado de Lisboa, es **mantener la estabilidad de precios**, definida como una inflación del 2% a medio plazo.
+
+A diferencia de la Reserva Federal estadounidense (que también tiene el mandato de maximizar el empleo), el BCE tiene un único objetivo: la inflación. Todo lo demás es secundario.
+
+**Dato importante:** El BCE no presta dinero directamente a ciudadanos ni empresas. Opera a través del sistema bancario: presta a los bancos comerciales, que a su vez prestan a particulares y empresas.
+
+## El instrumento principal: los tipos de interés de referencia
+
+El BCE tiene tres tipos de interés de referencia, pero el más importante es el **tipo de las operaciones de financiación principales** (el tipo refi). Es el tipo al que los bancos comerciales pueden pedir prestado dinero al BCE.
+
+**La lógica es simple:**
+
+- **Inflación alta → BCE sube tipos:** El dinero es más caro para los bancos → los bancos encarecen créditos y hipotecas → menos consumo e inversión → menos presión sobre los precios → baja la inflación.
+
+- **Inflación baja o recesión → BCE baja tipos:** El dinero es más barato → los bancos ofrecen crédito más asequible → más consumo e inversión → más crecimiento → sube la inflación hacia el 2%.
+
+## Cronología: lo que ha hecho el BCE desde 2020
+
+| Período | Tipo BCE | Contexto |
+|---------|----------|----------|
+| 2015-2022 | 0% - 0,25% | Tipos cero para estimular la economía post-crisis |
+| Jul 2022 - Sep 2023 | 0% → 4,5% | Subida histórica para combatir inflación del 10% |
+| Oct 2023 - Dic 2024 | 4,5% → 3,0% | Bajadas graduales al moderar la inflación |
+| Ene 2025 - Mar 2025 | 3,0% → 2,5% | Continuación de bajadas hacia tipo neutral |
+
+**La subida más rápida de la historia del BCE:** En solo 14 meses (julio 2022 - septiembre 2023) el BCE subió tipos 450 puntos básicos (del 0% al 4,5%). Nunca se había movido tan rápido.
+
+## Cómo afecta el BCE a tu hipoteca
+
+### Hipotecas variables (referenciadas al Euríbor)
+
+El Euríbor (Euro Interbank Offered Rate) es el tipo al que los bancos europeos se prestan dinero entre sí. Sigue de cerca al tipo del BCE con un pequeño retraso.
+
+**La cadena de transmisión:**
+BCE sube tipos → Euríbor sube → tu hipoteca variable sube.
+
+**Ejemplo real con números:**
+
+| Escenario | Euríbor | Cuota mensual (200.000€ a 25 años, diferencial 1%) |
+|-----------|---------|--------------------------------------------------|
+| 2021 (tipos cero) | -0,5% | ~720€/mes |
+| 2023 (tipos máximos) | 4,1% | ~1.060€/mes |
+| 2025 (tipos 2,5%) | 2,5% | ~890€/mes |
+| Previsión 2026 (tipos 2%) | ~2,0% | ~850€/mes |
+
+Si tienes hipoteca variable y el BCE baja tipos, tu cuota baja en tu próxima revisión anual o semestral.
+
+### Hipotecas fijas
+
+Las hipotecas fijas no se ven afectadas directamente por el Euríbor. Sin embargo, los tipos fijos que ofrecen los bancos reflejan las expectativas de tipos futuros. Cuando el BCE sube tipos, los bancos también suelen encarecer sus hipotecas fijas; cuando los baja, las abaratan.
+
+**Consejo:** Si estás buscando hipoteca fija en 2026, con el BCE bajando tipos, los diferenciales de hipotecas fijas deberían estar mejorando. Es un buen momento para comparar ofertas.
+
+## Cómo afecta el BCE a tus ahorros y depósitos
+
+Cuando el BCE sube tipos, los bancos también pagan más por los depósitos... aunque con menos entusiasmo y más retraso.
+
+**La realidad en España:**
+
+| Período | Tipo BCE | TAE media depósitos España |
+|---------|----------|---------------------------|
+| 2021 | 0% | 0,01% |
+| 2023 | 4,5% | 1,8% (los bancos se quedaron el margen) |
+| 2025 | 2,5% | 1,2% |
+
+Los bancos españoles han sido especialmente lentos en trasladar las subidas de tipos a los depósitos. La mejor alternativa han sido las [letras del Tesoro y los fondos monetarios](/blog/mejores-fondos-monetarios-espana), que sí reflejan directamente los tipos del BCE.
+
+## Cómo afecta el BCE a tus inversiones
+
+### Bonos y renta fija
+
+La relación es inversa: cuando suben los tipos, bajan los precios de los bonos ya emitidos (porque los nuevos bonos ofrecen más rentabilidad). Cuando bajan los tipos, suben los precios de los bonos.
+
+**Impacto en 2022-2023:** Los fondos de renta fija perdieron un 10-20% de su valor cuando el BCE subió tipos. Muchos inversores conservadores se llevaron un susto.
+
+**Ahora:** Con el BCE bajando tipos en 2025-2026, los bonos y fondos de renta fija a largo plazo se benefician. Momento interesante para revisitar esta clase de activo.
+
+### Acciones y fondos indexados
+
+Los tipos bajos suelen ser buenos para las bolsas: el crédito barato estimula el crecimiento empresarial y hace que las acciones sean más atractivas frente a los depósitos. Tipos altos tienen el efecto contrario a corto plazo.
+
+Sin embargo, a largo plazo (10+ años), los [fondos indexados](/blog/invertir-fondos-indexados-principiantes) han demostrado superar tanto la inflación como las fluctuaciones de tipos. El impacto del BCE importa más a corto plazo que a largo.
+
+### Planes de pensiones y fondos mixtos
+
+Muy dependientes de su composición. Si tienen mucha renta fija a largo plazo, se ven muy afectados por los movimientos de tipos. Si son mixtos o de renta variable, el impacto es más moderado.
+
+Para entender si tu [plan de pensiones](/blog/plan-de-pensiones-espana-merece-la-pena) está bien posicionado para el entorno actual de tipos, revisa su duración de la cartera de renta fija.
+
+## Las otras herramientas del BCE
+
+Además de los tipos de interés, el BCE tiene más instrumentos:
+
+**Compras de activos (QE - Quantitative Easing):** El BCE compra bonos en el mercado para inyectar liquidez cuando los tipos ya están en cero. Lo hizo masivamente entre 2015 y 2022.
+
+**TLTRO (préstamos a largo plazo a bancos):** Préstamos a los bancos a tipos muy favorables con la condición de que lo presten a empresas y familias.
+
+**Forward guidance:** Señales sobre las decisiones futuras para que los mercados y empresas puedan anticiparse. Cuando el BCE dice "los tipos permanecerán bajos durante mucho tiempo", los bancos ofrecen crédito más barato aunque todavía no hayan bajado tipos.
+
+## ¿Qué esperar del BCE en 2026?
+
+A marzo de 2026, el BCE ha llevado los tipos al 2,5%, cerca del llamado "tipo neutral" (el nivel que ni estimula ni frena la economía, estimado entre 2% y 2,5%).
+
+**Escenarios posibles:**
+
+| Escenario | Probabilidad | Impacto |
+|-----------|-------------|---------|
+| BCE sigue bajando hasta 2% | Moderada | Euríbor baja, hipotecas variables mejoran, bonos suben |
+| BCE se detiene en 2,5% | Alta | Estabilidad, tipos cercanos al neutral |
+| BCE sube por inflación persistente | Baja | Hipotecas encarecen, depósitos mejoran |
+
+La mayoría de analistas esperan uno o dos recortes adicionales en 2026, llevando los tipos hacia el 2%. Para hipotecas variables, eso se traduciría en una reducción adicional de 50-100€ mensuales en cuotas.
+
+## Conclusión: el BCE afecta tu vida financiera más de lo que crees
+
+Las decisiones del BCE son técnicas y se toman en Fráncfort, pero sus efectos llegan a tu cuota de hipoteca, al interés de tu depósito y a la rentabilidad de tus fondos de inversión. Entender el mecanismo no convierte en experto, pero sí te da contexto para tomar mejores decisiones: cuándo tiene sentido cambiar de hipoteca variable a fija, si merece la pena un plazo fijo largo ahora o si es momento de revisar la duración de tu cartera de renta fija.
+    `,
+    publishedAt: "2026-03-25",
+    readTime: "11 min",
+    category: "Inversiones",
+    tags: ["BCE", "tipos de interés", "Euríbor", "política monetaria", "hipoteca variable", "inflación", "depósitos", "ahorro España 2026"],
+    author: "Alejandro Torres",
+    faqs: [
+      {
+        question: "¿Cuál es el tipo de interés del BCE ahora mismo?",
+        answer: "A marzo de 2026, el tipo de interés de referencia del BCE (tipo de las operaciones de financiación principales) está en el 2,5%, tras una serie de bajadas iniciadas en 2024 desde el máximo del 4,5% alcanzado en septiembre de 2023.",
+      },
+      {
+        question: "¿Cuándo baja el Euríbor si el BCE baja tipos?",
+        answer: "El Euríbor suele reaccionar rápido a los cambios del BCE, generalmente en días o semanas. Sin embargo, tu cuota hipotecaria no cambia hasta la próxima revisión, que suele ser anual o semestral según tu contrato. Si tu revisión es en junio, los tipos actuales del BCE se reflejarán en tu cuota de junio.",
+      },
+      {
+        question: "¿Por qué los bancos españoles no suben los depósitos cuando sube el BCE?",
+        answer: "Los bancos captan dinero de muchas fuentes (no solo depósitos) y tienen poco incentivo para pagar más si los clientes no se mueven. La competencia en banca minorista española es limitada y los clientes tienen poca movilidad. La alternativa son las letras del Tesoro y fondos monetarios, que sí reflejan directamente los tipos del BCE.",
+      },
+      {
+        question: "¿Debería cambiar mi hipoteca variable a fija ahora que el BCE baja tipos?",
+        answer: "Depende de tu situación. Con tipos bajando, el Euríbor también baja, lo que mejora tu hipoteca variable. Pero si valoras la estabilidad y previsibilidad, una hipoteca fija en el entorno del 2,5-3% puede tener sentido. La clave es comparar el diferencial actual y tu horizonte temporal. Consulta siempre las condiciones específicas de tu banco.",
+      },
+    ],
+  },
+  {
+    slug: "estrategias-inversion-batir-inflacion",
+    title: "Cómo batir la inflación invirtiendo: la clave de toda estrategia financiera en 2026",
+    description:
+      "Con la inflación al 2,7%, el dinero parado pierde valor. Descubre qué inversiones superan la inflación y cómo construir tu cartera anti-inflación.",
+    image: "https://images.unsplash.com/photo-1535320903710-d993d3d77d29?w=1200&h=630&fit=crop",
+    content: `
+# Cómo batir la inflación invirtiendo: la clave de toda estrategia financiera en 2026
+
+Hay una regla que define cualquier estrategia de inversión seria: **si tu dinero no crece al menos al ritmo de la inflación, estás perdiendo dinero aunque el número en tu cuenta no baje**.
+
+Con una inflación del 2,7% en España en 2025, tener 100.000€ en cuenta corriente significa perder 2.700€ de poder adquisitivo cada año. En 10 años, esos 100.000€ tendrán el poder de compra de unos 76.000€ actuales. Sin hacer nada, has perdido el equivalente a 24.000€.
+
+La pregunta no es si invertir. La pregunta es cómo hacerlo de forma inteligente para batir la inflación sin asumir riesgos innecesarios.
+
+## La regla del 72: cuánto tarda la inflación en devorar tu dinero
+
+La regla del 72 es una fórmula rápida para calcular cuántos años tarda algo en duplicarse (o reducirse a la mitad). Divide 72 entre la tasa de inflación:
+
+- Inflación al 2,7%: 72 ÷ 2,7 = **26,6 años** para que tu dinero parado pierda la mitad de su valor
+- Inflación al 4%: 72 ÷ 4 = **18 años**
+- Inflación al 7% (pico 2022): 72 ÷ 7 = **10,3 años**
+
+No parece urgente hasta que lo calculas en dinero real.
+
+## El objetivo: rentabilidad real positiva
+
+La rentabilidad real es lo que importa:
+
+**Rentabilidad real = Rentabilidad nominal – Inflación**
+
+| Inversión | Rentabilidad nominal | Inflación | Rentabilidad real |
+|-----------|---------------------|-----------|-------------------|
+| Cuenta corriente | 0,1% | 2,7% | **-2,6%** |
+| Depósito 12 meses | 1,5% | 2,7% | **-1,2%** |
+| Letra del Tesoro 12m | 2,6% | 2,7% | **-0,1%** |
+| Fondo monetario | 2,8% | 2,7% | **+0,1%** |
+| Fondo indexado global (histórico) | 7-9% | 2,7% | **+4,3% a +6,3%** |
+
+El objetivo mínimo para proteger tu poder adquisitivo es una rentabilidad real positiva. Para construir riqueza real, necesitas una rentabilidad real claramente positiva.
+
+## Los activos que históricamente baten la inflación
+
+### 1. Fondos indexados de renta variable (la opción estrella)
+
+Los fondos indexados que replican índices como el S&P 500, el MSCI World o el Euro Stoxx 600 han generado históricamente retornos nominales del 7-10% anual a largo plazo, muy por encima de cualquier inflación histórica.
+
+**¿Por qué funcionan?** Las empresas incluidas en estos índices tienen poder de fijación de precios: cuando sube la inflación, pueden subir sus precios. Sus beneficios crecen con la inflación, y eso se refleja en el precio de sus acciones.
+
+**Datos históricos:**
+- S&P 500: +10,5% anual nominal en los últimos 30 años
+- MSCI World: +8,2% anual nominal en los últimos 30 años
+- Inflación media en ese período: ~2,5%
+- **Rentabilidad real media: +5,7% a +8% anual**
+
+**Regla de oro:** El horizonte temporal importa. A 1-2 años, la bolsa puede bajar. A 10+ años, históricamente siempre ha superado la inflación.
+
+Si no sabes por dónde empezar, la [guía de fondos indexados para principiantes](/blog/invertir-fondos-indexados-principiantes) te explica paso a paso cómo invertir desde España.
+
+### 2. ETFs de renta variable (mismo concepto, más flexibilidad)
+
+Los ETFs (fondos cotizados en bolsa) funcionan igual que los fondos indexados pero se compran y venden como acciones en el mercado. Menor coste en muchos casos, mayor liquidez.
+
+**ETFs especialmente útiles contra la inflación:**
+- **ETFs de materias primas:** Invierten en petróleo, gas, metales. Suben cuando sube la inflación de costes.
+- **ETFs de REITs (inmobiliario):** Los inmuebles históricamente se revalorizan con la inflación.
+- **ETFs de empresas con pricing power:** Empresas que pueden subir precios sin perder clientes (lujo, salud, consumo básico).
+
+### 3. Bonos ligados a la inflación (TIPS y Bonos Linker)
+
+Son bonos cuyo principal se ajusta automáticamente a la inflación. Si la inflación sube, el bono vale más.
+
+**En España:** Los bonos ligados al IPC emitidos por el Tesoro son una opción directa. También los ETFs de TIPS americanos o Linkers europeos a través de brókers como MyInvestor o Indexa Capital.
+
+**Cuándo usarlos:** Son especialmente útiles cuando esperas que la inflación suba por encima de lo que el mercado descuenta. No son la opción de mayor rentabilidad, pero son protección directa contra la inflación.
+
+### 4. Inmuebles: protección real con matices
+
+Los inmuebles históricamente se han revalorizado por encima de la inflación en España. El alquiler también tiende a subir con el IPC (los contratos están a menudo indexados).
+
+**El problema:** El inmueble directo requiere mucho capital, es ilíquido y tiene costes de gestión. La alternativa para inversores con menos capital son los **REITs (Sociedades de Inversión Inmobiliaria)** o la [inversión inmobiliaria fraccionada](/blog/inversion-inmobiliaria-fraccionada).
+
+### 5. Oro: reserva de valor histórica
+
+El oro ha mantenido su poder adquisitivo a lo largo de siglos. No genera rendimientos (no paga dividendos ni intereses), pero protege frente a la inflación extrema y las crisis financieras.
+
+**Recomendación:** Nunca más del 5-10% de una cartera diversificada. No es para hacerse rico — es para no arruinarse en escenarios extremos.
+
+### 6. Fondos monetarios y letras del Tesoro (protección a corto plazo)
+
+No baten la inflación de forma significativa, pero protegen tu dinero a corto plazo mientras decides dónde invertirlo. Con rentabilidades actuales del 2,5-3%, están casi igualando la inflación.
+
+Los [mejores fondos monetarios disponibles en España](/blog/mejores-fondos-monetarios-espana) ofrecen liquidez diaria con rentabilidades cercanas al tipo del BCE.
+
+## Carteras anti-inflación según tu perfil
+
+### Perfil conservador (horizonte corto, poca tolerancia al riesgo)
+
+| Activo | Peso |
+|--------|------|
+| Fondos monetarios / Letras Tesoro | 50% |
+| Bonos ligados a inflación | 30% |
+| Fondos indexados globales | 15% |
+| Oro | 5% |
+
+### Perfil moderado (horizonte 5-10 años)
+
+| Activo | Peso |
+|--------|------|
+| Fondos indexados globales | 50% |
+| Bonos ligados a inflación | 20% |
+| Fondos monetarios | 20% |
+| REITs / Inmobiliario | 5% |
+| Oro | 5% |
+
+### Perfil agresivo (horizonte 10+ años)
+
+| Activo | Peso |
+|--------|------|
+| Fondos indexados globales | 70% |
+| ETFs de materias primas | 10% |
+| REITs | 10% |
+| Oro | 5% |
+| Bonos ligados a inflación | 5% |
+
+## Lo que NO protege de la inflación
+
+- **Dinero en cuenta corriente:** Pierde poder adquisitivo garantizado.
+- **Depósitos a tipo fijo muy largo plazo:** Si la inflación sube por encima del tipo fijo, estás perdiendo en términos reales.
+- **Bonos de renta fija a largo plazo a tipo fijo:** Sufren cuando sube la inflación (el BCE sube tipos y los precios de los bonos caen).
+- **Inversiones en sectores muy regulados:** Telecomunicaciones, utilities con precios controlados, etc. No pueden subir precios libremente.
+
+## Fiscalidad de las inversiones en España: lo que debes saber
+
+Las ganancias de inversiones tributan en el IRPF como rentas del ahorro:
+
+| Ganancia anual | Tipo aplicable |
+|----------------|----------------|
+| Primeros 6.000€ | 19% |
+| 6.001€ - 50.000€ | 21% |
+| 50.001€ - 200.000€ | 23% |
+| Más de 200.000€ | 27% |
+
+**Truco fiscal:** En fondos de inversión, puedes traspasar entre fondos sin tributar hasta que reembolses. Esto te permite reequilibrar tu cartera sin pagar impuestos. Con ETFs o acciones, cada venta tributa.
+
+Los [roboadvisors](/blog/roboadvisors-guia-completa-inversion-automatizada) españoles como Indexa Capital o MyInvestor gestionan automáticamente la fiscalidad y el reequilibrio de la cartera.
+
+## La estrategia más importante: empezar
+
+El tiempo en el mercado bate al momento del mercado. Cada año que esperas "al momento perfecto" es un año en que la inflación erosiona tu dinero y los mercados generan rentabilidad sin ti.
+
+**Aportaciones periódicas (Dollar Cost Averaging):** En lugar de intentar adivinar cuándo está la bolsa "barata", invierte una cantidad fija cada mes. Cuando está cara, compras menos participaciones; cuando está barata, compras más. El resultado promediado suele ser mejor que intentar el market timing.
+
+## Conclusión: la clave es actuar, no esperar
+
+La inflación es el impuesto silencioso que nadie vota pero todos pagamos. La única defensa es poner el dinero a trabajar en activos que la superen.
+
+No necesitas ser un experto financiero ni tener mucho capital. Necesitas entender el principio básico: el dinero parado pierde valor, el dinero bien invertido lo multiplica. Con herramientas accesibles como fondos indexados, ETFs y fondos monetarios, hoy cualquier persona en España puede construir una cartera que bata la inflación a largo plazo.
+
+El único error que no tiene solución es no hacer nada.
+    `,
+    publishedAt: "2026-03-25",
+    readTime: "14 min",
+    category: "Inversiones",
+    tags: ["batir inflación", "estrategia de inversión", "fondos indexados", "ETFs", "REITs", "oro", "cartera anti-inflación", "rentabilidad real", "inversión España 2026"],
+    author: "Carlos Sánchez",
+    faqs: [
+      {
+        question: "¿Cuál es la mejor inversión para protegerse de la inflación en España?",
+        answer: "Los fondos indexados globales son la mejor opción a largo plazo (10+ años). Han generado rentabilidades nominales del 7-10% anual, muy por encima de cualquier inflación histórica. Para plazos más cortos, los fondos monetarios y las letras del Tesoro ofrecen rentabilidades cercanas a la inflación actual con mínimo riesgo.",
+      },
+      {
+        question: "¿Cuánto necesito para empezar a invertir contra la inflación?",
+        answer: "Con fondos indexados disponibles en plataformas como MyInvestor o Indexa Capital puedes empezar desde 1€. No necesitas grandes capitales. Lo importante es empezar pronto y ser constante con aportaciones periódicas, aunque sean pequeñas.",
+      },
+      {
+        question: "¿Es el oro una buena inversión contra la inflación?",
+        answer: "El oro protege el poder adquisitivo a muy largo plazo pero no genera rendimientos propios (no paga dividendos ni intereses). A corto y medio plazo puede ser muy volátil. La mayoría de expertos recomiendan no más de un 5-10% en oro dentro de una cartera diversificada, nunca como inversión principal.",
+      },
+      {
+        question: "¿Qué rentabilidad necesito para batir la inflación en España?",
+        answer: "Con la inflación en el 2,7% en España, necesitas una rentabilidad nominal superior al 2,7% para mantener tu poder adquisitivo. Considerando la fiscalidad española (tributas las ganancias al 19-27%), necesitas generar algo más para que la rentabilidad real después de impuestos sea positiva. Los fondos indexados, históricamente al 7-10% nominal, dan un amplio margen.",
       },
     ],
   },

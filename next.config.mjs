@@ -8,16 +8,15 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: [
-      "placeholder.svg",
-      "hebbkx1anhila5yf.public.blob.vercel-storage.com",
-      "images.unsplash.com",
-      "images.pexels.com",
-      "img-c.udemycdn.com",
-      "img.udemycdn.com",
+    remotePatterns: [
+      { protocol: "https", hostname: "hebbkx1anhila5yf.public.blob.vercel-storage.com" },
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "images.pexels.com" },
+      { protocol: "https", hostname: "img-c.udemycdn.com" },
+      { protocol: "https", hostname: "img.udemycdn.com" },
     ],
     formats: ["image/webp", "image/avif"],
-    minimumCacheTTL: 86400, // Cache images for 24 hours
+    minimumCacheTTL: 86400,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
@@ -77,6 +76,11 @@ const nextConfig = {
       {
         source: "/blog/movimiento-fire-retirarte-a-los-40",
         destination: "/blog/movimiento-fire-retiro-temprano",
+        permanent: true,
+      },
+      {
+        source: "/proyecciones",
+        destination: "/calculadoras/interes-compuesto",
         permanent: true,
       },
       {

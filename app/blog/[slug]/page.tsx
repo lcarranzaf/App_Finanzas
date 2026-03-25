@@ -336,7 +336,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               </Link>
             </Button>
             <Button variant="outline" asChild>
-              <Link href="/proyecciones">Calcular mis proyecciones</Link>
+              <Link href="/calculadoras/interes-compuesto">Calcular mis proyecciones</Link>
             </Button>
           </div>
         </div>

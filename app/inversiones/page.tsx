@@ -532,7 +532,7 @@ export default function InversionesPage() {
                   <Link href="/blog/invertir-primeros-pasos">Primeros Pasos</Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link href="/proyecciones">Calcular Crecimiento</Link>
+                  <Link href="/calculadoras/interes-compuesto">Calcular Crecimiento</Link>
                 </Button>
               </div>
             </div>

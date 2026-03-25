@@ -379,7 +379,7 @@ export default function AhorroPage() {
                   <Link href="/blog/presupuesto-personal-completo">Crear Presupuesto</Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link href="/proyecciones">Calcular Proyecciones</Link>
+                  <Link href="/calculadoras/interes-compuesto">Calcular Proyecciones</Link>
                 </Button>
               </div>
             </div>

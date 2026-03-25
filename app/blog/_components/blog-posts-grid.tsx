@@ -99,7 +99,7 @@ export default function BlogPostsGrid({
             </div>
           ) : (
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
-              {paginatedPosts.map((post: BlogPost) => (
+              {paginatedPosts.map((post: BlogPost, index: number) => (
                 <Card key={post.slug} className="hover:shadow-lg transition-shadow">
                   <div className="aspect-video overflow-hidden rounded-t-lg">
                     <Image
@@ -109,6 +109,8 @@ export default function BlogPostsGrid({
                       width={1200}
                       height={675}
                       sizes="(max-width: 1024px) 100vw, 33vw"
+                      priority={index === 0}
+                      loading={index === 0 ? undefined : "lazy"}
                     />
                   </div>
                   <CardHeader>
