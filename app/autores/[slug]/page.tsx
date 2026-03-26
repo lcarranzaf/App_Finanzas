@@ -24,12 +24,12 @@ export async function generateMetadata({ params }: AuthorPageProps): Promise<Met
     title: `${author.name} — ${author.role}`,
     description: author.bio,
     alternates: {
-      canonical: `https://app-finanzas-mu.vercel.app/autores/${author.slug}`,
+      canonical: `https://www.finanzasdigitales.es/autores/${author.slug}`,
     },
     openGraph: {
       title: `${author.name} | FinanzasPro`,
       description: author.bio,
-      url: `https://app-finanzas-mu.vercel.app/autores/${author.slug}`,
+      url: `https://www.finanzasdigitales.es/autores/${author.slug}`,
     },
   }
 }
