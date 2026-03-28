@@ -15,6 +15,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.finanzasdigitales.es/recursos",
   },
+  openGraph: {
+    title: "Mejores Apps y Herramientas Financieras — Recursos Recomendados",
+    description: "Las mejores apps de presupuesto, brokers para invertir y bancos digitales disponibles en España. Comparativa actualizada con pros, contras y calificaciones.",
+    url: "https://www.finanzasdigitales.es/recursos",
+    type: "website",
+    locale: "es_ES",
+    siteName: "FinanzasPro",
+  },
 }
 
 export default function RecursosPage() {

@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.finanzasdigitales.es/ahorro",
   },
+  openGraph: {
+    title: "Estrategias de Ahorro — Métodos Probados para Ahorrar Dinero",
+    description: "Descubre cómo ahorrar dinero con el método 50/30/20, ahorro automático y el reto 52 semanas. Guía paso a paso para crear tu fondo de emergencia desde cero.",
+    url: "https://www.finanzasdigitales.es/ahorro",
+    type: "website",
+    locale: "es_ES",
+    siteName: "FinanzasPro",
+  },
 }
 
 export default function AhorroPage() {
@@ -54,7 +62,7 @@ export default function AhorroPage() {
       title: "Reto 52 Semanas",
       icon: Target,
       description: "Ahorra de forma progresiva cada semana",
-      details: "Semana 1: $1, Semana 52: $52 = $1,378 total",
+      details: "Semana 1: 1€, Semana 52: 52€ = 1.378€ total",
       benefit: "Gamificado y motivador",
       color: "bg-purple-500/10",
       borderColor: "border-purple-500/30",
@@ -63,7 +71,7 @@ export default function AhorroPage() {
       title: "Presupuesto de Categorías",
       icon: PiggyBank,
       description: "Asigna límites a cada gasto",
-      details: "Comida: $400, Entretenimiento: $100, etc.",
+      details: "Comida: 400€, Entretenimiento: 100€, etc.",
       benefit: "Control total de gastos",
       color: "bg-orange-500/10",
       borderColor: "border-orange-500/30",
@@ -74,7 +82,7 @@ export default function AhorroPage() {
     {
       icon: CheckCircle2,
       title: "Empieza pequeño",
-      description: "No necesitas ahorrar mucho. Comienza con $20-50/mes. Lo importante es el hábito.",
+      description: "No necesitas ahorrar mucho. Comienza con 20-50€/mes. Lo importante es el hábito.",
     },
     {
       icon: CheckCircle2,
@@ -84,12 +92,12 @@ export default function AhorroPage() {
     {
       icon: CheckCircle2,
       title: "Reduce gastos pequeños",
-      description: "Café diario ($4) = $120/mes. Esos pequeños gastos suman rápido.",
+      description: "Café diario (2-3€) = 60-90€/mes. Esos pequeños gastos suman rápido.",
     },
     {
       icon: CheckCircle2,
       title: "Crea un fondo de emergencia",
-      description: "Meta: $1,000-2,000. Evita usar deuda cuando surjan imprevistos.",
+      description: "Meta: 1.000-2.000€. Evita usar deuda cuando surjan imprevistos.",
     },
     {
       icon: CheckCircle2,
@@ -107,20 +115,20 @@ export default function AhorroPage() {
     {
       stage: "Mes 1-3",
       goal: "Crear el hábito",
-      action: "Ahorra $50-100/mes automáticamente",
-      milestone: "$300 acumulado",
+      action: "Ahorra 50-100€/mes automáticamente",
+      milestone: "300€ acumulados",
     },
     {
       stage: "Mes 4-6",
       goal: "Fondo de emergencia básico",
       action: "Continúa ahorros automáticos",
-      milestone: "$1,000 acumulado",
+      milestone: "1.000€ acumulados",
     },
     {
       stage: "Mes 7-12",
       goal: "Fondo de emergencia completo",
-      action: "Aumenta a $150-200/mes si es posible",
-      milestone: "$2,000 acumulado",
+      action: "Aumenta a 150-200€/mes si es posible",
+      milestone: "2.000€ acumulados",
     },
     {
       stage: "Año 2+",
@@ -133,11 +141,11 @@ export default function AhorroPage() {
   const ahorroFAQs: FAQItem[] = [
     {
       question: "¿Cuánto dinero debo ahorrar cada mes?",
-      answer: "La regla general es ahorrar al menos el 20% de tus ingresos netos. Si ganas $2,000 al mes, intenta ahorrar $400. Sin embargo, si estás empezando, incluso $50-100 al mes es un excelente comienzo. Lo más importante es crear el hábito de ahorro consistente.",
+      answer: "La regla general es ahorrar al menos el 20% de tus ingresos netos. Si ganas 2.000€ al mes, intenta ahorrar 400€. Sin embargo, si estás empezando, incluso 50-100€ al mes es un excelente comienzo. Lo más importante es crear el hábito de ahorro consistente.",
     },
     {
       question: "¿Qué es un fondo de emergencia y cuánto necesito?",
-      answer: "Un fondo de emergencia es dinero reservado para gastos inesperados como reparaciones del auto, facturas médicas o pérdida de empleo. Se recomienda tener entre 3 y 6 meses de gastos básicos. Para empezar, una meta de $1,000-2,000 es suficiente para cubrir la mayoría de emergencias menores.",
+      answer: "Un fondo de emergencia es dinero reservado para gastos inesperados como reparaciones del coche, facturas o pérdida de empleo. Se recomienda tener entre 3 y 6 meses de gastos básicos. Para empezar, una meta de 1.000-2.000€ es suficiente para cubrir la mayoría de emergencias menores.",
     },
     {
       question: "¿Cuál es el mejor método de ahorro para principiantes?",
@@ -149,11 +157,11 @@ export default function AhorroPage() {
     },
     {
       question: "¿Cómo puedo ahorrar si gano poco dinero?",
-      answer: "Empieza con montos pequeños: incluso $10-20 semanales suman $520-1,040 al año. Revisa tus suscripciones, reduce gastos hormiga (café diario, comida fuera), y busca ingresos extra. El reto de las 52 semanas es excelente para empezar poco a poco e ir incrementando.",
+      answer: "Empieza con montos pequeños: incluso 10-20€ semanales suman 520-1.040€ al año. Revisa tus suscripciones, reduce gastos hormiga (café diario, comida fuera), y busca ingresos extra. El reto de las 52 semanas es excelente para empezar poco a poco e ir incrementando.",
     },
     {
       question: "¿Ahorro o pago deudas primero?",
-      answer: "Primero ahorra un mini fondo de emergencia de $500-1,000. Luego enfócate en pagar deudas con tasas de interés altas (tarjetas de crédito). Una vez eliminadas las deudas de alto interés, construye tu fondo de emergencia completo de 3-6 meses de gastos.",
+      answer: "Primero ahorra un mini fondo de emergencia de 500-1.000€. Luego enfócate en pagar deudas con tasas de interés altas (tarjetas de crédito). Una vez eliminadas las deudas de alto interés, construye tu fondo de emergencia completo de 3-6 meses de gastos.",
     },
   ]
 
@@ -214,7 +222,7 @@ export default function AhorroPage() {
                 <CardTitle className="text-lg">Poder del Tiempo</CardTitle>
               </CardHeader>
               <CardContent className="text-muted-foreground">
-                $100/mes × 10 años @ 7% = $18,000+. El tiempo magnifica tus ahorros exponencialmente.
+                100€/mes × 10 años @ 7% = 18.000€+. El tiempo magnifica tus ahorros exponencialmente.
               </CardContent>
             </Card>
             <Card className="border-l-4 border-l-purple-500">

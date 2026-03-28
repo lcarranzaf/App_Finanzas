@@ -2,6 +2,8 @@
 import { getBlogPosts } from "@/lib/blog-data"
 import BlogPostsGrid from "./_components/blog-posts-grid"
 
+const BASE_BLOG_URL = "https://www.finanzasdigitales.es/blog"
+
 const BASE_URL = "https://www.finanzasdigitales.es"
 const POSTS_PER_PAGE = 6
 
@@ -48,6 +50,36 @@ export default function BlogPage({ searchParams }: Props) {
   const selectedCategory = searchParams?.category || null
 
   const allPosts = getBlogPosts()
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Blog de Finanzas Personales",
+    description: "Artículos sobre ahorro, inversión y libertad financiera en español",
+    url: BASE_BLOG_URL,
+    numberOfItems: allPosts.length,
+    itemListElement: allPosts.slice(0, 10).map((post, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `${BASE_BLOG_URL}/${post.slug}`,
+      name: post.title,
+    })),
+  }
+
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${BASE_BLOG_URL}#blog`,
+    name: "Blog de FinanzasPro",
+    description: "Artículos sobre ahorro, inversiones y educación financiera en español.",
+    url: BASE_BLOG_URL,
+    inLanguage: "es",
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://www.finanzasdigitales.es/#organization",
+      name: "FinanzasPro",
+    },
+  }
   const categories = Array.from(new Set(allPosts.map((p) => p.category)))
 
   const filteredPosts = selectedCategory
@@ -59,14 +91,26 @@ export default function BlogPage({ searchParams }: Props) {
   const paginatedPosts = filteredPosts.slice((safePage - 1) * POSTS_PER_PAGE, safePage * POSTS_PER_PAGE)
 
   return (
-    <BlogPostsGrid
-      paginatedPosts={paginatedPosts}
-      categories={categories}
-      selectedCategory={selectedCategory}
-      currentPage={safePage}
-      totalPages={totalPages}
-      filteredCount={filteredPosts.length}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        suppressHydrationWarning
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+        suppressHydrationWarning
+      />
+      <BlogPostsGrid
+        paginatedPosts={paginatedPosts}
+        categories={categories}
+        selectedCategory={selectedCategory}
+        currentPage={safePage}
+        totalPages={totalPages}
+        filteredCount={filteredPosts.length}
+      />
+    </>
   )
 }
 

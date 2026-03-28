@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Mail } from "lucide-react"
 
 export default function Footer() {
 
@@ -29,6 +30,13 @@ export default function Footer() {
               <p className="mt-4 text-sm leading-6 text-muted-foreground">
                 Tu guía confiable para el éxito financiero. Aprende a ahorrar, invertir y construir un futuro próspero.
               </p>
+              <a
+                href="mailto:contacto@finanzasdigitales.es"
+                className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Mail className="h-4 w-4" />
+                contacto@finanzasdigitales.es
+              </a>
             </div>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">

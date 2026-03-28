@@ -22,7 +22,7 @@ import { ArticleSources } from "@/components/article-sources"
 import { getAuthorByName } from "@/lib/authors-data"
 import { FAQSection } from "@/components/faq-section"
 
-export const revalidate = 3600
+export const revalidate = 86400
 
 interface BlogPostPageProps {
   params: {
@@ -200,7 +200,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               width={1200}
               height={675}
               priority
-              sizes="100vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1200px"
               placeholder="blur"
               blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwC2gAH/2Q=="
               fetchPriority="high"
@@ -355,14 +355,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* FAQs */}
         {post.faqs && post.faqs.length > 0 && (
-          <>
-            <StructuredData type="faqpage" data={{ faqs: post.faqs }} />
-            <FAQSection
-              title="Preguntas Frecuentes"
-              subtitle="Resolvemos las dudas más comunes sobre este tema"
-              faqs={post.faqs}
-            />
-          </>
+          <FAQSection
+            title="Preguntas Frecuentes"
+            subtitle="Resolvemos las dudas más comunes sobre este tema"
+            faqs={post.faqs}
+          />
         )}
 
         {/* Ad - Antes de artículos relacionados */}

@@ -11,10 +11,18 @@ import { CategoryArticles } from "@/components/category-articles"
 export const metadata: Metadata = {
   title: `Finanzas para Jóvenes ${new Date().getFullYear()} - Guía para Estudiantes y Primer Sueldo`,
   description:
-    "Guía financiera completa para jóvenes, estudiantes y recién graduados. Aprende a manejar tu primer sueldo con la regla 50/30/20, construir historial crediticio y empezar a invertir desde $50 al mes.",
+    "Guía financiera completa para jóvenes, estudiantes y recién graduados. Aprende a manejar tu primer sueldo con la regla 50/30/20, construir historial crediticio y empezar a invertir desde 50€ al mes.",
   keywords: ["finanzas para jóvenes", "primer sueldo", "estudiantes universitarios", "recién graduados", "cómo ahorrar siendo joven", "historial crediticio", "inversión jóvenes"],
   alternates: {
     canonical: "https://www.finanzasdigitales.es/jovenes",
+  },
+  openGraph: {
+    title: "Finanzas para Jóvenes — Guía para Estudiantes y Primer Sueldo",
+    description: "Aprende a manejar tu primer sueldo, construir historial crediticio y empezar a invertir desde joven. Guía práctica para estudiantes y recién graduados en España.",
+    url: "https://www.finanzasdigitales.es/jovenes",
+    type: "website",
+    locale: "es_ES",
+    siteName: "FinanzasPro",
   },
 }
 

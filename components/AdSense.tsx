@@ -115,20 +115,27 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
   // hydrates, which causes hydration mismatch errors (#418/#425).
   // Rendering only after mount means hydration completes first, then the ad
   // element is inserted client-side where the ad blocker can remove it safely.
-  if (!mounted) {
-    return <div className={`ad-container ${className || ''}`} style={{ width: '100%', minHeight: '90px', margin: '20px 0' }} />;
-  }
-
   const adFormat = getAdFormat();
 
+  const getMinHeight = (fmt: string) => {
+    if (fmt === 'vertical') return '600px';
+    if (fmt === 'rectangle') return '280px';
+    if (fmt === 'horizontal') return '100px';
+    return '280px'; // auto
+  };
+
+  if (!mounted) {
+    return <div className={`ad-container ${className || ''}`} style={{ width: '100%', minHeight: getMinHeight(adFormat), margin: '20px 0' }} />;
+  }
+
   return (
-    <div className={`ad-container ${className || ''}`} style={{ width: '100%', minHeight: adFormat === 'vertical' ? '250px' : '90px', margin: '20px 0' }}>
+    <div className={`ad-container ${className || ''}`} style={{ width: '100%', minHeight: getMinHeight(adFormat), margin: '20px 0' }}>
       <ins
         className="adsbygoogle"
         style={style || {
           display: 'block',
           textAlign: 'center',
-          minHeight: adFormat === 'vertical' ? '250px' : '90px',
+          minHeight: getMinHeight(adFormat),
           width: '100%',
         }}
         data-ad-client="ca-pub-4657042320327960"

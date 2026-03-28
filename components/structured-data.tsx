@@ -1,5 +1,5 @@
 import { getBlogPost } from "@/lib/blog-data"
-import { getAuthorByName } from "@/lib/authors-data"
+import { getAuthorByName, getAllAuthors } from "@/lib/authors-data"
 
 const BASE_URL = "https://www.finanzasdigitales.es"
 const ORG_ID = `${BASE_URL}/#organization`
@@ -12,7 +12,7 @@ function toISODateTime(dateStr: string): string {
 }
 
 interface StructuredDataProps {
-  type: "website" | "article" | "organization" | "financeguide" | "faqpage"
+  type: "website" | "article" | "organization" | "financeguide" | "persons"
   data?: {
     slug?: string
     title?: string
@@ -22,7 +22,7 @@ interface StructuredDataProps {
     author?: string
     category?: string
     tags?: string[]
-    faqs?: { question: string; answer: string }[]
+    authorSlugs?: string[]
   }
 }
 
@@ -65,7 +65,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           height: 512,
           caption: "FinanzasPro",
         },
-        foundingDate: "2022",
+        foundingDate: "2022-01-01",
         knowsAbout: [
           "Finanzas Personales",
           "Inversiones",
@@ -77,6 +77,13 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           "Bolsa de Valores",
           "Planificación Financiera",
         ],
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer support",
+          email: "contacto@finanzasdigitales.es",
+          availableLanguage: "Spanish",
+          url: `${BASE_URL}/contacto`,
+        },
       }
       break
 
@@ -102,10 +109,12 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
               const authorData = getAuthorByName(post.author)
               return authorData ? {
                 "@type": "Person",
+                "@id": `${BASE_URL}/autores/${authorData.slug}#person`,
                 name: authorData.name,
                 url: `${BASE_URL}/autores/${authorData.slug}`,
                 jobTitle: authorData.role,
                 worksFor: { "@id": ORG_ID },
+                knowsAbout: authorData.expertise,
               } : {
                 "@type": "Organization",
                 "@id": ORG_ID,
@@ -129,30 +138,45 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
             },
             speakable: {
               "@type": "SpeakableSpecification",
-              cssSelector: ["h1", ".article-content p:first-of-type"],
+              cssSelector: ["h1", "article p:first-of-type"],
             },
           }
         }
       }
       break
 
-    case "faqpage":
-      if (data?.faqs && data.faqs.length > 0) {
-        structuredData = {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: data.faqs.map((faq) => ({
-            "@type": "Question",
-            name: faq.question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: faq.answer,
-            },
-          })),
-        }
-      }
-      break
-
+    case "persons": {
+      const slugsToRender = data?.authorSlugs ?? getAllAuthors().map((a) => a.slug)
+      const persons = slugsToRender
+        .map((slug) => {
+          const a = getAllAuthors().find((au) => au.slug === slug)
+          if (!a) return null
+          return {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": `${BASE_URL}/autores/${a.slug}#person`,
+            name: a.name,
+            url: `${BASE_URL}/autores/${a.slug}`,
+            jobTitle: a.role,
+            description: a.bio,
+            knowsAbout: a.expertise,
+            worksFor: { "@id": ORG_ID },
+          }
+        })
+        .filter(Boolean)
+      return (
+        <>
+          {persons.map((p: any) => (
+            <script
+              key={p["@id"]}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(p) }}
+              suppressHydrationWarning
+            />
+          ))}
+        </>
+      )
+    }
   }
 
   return (

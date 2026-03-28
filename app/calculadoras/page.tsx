@@ -83,18 +83,62 @@ const calculators = [
   },
 ]
 
+const BASE = "https://www.finanzasdigitales.es"
+const ORG_REF = { "@id": `${BASE}/#organization` }
+
+const calculatorApps = [
+  {
+    id: "calc-interes-compuesto",
+    name: "Calculadora de Interés Compuesto",
+    description: "Calcula el crecimiento de tu inversión con el poder del interés compuesto. Introduce capital inicial, aportaciones, tipo de interés y plazo.",
+    url: `${BASE}/calculadoras/interes-compuesto`,
+  },
+  {
+    id: "calc-meta-ahorro",
+    name: "Calculadora de Meta de Ahorro",
+    description: "Descubre cuánto necesitas ahorrar cada mes para alcanzar tu objetivo financiero en el plazo que elijas.",
+    url: `${BASE}/calculadoras/meta-ahorro`,
+  },
+  {
+    id: "calc-pago-deuda",
+    name: "Calculadora de Pago de Deuda",
+    description: "Planifica la amortización de tus deudas y descubre cuánto tiempo tardarás en quedar libre de deudas.",
+    url: `${BASE}/calculadoras/pago-deuda`,
+  },
+  {
+    id: "calc-divisas",
+    name: "Convertidor de Divisas",
+    description: "Convierte entre las principales divisas del mundo en tiempo real.",
+    url: `${BASE}/calculadoras/divisas`,
+  },
+]
+
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
+  "@id": `${BASE}/calculadoras#webpage`,
   name: "Calculadoras Financieras Gratuitas",
   description: "4 calculadoras financieras interactivas: interés compuesto, meta de ahorro, pago de deuda y divisas.",
-  url: "https://www.finanzasdigitales.es/calculadoras",
+  url: `${BASE}/calculadoras`,
   inLanguage: "es",
-  publisher: {
-    "@type": "Organization",
-    "@id": "https://www.finanzasdigitales.es/#organization",
-    name: "FinanzasPro",
-  },
+  isAccessibleForFree: true,
+  publisher: ORG_REF,
+  hasPart: calculatorApps.map((calc) => ({
+    "@type": "SoftwareApplication",
+    "@id": `${BASE}/calculadoras#${calc.id}`,
+    name: calc.name,
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Web",
+    description: calc.description,
+    url: calc.url,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "EUR",
+    },
+    inLanguage: "es",
+    provider: ORG_REF,
+  })),
 }
 
 export default function CalculadorasPage() {

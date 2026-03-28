@@ -8,6 +8,5 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ["/api/", "/_next/"],
     },
     sitemap: "https://www.finanzasdigitales.es/sitemap.xml",
-    host: "https://www.finanzasdigitales.es",
   }
 }

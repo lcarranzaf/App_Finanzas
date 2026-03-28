@@ -23,6 +23,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.finanzasdigitales.es/inversiones",
   },
+  openGraph: {
+    title: "Guía de Inversiones para Principiantes — FinanzasPro",
+    description: "Compara fondos indexados, ETFs, acciones y bonos. Estrategias de inversión adaptadas al mercado español y europeo.",
+    url: "https://www.finanzasdigitales.es/inversiones",
+    type: "website",
+    locale: "es_ES",
+    siteName: "FinanzasPro",
+  },
 }
 
 export default function InversionesPage() {
@@ -43,8 +51,8 @@ export default function InversionesPage() {
       title: "Fondos Indexados",
       riskLevel: "Bajo-Medio",
       returns: "7-10% anual",
-      minInvestment: "$100-500",
-      description: "Replican índices de mercado como el S&P 500",
+      minInvestment: "€100-500",
+      description: "Replican índices de mercado como el MSCI World o S&P 500",
       pros: ["Diversificación automática", "Bajas comisiones", "Pasivo y automático"],
       cons: ["Retornos modestos", "Requiere paciencia"],
       icon: BarChart3,
@@ -54,7 +62,7 @@ export default function InversionesPage() {
       title: "ETFs",
       riskLevel: "Bajo-Medio",
       returns: "6-12% anual",
-      minInvestment: "$100+",
+      minInvestment: "€100+",
       description: "Fondos negociados en bolsa, flexibles y transparentes",
       pros: ["Compra/venta fácil", "Bajo costo", "Amplia variedad"],
       cons: ["Requiere cuenta bursátil", "Volatilidad intradiaria"],
@@ -65,7 +73,7 @@ export default function InversionesPage() {
       title: "Acciones Individuales",
       riskLevel: "Medio-Alto",
       returns: "Variable (10-30%+)",
-      minInvestment: "$50-200",
+      minInvestment: "€50-200",
       description: "Compra participación en empresas específicas",
       pros: ["Alto potencial", "Control total", "Aprendizaje continuo"],
       cons: ["Mayor riesgo", "Requiere investigación"],
@@ -76,7 +84,7 @@ export default function InversionesPage() {
       title: "Bonos e Ingresos Fijos",
       riskLevel: "Muy Bajo",
       returns: "3-6% anual",
-      minInvestment: "$50-1000",
+      minInvestment: "€50-1.000",
       description: "Préstamos con rendimiento garantizado",
       pros: ["Predecible", "Seguro", "Generador de ingresos"],
       cons: ["Retornos bajos", "Riesgo inflación"],
@@ -89,7 +97,7 @@ export default function InversionesPage() {
     {
       icon: CheckCircle2,
       title: "Empieza con fondo de emergencia",
-      description: "$1,000-2,000 debe estar en efectivo o ahorro antes de invertir en bolsa.",
+      description: "1.000-2.000€ debe estar en efectivo o ahorro antes de invertir en bolsa.",
     },
     {
       icon: CheckCircle2,
@@ -99,7 +107,7 @@ export default function InversionesPage() {
     {
       icon: CheckCircle2,
       title: "Diversifica siempre",
-      description: "No pongas todo en una inversión. Reparte entre fondos, ETFs y acciones.",
+      description: "No pongas todo en una inversión. Reparte entre fondos globales, ETFs y acciones.",
     },
     {
       icon: CheckCircle2,
@@ -109,7 +117,7 @@ export default function InversionesPage() {
     {
       icon: CheckCircle2,
       title: "Automatiza aportaciones",
-      description: "Invierte $100/mes automáticamente. Es más efectivo que lump sums irregulares.",
+      description: "Invierte 100€/mes automáticamente. Es más efectivo que aportaciones irregulares.",
     },
     {
       icon: CheckCircle2,
@@ -142,10 +150,10 @@ export default function InversionesPage() {
     },
     {
       factor: "Inversión Mínima",
-      fondos: "$100-500",
-      etfs: "$100+",
-      acciones: "$50+",
-      bonos: "$50+",
+      fondos: "€100-500",
+      etfs: "€100+",
+      acciones: "€50+",
+      bonos: "€50+",
     },
     {
       factor: "Para Principiantes",
@@ -163,23 +171,23 @@ export default function InversionesPage() {
       duration: "1-2 meses",
       focus: "Leer, entender conceptos básicos",
       action: "Lee 1 artículo/semana sobre inversiones",
-      investment: "$0",
+      investment: "0€",
     },
     {
       phase: "Fase 2",
       title: "Fondos Indexados",
       duration: "6-12 meses",
       focus: "Construir cartera de bajo riesgo",
-      action: "Invierte $100/mes en S&P 500",
-      investment: "$600-1,200",
+      action: "Invierte 100€/mes en MSCI World vía MyInvestor o Trade Republic",
+      investment: "600-1.200€",
     },
     {
       phase: "Fase 3",
       title: "Diversificar",
       duration: "1-2 años",
       focus: "Agregar ETFs y bonos",
-      action: "70% fondos, 20% ETFs, 10% bonos",
-      investment: "$2,000-5,000",
+      action: "70% fondos globales, 20% ETFs europeos, 10% bonos",
+      investment: "2.000-5.000€",
     },
     {
       phase: "Fase 4",
@@ -194,7 +202,7 @@ export default function InversionesPage() {
   const inversionesFAQs: FAQItem[] = [
     {
       question: "¿Cuánto dinero necesito para empezar a invertir?",
-      answer: "Puedes empezar a invertir con tan solo $50-100. Muchas plataformas como Fidelity, Charles Schwab o apps como Acorns permiten invertir con montos mínimos. Lo importante no es la cantidad inicial sino la consistencia: invertir $100 mensuales durante 20 años al 8% genera más de $58,000.",
+      answer: "Puedes empezar a invertir con tan solo 50-100€. Plataformas disponibles en España como MyInvestor, Trade Republic, Degiro o Indexa Capital permiten invertir con importes mínimos. Lo importante no es la cantidad inicial sino la consistencia: invertir 100€ mensuales durante 20 años al 8% genera más de 58.000€.",
     },
     {
       question: "¿Qué son los fondos indexados y por qué son recomendados?",
@@ -258,6 +266,18 @@ export default function InversionesPage() {
         </div>
       </section>
 
+      {/* Disclaimer legal */}
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-8">
+        <div className="flex gap-3 rounded-lg border border-amber-500/30 bg-amber-500/5 p-4 text-sm text-amber-700 dark:text-amber-400">
+          <span className="shrink-0 mt-0.5">⚠️</span>
+          <p>
+            <strong>Contenido exclusivamente educativo.</strong> La información de esta página no constituye
+            asesoramiento financiero personalizado. Antes de tomar decisiones de inversión, consulta con un asesor
+            financiero autorizado y registrado en la CNMV.
+          </p>
+        </div>
+      </div>
+
       {/* Why Invest Section */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -275,7 +295,7 @@ export default function InversionesPage() {
                 <CardTitle className="text-lg">Crecimiento Exponencial</CardTitle>
               </CardHeader>
               <CardContent className="text-muted-foreground">
-                $200/mes × 20 años @ 8% = $89,000+. El tiempo es tu mejor inversor.
+                200€/mes × 20 años @ 8% = 89.000€+. El tiempo es tu mejor inversor.
               </CardContent>
             </Card>
             <Card className="border-l-4 border-l-purple-500">
@@ -524,7 +544,7 @@ export default function InversionesPage() {
             <div className="max-w-2xl">
               <h2 className="text-3xl font-bold text-foreground mb-4">¿Listo para invertir?</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                No necesitas mucho dinero para empezar. Fondos indexados desde $100 son suficientes. El mejor momento
+                No necesitas mucho dinero para empezar. Fondos indexados desde 100€ son suficientes. El mejor momento
                 para invertir fue ayer. El segundo mejor es hoy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">

@@ -6,6 +6,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import AdSense from "@/components/AdSense"
 import { getAllAuthors } from "@/lib/authors-data"
+import StructuredData from "@/components/structured-data"
 
 export const metadata: Metadata = {
   title: "Sobre Nosotros - Quiénes Somos en FinanzasPro",
@@ -14,6 +15,14 @@ export const metadata: Metadata = {
   keywords: ["sobre FinanzasPro", "educación financiera", "equipo", "misión", "finanzas personales en español"],
   alternates: {
     canonical: "https://www.finanzasdigitales.es/sobre-nosotros",
+  },
+  openGraph: {
+    title: "Sobre Nosotros — Quiénes Somos en FinanzasPro",
+    description: "Conoce al equipo detrás de FinanzasPro. Nuestra misión es democratizar la educación financiera en español con guías prácticas y herramientas gratuitas.",
+    url: "https://www.finanzasdigitales.es/sobre-nosotros",
+    type: "website",
+    locale: "es_ES",
+    siteName: "FinanzasPro",
   },
 }
 
@@ -39,6 +48,7 @@ export default function SobreNosotrosPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
         suppressHydrationWarning
       />
+      <StructuredData type="persons" />
     <div className="py-16 sm:py-20">
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
         {/* Header */}
