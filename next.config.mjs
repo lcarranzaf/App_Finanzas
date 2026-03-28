@@ -58,7 +58,7 @@ const nextConfig = {
               "img-src 'self' data: blob: https://images.unsplash.com https://images.pexels.com https://hebbkx1anhila5yf.public.blob.vercel-storage.com https://pagead2.googlesyndication.com https://www.google.com https://www.gstatic.com",
               "font-src 'self' data:",
               "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://vitals.vercel-insights.com https://vercel.live https://*.adtrafficquality.google",
-              "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com",
+              "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://*.adtrafficquality.google",
               "frame-ancestors 'none'",
             ].join("; "),
           },

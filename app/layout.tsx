@@ -175,7 +175,7 @@ export default function RootLayout({
           </Script>
         )}
       </head>
-      <body className="min-h-screen bg-background font-sans text-foreground">
+      <body className="min-h-screen bg-background font-sans text-foreground" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
