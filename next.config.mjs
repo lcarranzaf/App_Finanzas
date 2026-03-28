@@ -53,11 +53,11 @@ const nextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.google-analytics.com https://adservice.google.com https://googleads.g.doubleclick.net https://fundingchoicesmessages.google.com",
+              "script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.google-analytics.com https://adservice.google.com https://googleads.g.doubleclick.net https://fundingchoicesmessages.google.com https://*.adtrafficquality.google",
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: blob: https://images.unsplash.com https://images.pexels.com https://hebbkx1anhila5yf.public.blob.vercel-storage.com https://pagead2.googlesyndication.com https://www.google.com https://www.gstatic.com",
               "font-src 'self' data:",
-              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://vitals.vercel-insights.com https://vercel.live https://ep1.adtrafficquality.google https://adtrafficquality.google",
+              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://vitals.vercel-insights.com https://vercel.live https://*.adtrafficquality.google",
               "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com",
               "frame-ancestors 'none'",
             ].join("; "),
