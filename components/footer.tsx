@@ -32,7 +32,7 @@ export default function Footer() {
               </p>
               <a
                 href="mailto:contacto@finanzasdigitales.es"
-                className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors min-h-[48px]"
               >
                 <Mail className="h-4 w-4" />
                 contacto@finanzasdigitales.es
@@ -45,7 +45,7 @@ export default function Footer() {
               <ul role="list" className="mt-6 space-y-4">
                 {categories.map((item) => (
                   <li key={item.name}>
-                    <Link href={item.href} className="text-sm leading-6 text-muted-foreground hover:text-foreground block py-3">
+                    <Link href={item.href} className="text-sm leading-6 text-muted-foreground hover:text-foreground flex items-center min-h-[48px]">
                       {item.name}
                     </Link>
                   </li>

@@ -85,7 +85,7 @@ export default function HomePage() {
               </span>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl text-balance">
-              Educación Financiera en Español: <span className="text-primary">Ahorra, Invierte</span> y Alcanza la Libertad Financiera
+              Finanzas Personales en Español: <span className="text-primary">Ahorra, Invierte</span> y Alcanza la Libertad Financiera
             </h1>
             <p className="mt-5 text-lg leading-8 text-muted-foreground text-pretty">
               Aprende a ahorrar, invertir y gestionar tu dinero con estrategias probadas. Desde fondos indexados hasta
@@ -272,10 +272,10 @@ export default function HomePage() {
                     <h4 className="text-xl font-semibold text-foreground mb-2">2. Inversión Consistente</h4>
                     <p className="text-muted-foreground leading-7">
                       Invertir no es solo para los ricos. Con herramientas modernas como fondos indexados y ETFs, puedes
-                      comenzar a invertir con tan solo $100. El secreto no está en elegir la acción perfecta, sino en la
+                      comenzar a invertir con tan solo 100€. El secreto no está en elegir la acción perfecta, sino en la
                       consistencia y el tiempo. El interés compuesto es la octava maravilla del mundo, y cuando lo entiendes,
-                      cambia completamente tu perspectiva sobre el dinero. Invertir $200 mensuales durante 30 años con un
-                      rendimiento del 7% anual puede generar más de $240,000, de los cuales solo $72,000 serían tus aportaciones.
+                      cambia completamente tu perspectiva sobre el dinero. Invertir 200€ al mes durante 30 años con un
+                      rendimiento del 7% anual puede generar más de 240.000€, de los cuales solo 72.000€ serían tus aportaciones.
                     </p>
                   </div>
                   <div>
@@ -301,7 +301,7 @@ export default function HomePage() {
                   <li><strong>Semana 1:</strong> Calcula tu patrimonio neto actual (activos - pasivos) y crea un presupuesto básico
                     registrando todos tus gastos durante una semana.</li>
                   <li><strong>Semana 2:</strong> Identifica áreas donde puedes reducir gastos sin sacrificar calidad de vida.
-                    Pequeños cambios como preparar café en casa o cancelar suscripciones no utilizadas pueden liberar $100-300 mensuales.</li>
+                    Pequeños cambios como preparar café en casa o cancelar suscripciones no utilizadas pueden liberar 100-300€ al mes.</li>
                   <li><strong>Semana 3:</strong> Abre una cuenta de ahorros de alto rendimiento y configura una transferencia
                     automática del 10-20% de tus ingresos. Automatizar es clave porque elimina la necesidad de tomar decisiones
                     cada mes.</li>
@@ -319,13 +319,13 @@ export default function HomePage() {
                 <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-7 mt-4">
                   <li><strong>Esperar el momento perfecto:</strong> No existe. El mejor momento para empezar a ahorrar e invertir
                     fue ayer. El segundo mejor momento es hoy.</li>
-                  <li><strong>No tener un fondo de emergencia:</strong> Sin al menos $1,000-2,000 en efectivo, cualquier
+                  <li><strong>No tener un fondo de emergencia:</strong> Sin al menos 1.000-2.000€ en efectivo, cualquier
                     imprevisto te obligará a usar tarjetas de crédito o préstamos costosos.</li>
                   <li><strong>Intentar hacer timing del mercado:</strong> Incluso los profesionales no pueden predecir
                     cuándo subirá o bajará el mercado. La estrategia ganadora es invertir consistentemente sin importar
                     las condiciones del mercado.</li>
                   <li><strong>Ignorar las comisiones:</strong> Una comisión del 2% anual puede costarte decenas de miles
-                    de dólares a lo largo de 30 años. Siempre busca opciones de bajo costo como fondos indexados con comisiones
+                    de euros a lo largo de 30 años. Siempre busca opciones de bajo costo como fondos indexados con comisiones
                     menores al 0.2%.</li>
                 </ul>
               </div>
