@@ -6,6 +6,7 @@ import type { Metadata } from "next"
 import AdSense from "@/components/AdSense"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { TrackedLink } from "@/components/tracked-link"
+import { AffiliateDisclosure } from "@/components/affiliate-disclosure"
 
 export const metadata: Metadata = {
   title: `Mejores Apps y Herramientas Financieras ${new Date().getFullYear()} - Recursos Recomendados`,
@@ -253,9 +254,11 @@ export default function RecursosPage() {
             Recursos Financieros Recomendados
           </h1>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Herramientas, apps y servicios verificados para optimizar tus finanzas personales. Algunos enlaces son
-            afiliados y nos ayudan a mantener el contenido gratuito.
+            Herramientas, apps y servicios verificados para optimizar tus finanzas personales.
           </p>
+          <div className="mt-6 text-left">
+            <AffiliateDisclosure />
+          </div>
         </div>
 
         {/* Educational Introduction */}

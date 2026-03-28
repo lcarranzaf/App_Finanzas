@@ -47,10 +47,10 @@ export default function AuthorPage({ params }: AuthorPageProps) {
     name: author.name,
     jobTitle: author.role,
     description: author.bio,
-    url: `https://app-finanzas-mu.vercel.app/autores/${author.slug}`,
+    url: `https://www.finanzasdigitales.es/autores/${author.slug}`,
     worksFor: {
       "@type": "Organization",
-      "@id": "https://app-finanzas-mu.vercel.app/#organization",
+      "@id": "https://www.finanzasdigitales.es/#organization",
       name: "FinanzasPro",
     },
     knowsAbout: author.expertise,

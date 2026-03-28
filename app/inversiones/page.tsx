@@ -14,6 +14,7 @@ import AdSense from "@/components/AdSense"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { FAQSection, type FAQItem } from "@/components/faq-section"
 import { CategoryArticles } from "@/components/category-articles"
+import { AffiliateDisclosure } from "@/components/affiliate-disclosure"
 
 export const metadata: Metadata = {
   title: `Guía de Inversiones para Principiantes ${new Date().getFullYear()} - Fondos Indexados, ETFs y Acciones`,
@@ -266,8 +267,8 @@ export default function InversionesPage() {
         </div>
       </section>
 
-      {/* Disclaimer legal */}
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-8">
+      {/* Disclaimer legal + Divulgación de afiliados */}
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-8 space-y-3">
         <div className="flex gap-3 rounded-lg border border-amber-500/30 bg-amber-500/5 p-4 text-sm text-amber-700 dark:text-amber-400">
           <span className="shrink-0 mt-0.5">⚠️</span>
           <p>
@@ -276,6 +277,7 @@ export default function InversionesPage() {
             financiero autorizado y registrado en la CNMV.
           </p>
         </div>
+        <AffiliateDisclosure />
       </div>
 
       {/* Why Invest Section */}
