@@ -6,7 +6,14 @@ export default function middleware(request: NextRequest) {
   if (host === 'finanzasdigitales.es') {
     const url = new URL(request.url)
     url.host = 'www.finanzasdigitales.es'
-    return NextResponse.redirect(url, { status: 301 })
+    return NextResponse.redirect(url, { status: 308 })
+  }
+
+  // vercel.app: no redirigir (AdSense activo ahí), pero decirle a Google que no indexe
+  if (host === 'app-finanzas-mu.vercel.app') {
+    const response = NextResponse.next()
+    response.headers.set('X-Robots-Tag', 'noindex, nofollow')
+    return response
   }
 
   const { pathname } = request.nextUrl
