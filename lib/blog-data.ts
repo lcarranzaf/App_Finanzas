@@ -12,6 +12,7 @@ export interface BlogPost {
   image: string
   author: string
   faqs?: FAQItem[]
+  seoTitle?: string
 }
 
 export const blogPosts: BlogPost[] = [
@@ -436,10 +437,33 @@ Cada dólar que ahorras hoy te acerca un paso más a las llaves de tu propia cas
     category: "Ahorro",
     tags: ["comprar casa", "enganche", "ahorro", "hipoteca", "primer comprador", "vivienda", "planificación financiera"],
     author: "María López",
+    faqs: [
+      {
+        question: "¿Cuánto dinero necesito ahorrar para comprar una casa en España?",
+        answer: "En España necesitas al menos el 20% del precio de la vivienda para la entrada, más un 10-15% adicional para gastos de compraventa (notaría, registro, impuestos). Para una vivienda de 200.000€, necesitas entre 60.000€ y 70.000€ en total.",
+      },
+      {
+        question: "¿Cuánto tiempo tarda en ahorrar el dinero para una casa?",
+        answer: "Depende de tus ingresos y gastos. Ahorrando el 20% de un salario de 2.000€ netos (400€/mes), tardarías unos 12-15 años para una vivienda media. Con el 30% (600€/mes) lo reducirías a 8-10 años. Cuanto antes empieces y mayor sea el porcentaje ahorrado, más rápido llegarás.",
+      },
+      {
+        question: "¿Es mejor alquilar mientras ahorro para comprar una casa?",
+        answer: "En la mayoría de los casos sí. Alquilar te da flexibilidad y evita comprometerte con una hipoteca antes de tener suficiente capital. La clave es que el alquiler no supere el 30% de tus ingresos y que el dinero restante se destine activamente al ahorro.",
+      },
+      {
+        question: "¿Dónde debo guardar los ahorros para la entrada de la casa?",
+        answer: "Lo ideal es un producto seguro y con algo de rentabilidad: una cuenta de ahorro remunerada, un fondo monetario o un depósito a plazo fijo. Evita invertir en bolsa si prevés necesitar el dinero en menos de 3-5 años, ya que la volatilidad podría reducir tu capital en el momento de la compra.",
+      },
+      {
+        question: "¿Puedo pedir hipoteca sin el 20% de entrada?",
+        answer: "Sí, algunos bancos financian hasta el 90% o incluso el 100% del valor de tasación, pero solo para jóvenes menores de 35 años o en casos especiales. Estas hipotecas suelen tener condiciones más estrictas, tipos más altos y exigen contratar seguros adicionales. Lo recomendable es tener al menos el 20% más gastos.",
+      },
+    ],
   },
   {
     slug: "criptomonedas-para-principiantes-guia",
     title: "Criptomonedas para principiantes: Guía completa para invertir de forma segura",
+    seoTitle: "Criptomonedas para principiantes: guía completa 2026",
     description:
       "Aprende qué son las criptomonedas, cómo funcionan Bitcoin y Ethereum, dónde comprar de forma segura, cuánto invertir y los errores que debes evitar como principiante.",
     image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=1200&h=630&fit=crop",
@@ -663,6 +687,28 @@ Las criptomonedas no son un atajo para hacerte rico. Son una herramienta de inve
     category: "Inversiones",
     tags: ["criptomonedas", "bitcoin", "ethereum", "inversiones", "blockchain", "principiantes", "trading"],
     author: "Alejandro Torres",
+    faqs: [
+      {
+        question: "¿Es seguro invertir en criptomonedas en España?",
+        answer: "Las criptomonedas son activos de alto riesgo y alta volatilidad. No están reguladas como los productos financieros tradicionales, aunque la normativa MiCA de la UE está mejorando la protección del inversor. Nunca inviertas más de lo que puedas permitirte perder, y usa plataformas registradas en la CNMV.",
+      },
+      {
+        question: "¿Cuánto dinero necesito para empezar a invertir en criptomonedas?",
+        answer: "Puedes empezar con tan solo 10-20€ en plataformas como Coinbase, Kraken o Bitstamp. No necesitas comprar una criptomoneda entera: puedes comprar fracciones. Lo recomendable para principiantes es empezar con cantidades pequeñas para aprender sin arriesgar demasiado.",
+      },
+      {
+        question: "¿Hay que pagar impuestos por las ganancias en criptomonedas en España?",
+        answer: "Sí. En España las ganancias por venta de criptomonedas tributan en la base del ahorro del IRPF: 19% hasta 6.000€, 21% entre 6.000€ y 50.000€, y 23% a partir de 50.000€. Debes declarar todas las operaciones, incluso si no retiras el dinero a tu cuenta bancaria.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre Bitcoin y otras criptomonedas?",
+        answer: "Bitcoin es la primera criptomoneda y la de mayor capitalización de mercado, considerada un 'depósito de valor digital'. Ethereum es la segunda y permite contratos inteligentes y aplicaciones descentralizadas. Las demás criptomonedas (altcoins) tienen distintos casos de uso y suelen ser mucho más volátiles que Bitcoin.",
+      },
+      {
+        question: "¿Qué es un monedero de criptomonedas y necesito uno?",
+        answer: "Un monedero (wallet) es donde guardas tus criptomonedas. Hay monederos custodiados (en el exchange, más cómodos pero dependes de la plataforma) y no custodiados (hardware wallet como Ledger, más seguros). Si tienes cantidades pequeñas, puedes dejarlas en el exchange. Para cantidades mayores, un hardware wallet es más seguro.",
+      },
+    ],
   },
   {
     slug: "presupuesto-personal-completo",
@@ -1534,6 +1580,28 @@ Recuerda: Los bonos no están diseñados para hacerte rico rápidamente, sino pa
      tags: ["bonos", "renta fija", "inversiones", "estabilidad", "ingresos pasivos"],
      image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&h=630&fit=crop",
      author: "Carlos Sánchez",
+    faqs: [
+      {
+        question: "¿Qué son los bonos y cómo funcionan?",
+        answer: "Un bono es un préstamo que haces a un gobierno o empresa. A cambio, recibes un interés periódico (cupón) y recuperas el capital al vencimiento. Son considerados inversiones más seguras que las acciones porque tienen prioridad en caso de quiebra y ofrecen flujos de ingresos predecibles.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre un bono y una acción?",
+        answer: "Con una acción eres propietario parcial de la empresa y participas en sus beneficios, pero asumes más riesgo. Con un bono eres acreedor: tienes derecho a cobrar antes que los accionistas si la empresa quiebra, pero no participas en el crecimiento. Los bonos son más conservadores y los accionistas asumen más riesgo a cambio de mayor potencial de ganancia.",
+      },
+      {
+        question: "¿Son seguros los bonos del Estado español?",
+        answer: "Los bonos del Tesoro español son considerados inversiones de bajo riesgo dentro de los mercados desarrollados, respaldados por el Estado español y la zona euro. Sin embargo, no están exentos de riesgo: pueden perder valor si suben los tipos de interés o si la situación fiscal del país se deteriora. Son mucho más seguros que las acciones, pero no son equivalentes a tener el dinero en el banco.",
+      },
+      {
+        question: "¿Cómo puedo comprar bonos del Estado en España?",
+        answer: "Puedes comprar Letras del Tesoro, Bonos y Obligaciones del Estado directamente en el Tesoro Público (tesoro.es) sin comisiones, o a través de tu banco o broker habitual. La inversión mínima es de 1.000€. También puedes acceder a bonos diversificados a través de ETFs de renta fija con pequeñas cantidades.",
+      },
+      {
+        question: "¿Qué pasa con los bonos cuando suben los tipos de interés?",
+        answer: "Cuando los tipos de interés suben, el precio de los bonos existentes baja. Esto se debe a que los nuevos bonos ofrecen mayor rentabilidad, haciendo menos atractivos a los anteriores. Si mantienes el bono hasta vencimiento esto no te afecta (recibes el cupón y el capital acordados), pero si necesitas venderlo antes puede que lo hagas con pérdidas.",
+      },
+    ],
   },
   {
     slug: "manejo-deuda-personal",
@@ -1770,13 +1838,13 @@ Tu yo del futuro (sin deuda) te lo agradecerá.
   },
   {
     slug: "invertir-primeros-pasos",
-    title: "Inversiones para principiantes: Qué hacer con tus primeros $1,000",
+    title: "Inversiones para principiantes: Qué hacer con tus primeros 1.000€",
     description:
       "Guía paso a paso para invertir tu primer dinero sin miedo. Dónde abrir cuenta, qué instrumentos elegir y cómo empezar con bajo riesgo.",
     content: `
-# Inversiones para principiantes: Qué hacer con tus primeros $1,000
+# Inversiones para principiantes: Qué hacer con tus primeros 1.000€
 
-Tienes $1,000. ¿Y ahora qué? La mayoría de personas se congela. En esta guía te enseñaré exactamente dónde invertir ese dinero para que crezca sin estrés.
+Tienes 1.000€. ¿Y ahora qué? La mayoría de personas se congela. En esta guía te enseñaré exactamente dónde invertir ese dinero para que crezca sin estrés.
 
 ## Antes de invertir: Los 3 pilares
 
@@ -1975,6 +2043,28 @@ Abre esa cuenta hoy. Tu yo del futuro no lo lamentará.
      tags: ["inversiones", "principiantes", "fondos indexados", "bolsa"],
      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop",
      author: "Carlos Sánchez",
+    faqs: [
+      {
+        question: "¿Con cuánto dinero puedo empezar a invertir en España?",
+        answer: "Puedes empezar con tan solo 50-100€. Brokers como MyInvestor permiten invertir en fondos indexados desde 10€, y plataformas como Indexa Capital requieren un mínimo de 3.000€. Para ETFs en bolsa, la mayoría de brokers no tienen mínimo. Lo importante es empezar pronto, aunque sea con poco.",
+      },
+      {
+        question: "¿Qué es mejor para un principiante: fondos indexados o acciones individuales?",
+        answer: "Los fondos indexados son la opción recomendada para principiantes. Diversifican automáticamente tu inversión en cientos o miles de empresas, reducen el riesgo, tienen comisiones bajas (0,1-0,3%) y históricamente superan a la mayoría de fondos gestionados activamente. Las acciones individuales requieren más conocimiento y tiempo de análisis.",
+      },
+      {
+        question: "¿Cuándo debo empezar a invertir?",
+        answer: "El mejor momento es ahora, independientemente del mercado. El tiempo en el mercado es más importante que el momento de entrada. Invierte de forma periódica (por ejemplo mensualmente) para promediar el coste y reducir el impacto de la volatilidad. Antes de invertir, asîgúrate de tener un fondo de emergencia de 3-6 meses de gastos.",
+      },
+      {
+        question: "¿Cuál es el riesgo de perder dinero al invertir?",
+        answer: "La bolsa puede bajar a corto plazo: correcciones del 10-20% son normales y las crisis mayores ocurren cada 10-15 años. Sin embargo, históricamente el mercado siempre se ha recuperado y ha ofrecido rentabilidades positivas a largo plazo (7-10% anual en fondos indexados globales). El riesgo aumenta si necesitas el dinero a corto plazo.",
+      },
+      {
+        question: "¿Qué impuestos pago por mis inversiones en España?",
+        answer: "Las ganancias patrimoniales tributan en el IRPF a tipos del 19% (hasta 6.000€), 21% (6.000-50.000€) y 23% (más de 50.000€). Solo pagas impuestos cuando vendes con ganancias: mientras mantienes la inversión no tributa. Los dividendos también tributan como rendimientos del capital mobiliario a los mismos tipos.",
+      },
+    ],
   },
   {
     slug: "como-empezar-ahorrar-poco-dinero",
@@ -2239,6 +2329,28 @@ Recuerda: la tecnología es solo una herramienta. El éxito financiero depende d
      tags: ["apps", "tecnología", "fintech", "herramientas"],
      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&h=630&fit=crop",
      author: "Alejandro Torres",
+    faqs: [
+      {
+        question: "¿Cuál es la mejor app de finanzas personales para España en 2026?",
+        answer: "Las más valoradas en España son Fintonic (análisis automático de gastos y alertas), Spendee (control de presupuesto multimoneda) y Money Manager (registro manual detallado). Para inversiones, destacan Indexa Capital y MyInvestor. La mejor depende de si buscas control de gastos, presupuesto o gestión de inversiones.",
+      },
+      {
+        question: "¿Son seguras las apps de finanzas personales?",
+        answer: "Las apps serias como Fintonic usan tecnología PSD2 con acceso de solo lectura a tus cuentas: no pueden realizar transacciones. Busca apps con cifrado de datos, autenticación en dos pasos y que estén registradas como proveedores de servicios de pago en el Banco de España. Lee siempre la política de privacidad antes de conectar tu banco.",
+      },
+      {
+        question: "¿Puedo conectar todas mis cuentas bancarias en una sola app?",
+        answer: "Sí, gracias a la directiva europea PSD2, apps como Fintonic, Mint o Wallet by BudgetBakers pueden conectarse de forma segura a la mayoría de bancos españoles (Santander, BBVA, CaixaBank, ING, etc.) y mostrar todos tus movimientos en un solo lugar. Esto facilita enormemente el control del presupuesto.",
+      },
+      {
+        question: "¿Cuánto cuestan las mejores apps de finanzas personales?",
+        answer: "La mayoría ofrecen una versión gratuita con funciones básicas suficientes para el control del gasto. Las versiones premium (5-10€/mes) añaden funciones avanzadas como presupuestos ilimitados, exportación de datos, análisis predictivos o asesoramiento personalizado. Para empezar, la versión gratuita suele ser más que suficiente.",
+      },
+      {
+        question: "¿Para qué sirve una app de finanzas personales?",
+        answer: "Te ayuda a ver en qué gastas tu dinero, crear y seguir presupuestos, detectar gastos innecesarios, establecer metas de ahorro y recibir alertas cuando te acercas al límite de una categoría. Estudios demuestran que las personas que registran sus gastos ahorran entre un 10% y un 20% más que quienes no lo hacen.",
+      },
+    ],
   },
   {
     slug: "invertir-fondos-indexados-principiantes",
@@ -2941,6 +3053,28 @@ El crédito es un privilegio que se gana con responsabilidad. Úsalo sabiamente 
     tags: ["tarjetas de crédito", "score crediticio", "deudas", "finanzas personales"],
     image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
     author: "María López",
+    faqs: [
+      {
+        question: "¿Cuál es la diferencia entre una tarjeta de crédito y una de débito?",
+        answer: "Con la tarjeta de débito el dinero se descuenta directamente de tu cuenta en el momento de la compra. Con la tarjeta de crédito el banco te presta el dinero y tú lo devuelves al final del mes o en cuotas. Si pagas el total a fin de mes, no pagas intereses; si aplazas, los intereses pueden ser del 20-30% anual.",
+      },
+      {
+        question: "¿Cómo evito pagar intereses con la tarjeta de crédito?",
+        answer: "La regla de oro es pagar siempre el saldo total a fin de mes, nunca solo el mínimo. Configura un pago automático del importe total desde tu cuenta corriente. Además, no uses la tarjeta de crédito para anticipos de efectivo: los intereses empiezan desde el primer día y suelen ser más altos que en las compras.",
+      },
+      {
+        question: "¿Merece la pena tener una tarjeta de crédito en España?",
+        answer: "Sí, si la usas con disciplina. Las tarjetas de crédito ofrecen ventajas reales: cashback o puntos canjeables, seguros de compra y viaje gratuitos, protección frente a fraudes y financiación temporal sin coste si pagas a fin de mes. El problema surge cuando se usan para gastar más de lo que se tiene.",
+      },
+      {
+        question: "¿Qué pasa si no puedo pagar el total de la tarjeta de crédito?",
+        answer: "Si no puedes pagar el total, paga al menos el máximo posible para reducir el capital pendiente. Los intereses se calculan sobre el saldo vivo, así que cuanto menos debas, menos pagarás. Evita a toda costa pagar solo el mínimo: con una deuda de 1.000€ al 24% pagando el mínimo tardarías años en saldarla y pagarías cientos de euros en intereses.",
+      },
+      {
+        question: "¿Cuál es el límite de crédito recomendable?",
+        answer: "Los expertos recomiendan no usar más del 30% de tu límite de crédito disponible. Si tienes un límite de 3.000€, intenta no superar 900€ de saldo. Mantener un uso bajo del crédito también mejora tu historial crediticio (CIRBE), lo que puede ayudarte a obtener mejores condiciones en hipotecas o préstamos futuros.",
+      },
+    ],
   },
   {
     slug: "5-formas-ganar-dinero-extra-online",
@@ -3267,10 +3401,33 @@ Elige la estrategia que mejor se alinee con tus habilidades y disponibilidad de 
     tags: ["freelancing", "ingresos online", "emprendimiento", "trabajo remoto"],
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
     author: "Alejandro Torres",
+    faqs: [
+      {
+        question: "¿Cuánto dinero puedo ganar realmente con un trabajo extra online?",
+        answer: "Depende mucho de la actividad y el tiempo dedicado. Con freelancing (diseño, programación, redacción) puedes ganar entre 20-80€/hora. Con venta de productos digitales, los ingresos son variables pero pueden escalar sin límite. Encuestas y tareas microtareas generan 50-200€ al mes como complemento. Lo más importante es empezar y ser constante.",
+      },
+      {
+        question: "¿Necesito declarar los ingresos extra a Hacienda en España?",
+        answer: "Sí. En España cualquier ingreso está sujeto a declaración en el IRPF, independientemente de su importe. Los ingresos por actividades económicas online (freelancing, venta de productos) requieren darse de alta como autónomo o en el régimen de estimación objetiva. Superar 1.000€ anuales en actividades económicas obliga a declararlos.",
+      },
+      {
+        question: "¿Cuáles son los trabajos online mejor pagados para principiantes?",
+        answer: "Para principiantes sin experiencia previa, las opciones mejor pagadas son: redacción de contenidos (15-30€/artículo), traducción si dominas idiomas (0,05-0,10€/palabra), gestión de redes sociales (500-1.500€/mes por cliente), atención al cliente remota (10-15€/hora) y diseño gráfico básico con herramientas como Canva (20-50€/proyecto).",
+      },
+      {
+        question: "¿Es fiable ganar dinero con afiliados en internet?",
+        answer: "El marketing de afiliados es legítimo y muchas personas generan ingresos significativos. La clave es tener una audiencia (blog, canal de YouTube, redes sociales) y recomendar productos que realmente uses y en los que confíes. Los ingresos al principio son bajos, pero con el tiempo y el tráfico pueden convertirse en ingresos pasivos relevantes.",
+      },
+      {
+        question: "¿Cuánto tiempo debo dedicar para ver resultados?",
+        answer: "Para trabajos activos (freelancing, atención al cliente) los ingresos son inmediatos pero requieren tiempo continuo. Para ingresos pasivos (cursos online, afiliados, venta de plantillas) necesitas entre 6 y 18 meses para ver resultados significativos. Lo habitual es combinar ambos: trabajos activos para ingresos inmediatos mientras construyes fuentes pasivas.",
+      },
+    ],
   },
   {
     slug: "inteligencia-artificial-finanzas-personales",
-    title: "Cómo la Inteligencia Artificial Puede Ahorrarte Miles de Dólares en 2026",
+    title: "Cómo la Inteligencia Artificial Puede Ahorrarte Miles de Euros en 2026",
+    seoTitle: "IA y finanzas personales: ahorra miles en 2026",
     description:
       "Descubre las mejores apps y herramientas de IA para gestionar tu dinero automáticamente. Desde presupuestos inteligentes hasta inversiones automatizadas con ChatGPT, Gemini y Fintonic.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop",
@@ -3423,6 +3580,28 @@ No necesitas ser experto en tecnología. Solo necesitas dar el primer paso: desc
     category: "Tecnología Financiera",
     tags: ["inteligencia artificial", "apps financieras", "roboadvisors", "ahorro automático", "fintech"],
     author: "Alejandro Torres",
+    faqs: [
+      {
+        question: "¿Cómo puede la inteligencia artificial ayudarme con mis finanzas personales?",
+        answer: "La IA puede analizar tus patrones de gasto automáticamente, categorizar transacciones, detectar gastos innecesarios, sugerir presupuestos personalizados, optimizar tus inversiones mediante robo-advisors y responder dudas financieras en tiempo real. Herramientas como Fintonic, Cleo o los asistentes de IA de los propios bancos ya aplican estas capacidades.",
+      },
+      {
+        question: "¿Es seguro usar ChatGPT o herramientas de IA para asesoramiento financiero?",
+        answer: "La IA puede darte información general, explicar conceptos y ayudarte a organizar tu pensamiento financiero, pero no es un asesor financiero regulado. Para decisiones importantes (hipoteca, plan de pensiones, inversiones significativas) siempre consulta con un profesional certificado. Nunca compartas datos bancarios o contraseñas con ninguna IA.",
+      },
+      {
+        question: "¿Qué son los robo-advisors y cómo usan la IA?",
+        answer: "Los robo-advisors son plataformas que usan algoritmos e IA para gestionar carteras de inversión de forma automática. Analizan tu perfil de riesgo, distribuyen tu dinero en fondos diversificados y rebalancean la cartera periódicamente. En España destacan Indexa Capital, MyInvestor Cartera y Finizens, con comisiones mucho menores que los fondos de gestión activa tradicionales.",
+      },
+      {
+        question: "¿Pueden las apps de IA predecir cuándo debo invertir o vender?",
+        answer: "No con fiabilidad. Ninguna IA puede predecir consistentemente los movimientos del mercado a corto plazo. Lo que sí pueden hacer es analizar tendencias históricas, alertarte de oportunidades basadas en tu perfil y automatizar aportaciones periódicas (DCA). Descónfía de cualquier herramienta que prometa predecir el mercado con exactitud.",
+      },
+      {
+        question: "¿Cuáles son las mejores apps de IA para finanzas en España en 2026?",
+        answer: "Para control de gastos: Fintonic (con análisis automático por IA). Para inversiones automatizadas: Indexa Capital y Finizens. Para análisis y consultas: ChatGPT o Claude como asistentes generales. Para presupuestos inteligentes: Cleo (disponible en Europa). Los propios bancos como BBVA y CaixaBank han integrado asistentes de IA en sus apps.",
+      },
+    ],
   },
   {
     slug: "movimiento-fire-retiro-temprano",
@@ -3579,12 +3758,35 @@ El mejor momento para empezar fue hace 10 años. El segundo mejor momento es hoy
     category: "Planificación",
     tags: ["movimiento FIRE", "independencia financiera", "retiro temprano", "libertad financiera", "inversiones"],
     author: "Carlos Sánchez",
+    faqs: [
+      {
+        question: "¿Qué significa FIRE y cómo funciona?",
+        answer: "FIRE significa Financial Independence, Retire Early (Independencia Financiera, Jubilación Anticipada). El objetivo es acumular suficiente patrimonio para vivir de las rentas de las inversiones sin necesidad de trabajar. La regla más usada es el 4%: necesitas 25 veces tus gastos anuales invertidos para poder retirar el 4% cada año indefinidamente.",
+      },
+      {
+        question: "¿Cuánto dinero necesito para retirarme anticipadamente en España?",
+        answer: "Depende de tus gastos anuales. Con gastos de 18.000€/año necesitas 450.000€ invertidos (regla del 4%). Con 24.000€/año necesitas 600.000€. En España hay que considerar además la sanidad pública (no pagas si cotizas), pero sí deberás gestionar los gastos de comunidad, seguros y el coste de vida. Madrid y Barcelona son más caros que ciudades medianas.",
+      },
+      {
+        question: "¿A qué edad es realista alcanzar la independencia financiera en España?",
+        answer: "Con una tasa de ahorro del 50% de los ingresos, se puede alcanzar la independencia financiera en unos 15-17 años. Empezando a los 25 con esta tasa, podrías retirarte alrededor de los 40-42. Con una tasa del 30%, el plazo se extiende a 25-28 años. Es ambicioso pero alcanzable con planificación y disciplina.",
+      },
+      {
+        question: "¿Es compatible el movimiento FIRE con el sistema de pensiones español?",
+        answer: "Parcialmente. Si te retiras antes de los 65 y dejas de cotizar, tu pensión pública será mucho menor. Por eso el movimiento FIRE en España generalmente contempla: mantener alguna actividad con cotización mínima, complementar con inversiones privadas y no depender exclusivamente de la pensión del Estado. Algunos optan por una 'semi-retirada' con trabajo a tiempo parcial.",
+      },
+      {
+        question: "¿Cuáles son los principales riesgos del movimiento FIRE?",
+        answer: "Los riesgos más importantes son: el riesgo de secuencia (una crisis justo al retirarte puede devastar el plan), la inflación sostenida que erosione el poder adquisitivo, gastos médicos imprevistos, y el riesgo de aburrimiento o falta de propósito sin trabajo. Por eso muchos expertos recomiendan el Lean FIRE (gastos muy ajustados) o el Barista FIRE (trabajo parcial para cubrir gastos básicos).",
+      },
+    ],
   },
   {
     slug: "inversion-inmobiliaria-fraccionada",
-    title: "Inversión Inmobiliaria desde $50: Cómo Funciona la Propiedad Fraccionada",
+    title: "Inversión Inmobiliaria desde 50€: Cómo Funciona la Propiedad Fraccionada",
+    seoTitle: "Inversión inmobiliaria fraccionada desde 50€",
     description:
-      "Ya no necesitas miles de dólares para invertir en bienes raíces. Descubre las plataformas de inversión inmobiliaria fraccionada y tokenizada que están revolucionando el mercado en 2026.",
+      "Ya no necesitas miles de euros para invertir en bienes raíces. Descubre las plataformas de inversión inmobiliaria fraccionada y tokenizada que están revolucionando el mercado en 2026.",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=630&fit=crop",
     content: `
 # Inversión Inmobiliaria Fraccionada: Bienes Raíces al Alcance de Todos
@@ -3723,6 +3925,28 @@ El futuro del real estate es digital, fraccionado y accesible para todos. La pre
     category: "Inversiones",
     tags: ["inversión inmobiliaria", "tokenización", "bienes raíces", "crowdfunding", "ingresos pasivos"],
     author: "Carlos Sánchez",
+    faqs: [
+      {
+        question: "¿Qué es la inversión inmobiliaria fraccionada?",
+        answer: "Es un modelo que permite a varios inversores comprar conjuntamente una propiedad, dividiendo tanto la inversión necesaria como los beneficios obtenidos (alquiler y plusvalía). Gracias a la tokenización blockchain y las plataformas digitales, puedes ser propietario parcial de inmuebles con desde 50€, algo impensable con la inversión inmobiliaria tradicional.",
+      },
+      {
+        question: "¿Cuánto se puede ganar con la inversión inmobiliaria fraccionada?",
+        answer: "Las rentabilidades varían según la plataforma y el inmueble, pero suelen situarse entre el 5% y el 12% anual combinando rentas de alquiler y revalorización del activo. Las plataformas europeas como Reinvest24, Estateguru o Brickstarter muestran rentabilidades históricas del 7-10%. Recuerda que rentabilidades pasadas no garantizan resultados futuros.",
+      },
+      {
+        question: "¿Es segura la inversión inmobiliaria fraccionada en España?",
+        answer: "El sector está en crecimiento y la regulación avanza con MiCA y la normativa europea de crowdfunding (Reglamento UE 2020/1503). Busca plataformas registradas en la CNMV o reguladas por organismos europeos equivalentes. Los riesgos incluyen iliquidez (no puedes vender de inmediato), riesgo del inmueble y riesgo de la plataforma. Diversifica entre varias propiedades y plataformas.",
+      },
+      {
+        question: "¿Cuáles son las mejores plataformas de inversión inmobiliaria fraccionada en España?",
+        answer: "Entre las más conocidas para inversores españoles están Brickstarter (enfocada en alquiler vacacional en España), Reinvest24 (inmuebles europeos con alquileres), Housers (pionera en España aunque con historial mixto) y Urbanitae (proyectos de desarrollo inmobiliario). Compara comisiones, historial de pagos y la calidad del equipo gestor antes de invertir.",
+      },
+      {
+        question: "¿Hay que pagar impuestos por los rendimientos de la inversión inmobiliaria fraccionada?",
+        answer: "Sí. Los rendimientos de alquiler tributan como rendimientos del capital mobiliario en el IRPF (19-23%). Las ganancias por venta o revalorización se declaran como ganancias patrimoniales a los mismos tipos. Dependiendo de la estructura legal de la plataforma, algunos rendimientos pueden tributar de forma diferente. Consulta con un asesor fiscal para optimizar tu declaración.",
+      },
+    ],
   },
   {
     slug: "metodo-kakebo-ahorrar-dinero",
@@ -3875,10 +4099,33 @@ Compra un cuaderno hoy. Tu versión futura con más dinero en el banco te lo agr
     category: "Ahorro",
     tags: ["método kakebo", "ahorro", "presupuesto", "gastos", "finanzas personales", "hábitos financieros"],
     author: "María López",
+    faqs: [
+      {
+        question: "¿Qué es el método Kakebo y de dónde viene?",
+        answer: "Kakebo (家計簿) es un sistema de registro contable doméstico japonés inventado en 1904 por la periodista Motoko Hani. Significa literalmente 'libro de cuentas del hogar'. Su filosofía combina el registro minucioso de ingresos y gastos con la reflexión personal sobre los hábitos de consumo, buscando no solo ahorrar dinero sino mejorar la relación con él.",
+      },
+      {
+        question: "¿Cuánto se ahorra realmente con el método Kakebo?",
+        answer: "Estudios sobre el método señalan que las personas que lo practican de forma constante ahorran entre un 25% y un 35% más que antes de usarlo. El simple hecho de registrar cada gasto a mano genera conciencia y reduce el consumo impulsivo. Los primeros resultados suelen verse en el primer o segundo mes de práctica.",
+      },
+      {
+        question: "¿Necesito comprar un libro físico Kakebo para seguir el método?",
+        answer: "No es necesario. Puedes replicar el sistema con un cuaderno en blanco, hojas de cálculo en Excel o Google Sheets, o apps basadas en Kakebo como 'Kakebo - Budget & Save' o simplemente adaptando cualquier app de control de gastos. Sin embargo, muchos practicantes defienden que escribir a mano potencia el efecto reflexivo del método.",
+      },
+      {
+        question: "¿En qué se diferencia Kakebo de otras técnicas de presupuesto?",
+        answer: "A diferencia de métodos como el 50/30/20 (que asigna porcentajes por categoría) o el sobre físico, Kakebo pone el énfasis en el registro diario y la reflexión semanal/mensual. Al final de cada mes, el Kakebo te hace responder cuatro preguntas: ¿Cuánto dinero tengo? ¿Cuánto gasto? ¿Cuánto quiero ahorrar? ¿Cómo puedo mejorar? Este componente reflexivo es lo que lo distingue.",
+      },
+      {
+        question: "¿Funciona el método Kakebo para familias con ingresos variables?",
+        answer: "Sí, especialmente bien. El Kakebo te obliga a planificar con lo que tienes cada mes, no con un ingreso teórico. Para ingresos variables, la clave es establecer un 'presupuesto de mínimos' basado en el mes con menos ingresos y tratar cualquier ingreso adicional como ahorro o fondo de seguridad, no como dinero extra para gastar.",
+      },
+    ],
   },
   {
     slug: "ciberseguridad-financiera-proteger-dinero",
     title: "Ciberseguridad Financiera: 10 Formas en que los Hackers Roban tu Dinero (y Cómo Protegerte)",
+    seoTitle: "Ciberseguridad financiera: protege tu dinero online",
     description:
       "Los fraudes financieros digitales crecieron un 40% en 2025. Aprende a proteger tus cuentas bancarias, tarjetas y apps de inversión con esta guía completa de ciberseguridad financiera.",
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&h=630&fit=crop",
@@ -4035,6 +4282,28 @@ No esperes a ser víctima para actuar. Dedica hoy 30 minutos a revisar tu seguri
     category: "Planificación",
     tags: ["ciberseguridad", "fraude financiero", "protección", "banca digital", "seguridad online"],
     author: "Alejandro Torres",
+    faqs: [
+      {
+        question: "¿Cuáles son las estafas financieras online más comunes en España?",
+        answer: "Las más frecuentes son: el phishing (emails o SMS falsos que simulan ser tu banco), el smishing (SMS con enlaces maliciosos), el vishing (llamadas fraudulentas de supuestos agentes bancarios), las inversiones fraudulentas con rentabilidades garantizadas y el robo de identidad para solicitar créditos. El Banco de España y la OCU publican alertas periódicas sobre nuevas modalidades.",
+      },
+      {
+        question: "¿Cómo sé si un email de mi banco es legítimo o es phishing?",
+        answer: "Tu banco nunca te pedirá contraseñas, PINs completos ni credenciales por email. Verifica siempre el dominio del remitente (no solo el nombre visible), busca errores ortográficos y descónfía de los mensajes urgentes que te presionan a actuar de inmediato. Ante la duda, entra directamente en la web oficial del banco escribiendo la URL tú mismo, nunca pinchando en el enlace del email.",
+      },
+      {
+        question: "¿Qué debo hacer si creo que me han hackeado la cuenta bancaria?",
+        answer: "Actúa de inmediato: 1) Llama a tu banco para bloquear la cuenta, 2) Cambia las contraseñas de tu banca online desde un dispositivo seguro, 3) Denuncia ante la Policía Nacional o Guardia Civil, 4) Interpón una reclamación ante el banco (si hubo negligencia del banco, están obligados a devolverte el dinero según la Directiva PSD2), 5) Notifica al INCIBE (017).",
+      },
+      {
+        question: "¿Es seguro hacer transferencias bancarias por el móvil?",
+        answer: "Sí, si tomas precauciones: usa solo la app oficial del banco (descargada de la tienda oficial), conectado a tu red WiFi propia (nunca en WiFi pública), con el teléfono actualizado y con antivirus. Las apps bancarias usan cifrado de nivel bancario. El riesgo real no está en la tecnología sino en el engaño social (que te convenzan de hacer una transferencia tú mismo).",
+      },
+      {
+        question: "¿Cómo protejo mis cuentas bancarias online de los hackers?",
+        answer: "Usa contraseñas únicas y fuertes para cada banco (un gestor de contraseñas como Bitwarden te ayuda), activa siempre la autenticación en dos pasos (2FA), no uses la misma contraseña del email y del banco, revisa regularmente tus movimientos, activa alertas por SMS o email para cada transacción y nunca accedas a tu banca desde ordenadores públicos.",
+      },
+    ],
   },
   {
     slug: "finanzas-parejas-dinero-sin-peleas",
@@ -4210,6 +4479,28 @@ Tengan esa primera conversación financiera hoy. No tiene que ser perfecta, solo
     category: "Planificación",
     tags: ["finanzas en pareja", "presupuesto familiar", "dinero y relaciones", "planificación financiera", "ahorro en pareja"],
     author: "María López",
+    faqs: [
+      {
+        question: "¿Es mejor tener cuentas conjuntas o separadas en pareja?",
+        answer: "No hay una respuesta única: depende de la situación de cada pareja. El modelo híbrido más popular es mantener cuentas personales para gastos individuales más una cuenta conjunta para gastos compartidos (alquiler, supermercado, ocio en pareja). Esto preserva la autonomía de cada uno mientras facilita la gestión de los gastos comunes.",
+      },
+      {
+        question: "¿Cómo hablar de dinero en pareja sin que acabe en discusión?",
+        answer: "Establece una 'reunión financiera mensual' en un momento tranquilo, sin estrés. Habla de datos objetivos (gastos, ahorros, objetivos) en lugar de comportamientos ('tú siempre gastas demasiado'). Alinea primero los objetivos comunes a largo plazo antes de debatir los gastos cotidianos. El dinero es el tema de discusión número uno en las parejas, pero con comunicación regular pierde esa carga emocional.",
+      },
+      {
+        question: "¿Qué pasa con las finanzas si la pareja tiene ingresos muy diferentes?",
+        answer: "Hay dos enfoques principales: contribución igualitaria (cada uno aporta el 50% independientemente de los ingresos, con más dinero libre para el que gana más) o contribución proporcional (cada uno aporta un porcentaje igual de sus ingresos a los gastos comunes, considerado más justo). La clave es que ambos se sientan cómodos y el acuerdo sea explícito y revisable.",
+      },
+      {
+        question: "¿Debo unir completamente mis finanzas con mi pareja?",
+        answer: "Los expertos financieros recomiendan que cada persona mantenga siempre cierta independencia económica: cuenta propia, historial crediticio propio y un fondo de emergencia personal. La dependencia financiera total es un factor de riesgo tanto económico como de bienestar. Una economía compartida no implica necesariamente eliminar toda autonomía individual.",
+      },
+      {
+        question: "¿Qué documentos financieros debería revisar con mi pareja antes de convivir?",
+        answer: "Antes de dar el paso de convivir o casarse, es recomendable hablar sobre: deudas existentes de cada uno, nivel de ahorros y fondo de emergencia, filosofía de gasto e inversión, objetivos financieros a medio plazo (comprar casa, tener hijos, viajes) y la actitud de cada uno ante el riesgo. Estas conversaciones son incómodas pero evitan muchas sorpresas desagradables.",
+      },
+    ],
   },
   {
     slug: "roboadvisors-guia-completa-inversion-automatizada",
@@ -4349,10 +4640,33 @@ Tu futuro financiero no depende de cuánto sabes de inversiones. Depende de cuá
     category: "Inversiones",
     tags: ["roboadvisors", "inversión automatizada", "fondos indexados", "inversión principiantes", "fintech"],
     author: "Carlos Sánchez",
+    faqs: [
+      {
+        question: "¿Qué es un roboadvisor y cómo funciona?",
+        answer: "Un roboadvisor es una plataforma de inversión automatizada que usa algoritmos para crear y gestionar carteras de fondos indexados según tu perfil de riesgo y objetivos. Tras responder un cuestionario, el sistema asigna tu dinero a una cartera diversificada globalmente y la rebalancea automáticamente cuando se desvía de los porcentajes objetivo.",
+      },
+      {
+        question: "¿Cuáles son los mejores roboadvisors en España en 2026?",
+        answer: "Los principales en España son: Indexa Capital (el mayor y más consolidado, desde 3.000€), Finizens (buena interfaz, desde 1.000€), MyInvestor Cartera (sin mínimo de inversión, del grupo Andbank), Inbestme (más opciones de personalización) y Openbank Inversión Inteligente (del Grupo Santander). Compara las comisiones totales (TER + comisión de gestión) antes de decidir.",
+      },
+      {
+        question: "¿Cuánto cobran los roboadvisors en comisiones?",
+        answer: "Las comisiones totales de los roboadvisors suelen estar entre el 0,4% y el 0,7% anual sobre el patrimonio gestionado (comisión del roboadvisor más TER de los fondos). Esto es significativamente menor que los fondos de inversión activos tradicionales, que cobran entre el 1,5% y el 2,5%. En una inversión de 50.000€ a 20 años, esa diferencia puede suponer más de 30.000€.",
+      },
+      {
+        question: "¿Es seguro invertir con un roboadvisor?",
+        answer: "Los roboadvisors regulados en España están supervisados por la CNMV y los fondos están segregados del patrimonio del gestor (si la empresa quiebra, tus fondos están protegidos). No están cubiertos por el Fondo de Garantía de Depósitos, pero sí por el Fondo de Garantía de Inversiones (FOGAIN) hasta 100.000€ en caso de insolvencia del intermediario.",
+      },
+      {
+        question: "¿Para quién es recomendable un roboadvisor?",
+        answer: "Son ideales para inversores que quieren delegar la gestión sin pagar las altas comisiones de los fondos activos, principiantes que no saben cómo construir una cartera diversificada, personas con poco tiempo para gestionar sus inversiones activamente y ahorradores que quieren automatizar sus aportaciones mensuales. No son la mejor opción si quieres control total sobre cada activo de tu cartera.",
+      },
+    ],
   },
   {
     slug: "mejores-fondos-monetarios-espana",
     title: "Mejores fondos monetarios en España 2026: guía completa para el ahorrador",
+    seoTitle: "Mejores fondos monetarios en España 2026",
     description:
       "Descubre qué son los fondos monetarios, cómo funcionan, cuáles son los mejores disponibles en España en 2026 y si son mejor opción que los depósitos bancarios.",
     image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=1200&h=630&fit=crop",
@@ -4532,6 +4846,7 @@ No te van a hacer rico. Pero sí van a hacer que tu dinero no pierda valor frent
   {
     slug: "alquilar-vs-comprar-vivienda-espana",
     title: "Alquilar o comprar vivienda en España 2026: análisis financiero completo",
+    seoTitle: "Alquilar o comprar vivienda en España 2026",
     description:
       "¿Comprar o alquilar en España en 2026? Analizamos los números reales, la rentabilidad de cada opción, el coste de oportunidad y cuándo compensa cada alternativa según tu situación.",
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=630&fit=crop",
@@ -5096,6 +5411,7 @@ El único requisito es empezar. Hoy, no mañana.
   {
     slug: "tipos-de-inflacion-guia-completa",
     title: "Tipos de inflación: qué son, cómo se diferencian y cómo afectan tu dinero en 2026",
+    seoTitle: "Tipos de inflación: guía completa 2026",
     description:
       "Descubre los 5 tipos de inflación con ejemplos reales de España: demanda, costes, estanflación y más. Guía completa para entender qué mueve los precios.",
     image: "https://images.unsplash.com/photo-1604594849809-dfedbc827105?w=1200&h=630&fit=crop",
@@ -5245,6 +5561,7 @@ Lo que sí es universal: el dinero parado en cuenta corriente pierde valor con c
   {
     slug: "causas-consecuencias-inflacion-espana",
     title: "10 causas de la inflación en España y sus consecuencias reales en tu economía",
+    seoTitle: "10 causas de la inflación en España 2026",
     description:
       "España cerró 2025 con la inflación más alta de la UE. Analizamos las 10 causas reales y cómo afectan a tu hipoteca, ahorro y poder adquisitivo.",
     image: "https://images.unsplash.com/photo-1618044619888-009e412ff12a?w=1200&h=630&fit=crop",
@@ -5400,6 +5717,7 @@ Lo que no puedes hacer es ignorarla. El dinero parado pierde valor de forma sile
   {
     slug: "como-controla-bce-inflacion-espana",
     title: "Cómo controla el BCE la inflación: tipos de interés y qué significa para tu hipoteca y ahorro",
+    seoTitle: "El BCE y la inflación: impacto en hipoteca y ahorro 2026",
     description:
       "El BCE bajó tipos al 2,5% en 2025. Descubre cómo la política monetaria afecta tu hipoteca, depósitos e inversiones, explicado sin tecnicismos.",
     image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&h=630&fit=crop",
@@ -5556,6 +5874,7 @@ Las decisiones del BCE son técnicas y se toman en Fráncfort, pero sus efectos 
   {
     slug: "estrategias-inversion-batir-inflacion",
     title: "Cómo batir la inflación invirtiendo: la clave de toda estrategia financiera en 2026",
+    seoTitle: "Cómo batir la inflación invirtiendo en 2026",
     description:
       "Con la inflación al 2,7%, el dinero parado pierde valor. Descubre qué inversiones superan la inflación y cómo construir tu cartera anti-inflación.",
     image: "https://images.unsplash.com/photo-1535320903710-d993d3d77d29?w=1200&h=630&fit=crop",
