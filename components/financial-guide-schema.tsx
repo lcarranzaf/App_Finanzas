@@ -14,7 +14,7 @@ export function FinancialGuideSchema({ post }: { post: any }) {
     },
     publisher: {
       "@type": "Organization",
-      name: "FinanzasPro",
+      name: "Finanzas Digitales",
       logo: {
         "@type": "ImageObject",
         url: "https://www.finanzasdigitales.es/logo.png",

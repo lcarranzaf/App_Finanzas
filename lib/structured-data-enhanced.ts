@@ -94,7 +94,7 @@ export const generateStructuredData = (article: {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'FinanzasPro',
+    name: 'Finanzas Digitales',
     url: baseUrl,
     description: 'La guía más completa de finanzas personales en España 2025',
     potentialAction: {
@@ -105,7 +105,7 @@ export const generateStructuredData = (article: {
     mainEntity: articleSchema,
     publisher: {
       '@type': 'Organization',
-      name: 'FinanzasPro',
+      name: 'Finanzas Digitales',
       url: baseUrl,
       logo: {
         '@type': 'ImageObject',
@@ -140,7 +140,7 @@ export const generateStructuredData = (article: {
     embedUrl: `${baseUrl}/embed/${article.slug}`,
     publisher: {
       '@type': 'Organization',
-      name: 'FinanzasPro',
+      name: 'Finanzas Digitales',
       logo: {
         '@type': 'ImageObject',
         url: `${baseUrl}/logo.png`
@@ -274,12 +274,12 @@ export const generateMetaTags = (article: {
     title: enhancedTitle,
     description: article.description,
     keywords: article.tags.join(', '),
-    author: 'FinanzasPro',
+    author: 'Finanzas Digitales',
     openGraph: {
       title: enhancedTitle,
       description: article.description,
       url,
-      siteName: 'FinanzasPro',
+      siteName: 'Finanzas Digitales',
       images: [
         {
           url: article.image,

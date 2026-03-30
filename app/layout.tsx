@@ -22,8 +22,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.finanzasdigitales.es"),
   title: {
-    default: "FinanzasPro - Tu Guía para el Éxito Financiero",
-    template: "%s | FinanzasPro",
+    default: "Finanzas Digitales - Tu Guía para el Éxito Financiero",
+    template: "%s | Finanzas Digitales",
   },
   description:
     "Aprende a ahorrar, invertir y gestionar tu dinero. Guías prácticas sobre fondos indexados, presupuestos, ETFs y libertad financiera en español.",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     "ETF",
     "bolsa de valores",
   ],
-  authors: [{ name: "FinanzasPro", url: "https://www.finanzasdigitales.es" }],
-  creator: "FinanzasPro",
-  publisher: "FinanzasPro",
+  authors: [{ name: "Finanzas Digitales", url: "https://www.finanzasdigitales.es" }],
+  creator: "Finanzas Digitales",
+  publisher: "Finanzas Digitales",
   robots: {
     index: true,
     follow: true,
@@ -57,22 +57,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     url: "https://www.finanzasdigitales.es",
-    title: "FinanzasPro - Tu Guía para el Éxito Financiero",
+    title: "Finanzas Digitales - Tu Guía para el Éxito Financiero",
     description:
       "Aprende a ahorrar, invertir y construir un futuro próspero con nuestros consejos expertos en finanzas personales.",
-    siteName: "FinanzasPro",
+    siteName: "Finanzas Digitales",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "FinanzasPro - Finanzas Personales",
+        alt: "Finanzas Digitales - Finanzas Personales",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FinanzasPro - Tu Guía para el Éxito Financiero",
+    title: "Finanzas Digitales - Tu Guía para el Éxito Financiero",
     description:
       "Aprende a ahorrar, invertir y construir un futuro próspero con nuestros consejos expertos en finanzas personales.",
     images: ["/og-image.jpg"],

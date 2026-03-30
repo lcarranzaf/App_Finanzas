@@ -57,7 +57,7 @@ export default function HomePage() {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Artículos más leídos de FinanzasPro",
+    name: "Artículos más leídos de Finanzas Digitales",
     numberOfItems: 4,
     itemListElement: [
       { "@type": "ListItem", position: 1, url: "https://www.finanzasdigitales.es/blog/interes-compuesto-como-funciona", name: "Interés compuesto: cómo funciona y cómo te hace rico" },
@@ -250,7 +250,7 @@ export default function HomePage() {
                   su futuro financiero durante años.
                 </p>
                 <p className="text-muted-foreground leading-7 mt-4">
-                  En FinanzasPro, creemos que todos merecen acceso a educación financiera de calidad, sin importar su nivel de ingresos
+                  En Finanzas Digitales, creemos que todos merecen acceso a educación financiera de calidad, sin importar su nivel de ingresos
                   o conocimientos previos. Nuestro objetivo es simplificar conceptos complejos y proporcionar estrategias prácticas que
                   cualquier persona pueda implementar inmediatamente.
                 </p>

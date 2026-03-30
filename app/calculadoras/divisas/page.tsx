@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     canonical: "https://www.finanzasdigitales.es/calculadoras/divisas",
   },
   openGraph: {
-    title: "Convertidor de Divisas Gratis — Euro, Dólar y 20+ monedas | FinanzasPro",
+    title: "Convertidor de Divisas Gratis — Euro, Dólar y 20+ monedas | Finanzas Digitales",
     description: "Tipos de cambio en tiempo real para más de 20 monedas. Perfecto para viajes, negocios e inversiones.",
     url: "https://www.finanzasdigitales.es/calculadoras/divisas",
     type: "website",

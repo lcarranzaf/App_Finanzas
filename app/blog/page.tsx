@@ -70,14 +70,14 @@ export default function BlogPage({ searchParams }: Props) {
     "@context": "https://schema.org",
     "@type": "Blog",
     "@id": `${BASE_BLOG_URL}#blog`,
-    name: "Blog de FinanzasPro",
+    name: "Blog de Finanzas Digitales",
     description: "Artículos sobre ahorro, inversiones y educación financiera en español.",
     url: BASE_BLOG_URL,
     inLanguage: "es",
     publisher: {
       "@type": "Organization",
       "@id": "https://www.finanzasdigitales.es/#organization",
-      name: "FinanzasPro",
+      name: "Finanzas Digitales",
     },
   }
   const categories = Array.from(new Set(allPosts.map((p) => p.category)))

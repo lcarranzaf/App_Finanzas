@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     canonical: "https://www.finanzasdigitales.es/calculadoras/meta-ahorro",
   },
   openGraph: {
-    title: "Calculadora de Meta de Ahorro — FinanzasPro",
+    title: "Calculadora de Meta de Ahorro — Finanzas Digitales",
     description: "Descubre cuánto necesitas ahorrar cada mes para alcanzar tu objetivo financiero.",
     url: "https://www.finanzasdigitales.es/calculadoras/meta-ahorro",
     type: "website",

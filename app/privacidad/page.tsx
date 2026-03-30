@@ -2,8 +2,8 @@
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad | FinanzasPro",
-  description: "Política de privacidad de FinanzasPro. Cómo protegemos tus datos personales.",
+  title: "Política de Privacidad | Finanzas Digitales",
+  description: "Política de privacidad de Finanzas Digitales. Cómo protegemos tus datos personales.",
   robots: { index: false, follow: true },
   alternates: {
     canonical: "https://www.finanzasdigitales.es/privacidad",
@@ -26,7 +26,7 @@ export default function PrivacyPage() {
         <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground prose-a:text-primary hover:prose-a:underline">
           <h2>1. Introducción</h2>
           <p>
-            En FinanzasPro (en adelante &quot;nosotros&quot; o &quot;el sitio&quot;), respetamos la privacidad de nuestros usuarios.
+            En Finanzas Digitales (en adelante &quot;nosotros&quot; o &quot;el sitio&quot;), respetamos la privacidad de nuestros usuarios.
             Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos tu información
             cuando visitas nuestro sitio web.
           </p>

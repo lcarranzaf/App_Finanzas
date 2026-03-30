@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Artículos expertos sobre ahorro, inversión, ETFs y libertad financiera en español. Guías prácticas para mejorar tu situación financiera.",
   openGraph: {
     url: "https://www.finanzasdigitales.es/blog",
-    title: "Blog de Finanzas Personales | FinanzasPro",
+    title: "Blog de Finanzas Personales | Finanzas Digitales",
     description:
       "Artículos expertos sobre ahorro, inversión, ETFs y libertad financiera en español.",
   },

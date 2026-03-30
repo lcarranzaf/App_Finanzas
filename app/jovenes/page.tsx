@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "https://www.finanzasdigitales.es/jovenes",
     type: "website",
     locale: "es_ES",
-    siteName: "FinanzasPro",
+    siteName: "Finanzas Digitales",
   },
 }
 
@@ -31,7 +31,7 @@ export default function JovenesPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": "https://www.finanzasdigitales.es/jovenes",
-    name: "Finanzas para Jóvenes - FinanzasPro",
+    name: "Finanzas para Jóvenes - Finanzas Digitales",
     description:
       "Guía financiera completa para jóvenes, estudiantes y recién graduados.",
     url: "https://www.finanzasdigitales.es/jovenes",

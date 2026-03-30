@@ -25,7 +25,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="text-2xl font-bold text-primary">FinanzasPro</span>
+            <span className="text-2xl font-bold text-primary">Finanzas Digitales</span>
           </Link>
         </div>
 
@@ -71,7 +71,7 @@ export default function Navbar() {
           <div className="absolute right-0 top-0 h-full w-72 max-w-full bg-background px-6 py-6 shadow-xl ring-1 ring-border">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
-                <span className="text-2xl font-bold text-primary">FinanzasPro</span>
+                <span className="text-2xl font-bold text-primary">Finanzas Digitales</span>
               </Link>
               <Button
                 variant="ghost"

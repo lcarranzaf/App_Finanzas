@@ -41,7 +41,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           },
           "publisher": {
             "@type": "Organization",
-            "name": "FinanzasPro",
+            "name": "Finanzas Digitales",
             "url": "https://www.finanzasdigitales.es"
           },
           "datePublished": post.publishedAt,

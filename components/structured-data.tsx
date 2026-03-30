@@ -35,7 +35,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "@id": `${BASE_URL}/#website`,
-        name: "FinanzasPro",
+        name: "Finanzas Digitales",
         description:
           "Tu guía confiable para el éxito financiero. Aprende a ahorrar, invertir y construir un futuro próspero.",
         url: BASE_URL,
@@ -53,7 +53,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         "@context": "https://schema.org",
         "@type": "Organization",
         "@id": ORG_ID,
-        name: "FinanzasPro",
+        name: "Finanzas Digitales",
         description:
           "Plataforma educativa especializada en finanzas personales, inversiones y estrategias de ahorro.",
         url: BASE_URL,
@@ -63,7 +63,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           url: `${BASE_URL}/logo-square.svg`,
           width: 512,
           height: 512,
-          caption: "FinanzasPro",
+          caption: "Finanzas Digitales",
         },
         foundingDate: "2022-01-01",
         knowsAbout: [
@@ -118,7 +118,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
               } : {
                 "@type": "Organization",
                 "@id": ORG_ID,
-                name: "FinanzasPro",
+                name: "Finanzas Digitales",
               }
             })(),
             publisher: { "@id": ORG_ID },

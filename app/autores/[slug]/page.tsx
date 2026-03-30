@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: AuthorPageProps): Promise<Met
       canonical: `https://www.finanzasdigitales.es/autores/${author.slug}`,
     },
     openGraph: {
-      title: `${author.name} | FinanzasPro`,
+      title: `${author.name} | Finanzas Digitales`,
       description: author.bio,
       url: `https://www.finanzasdigitales.es/autores/${author.slug}`,
     },
@@ -51,7 +51,7 @@ export default function AuthorPage({ params }: AuthorPageProps) {
     worksFor: {
       "@type": "Organization",
       "@id": "https://www.finanzasdigitales.es/#organization",
-      name: "FinanzasPro",
+      name: "Finanzas Digitales",
     },
     knowsAbout: author.expertise,
   }
@@ -76,7 +76,7 @@ export default function AuthorPage({ params }: AuthorPageProps) {
             </div>
             <div className="flex-1">
               <h1 className="text-3xl font-bold text-foreground">
-                {author.slug === "equipo-finanzaspro" ? "Equipo Editorial FinanzasPro" : author.name}
+                {author.slug === "equipo-finanzaspro" ? "Equipo Editorial Finanzas Digitales" : author.name}
               </h1>
               <p className="mt-1 text-lg text-primary font-medium">{author.role}</p>
               {author.credentials && (
@@ -141,7 +141,7 @@ export default function AuthorPage({ params }: AuthorPageProps) {
 
           <div className="mt-12 pt-8 border-t border-border">
             <Link href="/sobre-nosotros" className="text-primary hover:underline">
-              ← Sobre FinanzasPro
+              ← Sobre Finanzas Digitales
             </Link>
           </div>
         </div>

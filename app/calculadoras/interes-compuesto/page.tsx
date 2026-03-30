@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     canonical: "https://www.finanzasdigitales.es/calculadoras/interes-compuesto",
   },
   openGraph: {
-    title: "Calculadora de Interés Compuesto Gratis — FinanzasPro",
+    title: "Calculadora de Interés Compuesto Gratis — Finanzas Digitales",
     description:
       "Simula cómo crece tu dinero con el interés compuesto. Aportes mensuales, tasas personalizadas y plazos hasta 40 años.",
     url: "https://www.finanzasdigitales.es/calculadoras/interes-compuesto",

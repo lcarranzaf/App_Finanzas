@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     canonical: "https://www.finanzasdigitales.es/calculadoras",
   },
   openGraph: {
-    title: "Calculadoras Financieras Gratuitas — FinanzasPro",
+    title: "Calculadoras Financieras Gratuitas — Finanzas Digitales",
     description: "4 herramientas interactivas para simular inversiones, planificar ahorro, liquidar deudas y convertir divisas. Sin registro.",
     url: "https://www.finanzasdigitales.es/calculadoras",
     type: "website",

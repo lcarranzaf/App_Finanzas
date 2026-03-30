@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="space-y-8">
             <div>
               <Link href="/" className="text-2xl font-bold text-primary">
-                FinanzasPro
+                Finanzas Digitales
               </Link>
               <p className="mt-4 text-sm leading-6 text-muted-foreground">
                 Tu guía confiable para el éxito financiero. Aprende a ahorrar, invertir y construir un futuro próspero.
@@ -68,7 +68,7 @@ export default function Footer() {
         </div>
         <div className="mt-16 border-t border-border pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-muted-foreground">
-            &copy; 2026 FinanzasPro. Todos los derechos reservados. La información proporcionada es solo para fines
+            &copy; 2026 Finanzas Digitales. Todos los derechos reservados. La información proporcionada es solo para fines
             educativos.
           </p>
         </div>

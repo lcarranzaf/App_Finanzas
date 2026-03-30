@@ -2,8 +2,8 @@
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Términos y Condiciones | FinanzasPro",
-  description: "Términos y condiciones de uso de FinanzasPro. Información sobre el uso del sitio y sus contenidos.",
+  title: "Términos y Condiciones | Finanzas Digitales",
+  description: "Términos y condiciones de uso de Finanzas Digitales. Información sobre el uso del sitio y sus contenidos.",
   robots: { index: false, follow: true },
   alternates: {
     canonical: "https://www.finanzasdigitales.es/terminos",
@@ -26,13 +26,13 @@ export default function TerminosPage() {
         <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground prose-a:text-primary hover:prose-a:underline">
           <h2>1. Aceptación de los términos</h2>
           <p>
-            Al acceder y utilizar FinanzasPro (en adelante &quot;el sitio&quot;), aceptas quedar vinculado por estos
+            Al acceder y utilizar Finanzas Digitales (en adelante &quot;el sitio&quot;), aceptas quedar vinculado por estos
             Términos y Condiciones. Si no estás de acuerdo con alguno de ellos, te pedimos que no uses el sitio.
           </p>
 
           <h2>2. Uso del sitio</h2>
           <p>
-            FinanzasPro es una plataforma educativa de finanzas personales. Puedes usar el sitio para:
+            Finanzas Digitales es una plataforma educativa de finanzas personales. Puedes usar el sitio para:
           </p>
           <ul>
             <li>Leer artículos y guías de educación financiera</li>
@@ -49,12 +49,12 @@ export default function TerminosPage() {
 
           <h2>3. Descargo de responsabilidad financiera</h2>
           <p>
-            El contenido de FinanzasPro tiene <strong>carácter exclusivamente educativo e informativo</strong>.
+            El contenido de Finanzas Digitales tiene <strong>carácter exclusivamente educativo e informativo</strong>.
             La información publicada no constituye asesoramiento financiero, de inversión, fiscal o legal.
           </p>
           <p>
             Antes de tomar cualquier decisión financiera, te recomendamos consultar con un asesor financiero
-            profesional debidamente registrado y certificado. FinanzasPro no se hace responsable de las
+            profesional debidamente registrado y certificado. Finanzas Digitales no se hace responsable de las
             decisiones financieras tomadas por los usuarios en base a la información publicada en el sitio.
           </p>
           <p>
@@ -64,8 +64,8 @@ export default function TerminosPage() {
 
           <h2>4. Propiedad intelectual</h2>
           <p>
-            Todo el contenido publicado en FinanzasPro, incluyendo textos, imágenes, gráficos, logotipos y
-            herramientas, es propiedad de FinanzasPro o sus respectivos titulares, y está protegido por las
+            Todo el contenido publicado en Finanzas Digitales, incluyendo textos, imágenes, gráficos, logotipos y
+            herramientas, es propiedad de Finanzas Digitales o sus respectivos titulares, y está protegido por las
             leyes de propiedad intelectual aplicables.
           </p>
           <p>
@@ -75,7 +75,7 @@ export default function TerminosPage() {
 
           <h2>5. Contenido de terceros y enlaces externos</h2>
           <p>
-            El sitio puede contener enlaces a sitios web de terceros. FinanzasPro no controla ni es responsable
+            El sitio puede contener enlaces a sitios web de terceros. Finanzas Digitales no controla ni es responsable
             del contenido, políticas de privacidad o prácticas de dichos sitios. Los enlaces se proporcionan
             únicamente para conveniencia del usuario.
           </p>
@@ -87,7 +87,7 @@ export default function TerminosPage() {
 
           <h2>6. Publicidad</h2>
           <p>
-            FinanzasPro utiliza Google AdSense para mostrar anuncios publicitarios. Estos anuncios son
+            Finanzas Digitales utiliza Google AdSense para mostrar anuncios publicitarios. Estos anuncios son
             gestionados por Google y pueden ser relevantes a tus intereses según tu historial de navegación.
             Para más información, consulta la{" "}
             <Link href="/privacidad" className="text-primary hover:underline">
@@ -98,14 +98,14 @@ export default function TerminosPage() {
 
           <h2>7. Disponibilidad del servicio</h2>
           <p>
-            FinanzasPro no garantiza que el sitio esté disponible de forma ininterrumpida o libre de errores.
+            Finanzas Digitales no garantiza que el sitio esté disponible de forma ininterrumpida o libre de errores.
             Nos reservamos el derecho de suspender, modificar o discontinuar el sitio o cualquiera de sus
             funciones en cualquier momento, con o sin previo aviso.
           </p>
 
           <h2>8. Limitación de responsabilidad</h2>
           <p>
-            En la máxima medida permitida por la ley aplicable, FinanzasPro no será responsable de ningún
+            En la máxima medida permitida por la ley aplicable, Finanzas Digitales no será responsable de ningún
             daño directo, indirecto, incidental, especial o consecuente que resulte del uso o la imposibilidad
             de uso del sitio o su contenido.
           </p>

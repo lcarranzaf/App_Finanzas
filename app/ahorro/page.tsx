@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "https://www.finanzasdigitales.es/ahorro",
     type: "website",
     locale: "es_ES",
-    siteName: "FinanzasPro",
+    siteName: "Finanzas Digitales",
   },
 }
 
@@ -31,7 +31,7 @@ export default function AhorroPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": "https://www.finanzasdigitales.es/ahorro",
-    name: "Estrategias de Ahorro - FinanzasPro",
+    name: "Estrategias de Ahorro - Finanzas Digitales",
     description:
       "Descubre cómo ahorrar dinero con el método 50/30/20, ahorro automático y el reto 52 semanas.",
     url: "https://www.finanzasdigitales.es/ahorro",

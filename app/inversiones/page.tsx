@@ -25,12 +25,12 @@ export const metadata: Metadata = {
     canonical: "https://www.finanzasdigitales.es/inversiones",
   },
   openGraph: {
-    title: "Guía de Inversiones para Principiantes — FinanzasPro",
+    title: "Guía de Inversiones para Principiantes — Finanzas Digitales",
     description: "Compara fondos indexados, ETFs, acciones y bonos. Estrategias de inversión adaptadas al mercado español y europeo.",
     url: "https://www.finanzasdigitales.es/inversiones",
     type: "website",
     locale: "es_ES",
-    siteName: "FinanzasPro",
+    siteName: "Finanzas Digitales",
   },
 }
 
@@ -39,7 +39,7 @@ export default function InversionesPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": "https://www.finanzasdigitales.es/inversiones",
-    name: "Guía de Inversiones para Principiantes - FinanzasPro",
+    name: "Guía de Inversiones para Principiantes - Finanzas Digitales",
     description:
       "Aprende a invertir desde cero: compara fondos indexados, ETFs, acciones y bonos. Estrategias para todos los perfiles de riesgo.",
     url: "https://www.finanzasdigitales.es/inversiones",

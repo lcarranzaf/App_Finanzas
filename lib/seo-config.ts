@@ -29,7 +29,7 @@ export const seoConfig = {
     "url": url,
     "provider": {
       "@type": "Organization",
-      "name": "FinanzasPro",
+      "name": "Finanzas Digitales",
       "url": "https://www.finanzasdigitales.es"
     },
     "serviceType": "Financial Planning Service",
@@ -101,7 +101,7 @@ export const seoConfig = {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "FinanzasPro",
+      "name": "Finanzas Digitales",
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.finanzasdigitales.es/og-image.jpg"

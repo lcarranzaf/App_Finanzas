@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const pageUrl = `${siteUrl}/curso/${slug}`
 
   return {
-    title: `${curso.title} | 100% Gratis en Udemy - FinanzasPro`,
+    title: `${curso.title} | 100% Gratis en Udemy - Finanzas Digitales`,
     description: curso.description,
     alternates: { canonical: pageUrl },
     openGraph: {
@@ -255,7 +255,7 @@ export default async function CursoPage({ params }: Props) {
 
         {/* ── BLOQUE FINANZASPRO ── */}
         <div className="mt-8 rounded-xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 p-6">
-          <h3 className="text-lg font-bold text-foreground mb-2">¿Por qué FinanzasPro?</h3>
+          <h3 className="text-lg font-bold text-foreground mb-2">¿Por qué Finanzas Digitales?</h3>
           <p className="text-sm text-muted-foreground mb-4 leading-6">
             Compartimos cupones de cursos gratuitos, guías de ahorro e inversión y herramientas
             para que tomes mejores decisiones con tu dinero. Todo el contenido es gratuito.

@@ -9,20 +9,20 @@ import { getAllAuthors } from "@/lib/authors-data"
 import StructuredData from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Sobre Nosotros - Quiénes Somos en FinanzasPro",
+  title: "Sobre Nosotros - Quiénes Somos en Finanzas Digitales",
   description:
-    "Conoce al equipo detrás de FinanzasPro. Nuestra misión es democratizar la educación financiera en español con guías prácticas, herramientas gratuitas y contenido confiable para alcanzar tu libertad financiera.",
-  keywords: ["sobre FinanzasPro", "educación financiera", "equipo", "misión", "finanzas personales en español"],
+    "Conoce al equipo detrás de Finanzas Digitales. Nuestra misión es democratizar la educación financiera en español con guías prácticas, herramientas gratuitas y contenido confiable para alcanzar tu libertad financiera.",
+  keywords: ["sobre Finanzas Digitales", "educación financiera", "equipo", "misión", "finanzas personales en español"],
   alternates: {
     canonical: "https://www.finanzasdigitales.es/sobre-nosotros",
   },
   openGraph: {
-    title: "Sobre Nosotros — Quiénes Somos en FinanzasPro",
-    description: "Conoce al equipo detrás de FinanzasPro. Nuestra misión es democratizar la educación financiera en español con guías prácticas y herramientas gratuitas.",
+    title: "Sobre Nosotros — Quiénes Somos en Finanzas Digitales",
+    description: "Conoce al equipo detrás de Finanzas Digitales. Nuestra misión es democratizar la educación financiera en español con guías prácticas y herramientas gratuitas.",
     url: "https://www.finanzasdigitales.es/sobre-nosotros",
     type: "website",
     locale: "es_ES",
-    siteName: "FinanzasPro",
+    siteName: "Finanzas Digitales",
   },
 }
 
@@ -32,9 +32,9 @@ export default function SobreNosotrosPage() {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "@id": "https://www.finanzasdigitales.es/sobre-nosotros",
-    name: "Sobre FinanzasPro",
+    name: "Sobre Finanzas Digitales",
     description:
-      "Conoce al equipo detrás de FinanzasPro. Nuestra misión es democratizar la educación financiera en español.",
+      "Conoce al equipo detrás de Finanzas Digitales. Nuestra misión es democratizar la educación financiera en español.",
     url: "https://www.finanzasdigitales.es/sobre-nosotros",
     inLanguage: "es",
     isPartOf: { "@id": "https://www.finanzasdigitales.es/#website" },
@@ -53,7 +53,7 @@ export default function SobreNosotrosPage() {
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
         {/* Header */}
         <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Sobre FinanzasPro</h1>
+          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Sobre Finanzas Digitales</h1>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
             Democratizando la educación financiera, una persona a la vez
           </p>
@@ -81,7 +81,7 @@ export default function SobreNosotrosPage() {
           <h2 className="text-3xl font-bold text-foreground text-center mb-8">Nuestra Historia</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground">
             <p>
-              FinanzasPro nació en 2022 de la frustración de ver cómo la falta de educación financiera afectaba a
+              Finanzas Digitales nació en 2022 de la frustración de ver cómo la falta de educación financiera afectaba a
               millones de personas. Como entusiastas de las finanzas personales, nos dimos cuenta de que la información
               existente era demasiado compleja, estaba dispersa o simplemente no era accesible para el público general.
             </p>
@@ -91,7 +91,7 @@ export default function SobreNosotrosPage() {
               persona pueda entenderlo y aplicarlo inmediatamente.
             </p>
             <p>
-              Hoy, más de 50,000 personas confían en FinanzasPro para tomar decisiones financieras informadas. Nuestros
+              Hoy, más de 50,000 personas confían en Finanzas Digitales para tomar decisiones financieras informadas. Nuestros
               lectores han ahorrado millones de euros en comisiones innecesarias, han construido fondos de emergencia
               sólidos y han comenzado su camino en la inversión con confianza.
             </p>
@@ -182,7 +182,7 @@ export default function SobreNosotrosPage() {
 
         {/* Stats */}
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-foreground text-center mb-8">FinanzasPro en números</h2>
+          <h2 className="text-3xl font-bold text-foreground text-center mb-8">Finanzas Digitales en números</h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-4">
             {[
               { value: "2022", label: "Año de fundación" },

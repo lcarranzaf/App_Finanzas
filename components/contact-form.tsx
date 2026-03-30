@@ -78,7 +78,7 @@ export default function ContactForm() {
           <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground">
             <h2 className="text-2xl font-bold text-foreground mb-4">¿Necesitas ayuda con tus finanzas personales?</h2>
             <p className="text-muted-foreground leading-7">
-              En FinanzasPro, estamos comprometidos a ayudarte en tu viaje hacia la libertad financiera. Recibimos cientos
+              En Finanzas Digitales, estamos comprometidos a ayudarte en tu viaje hacia la libertad financiera. Recibimos cientos
               de consultas cada mes y hacemos nuestro mejor esfuerzo para responder a todas. Aquí te explicamos cómo
               podemos ayudarte y qué esperar cuando nos contactas.
             </p>

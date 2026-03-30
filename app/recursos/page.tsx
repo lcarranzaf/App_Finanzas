@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "https://www.finanzasdigitales.es/recursos",
     type: "website",
     locale: "es_ES",
-    siteName: "FinanzasPro",
+    siteName: "Finanzas Digitales",
   },
 }
 
@@ -31,7 +31,7 @@ export default function RecursosPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": "https://www.finanzasdigitales.es/recursos",
-    name: "Recursos Financieros Recomendados - FinanzasPro",
+    name: "Recursos Financieros Recomendados - Finanzas Digitales",
     description:
       "Las mejores apps de presupuesto, brokers para invertir, bancos digitales y herramientas financieras gratuitas.",
     url: "https://www.finanzasdigitales.es/recursos",

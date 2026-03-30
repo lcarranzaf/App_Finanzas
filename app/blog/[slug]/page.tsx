@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     keywords: post.tags.join(", "),
     authors: [{ name: post.author, url: "https://www.finanzasdigitales.es" }],
     creator: post.author,
-    publisher: "FinanzasPro",
+    publisher: "Finanzas Digitales",
     robots: {
       index: true,
       follow: true,
@@ -70,7 +70,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
         },
       ],
       url: `https://www.finanzasdigitales.es/blog/${post.slug}`,
-      siteName: "FinanzasPro",
+      siteName: "Finanzas Digitales",
       type: "article",
       publishedTime: `${post.publishedAt}T00:00:00+00:00`,
       modifiedTime: `${post.publishedAt}T00:00:00+00:00`,

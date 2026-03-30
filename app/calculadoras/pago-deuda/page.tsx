@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     canonical: "https://www.finanzasdigitales.es/calculadoras/pago-deuda",
   },
   openGraph: {
-    title: "Calculadora de Pago de Deuda — FinanzasPro",
+    title: "Calculadora de Pago de Deuda — Finanzas Digitales",
     description: "Descubre cuándo estarás libre de deudas y cuánto puedes ahorrar pagando un poco más cada mes.",
     url: "https://www.finanzasdigitales.es/calculadoras/pago-deuda",
     type: "website",
