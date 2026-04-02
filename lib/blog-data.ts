@@ -713,151 +713,272 @@ Las criptomonedas no son un atajo para hacerte rico. Son una herramienta de inve
   {
     slug: "presupuesto-personal-completo",
     title: "Cómo crear un presupuesto personal completo: Paso a paso",
+    seoTitle: "Presupuesto personal: ejemplo mensual y plantilla gratis 2026",
     description:
-      "Aprende a crear un presupuesto detallado que te permita controlar tus gastos y alcanzar tus metas financieras. Ejemplos reales y plantillas descargables.",
+      "Crea tu presupuesto personal con ejemplos reales en euros, plantilla gratuita para Excel y Google Sheets, y calculadora de ahorro. Guía paso a paso adaptada a España 2026.",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=630&fit=crop",
     content: `
 # Cómo crear un presupuesto personal completo: Paso a paso
 
-Un presupuesto es el fundamento de cualquier plan financiero. Sin él, es como navegar sin brújula. En esta guía aprenderás a crear un presupuesto realista que se adapte a tu vida.
+Un presupuesto es el fundamento de cualquier plan financiero. Sin él, es como intentar llegar a un destino sin mapa. En esta guía aprenderás a crear un presupuesto realista adaptado a la realidad española: sueldos en euros, nóminas con IRPF ya descontado, y herramientas que funcionan en España.
 
-## ¿Qué es un presupuesto?
+## ¿Qué es un presupuesto personal y por qué necesitas uno?
 
-Un presupuesto es un plan que te ayuda a:
-- **Saber a dónde va tu dinero** (conciencia financiera)
-- **Controlar gastos innecesarios** (disciplina)
-- **Ahorrar para tus metas** (progreso)
+Un presupuesto personal es un plan que asigna tus ingresos a categorías concretas: necesidades, deseos, ahorro e inversión. No es una hoja de cálculo aburrida — es la herramienta que separa a quienes construyen riqueza de quienes llegan justos a fin de mes.
 
-No es para restringirte, sino para empoderarte.
+Un buen presupuesto te permite:
+- **Saber exactamente adónde va tu dinero** cada mes
+- **Eliminar gastos innecesarios** sin sentirte culpable
+- **Ahorrar con propósito** para metas concretas
+- **Dormir mejor** sabiendo que tus finanzas están bajo control
 
-## Paso 1: Calcula tus ingresos mensuales
+Según el Banco de España, el 40% de los hogares españoles no tiene ningún ahorro de emergencia. Un presupuesto cambia eso.
 
-Suma TODOS tus ingresos:
-- Sueldo principal
-- Trabajos adicionales
-- Ingresos pasivos (intereses, dividendos, rentas)
-- Bonificaciones esperadas
+## Paso 1: Calcula tus ingresos netos reales
 
-**Importante**: Usa el ingreso NETO (después de impuestos), no el bruto.
+El error más común es presupuestar sobre el salario bruto. En España, lo que realmente cuenta es lo que entra en tu cuenta bancaria: el **salario neto**.
 
-### Ejemplo:
-- Sueldo principal: $3,000
-- Freelance ocasional: $500
-- Intereses de ahorros: $50
-- **Total mensual: $3,550**
+Tu nómina ya descuenta:
+- **IRPF** (retención fiscal, entre el 15% y el 37% según tramo)
+- **Seguridad Social** (alrededor del 6,35% del trabajador)
 
-## Paso 2: Registra tus gastos fijos
+### Ejemplo con salario medio español (2026):
 
-Estos son gastos que ocurren cada mes sin cambio:
+| Concepto | Importe |
+|----------|---------|
+| Salario bruto anual | 27.000 € |
+| Retención IRPF (~18%) | -4.860 € |
+| Seguridad Social (~6,35%) | -1.715 € |
+| **Salario neto anual** | **~20.425 €** |
+| **Neto mensual (12 pagas)** | **~1.702 €** |
 
-| Gasto | Monto |
-|-------|-------|
-| Renta/Hipoteca | $1,200 |
-| Servicios (agua, luz, internet) | $250 |
-| Transporte | $150 |
-| Seguros | $100 |
-| Suscripciones | $30 |
-| **Total fijo** | **$1,730** |
+Si tienes pagas extra en junio y diciembre, divídelas entre 12 y súmalas al mensual para tener una visión uniforme.
 
-## Paso 3: Registra gastos variables
+Suma también:
+- Ingresos freelance o segunda actividad (ya netos de gastos deducibles)
+- Rentas del alquiler (neto tras gastos e IRPF)
+- Intereses de cuentas remuneradas o dividendos
 
-Estos cambian cada mes:
+## Paso 2: Clasifica y registra todos tus gastos
+
+Divide tus gastos en dos grandes bloques:
+
+### Gastos fijos (igual cada mes)
+
+| Gasto | Ejemplo |
+|-------|---------|
+| Alquiler o hipoteca | 700 € |
+| Comunidad de propietarios | 60 € |
+| Suministros (luz, agua, gas) | 120 € |
+| Internet + móvil | 55 € |
+| Transporte (abono, seguro, ITV) | 90 € |
+| Seguros (salud, hogar, vida) | 80 € |
+| Suscripciones (streaming, gym) | 40 € |
+| **Total fijos estimado** | **1.145 €** |
+
+### Gastos variables (cambian cada mes)
 
 | Categoría | Promedio |
 |-----------|----------|
-| Alimentos | $400 |
-| Restaurantes | $150 |
-| Entretenimiento | $100 |
-| Ropa | $75 |
-| Medicina/Farmacia | $50 |
-| Otros | $95 |
-| **Total variable** | **$870** |
+| Alimentación (supermercado) | 300 € |
+| Restaurantes y ocio | 120 € |
+| Ropa y calzado | 50 € |
+| Farmacia y salud | 30 € |
+| Transporte ocasional (taxi, Renfe) | 40 € |
+| Imprevistos | 60 € |
+| **Total variables estimado** | **600 €** |
 
-**Tip**: Revisa tus últimos 3 meses de extractos bancarios para calcular promedios reales.
+**Truco**: Descarga los movimientos de los últimos 3 meses desde la app de tu banco (todos los bancos españoles permiten exportar en PDF o Excel). Te sorprenderás con lo que gastas en algunas categorías.
 
-## Paso 4: Calcula tu presupuesto final
+## Paso 3: Aplica la regla 50/30/20
 
-| Concepto | Monto | % de Ingreso |
-|----------|-------|-------------|
-| **Ingresos totales** | $3,550 | 100% |
-| Gastos fijos | -$1,730 | -48% |
-| Gastos variables | -$870 | -24% |
-| **Disponible para ahorrar** | **$950** | **27%** |
+La regla 50/30/20 es el método más popular y sencillo para estructurar un presupuesto:
 
-## Paso 5: Asigna tu dinero de ahorro
+| Categoría | % del neto | Para una nómina de 1.700 € |
+|-----------|-----------|--------------------------|
+| **Necesidades** (vivienda, comida, transporte, seguros) | 50% | 850 € |
+| **Deseos** (ocio, restaurantes, ropa, suscripciones) | 30% | 510 € |
+| **Ahorro e inversión** | 20% | 340 € |
 
-De los $950 disponibles, divídelos así:
-- **50% Fondo de emergencia**: $475 (hasta alcanzar 6 meses de gastos)
-- **30% Metas corto plazo**: $285 (próximas vacaciones, nuevo teléfono)
-- **20% Inversión**: $190 (fondos indexados, acciones)
+### ¿Qué pasa si el alquiler se lleva el 50% solo?
 
-## Errores comunes en presupuestos
+Es la realidad de muchas ciudades españolas. En ese caso, ajusta así:
+- Reduce el bloque de "deseos" al 20-25%
+- Mantén al menos un 10% para ahorro (aunque sea poco)
+- Busca formas de aumentar ingresos o reducir el alquiler a largo plazo
 
-### ❌ Error 1: Ser demasiado restrictivo
-- Presupuesto irreal → lo abandonas en 2 semanas
-- Solución: Reserva dinero para "caprichos"
+## Paso 4: Calcula tu presupuesto mensual real
 
-### ❌ Error 2: No incluir gastos ocasionales
-- Olvidan: dentista, reparaciones, regalos
-- Solución: Crea categoría "Gastos imprevistos" con 5% del ingreso
+Con los datos anteriores, tu cuadro quedaría así:
 
-### ❌ Error 3: No revisar nunca
-- Un presupuesto estático no funciona
-- Solución: Revisa mensualmente y ajusta
+| Concepto | Importe | % del neto |
+|----------|---------|-----------|
+| **Ingresos netos** | 1.700 € | 100% |
+| Gastos fijos | -1.145 € | -67% |
+| Gastos variables | -600 € | -35% |
+| **Resultado** | **-45 €** | **-2%** |
 
-### ❌ Error 4: Presupuestar para enero solamente
-- Los gastos cambian con estaciones
-- Solución: Planifica por trimestres
+En este ejemplo hay un déficit de 45 €. Aquí es donde el presupuesto hace su trabajo: te muestra la realidad para que puedas tomar decisiones conscientes.
 
-## Herramientas para tu presupuesto
+**Opciones para equilibrarlo:**
+- Reducir gastos variables (¿a cuántas plataformas de streaming estás suscrito?)
+- Negociar el seguro o cambiar de compañía de teléfono
+- Aumentar ingresos con una actividad secundaria
 
-### Apps gratuitas:
-1. **Google Sheets** (plantilla simple)
-2. **Mint** (automático y sincronizado)
-3. **GnuCash** (detallado, gratis)
+## Paso 5: Asigna tu capacidad de ahorro
 
-### Apps de pago:
-1. **YNAB** ($14.99/mes) - Metodología probada
-2. **EveryDollar** ($14.99/mes) - Simple y visual
+Una vez equilibrado el presupuesto y generado superávit, asigna el ahorro por prioridades:
+
+1. **Primero: Fondo de emergencia** — hasta acumular 3-6 meses de gastos (entre 3.000 € y 10.000 € dependiendo de tu situación)
+2. **Segundo: Deudas caras** — si tienes deudas con intereses >5%, amortízalas antes de invertir
+3. **Tercero: Inversión a largo plazo** — fondos indexados, planes de pensiones, ETFs
+
+## Ejemplo de presupuesto personal mensual completo
+
+Este es un ejemplo real para una persona con salario neto de 1.700 € en España:
+
+| Categoría | Concepto | Importe |
+|-----------|----------|---------|
+| **INGRESOS** | Nómina neta | **1.700 €** |
+| Necesidades | Alquiler | 650 € |
+| Necesidades | Supermercado | 280 € |
+| Necesidades | Luz + agua + gas | 90 € |
+| Necesidades | Internet + móvil | 45 € |
+| Necesidades | Transporte (abono) | 55 € |
+| Necesidades | Seguro salud | 60 € |
+| Deseos | Restaurantes y bares | 80 € |
+| Deseos | Streaming (Netflix, Spotify) | 25 € |
+| Deseos | Ocio y salidas | 60 € |
+| Deseos | Ropa | 40 € |
+| Ahorro | Fondo emergencia | 120 € |
+| Ahorro | Inversión (fondos) | 80 € |
+| Imprevistos | Colchón mensual | 55 € |
+| **TOTAL GASTOS** | | **1.640 €** |
+| **SUPERÁVIT** | | **+60 €** |
+
+Este ejemplo sigue la regla 50/30/20 ajustada a la realidad española. Cópialo en Excel o Google Sheets y personaliza las cifras con tus gastos reales.
+
+## Plantilla de presupuesto personal gratis (Excel y Google Sheets)
+
+No necesitas comprar ninguna app ni plantilla de pago. Puedes crear la tuya gratis en minutos:
+
+**Opción 1 — Google Sheets (recomendado):**
+1. Ve a [sheets.google.com](https://sheets.google.com) y crea una hoja nueva
+2. Crea columnas: Categoría | Presupuestado | Real | Diferencia
+3. Añade las filas del ejemplo de arriba
+4. La columna "Diferencia" = Real - Presupuestado (verde si ahorras, rojo si te pasas)
+
+**Opción 2 — Excel:**
+Misma estructura. Guárdalo en OneDrive o Google Drive para tenerlo en el móvil.
+
+**Opción 3 — Fintonic:**
+Si no quieres crear nada manual, Fintonic conecta con tu banco español y categoriza los gastos automáticamente.
+
+> **Consejo**: Una vez que controles tus gastos mensuales, usa nuestra [calculadora de meta de ahorro](/calculadoras/meta-ahorro) para calcular cuánto tiempo tardarás en alcanzar tu objetivo financiero.
+
+## La regla del sobre: el método físico que funciona
+
+Si tienes dificultades con el control digital, prueba el **método del sobre**:
+
+- Saca en efectivo el dinero destinado a gastos variables cada mes
+- Distribúyelo en sobres etiquetados: "Supermercado", "Ocio", "Ropa"
+- Cuando el sobre se vacía, esa categoría está agotada hasta el mes siguiente
+
+Es más psicológico que una tarjeta, y muchos españoles lo usan con excelentes resultados.
+
+## Herramientas para presupuestar en España
+
+### Apps gratuitas (disponibles en España):
+1. **Fintonic** — La app española más popular, conecta con todos los bancos nacionales y categoriza gastos automáticamente
+2. **Wallet by BudgetBakers** — Conecta con banca española, gráficos claros, versión gratuita muy completa
+3. **Google Sheets** — La hoja de cálculo clásica: control total y cero coste
+4. **Money Manager** — Registro manual sencillo, ideal si prefieres no conectar tu banco
 
 ### Método tradicional:
-Papel + bolígrafo (funciona, es más consciente)
+Libreta + bolígrafo. Parece anticuado, pero escribir los gastos a mano genera más conciencia que teclearlos en el móvil.
 
-## Tu primer mes: Plan de acción
+## 5 errores comunes en presupuestos (y cómo evitarlos)
 
-### Semana 1: Recopilación
-- Descarga extractos de últimos 3 meses
-- Haz lista de gastos fijos
-- Estima gastos variables
+### ❌ Error 1: Presupuestar sobre el bruto
+Siempre usa el neto. Lo que no llega a tu cuenta no existe para tu presupuesto.
+
+### ❌ Error 2: Olvidar gastos anuales
+Seguro del coche, ITV, vacaciones, regalos de Navidad, revisiones médicas... Divídelos entre 12 y inclúyelos como gasto mensual.
+
+### ❌ Error 3: No incluir un fondo para imprevistos
+Siempre habrá una avería, una multa o una visita al dentista. Reserva entre 50 € y 100 € al mes para imprevistos.
+
+### ❌ Error 4: Ser demasiado restrictivo
+Un presupuesto irreal dura dos semanas. Incluye siempre algo para ocio y caprichos, o lo abandonarás.
+
+### ❌ Error 5: Hacerlo una vez y olvidarlo
+El presupuesto es un documento vivo. Revísalo cada mes y ajústalo cuando cambien tus circunstancias.
+
+## Tu plan de acción para el primer mes
+
+### Semana 1: Diagnóstico
+- Descarga los movimientos de los últimos 3 meses de tu banco
+- Categoriza cada gasto manualmente o con Fintonic
+- Calcula cuánto gastas realmente en cada categoría
 
 ### Semana 2: Planificación
-- Crea presupuesto en una hoja
-- Asigna categorías a cada gasto
-- Establece límites realistas
+- Establece límites realistas por categoría basándote en los datos reales
+- Aplica la regla 50/30/20 como guía
+- Define al menos una meta de ahorro concreta (cuánto y para qué)
 
-### Semana 3: Seguimiento
-- Registra TODOS los gastos (diarios)
-- Usa app o hoja para trackear
-- No juzgues, solo observa
+### Semana 3: Seguimiento activo
+- Revisa tus gastos cada 2-3 días (5 minutos)
+- Anota cualquier desviación sin juzgarte
+- Ajusta si ves que alguna categoría es imposible de cumplir
 
-### Semana 4: Análisis
-- Compara gasto real vs presupuestado
-- ¿Dónde excediste?
-- ¿Dónde ahorraste más?
-- Ajusta para mes 2
+### Semana 4: Evaluación y mejora
+- ¿Cuánto ahorraste vs lo planeado?
+- ¿En qué categorías te excediste?
+- ¿Qué cambiarías para el mes siguiente?
+
+## Presupuesto con ingresos variables (autónomos y freelancers)
+
+Si tus ingresos no son fijos, sigue esta estrategia:
+
+1. **Calcula tu mínimo vital**: el gasto mínimo imprescindible para vivir (alquiler + comida + suministros básicos)
+2. **Usa el mes de menor ingreso como base** para compromisos fijos
+3. **Los meses buenos, aplica este orden**: impuestos > fondo de emergencia > deudas > inversión > caprichos
+4. **Reserva el 30% de cada cobro para IRPF** (si eres autónomo en estimación directa)
 
 ## Conclusión
 
-Un presupuesto te da **control**, no restricción. Es tu mapa financiero personal. No existe el presupuesto perfecto; existe el que TÚ mantendrás consistentemente.
+Crear un presupuesto personal no requiere ser experto en finanzas ni tener un sueldo alto. Requiere honestidad sobre tus números y 30 minutos al mes de revisión.
 
-Comienza simple. Una vez que domines lo básico, agrega complejidad. El objetivo final es lograr libertad financiera, y eso comienza con un presupuesto claro.
+El presupuesto perfecto no existe. Existe el que tú mantendrás de forma consistente. Empieza simple, ajusta sobre la marcha y recuerda: el objetivo no es restringirte, sino darte la libertad de gastar en lo que de verdad importa sin culpa ni estrés.
 
-**Recuerda**: Medir es el primer paso para mejorar.
+**El control de tu dinero empieza con saber adónde va. Ese es el único secreto.**
     `,
     publishedAt: "2026-01-15",
-    readTime: "10 min",
+    readTime: "15 min",
     category: "Presupuesto",
-    tags: ["presupuesto", "finanzas personales", "gastos", "control financiero"],
+    tags: [
+      "presupuesto personal",
+      "presupuesto",
+      "presupuesto personal ejemplo",
+      "presupuesto personal mensual",
+      "presupuesto personal mensual ejemplo",
+      "plantilla presupuesto Excel gratis",
+      "presupuesto personal Excel",
+      "presupuesto personal gratis",
+      "calculadora presupuesto personal",
+      "cómo hacer un presupuesto personal",
+      "regla 50/30/20",
+      "finanzas personales",
+      "control de gastos",
+      "gastos",
+      "control financiero",
+      "ahorro mensual",
+      "gestión de gastos",
+      "presupuesto familiar",
+      "presupuesto personal España",
+      "Fintonic",
+      "método del sobre",
+    ],
     author: "María López",
     faqs: [
       {
@@ -870,7 +991,7 @@ Comienza simple. Una vez que domines lo básico, agrega complejidad. El objetivo
       },
       {
         question: "¿Cuánto debería ahorrar cada mes según mi salario?",
-        answer: "Como mínimo, el 10% de tu ingreso neto. Lo ideal es el 20% o más. Si ganas $2,000 al mes, ahorra al menos $200-400. Si no puedes llegar a ese porcentaje, empieza con lo que puedas (incluso $50) y aumenta gradualmente cada 3-6 meses.",
+        answer: "Como mínimo, el 10% de tu ingreso neto. Lo ideal es el 20% o más. Si ganas 1.700 € al mes, ahorra al menos 170-340 €. Si no puedes llegar a ese porcentaje, empieza con lo que puedas (incluso 50 €) y aumenta gradualmente cada 3-6 meses.",
       },
       {
         question: "¿Cómo controlo mis gastos si tengo ingresos variables?",
@@ -5054,8 +5175,9 @@ La mejor decisión no es la que maximiza el patrimonio en papel. Es la que te pe
   {
     slug: "plan-de-pensiones-espana-merece-la-pena",
     title: "Plan de pensiones en España 2026: ¿merece la pena o hay algo mejor?",
+    seoTitle: "Mejores planes de pensiones España 2026: ¿merece la pena?",
     description:
-      "Analizamos si los planes de pensiones privados siguen siendo una buena opción en España tras la reducción de beneficios fiscales, y los comparamos con fondos indexados y otras alternativas.",
+      "¿Merece la pena un plan de pensiones en España en 2026? Comparativa con fondos indexados, tabla de deducción IRPF, mejores planes baratos (Indexa, MyInvestor) y cuándo rescatarlo. Guía completa.",
     image: "https://images.unsplash.com/photo-1559526324-593bc073d938?w=1200&h=630&fit=crop",
     content: `
 # Plan de pensiones en España 2026: la verdad que nadie te cuenta
@@ -5176,6 +5298,35 @@ El plan de pensiones sigue siendo interesante si:
 - Si tienes menos de 10 años para jubilarte y no puedes permitirte iliquidez
 - Si no tienes fondo de emergencia ni otras inversiones más líquidas
 
+## El rescate a los 10 años: la norma que lo cambia todo
+
+Desde enero de 2025 existe una nueva modalidad de rescate que cambia el análisis del plan de pensiones: **puedes recuperar las aportaciones que tengan más de 10 años de antigüedad sin necesidad de estar jubilado ni en situación de contingencia especial**.
+
+Esto es relevante porque históricamente la iliquidez total era el mayor argumento en contra de los planes de pensiones. Ahora esa barrera se reduce significativamente.
+
+### ¿Cómo funciona el rescate a los 10 años?
+
+| Concepto | Detalle |
+|----------|---------|
+| Aportaciones rescatables | Solo las realizadas antes de 2015 (en 2025) o antes de 2016 (en 2026), etc. |
+| Tributación | Como rendimiento del trabajo (igual que el rescate en jubilación) |
+| Límite | Puedes rescatar solo las aportaciones antiguas, no las recientes |
+| Penalización | Ninguna — es un derecho regulado |
+
+**Tip:** Si aportaste a un plan de pensiones entre 2013 y 2015 y necesitas el dinero, desde 2025 puedes recuperarlo. Pero recuerda que tributará como renta del trabajo ese año, así que calcula el impacto antes de rescatar.
+
+### Estrategia de rescate eficiente en la jubilación
+
+Si llegas a la jubilación con un plan de pensiones acumulado, la forma de rescatarlo importa tanto como el dinero que hayas ahorrado:
+
+| Estrategia | Impacto fiscal |
+|------------|---------------|
+| Rescate total en un año | Altísimo — suma todo a tu renta y sube tu tramo IRPF |
+| Rescate en forma de renta mensual | Moderado — tributas solo por lo que cobras ese año |
+| Rescate mixto (capital + renta) | Intermedio — permite aprovechar la reducción del 40% para aportaciones pre-2007 |
+
+**Regla general:** Rescatar gradualmente durante 10-15 años suele ser más eficiente fiscalmente que rescatar de golpe, porque mantienes tu base imponible baja cada año.
+
 ## La estrategia óptima para la jubilación en España 2026
 
 La mayoría de expertos independientes recomiendan una estrategia combinada:
@@ -5194,7 +5345,28 @@ Si el banco te recomienda un plan de pensiones con comisiones del 1,5% como úni
     publishedAt: "2026-03-20",
     readTime: "15 min",
     category: "Inversiones",
-    tags: ["plan de pensiones", "jubilación", "IRPF", "ahorro jubilación", "fondos indexados", "España"],
+    tags: [
+      "plan de pensiones",
+      "plan de pensiones España 2026",
+      "mejores planes de pensiones 2026",
+      "plan de pensiones merece la pena",
+      "plan de pensiones vs fondo de inversión",
+      "plan de pensiones deducción IRPF",
+      "cuánto aportar plan de pensiones",
+      "rescate plan de pensiones",
+      "rescate plan de pensiones 10 años",
+      "plan de pensiones MyInvestor",
+      "plan de pensiones Indexa Capital",
+      "plan de pensiones bajo coste",
+      "jubilación España",
+      "ahorro jubilación",
+      "fondos indexados jubilación",
+      "EPSV País Vasco",
+      "plan de pensiones rentabilidad",
+      "pensión privada España",
+      "IRPF",
+      "finanzas personales",
+    ],
     author: "Carlos Sánchez",
     faqs: [
       {
@@ -5413,7 +5585,7 @@ El único requisito es empezar. Hoy, no mañana.
     title: "Tipos de inflación: qué son, cómo se diferencian y cómo afectan tu dinero en 2026",
     seoTitle: "Tipos de inflación: guía completa 2026",
     description:
-      "Descubre los 5 tipos de inflación con ejemplos reales de España: demanda, costes, estanflación y más. Guía completa para entender qué mueve los precios.",
+      "Los 5 tipos de inflación explicados con ejemplos reales en España: demanda, costes, estructural, estanflación e inercial. Qué es el IPC, inflación subyacente y cómo proteger tu dinero.",
     image: "https://images.unsplash.com/photo-1604594849809-dfedbc827105?w=1200&h=630&fit=crop",
     content: `
 # Tipos de inflación: qué son, cómo se diferencian y cómo afectan tu dinero
@@ -5528,6 +5700,61 @@ Dependiendo del tipo de inflación predominante, las estrategias de protección 
 
 Para una guía completa sobre cómo proteger tus ahorros de la inflación en el contexto español, consulta nuestro artículo [Cómo proteger tus ahorros de la inflación en España](/blog/como-proteger-ahorros-inflacion-espana).
 
+## Otros conceptos que debes conocer: deflación, hiperinflación e inflación subyacente
+
+### ¿Qué es la deflación?
+
+La deflación es lo contrario a la inflación: los precios bajan de forma generalizada y sostenida. Aunque parezca buena noticia, es una de las situaciones más peligrosas para una economía.
+
+**¿Por qué es peligrosa la deflación?**
+- Los consumidores retrasan las compras esperando que los precios bajen más → menos demanda → las empresas reducen producción → despidos → aún menos demanda → espiral deflacionaria
+- Las deudas se vuelven más pesadas en términos reales (pagas con un dinero que vale más)
+- Los bancos centrales tienen poco margen de actuación (los tipos ya están cerca del 0%)
+
+**Ejemplo histórico:** Japón sufrió deflación durante casi dos décadas (1990-2010), conocida como la "década perdida". La economía prácticamente no creció durante ese período.
+
+**En España:** No hay riesgo de deflación en 2026, pero en 2020 (pandemia) el IPC llegó a terreno negativo puntualmente.
+
+### ¿Qué es la hiperinflación?
+
+La hiperinflación es una inflación extrema y descontrolada, generalmente superior al 50% mensual. Los precios pueden doblar en días o semanas.
+
+**Causas:** Emisión masiva de dinero sin respaldo, colapso de la confianza en la moneda, crisis política severa.
+
+**Ejemplos históricos:**
+- Alemania 1923: los precios se multiplicaron por un billón en un año
+- Zimbabwe 2008: inflación del 89.700.000.000.000.000.000.000% (sí, con 23 ceros)
+- Venezuela 2018: inflación del 1.000.000%
+
+**¿Puede ocurrir en España?** No, mientras España sea miembro de la eurozona. El BCE controla la política monetaria y tiene un mandato explícito de estabilidad de precios. La hiperinflación requiere que un país emita su propia moneda sin control.
+
+### ¿Qué es la inflación subyacente?
+
+La inflación subyacente es la inflación "filtrada": excluye los precios de energía y alimentos frescos porque son muy volátiles y no reflejan la tendencia real de los precios.
+
+**¿Por qué importa?**
+Porque el BCE y los economistas la usan para tomar decisiones de política monetaria. Un IPC general alto por la energía puede bajar en meses, pero una inflación subyacente alta indica un problema más profundo y persistente.
+
+| Indicador | Incluye energía y alimentos | Para qué sirve |
+|-----------|----------------------------|----------------|
+| IPC general | Sí | Medir el coste de vida real del ciudadano |
+| Inflación subyacente | No | Medir la tendencia estructural de los precios |
+| IPCA (armonizado) | Sí | Comparar entre países de la UE |
+
+**En España en 2025:** La inflación subyacente se mantuvo en torno al 2,5-3%, por encima del IPC general en algunos meses. Eso significa que incluso sin el efecto de la energía, los precios siguen subiendo más de lo deseable.
+
+## ¿Cuándo bajará la inflación en España?
+
+Esta es la pregunta que todos se hacen. La respuesta depende del tipo de inflación que predomine:
+
+- La **inflación energética** ya se ha moderado — si no hay nuevas crisis geopolíticas, su efecto será neutro o bajista en 2026
+- La **inflación de alimentos** depende de las cosechas — el aceite de oliva se ha normalizado parcialmente, pero la sequía es un riesgo permanente
+- La **inflación en servicios** (+3,7% en 2025) es la más difícil de bajar — requiere reformas estructurales que llevan años
+
+**Previsión 2026:** La mayoría de analistas esperan una inflación media del 2,3-2,8% en España para 2026, ligeramente por encima del objetivo del BCE pero lejos de los picos de 2022. El BCE ha iniciado bajadas de tipos desde mediados de 2024, lo que debería ir moderando la inflación gradualmente.
+
+**Lo que no cambia:** Incluso con inflación del 2%, el dinero parado pierde valor. La respuesta sigue siendo la misma: invertir.
+
 ## Conclusión: el tipo importa tanto como el dato
 
 Cuando lees que "la inflación en España es del 2,7%", ese número no te dice qué tipo de inflación es, si está subiendo o bajando, ni qué sectores están más afectados. Para tomar buenas decisiones financieras necesitas entender el contexto.
@@ -5535,9 +5762,31 @@ Cuando lees que "la inflación en España es del 2,7%", ese número no te dice q
 Lo que sí es universal: el dinero parado en cuenta corriente pierde valor con cualquier tipo de inflación. La respuesta siempre pasa por invertir en activos que la superen. Y para eso, entender qué tipo de inflación estás combatiendo marca la diferencia.
     `,
     publishedAt: "2026-03-25",
-    readTime: "12 min",
+    readTime: "17 min",
     category: "Inversiones",
-    tags: ["tipos de inflación", "inflación por demanda", "inflación de costes", "estanflación", "IPC", "economía España", "inflación 2026"],
+    tags: [
+      "tipos de inflación",
+      "tipos de inflación y ejemplos",
+      "tipos de inflación economía",
+      "qué es la inflación",
+      "inflación por demanda",
+      "inflación de costes",
+      "inflación estructural",
+      "estanflación qué es",
+      "inflación inercial",
+      "inflación subyacente",
+      "hiperinflación",
+      "deflación qué es",
+      "IPC qué es",
+      "IPC España",
+      "inflación 2026",
+      "inflación España 2026",
+      "inflación y tipos de interés",
+      "cómo afecta la inflación al ahorro",
+      "inflación BCE",
+      "economía España",
+      "finanzas personales",
+    ],
     author: "Alejandro Torres",
     faqs: [
       {
@@ -5563,7 +5812,7 @@ Lo que sí es universal: el dinero parado en cuenta corriente pierde valor con c
     title: "10 causas de la inflación en España y sus consecuencias reales en tu economía",
     seoTitle: "10 causas de la inflación en España 2026",
     description:
-      "España cerró 2025 con la inflación más alta de la UE. Analizamos las 10 causas reales y cómo afectan a tu hipoteca, ahorro y poder adquisitivo.",
+      "¿Por qué sube la inflación en España? Las 10 causas reales: energía, SMI, turismo, cadena de suministro y más. Consecuencias en tu hipoteca, ahorro y poder adquisitivo en 2026.",
     image: "https://images.unsplash.com/photo-1618044619888-009e412ff12a?w=1200&h=630&fit=crop",
     content: `
 # 10 causas de la inflación en España y sus consecuencias reales en tu economía
@@ -5684,6 +5933,50 @@ La inflación cambia por completo qué inversiones son rentables y cuáles no:
 
 Para una estrategia completa de protección, consulta nuestra guía [Cómo proteger tus ahorros de la inflación en España](/blog/como-proteger-ahorros-inflacion-espana).
 
+## España vs Europa: ¿por qué siempre tenemos más inflación?
+
+Una pregunta frecuente: si el BCE controla la política monetaria para toda la eurozona, ¿por qué España tiene sistemáticamente más inflación que Alemania o Francia?
+
+### Comparativa de inflación media 2020-2025
+
+| País | Inflación media 2020-2025 | Inflación 2025 |
+|------|--------------------------|----------------|
+| España | 3,8% | 2,7% |
+| Alemania | 3,2% | 2,2% |
+| Francia | 2,9% | 1,7% |
+| Italia | 2,7% | 1,9% |
+| Media eurozona | 3,1% | 2,3% |
+
+### Las razones estructurales del diferencial español
+
+**1. Mayor peso del turismo:** El sector turístico representa el 13% del PIB español (vs 3-5% en Alemania). Los precios turísticos son muy volátiles y responden más rápido a la demanda.
+
+**2. Dependencia energética:** España importa el 70% de la energía que consume. Alemania y Francia tienen más diversificación energética (nuclear en Francia, carbón y gas doméstico en Alemania).
+
+**3. Mercado laboral más rígido:** Las negociaciones colectivas en España tienen más peso en la fijación de salarios, lo que facilita la espiral salario-precio.
+
+**4. Menos competencia en sectores clave:** Telecomunicaciones, energía y alimentación tienen menor competencia en España que en economías más liberalizadas.
+
+**5. Mayor exposición a materias primas agrícolas:** El aceite de oliva, el vino y otros productos agrícolas tienen mucho peso en la cesta española de consumo.
+
+## ¿Cuándo bajará la inflación en España?
+
+Esta es la pregunta que todos se hacen. Según las previsiones disponibles a principios de 2026:
+
+| Factor | Tendencia 2026 | Impacto en inflación |
+|--------|---------------|---------------------|
+| Energía | Estable / bajista | Moderador |
+| Alimentos | Moderación (aceite se normaliza) | Moderador |
+| Servicios | Persistente (+3%) | Inflacionario |
+| Tipos BCE | Bajadas graduales | Moderador a medio plazo |
+| Turismo | Crecimiento continuado | Inflacionario en verano |
+
+**Previsión de consenso:** La inflación española debería situarse entre el 2,3% y el 2,8% de media en 2026 — por encima del objetivo del BCE del 2%, pero lejos de los picos del 10% de 2022.
+
+**La mala noticia:** La inflación en servicios es la más difícil de reducir y será el componente más persistente durante 2026 y probablemente 2027.
+
+**Lo que puedes hacer:** No esperar a que la inflación "baje" para actuar. Incluso con inflación del 2%, el dinero parado pierde poder adquisitivo cada año. La clave es que tus ahorros rindan por encima de la inflación.
+
 ## Conclusión
 
 La inflación en España no es un fenómeno simple ni uniforme. Es el resultado de al menos 10 factores que interactúan entre sí, algunos globales y algunos específicos de nuestra economía. Entender sus causas te permite anticiparte a sus consecuencias y tomar mejores decisiones financieras.
@@ -5691,9 +5984,31 @@ La inflación en España no es un fenómeno simple ni uniforme. Es el resultado 
 Lo que no puedes hacer es ignorarla. El dinero parado pierde valor de forma silenciosa pero implacable. La respuesta está en entender el fenómeno y actuar en consecuencia.
     `,
     publishedAt: "2026-03-25",
-    readTime: "13 min",
+    readTime: "17 min",
     category: "Ahorro",
-    tags: ["causas inflación", "consecuencias inflación", "IPC España", "inflación España 2026", "poder adquisitivo", "economía", "hipoteca Euribor"],
+    tags: [
+      "causas de la inflación",
+      "causas y consecuencias de la inflación",
+      "causas inflación España",
+      "consecuencias de la inflación",
+      "por qué sube la inflación",
+      "inflación España 2026",
+      "IPC España 2026",
+      "inflación y Euribor",
+      "inflación hipoteca variable",
+      "subida de precios España",
+      "inflación poder adquisitivo",
+      "SMI e inflación",
+      "inflación BCE tipos de interés",
+      "inflación energía España",
+      "aceite de oliva inflación",
+      "inflación servicios España",
+      "cadena de suministro inflación",
+      "estanflación España",
+      "proteger ahorros inflación",
+      "economía española",
+      "finanzas personales",
+    ],
     author: "Carlos Sánchez",
     faqs: [
       {
