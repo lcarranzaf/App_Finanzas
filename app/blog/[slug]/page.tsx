@@ -7,13 +7,11 @@ import { notFound } from "next/navigation"
 import Image from 'next/image'
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { RelatedArticles } from "@/components/related-articles"
-import { DisqusComments } from "@/components/disqus-comments"
 import { Metadata } from "next"
 import StructuredData from "@/components/structured-data"
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { ContextualLinks } from "@/components/internal-links"
-import { LazyLoad } from "@/components/lazy-load"
 import AdSense from "@/components/AdSense"
 import { TableOfContents } from "@/components/table-of-contents"
 import { InvestmentDisclaimer } from "@/components/investment-disclaimer"
@@ -341,17 +339,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </div>
 
-        {/* Tags */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="text-sm font-semibold text-foreground">Etiquetas:</span>
-            {post.tags.map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs font-medium px-3 py-1 hover:bg-primary/20 transition-colors">
-                {tag}
-              </Badge>
-            ))}
-          </div>
-        </div>
+        {/* Tags - hidden visually, used only for SEO metadata */}
 
         {/* FAQs */}
         {post.faqs && post.faqs.length > 0 && (
@@ -359,6 +347,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             title="Preguntas Frecuentes"
             subtitle="Resolvemos las dudas más comunes sobre este tema"
             faqs={post.faqs}
+            inArticle
           />
         )}
 
@@ -387,14 +376,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </Button>
         </div>
 
-        {/* Comments */}
-        <LazyLoad offset={300} placeholder={<div className="h-64 bg-muted/30 rounded-lg flex items-center justify-center text-muted-foreground">Cargando comentarios...</div>}>
-          <DisqusComments
-            postSlug={post.slug}
-            postTitle={post.title}
-            postUrl={`https://www.finanzasdigitales.es/blog/${post.slug}`}
-          />
-        </LazyLoad>
       </div>
       </div>
     </>

@@ -5813,7 +5813,7 @@ Lo que sí es universal: el dinero parado en cuenta corriente pierde valor con c
     seoTitle: "10 causas de la inflación en España 2026",
     description:
       "¿Por qué sube la inflación en España? Las 10 causas reales: energía, SMI, turismo, cadena de suministro y más. Consecuencias en tu hipoteca, ahorro y poder adquisitivo en 2026.",
-    image: "https://images.unsplash.com/photo-1618044619888-009e412ff12a?w=1200&h=630&fit=crop",
+    image: "https://images.unsplash.com/photo-1543286386-2e659306cd6c?w=1200&h=630&fit=crop",
     content: `
 # 10 causas de la inflación en España y sus consecuencias reales en tu economía
 
