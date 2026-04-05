@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 interface LazyLoadProps {
   children: React.ReactNode
@@ -67,12 +68,12 @@ export function LazyImage({ src, alt, className, width = 800, height = 600 }: La
       {!isLoaded && (
         <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-muted/30 to-muted/50" />
       )}
-      <img
+      <Image
         src={src}
         alt={alt}
         width={width}
         height={height}
-        loading="lazy"
+        unoptimized
         className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
         onLoad={() => setIsLoaded(true)}
       />

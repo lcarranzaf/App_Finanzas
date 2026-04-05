@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Slider } from "@/components/ui/slider"
-import { Calculator, TrendingUp, PiggyBank, Target } from "lucide-react"
+import { TrendingUp, PiggyBank, Target } from "lucide-react"
 
 export default function ProjectionCalculator() {
   const [initialAmount, setInitialAmount] = useState(1000)

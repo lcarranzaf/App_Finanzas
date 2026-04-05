@@ -524,6 +524,22 @@ export default function InversionesPage() {
         </div>
       </section>
 
+      {/* Enlace destacado a fondos indexados */}
+      <section className="py-10">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/5 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <p className="text-xs font-semibold text-emerald-600 uppercase tracking-wide mb-1">Guía especial</p>
+              <h3 className="text-lg font-bold text-foreground">Fondos indexados en España: qué son y los mejores de 2026</h3>
+              <p className="text-sm text-muted-foreground mt-1">Compara plataformas, índices y aprende a empezar con MyInvestor, Trade Republic o Indexa Capital.</p>
+            </div>
+            <Button asChild className="shrink-0">
+              <Link href="/fondos-indexados">Ver guía completa</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Artículos Relacionados */}
       <CategoryArticles
         category="Inversiones"

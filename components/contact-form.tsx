@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Mail, MessageSquare, Clock } from "lucide-react"
+import { MessageSquare, Clock } from "lucide-react"
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({

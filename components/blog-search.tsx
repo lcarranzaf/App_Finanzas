@@ -8,12 +8,14 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import Image from "next/image"
-import { getBlogPosts } from "@/lib/blog-data"
+import type { BlogSearchPost } from "@/lib/blog-data"
 
-export function BlogSearch() {
+interface BlogSearchProps {
+  posts: BlogSearchPost[]
+}
+
+export function BlogSearch({ posts }: BlogSearchProps) {
   const [query, setQuery] = useState("")
-
-  const posts = useMemo(() => getBlogPosts(), [])
 
   const fuse = useMemo(() => {
     return new Fuse(posts, {
@@ -22,17 +24,8 @@ export function BlogSearch() {
         { name: "description", weight: 0.3 },
         { name: "tags", weight: 0.15 },
         { name: "category", weight: 0.05 },
-        {
-          name: "content",
-          weight: 0.2,
-          getFn: (post) => {
-            return post.content.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim()
-          },
-        },
       ],
       threshold: 0.4,
-      includeScore: true,
-      includeMatches: true,
       useExtendedSearch: true,
       ignoreLocation: true,
     })
@@ -116,4 +109,3 @@ export function BlogSearch() {
     </div>
   )
 }
-

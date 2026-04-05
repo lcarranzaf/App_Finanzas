@@ -265,7 +265,6 @@ export const generateMetaTags = (article: {
 }) => {
   const baseUrl = 'https://www.finanzasdigitales.es'
   const url = `${baseUrl}/blog/${article.slug}`
-  const currentYear = new Date().getFullYear()
   
   // Enhanced title for CTR
   const enhancedTitle = `${article.title.split(':')[0]}: Guía 2025 Con Ejemplos Reales`
@@ -317,7 +316,9 @@ export const generateMetaTags = (article: {
   }
 }
 
-export default {
+const structuredDataEnhanced = {
   generateStructuredData,
   generateMetaTags
 }
+
+export default structuredDataEnhanced

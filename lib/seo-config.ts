@@ -3,7 +3,7 @@
 
 export const seoConfig = {
   // Aggressive meta titles optimized for CTR
-  getOptimizedTitle: (title: string, category: string) => {
+  getOptimizedTitle: (title: string) => {
     const currentYear = new Date().getFullYear();
     const ctaPhrases = ["Guía Definitiva", "Tutorial Completo", "Método Probado"];
     const cta = ctaPhrases[Math.floor(Math.random() * ctaPhrases.length)];
@@ -115,7 +115,7 @@ export const seoConfig = {
     },
     "articleSection": "Finanzas Personales",
     "wordCount": 8500,
-    "keywords": ["finanzas personales", "ahorrar dinero", "inversiones", "presupuesto", "España 2025"],
+    "keywords": ["finanzas personales", "ahorrar dinero", "inversiones", "presupuesto", `España ${new Date().getFullYear()}`],
     "inLanguage": "es-ES",
     "isAccessibleForFree": true
   }),
@@ -150,7 +150,7 @@ export const seoConfig = {
 };
 
 // Auto-generate FAQ content from article
-export const generateFAQs = (content: string) => {
+export const generateFAQs = () => {
   const commonQuestions = [
     {
       question: "¿Cuánto dinero debería ahorrar mensualmente en España 2025?",

@@ -1,47 +1,5 @@
 import { blogPosts } from "@/lib/blog-data"
 import Link from "next/link"
-import type { BlogPost } from "@/lib/blog-data"
-
-interface AutoLinkProps {
-  content: string
-  currentSlug: string
-  maxLinks?: number
-}
-
-export function AutoInternalLinks({ content, currentSlug, maxLinks = 3 }: AutoLinkProps) {
-  const otherPosts = blogPosts.filter(post => post.slug !== currentSlug)
-  
-  const linkedContent = otherPosts.reduce((acc, post, index) => {
-    if (index >= maxLinks) return acc
-    
-    const keywords = post.tags.slice(0, 2)
-    const titleWords = post.title.split(' ').slice(0, 3).join(' ')
-    
-    let modifiedContent = acc
-    
-    keywords.forEach(keyword => {
-      const regex = new RegExp(`\\b${keyword}\\b`, 'gi')
-      if (!modifiedContent.includes(`/blog/${post.slug}`)) {
-        modifiedContent = modifiedContent.replace(
-          regex,
-          `<Link href="/blog/${post.slug}" className="text-primary hover:underline font-medium" title="${post.title}">$&</Link>`
-        )
-      }
-    })
-    
-    if (!modifiedContent.includes(`/blog/${post.slug}`)) {
-      const titleRegex = new RegExp(`\\b${titleWords}\\b`, 'gi')
-      modifiedContent = modifiedContent.replace(
-        titleRegex,
-        `<Link href="/blog/${post.slug}" className="text-primary hover:underline font-medium" title="${post.title}">$&</Link>`
-      )
-    }
-    
-    return modifiedContent
-  }, content)
-
-  return <div dangerouslySetInnerHTML={{ __html: linkedContent }} />
-}
 
 interface ContextualLinksProps {
   currentTags: string[]

@@ -9,16 +9,16 @@ import { FAQSection, type FAQItem } from "@/components/faq-section"
 import { CategoryArticles } from "@/components/category-articles"
 
 export const metadata: Metadata = {
-  title: `Estrategias de Ahorro ${new Date().getFullYear()} - Métodos Probados para Ahorrar Dinero`,
+  title: `Cómo Ahorrar Dinero en España ${new Date().getFullYear()} - Métodos Probados y Fondo de Emergencia`,
   description:
-    "Descubre cómo ahorrar dinero con el método 50/30/20, ahorro automático y el reto 52 semanas. Guía paso a paso para crear tu fondo de emergencia desde cero, incluso con ingresos bajos.",
-  keywords: ["ahorro", "cómo ahorrar dinero", "método 50/30/20", "fondo de emergencia", "presupuesto personal", "estrategias de ahorro", "reto 52 semanas", "finanzas personales"],
+    "Aprende a ahorrar dinero en España con el método 50/30/20, ahorro automático y el reto 52 semanas. Cómo crear tu fondo de emergencia desde cero, incluso con ingresos bajos. Guía práctica actualizada.",
+  keywords: ["cómo ahorrar dinero", "ahorro España", "método 50/30/20", "fondo de emergencia España", "estrategias ahorro", "reto 52 semanas", "cuentas remuneradas", "ahorrar con poco dinero", "finanzas personales España"],
   alternates: {
     canonical: "https://www.finanzasdigitales.es/ahorro",
   },
   openGraph: {
-    title: "Estrategias de Ahorro — Métodos Probados para Ahorrar Dinero",
-    description: "Descubre cómo ahorrar dinero con el método 50/30/20, ahorro automático y el reto 52 semanas. Guía paso a paso para crear tu fondo de emergencia desde cero.",
+    title: "Cómo Ahorrar Dinero en España — Métodos Probados y Fondo de Emergencia",
+    description: "Aprende a ahorrar dinero en España con el método 50/30/20, ahorro automático y el reto 52 semanas. Crea tu fondo de emergencia desde cero.",
     url: "https://www.finanzasdigitales.es/ahorro",
     type: "website",
     locale: "es_ES",
@@ -102,7 +102,7 @@ export default function AhorroPage() {
     {
       icon: CheckCircle2,
       title: "Celebra milestones",
-      description: "Primer $100, $500, $1,000. Cada hito merece reconocimiento.",
+      description: "Primer €100, €500, €1.000. Cada hito merece reconocimiento.",
     },
     {
       icon: CheckCircle2,
@@ -152,8 +152,8 @@ export default function AhorroPage() {
       answer: "El método 50/30/20 es ideal para principiantes: destina 50% de tus ingresos a necesidades, 30% a deseos y 20% a ahorro. Combínalo con ahorro automático (transferencias programadas el día de pago) para que el dinero se ahorre antes de que lo veas.",
     },
     {
-      question: "¿Dónde debo guardar mis ahorros?",
-      answer: "Para tu fondo de emergencia, usa una cuenta de ahorros de alto rendimiento que ofrezca fácil acceso. Para ahorros a largo plazo (más de 1 año), considera certificados de depósito (CDs) o fondos del mercado monetario que ofrecen mejores tasas de interés.",
+      question: "¿Dónde debo guardar mis ahorros en España?",
+      answer: "En 2026 tienes buenas opciones sin riesgo: para el fondo de emergencia, una cuenta remunerada (Trade Republic ofrece ~3% TAE con liquidez inmediata). Para ahorros a medio plazo, un fondo monetario en MyInvestor o Indexa Capital (~3-4% anual). Para plazos fijos, compara los depósitos de Sabadell, BBVA u Openbank. Evita dejar grandes cantidades en una cuenta corriente sin remuneración.",
     },
     {
       question: "¿Cómo puedo ahorrar si gano poco dinero?",
@@ -187,11 +187,10 @@ export default function AhorroPage() {
               <span className="text-sm font-medium text-blue-600">Guía de Ahorro</span>
             </div>
             <h1 className="text-5xl font-bold tracking-tight text-foreground sm:text-6xl text-balance">
-              Construye riqueza <span className="text-blue-600">ahorrando dinero</span>
+              Cómo ahorrar dinero en España: <span className="text-blue-600">métodos que funcionan de verdad</span>
             </h1>
             <p className="mt-8 text-xl leading-8 text-muted-foreground text-pretty">
-              El ahorro es el primer paso hacia la libertad financiera. Aprende técnicas prácticas para empezar a
-              ahorrar sin sacrificar tu calidad de vida.
+              Aprende a ahorrar con técnicas probadas y adaptadas al contexto español. Desde el método 50/30/20 hasta las mejores cuentas remuneradas, te guiamos paso a paso.
             </p>
             <div className="mt-10 flex items-center justify-center gap-4">
               <Button size="lg" asChild>
@@ -364,6 +363,54 @@ export default function AhorroPage() {
         subtitle="Profundiza con nuestras guías y consejos prácticos"
         tags={["ahorro", "presupuesto", "fondo de emergencia", "gastos"]}
       />
+
+      {/* Cuentas remuneradas - sección SEO */}
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                ¿Dónde guardar tus ahorros en España?
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                En 2026 hay opciones que dan rentabilidad real sin riesgo para tu fondo de emergencia
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {[
+                {
+                  tipo: "Cuenta remunerada",
+                  ejemplo: "Trade Republic (3% TAE), Revolut, N26",
+                  ventaja: "Acceso inmediato + rentabilidad",
+                  para: "Fondo de emergencia (1-6 meses de gastos)",
+                },
+                {
+                  tipo: "Fondo monetario",
+                  ejemplo: "MyInvestor, Indexa Capital",
+                  ventaja: "3-4% anual, sin riesgo real",
+                  para: "Ahorro a corto plazo (0-12 meses)",
+                },
+                {
+                  tipo: "Depósito a plazo",
+                  ejemplo: "Banco Sabadell, BBVA, Openbank",
+                  ventaja: "Tipo fijo garantizado",
+                  para: "Ahorro comprometido (6-24 meses)",
+                },
+              ].map((opt) => (
+                <div key={opt.tipo} className="rounded-xl border border-border bg-card p-5">
+                  <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-2">{opt.tipo}</p>
+                  <p className="font-semibold text-foreground mb-1">{opt.ejemplo}</p>
+                  <p className="text-sm text-green-600 font-medium mb-3">✓ {opt.ventaja}</p>
+                  <p className="text-xs text-muted-foreground">Ideal para: {opt.para}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-sm text-muted-foreground text-center">
+              * Tipos de interés orientativos para 2026. Comprueba siempre las condiciones actuales antes de contratar.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <FAQSection

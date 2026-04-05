@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import type { BlogPost } from "@/lib/blog-data"
+import type { BlogPost, BlogSearchPost } from "@/lib/blog-data"
 import { Clock, Calendar, ChevronLeft, ChevronRight } from "lucide-react"
 import AdSense from "@/components/AdSense"
 import { BlogSearch } from "@/components/blog-search"
@@ -15,6 +15,7 @@ interface BlogPostsGridProps {
   currentPage: number
   totalPages: number
   filteredCount: number
+  searchPosts: BlogSearchPost[]
 }
 
 function getPageHref(page: number, category: string | null): string {
@@ -32,6 +33,7 @@ export default function BlogPostsGrid({
   currentPage,
   totalPages,
   filteredCount,
+  searchPosts,
 }: BlogPostsGridProps) {
   return (
     <div className="py-16 sm:py-20">
@@ -48,7 +50,7 @@ export default function BlogPostsGrid({
 
         {/* Search */}
         <div className="mt-8 flex justify-center">
-          <BlogSearch />
+          <BlogSearch posts={searchPosts} />
         </div>
 
         {/* Categories */}

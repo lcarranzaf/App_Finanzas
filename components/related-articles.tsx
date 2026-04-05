@@ -1,12 +1,9 @@
-"use client"
-
 import Link from "next/link"
 import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Clock } from "lucide-react"
 import { getBlogPosts } from "@/lib/blog-data"
-import type { BlogPost } from "@/lib/blog-data"
 
 interface RelatedArticlesProps {
   currentPostSlug: string

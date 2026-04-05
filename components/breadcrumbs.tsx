@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { ChevronRight, Home } from "lucide-react"
 import { usePathname } from "next/navigation"
-import type { Metadata } from "next"
 
 interface BreadcrumbItem {
   label: string

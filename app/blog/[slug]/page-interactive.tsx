@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react'
-import Image from 'next/image'
 import { OptimizedImage } from '@/components/optimized-image'
 
 interface BlogPostPageProps {

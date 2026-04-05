@@ -26,6 +26,18 @@ interface StructuredDataProps {
   }
 }
 
+interface PersonStructuredData {
+  "@context": "https://schema.org"
+  "@type": "Person"
+  "@id": string
+  name: string
+  url: string
+  jobTitle: string
+  description: string
+  knowsAbout: string[]
+  worksFor: { "@id": string }
+}
+
 export default function StructuredData({ type, data }: StructuredDataProps) {
   let structuredData: Record<string, unknown> = {}
 
@@ -148,7 +160,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
     case "persons": {
       const slugsToRender = data?.authorSlugs ?? getAllAuthors().map((a) => a.slug)
       const persons = slugsToRender
-        .map((slug) => {
+        .map((slug): PersonStructuredData | null => {
           const a = getAllAuthors().find((au) => au.slug === slug)
           if (!a) return null
           return {
@@ -163,14 +175,14 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
             worksFor: { "@id": ORG_ID },
           }
         })
-        .filter(Boolean)
+        .filter((person): person is PersonStructuredData => person !== null)
       return (
         <>
-          {persons.map((p: any) => (
+          {persons.map((person) => (
             <script
-              key={p["@id"]}
+              key={person["@id"]}
               type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: JSON.stringify(p) }}
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }}
               suppressHydrationWarning
             />
           ))}

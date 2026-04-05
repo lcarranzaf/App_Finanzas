@@ -6,7 +6,6 @@ import { getBlogPosts } from "@/lib/blog-data"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock } from "lucide-react"
-import Image from "next/image"
 
 interface AuthorPageProps {
   params: { slug: string }

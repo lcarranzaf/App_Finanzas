@@ -1,4 +1,5 @@
-﻿import { getBlogPost } from "@/lib/blog-data"
+﻿import React from "react"
+import { getBlogPost } from "@/lib/blog-data"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
@@ -9,7 +10,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs"
 import { RelatedArticles } from "@/components/related-articles"
 import { Metadata } from "next"
 import StructuredData from "@/components/structured-data"
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown, { type Components } from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { ContextualLinks } from "@/components/internal-links"
 import AdSense from "@/components/AdSense"
@@ -57,7 +58,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       },
     },
     openGraph: {
-      title: post.title,
+      title: post.seoTitle ?? post.title,
       description: post.description,
       images: [
         {
@@ -79,7 +80,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: post.seoTitle ?? post.title,
       description: post.description,
       images: [post.image],
     },
@@ -100,7 +101,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     notFound()
   }
 
-  const shareUrl = `https://www.finanzasdigitales.es/blog/${post.slug}`
   const postAuthor = getAuthorByName(post.author)
   const authorSlug = postAuthor?.slug ?? "equipo-finanzaspro"
 
@@ -120,8 +120,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   const getTextFromChildren = (children: React.ReactNode): string => {
     if (typeof children === 'string') return children
     if (Array.isArray(children)) return children.map(getTextFromChildren).join('')
-    if (children && typeof children === 'object' && 'props' in children) {
-      return getTextFromChildren((children as any).props.children)
+    if (React.isValidElement<{ children?: React.ReactNode }>(children)) {
+      return getTextFromChildren(children.props.children)
     }
     return ''
   }
@@ -235,21 +235,21 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           const firstHalf = contentLines.slice(0, splitIndex).join("\n")
           const secondHalf = contentLines.slice(splitIndex).join("\n")
 
-          const markdownComponents = {
-            h1: ({children}: any) => {
+          const markdownComponents: Components = {
+            h1: ({ children }) => {
               const id = generateId(getTextFromChildren(children))
               return <h2 id={id} className="text-4xl font-bold tracking-tight text-foreground mt-12 mb-6 pb-4 border-b border-border scroll-mt-24">{children}</h2>
             },
-            h2: ({children}: any) => {
+            h2: ({ children }) => {
               const id = generateId(getTextFromChildren(children))
               return <h2 id={id} className="text-3xl font-bold tracking-tight text-foreground mt-14 mb-5 pb-3 border-b border-border/50 scroll-mt-24">{children}</h2>
             },
-            h3: ({children}: any) => {
+            h3: ({ children }) => {
               const id = generateId(getTextFromChildren(children))
               return <h3 id={id} className="text-2xl font-bold tracking-tight text-foreground mt-10 mb-4 scroll-mt-24">{children}</h3>
             },
-            h4: ({children}: any) => <h4 className="text-xl font-bold tracking-tight text-foreground mt-8 mb-3">{children}</h4>,
-            p: ({children}: any) => {
+            h4: ({ children }) => <h4 className="text-xl font-bold tracking-tight text-foreground mt-8 mb-3">{children}</h4>,
+            p: ({ children }) => {
               const text = getTextFromChildren(children)
               if (text.startsWith('Tip:') || text.startsWith('**Tip**:') || text.startsWith('**Tip:**')) {
                 return <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4 my-6 text-foreground leading-7">{children}</div>
@@ -262,27 +262,27 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               }
               return <p className="text-foreground leading-8 mb-6 text-base font-normal">{children}</p>
             },
-            ul: ({children}: any) => <ul className="my-6 space-y-3 list-disc list-outside ml-6 text-foreground">{children}</ul>,
-            ol: ({children}: any) => <ol className="my-6 space-y-3 list-decimal list-outside ml-6 text-foreground">{children}</ol>,
-            li: ({children}: any) => <li className="text-foreground leading-7 pl-2 mb-2">{children}</li>,
-            strong: ({children}: any) => <strong className="font-semibold text-foreground">{children}</strong>,
-            em: ({children}: any) => <em className="italic text-foreground/90">{children}</em>,
-            code: ({children}: any) => <code className="bg-muted/80 text-sm px-2 py-1 rounded-md font-mono text-foreground border border-border">{children}</code>,
-            a: ({children, href}: any) => <a href={href} className="text-primary hover:underline font-medium transition-colors">{children}</a>,
-            blockquote: ({children}: any) => (
+            ul: ({ children }) => <ul className="my-6 space-y-3 list-disc list-outside ml-6 text-foreground">{children}</ul>,
+            ol: ({ children }) => <ol className="my-6 space-y-3 list-decimal list-outside ml-6 text-foreground">{children}</ol>,
+            li: ({ children }) => <li className="text-foreground leading-7 pl-2 mb-2">{children}</li>,
+            strong: ({ children }) => <strong className="font-semibold text-foreground">{children}</strong>,
+            em: ({ children }) => <em className="italic text-foreground/90">{children}</em>,
+            code: ({ children }) => <code className="bg-muted/80 text-sm px-2 py-1 rounded-md font-mono text-foreground border border-border">{children}</code>,
+            a: ({ children, href }) => <a href={href} className="text-primary hover:underline font-medium transition-colors">{children}</a>,
+            blockquote: ({ children }) => (
               <blockquote className="border-l-4 border-primary bg-primary/5 pl-6 pr-4 py-4 italic my-8 text-muted-foreground rounded-r-lg">{children}</blockquote>
             ),
-            table: ({children}: any) => (
+            table: ({ children }) => (
               <div className="my-8 overflow-x-auto rounded-lg border border-border">
                 <table className="w-full text-sm">{children}</table>
               </div>
             ),
-            thead: ({children}: any) => <thead className="bg-muted/50 border-b border-border">{children}</thead>,
-            tbody: ({children}: any) => <tbody className="divide-y divide-border">{children}</tbody>,
-            tr: ({children}: any) => <tr className="hover:bg-muted/30 transition-colors">{children}</tr>,
-            th: ({children}: any) => <th className="px-4 py-3 text-left font-semibold text-foreground">{children}</th>,
-            td: ({children}: any) => <td className="px-4 py-3 text-muted-foreground">{children}</td>,
-            img: ({src, alt}: any) => (
+            thead: ({ children }) => <thead className="bg-muted/50 border-b border-border">{children}</thead>,
+            tbody: ({ children }) => <tbody className="divide-y divide-border">{children}</tbody>,
+            tr: ({ children }) => <tr className="hover:bg-muted/30 transition-colors">{children}</tr>,
+            th: ({ children }) => <th className="px-4 py-3 text-left font-semibold text-foreground">{children}</th>,
+            td: ({ children }) => <td className="px-4 py-3 text-muted-foreground">{children}</td>,
+            img: ({ src, alt }) => (
               <figure className="my-10">
                 <Image src={src || '/placeholder.svg'} alt={alt || ''} width={800} height={400} className="rounded-xl shadow-lg w-full border border-border/20" />
                 {alt && <figcaption className="mt-3 text-center text-sm text-muted-foreground italic">{alt}</figcaption>}

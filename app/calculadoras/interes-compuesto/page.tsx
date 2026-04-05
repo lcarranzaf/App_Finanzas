@@ -4,7 +4,6 @@ import Link from "next/link"
 import { TrendingUp, CheckCircle, Clock, Zap, PiggyBank, CreditCard, ArrowLeftRight, ChevronRight } from "lucide-react"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
 
 const ProjectionCalculator = dynamic(
   () => import("@/components/projection-calculator"),
@@ -264,6 +263,57 @@ export default function InteresCompuestoPage() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{f.a}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECCIÓN EDUCATIVA - ejemplos reales para España */}
+      <section className="py-16">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-foreground sm:text-3xl">Ejemplos reales: cuánto puedes acumular en España</h2>
+            <p className="mt-3 text-muted-foreground">Proyecciones con fondos indexados MSCI World al 8% anual (tasa histórica moderada)</p>
+          </div>
+          <div className="overflow-x-auto rounded-xl border border-border">
+            <table className="w-full text-sm">
+              <thead className="bg-muted/50 border-b border-border">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold text-foreground">Aportación mensual</th>
+                  <th className="px-4 py-3 text-right font-semibold text-foreground">10 años</th>
+                  <th className="px-4 py-3 text-right font-semibold text-foreground">20 años</th>
+                  <th className="px-4 py-3 text-right font-semibold text-foreground">30 años</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                {[
+                  ["50 €/mes", "9.147 €", "29.451 €", "74.518 €"],
+                  ["100 €/mes", "18.295 €", "58.902 €", "149.036 €"],
+                  ["200 €/mes", "36.589 €", "117.804 €", "298.072 €"],
+                  ["300 €/mes", "54.884 €", "176.706 €", "447.108 €"],
+                  ["500 €/mes", "91.473 €", "294.510 €", "745.180 €"],
+                ].map(([aport, ...vals]) => (
+                  <tr key={aport} className="hover:bg-muted/30 transition-colors">
+                    <td className="px-4 py-3 font-medium text-foreground">{aport}</td>
+                    {vals.map(v => <td key={v} className="px-4 py-3 text-right text-muted-foreground">{v}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 text-xs text-muted-foreground text-center">
+            * Capital inicial 0 €. Rentabilidad del 8% anual. Valores brutos antes de impuestos. No garantiza resultados futuros.
+          </p>
+          <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/5 p-6">
+            <p className="text-sm font-semibold text-foreground mb-2">¿Dónde invertir en fondos indexados en España?</p>
+            <p className="text-sm text-muted-foreground mb-4">
+              Para conseguir ese 8% anual históricamente, necesitas un fondo indexado MSCI World o S&P 500 de bajo costo. En España las plataformas más accesibles son <strong className="text-foreground">MyInvestor</strong> (fondos desde 1 €, sin custodia), <strong className="text-foreground">Indexa Capital</strong> (cartera automática desde 1.000 €) y <strong className="text-foreground">Trade Republic</strong> (ETFs desde 1 €/mes).
+            </p>
+            <Link
+              href="/fondos-indexados"
+              className="inline-flex items-center text-sm font-semibold text-blue-500 hover:underline"
+            >
+              Ver guía completa de fondos indexados en España →
+            </Link>
           </div>
         </div>
       </section>

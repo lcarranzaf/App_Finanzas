@@ -22,11 +22,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.finanzasdigitales.es"),
   title: {
-    default: "Finanzas Digitales - Tu Guía para el Éxito Financiero",
+    default: "Finanzas Digitales - Ahorro e Inversion en Espana",
     template: "%s | Finanzas Digitales",
   },
   description:
-    "Aprende a ahorrar, invertir y gestionar tu dinero. Guías prácticas sobre fondos indexados, presupuestos, ETFs y libertad financiera en español.",
+    "Guias gratuitas de finanzas personales para Espana: ahorra mas, invierte en fondos indexados y ETFs, crea tu presupuesto y alcanza la libertad financiera.",
   keywords: [
     "finanzas personales",
     "ahorro",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "dinero",
     "presupuesto",
     "fondos indexados",
-    "educación financiera",
+    "educacion financiera",
     "libertad financiera",
     "ETF",
     "bolsa de valores",
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     url: "https://www.finanzasdigitales.es",
-    title: "Finanzas Digitales - Tu Guía para el Éxito Financiero",
+    title: "Finanzas Digitales - Ahorro e Inversion en Espana",
     description:
-      "Aprende a ahorrar, invertir y construir un futuro próspero con nuestros consejos expertos en finanzas personales.",
+      "Guias gratuitas de finanzas personales para Espana: ahorra mas, invierte en fondos indexados y ETFs, y alcanza la libertad financiera.",
     siteName: "Finanzas Digitales",
     images: [
       {
@@ -72,9 +72,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Finanzas Digitales - Tu Guía para el Éxito Financiero",
+    title: "Finanzas Digitales - Ahorro e Inversion en Espana",
     description:
-      "Aprende a ahorrar, invertir y construir un futuro próspero con nuestros consejos expertos en finanzas personales.",
+      "Guias gratuitas de finanzas personales para Espana: ahorra mas, invierte en fondos indexados y ETFs, y alcanza la libertad financiera.",
     images: ["/og-image.jpg"],
   },
   verification: {

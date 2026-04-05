@@ -1,5 +1,7 @@
-﻿// Additional structured data components for finance-specific content
-export function FinancialGuideSchema({ post }: { post: any }) {
+﻿import type { BlogPost } from "@/lib/blog-data"
+
+// Additional structured data components for finance-specific content
+export function FinancialGuideSchema({ post }: { post: BlogPost }) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": ["Article", "HowTo"],

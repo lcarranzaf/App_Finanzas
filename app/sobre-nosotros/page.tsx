@@ -91,9 +91,7 @@ export default function SobreNosotrosPage() {
               persona pueda entenderlo y aplicarlo inmediatamente.
             </p>
             <p>
-              Hoy, más de 50,000 personas confían en Finanzas Digitales para tomar decisiones financieras informadas. Nuestros
-              lectores han ahorrado millones de euros en comisiones innecesarias, han construido fondos de emergencia
-              sólidos y han comenzado su camino en la inversión con confianza.
+              Cada semana, nuevos lectores llegan a Finanzas Digitales buscando información clara y sin conflictos de interés para tomar decisiones financieras informadas. Nuestros lectores han reducido comisiones innecesarias, han construido fondos de emergencia sólidos y han comenzado su camino en la inversión con confianza.
             </p>
           </div>
         </div>
@@ -186,7 +184,7 @@ export default function SobreNosotrosPage() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-4">
             {[
               { value: "2022", label: "Año de fundación" },
-              { value: "20+", label: "Artículos publicados" },
+              { value: "28+", label: "Artículos publicados" },
               { value: "Gratis", label: "Acceso a todo el contenido" },
               { value: "100%", label: "Contenido en español" },
             ].map((stat) => (

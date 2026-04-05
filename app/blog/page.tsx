@@ -1,5 +1,5 @@
 ﻿import type { Metadata } from "next"
-import { getBlogPosts } from "@/lib/blog-data"
+import { getBlogPosts, getBlogSearchPosts } from "@/lib/blog-data"
 import BlogPostsGrid from "./_components/blog-posts-grid"
 
 const BASE_BLOG_URL = "https://www.finanzasdigitales.es/blog"
@@ -30,16 +30,30 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     }
   }
 
+  const categoryDescriptions: Record<string, string> = {
+    "Ahorro": "Técnicas y estrategias de ahorro para España: método 50/30/20, fondos de emergencia y hábitos para ahorrar más cada mes.",
+    "Inversiones": "Guías de inversión para principiantes en España: fondos indexados, ETFs, interés compuesto y cómo empezar con poco dinero.",
+    "Inflación": "Todo sobre la inflación en España: causas, consecuencias y cómo proteger tu dinero e inversiones ante la subida de precios.",
+    "Criptomonedas": "Guías sobre criptomonedas para principiantes: cómo invertir de forma segura, riesgos y las mejores estrategias en 2026.",
+    "Tecnología": "Finanzas y tecnología: cómo usar la IA y las herramientas digitales para mejorar tu gestión financiera personal.",
+    "Vivienda": "Claves sobre vivienda en España: alquilar o comprar, hipotecas, inversión inmobiliaria fraccionada y más.",
+  }
+
   const title = category
     ? page > 1
       ? `${category} - Página ${page} | Blog de Finanzas`
-      : `${category} | Blog de Finanzas`
+      : `Artículos de ${category} 2026 - Guías Prácticas | Finanzas Digitales`
     : page > 1
-      ? `Blog - Página ${page}`
-      : "Blog de Finanzas Personales"
+      ? `Blog de Finanzas - Página ${page} | Finanzas Digitales`
+      : "Blog de Finanzas Personales 2026 - Ahorro, Inversión y Presupuesto"
+
+  const description = category
+    ? categoryDescriptions[category] ?? `Artículos sobre ${category} en español. Guías prácticas y actualizadas para mejorar tus finanzas personales en España.`
+    : "Artículos de finanzas personales en español: cómo ahorrar, invertir en fondos indexados, crear un presupuesto y alcanzar la libertad financiera en España."
 
   return {
     title,
+    description,
     alternates: { canonical },
     robots: page > 1 ? { index: false, follow: true } : { index: true, follow: true },
   }
@@ -50,6 +64,7 @@ export default function BlogPage({ searchParams }: Props) {
   const selectedCategory = searchParams?.category || null
 
   const allPosts = getBlogPosts()
+  const searchPosts = getBlogSearchPosts()
 
   const itemListSchema = {
     "@context": "https://schema.org",
@@ -109,9 +124,8 @@ export default function BlogPage({ searchParams }: Props) {
         currentPage={safePage}
         totalPages={totalPages}
         filteredCount={filteredPosts.length}
+        searchPosts={searchPosts}
       />
     </>
   )
 }
-
-
