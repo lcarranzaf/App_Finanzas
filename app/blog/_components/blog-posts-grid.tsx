@@ -75,6 +75,54 @@ export default function BlogPostsGrid({
           ))}
         </div>
 
+        <section className="mt-12 rounded-2xl border border-border bg-muted/30 p-6 sm:p-8">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-primary">Comparativas destacadas</p>
+              <h2 className="mt-1 text-2xl font-bold text-foreground">Guias para decidir mejor en Espana</h2>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Si buscas opciones concretas en 2026, aqui tienes las landings mas utiles del sitio.
+              </p>
+            </div>
+            <Button variant="outline" asChild>
+              <Link href="/comparativas-espana-2026">Ver hub de comparativas</Link>
+            </Button>
+          </div>
+          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {[
+              {
+                href: "/cuentas-remuneradas-espana-2026",
+                title: "Cuentas remuneradas en Espana 2026",
+                description: "Para liquidez y fondo de emergencia.",
+              },
+              {
+                href: "/mejores-fondos-monetarios-espana-2026",
+                title: "Fondos monetarios en Espana 2026",
+                description: "Alternativa a cuentas y depositos.",
+              },
+              {
+                href: "/mejores-brokers-espana-2026",
+                title: "Mejores brokers en Espana 2026",
+                description: "Para ETFs, fondos y acciones.",
+              },
+              {
+                href: "/mejores-planes-de-pensiones-espana-2026",
+                title: "Planes de pensiones en Espana 2026",
+                description: "Fiscalidad, comisiones y comparativa.",
+              },
+            ].map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="block rounded-xl border border-border bg-background p-4 hover:border-primary/40 hover:bg-primary/5 transition-colors"
+              >
+                <p className="font-semibold text-foreground">{guide.title}</p>
+                <p className="mt-2 text-sm text-muted-foreground">{guide.description}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* Banner Horizontal AdSense */}
         <div className="mt-12">
           <AdSense slot="7561827917" format="horizontal" />

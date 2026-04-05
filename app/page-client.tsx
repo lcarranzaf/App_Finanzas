@@ -166,6 +166,66 @@ export default function HomePageClient() {
         </div>
       </section>
 
+      <section className="py-16 sm:py-20 bg-muted/30">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Comparativas clave para España en 2026
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-muted-foreground">
+              Las guías más útiles para decidir dónde ahorrar, invertir y comparar opciones reales del mercado español.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                href: "/cuentas-remuneradas-espana-2026",
+                category: "Ahorro",
+                title: "Mejores cuentas remuneradas en España 2026",
+                description: "Para guardar liquidez con algo de rentabilidad y sin complicarte.",
+              },
+              {
+                href: "/mejores-fondos-monetarios-espana-2026",
+                category: "Liquidez",
+                title: "Mejores fondos monetarios en España 2026",
+                description: "Una alternativa fiscalmente más eficiente para dinero a corto plazo.",
+              },
+              {
+                href: "/mejores-brokers-espana-2026",
+                category: "Inversión",
+                title: "Mejores brokers en España 2026",
+                description: "Compara plataformas para ETFs, acciones y fondos indexados.",
+              },
+              {
+                href: "/mejores-planes-de-pensiones-espana-2026",
+                category: "Jubilación",
+                title: "Mejores planes de pensiones en España 2026",
+                description: "Fiscalidad, comisiones y cuándo compensa frente a un fondo indexado.",
+              },
+            ].map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="group block rounded-xl border border-foreground/10 bg-card p-5 hover:border-primary/30 hover:shadow-md transition-all"
+              >
+                <span className="inline-block text-xs font-semibold text-primary bg-primary/10 rounded-full px-2 py-1 mb-3">
+                  {guide.category}
+                </span>
+                <p className="text-base font-semibold text-foreground group-hover:text-primary transition-colors leading-snug mb-3">
+                  {guide.title}
+                </p>
+                <p className="text-sm text-muted-foreground leading-6">{guide.description}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Button variant="outline" asChild>
+              <Link href="/comparativas-espana-2026">Ver todas las comparativas</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Articles — enlaces directos a artículos individuales */}
       <section className="py-16 sm:py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

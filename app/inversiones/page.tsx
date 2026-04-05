@@ -540,6 +540,29 @@ export default function InversionesPage() {
         </div>
       </section>
 
+      {/* Links a guías de inversión */}
+      <section className="py-10 sm:py-12">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2 className="text-2xl font-bold mb-6">Más guías de inversión en España</h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Link
+              href="/mejores-brokers-espana-2026"
+              className="block p-5 rounded-xl border hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-colors"
+            >
+              <p className="font-semibold mb-1">Mejores brokers en España 2026</p>
+              <p className="text-sm text-muted-foreground">Comparativa de Trade Republic, MyInvestor, Indexa Capital, Degiro e Interactive Brokers.</p>
+            </Link>
+            <Link
+              href="/mejores-planes-de-pensiones-espana-2026"
+              className="block p-5 rounded-xl border hover:border-blue-500/50 hover:bg-blue-500/5 transition-colors"
+            >
+              <p className="font-semibold mb-1">Mejores planes de pensiones en España 2026</p>
+              <p className="text-sm text-muted-foreground">Comisiones, fiscalidad y cuándo te conviene frente a un fondo indexado.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Artículos Relacionados */}
       <CategoryArticles
         category="Inversiones"

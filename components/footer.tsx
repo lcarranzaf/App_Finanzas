@@ -12,6 +12,7 @@ export default function Footer() {
   const categories = [
     { name: "Ahorro", href: "/ahorro" },
     { name: "Inversiones", href: "/inversiones" },
+    { name: "Comparativas 2026", href: "/comparativas-espana-2026" },
     { name: "Finanzas para Jóvenes", href: "/jovenes" },
     { name: "Blog", href: "/blog" },
     { name: "Recursos", href: "/recursos" },
