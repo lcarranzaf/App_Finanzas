@@ -53,6 +53,7 @@ const nextConfig = {
               "font-src 'self' data: https://disquscdn.com https://*.disquscdn.com",
               "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://vitals.vercel-insights.com https://vercel.live https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://*.disqus.com https://disqus.com",
               "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://*.adtrafficquality.google",
+              "worker-src 'self'",
               "frame-ancestors 'none'",
             ].join("; "),
           },

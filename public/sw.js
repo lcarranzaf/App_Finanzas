@@ -1,8 +1,8 @@
 ﻿// Service Worker for caching static assets and improving performance
 
-const CACHE_NAME = 'finanzaspro-v3'
-const STATIC_CACHE = 'finanzaspro-static-v3'
-const DYNAMIC_CACHE = 'finanzaspro-dynamic-v3'
+const CACHE_NAME = 'finanzasdigitales-v1'
+const STATIC_CACHE = 'finanzasdigitales-static-v1'
+const DYNAMIC_CACHE = 'finanzasdigitales-dynamic-v1'
 
 // Only cache truly static assets that are guaranteed to exist
 // Do NOT cache HTML pages here — they must be served fresh to avoid hydration mismatches
