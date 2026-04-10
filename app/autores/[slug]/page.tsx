@@ -5,7 +5,7 @@ import { getAuthor, getAllAuthors } from "@/lib/authors-data"
 import { getBlogPosts } from "@/lib/blog-data"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, Clock } from "lucide-react"
+import { Calendar, Clock, GraduationCap, Award } from "lucide-react"
 
 interface AuthorPageProps {
   params: { slug: string }
@@ -43,6 +43,7 @@ export default function AuthorPage({ params }: AuthorPageProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": `https://www.finanzasdigitales.es/autores/${author.slug}#person`,
     name: author.name,
     jobTitle: author.role,
     description: author.bio,
@@ -53,6 +54,13 @@ export default function AuthorPage({ params }: AuthorPageProps) {
       name: "Finanzas Digitales",
     },
     knowsAbout: author.expertise,
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: author.education.institution,
+    },
+    ...(author.hasCredential
+      ? { hasCredential: author.hasCredential.map((c) => ({ "@type": "EducationalOccupationalCredential", name: c })) }
+      : {}),
   }
 
   return (
@@ -81,6 +89,18 @@ export default function AuthorPage({ params }: AuthorPageProps) {
               {author.credentials && (
                 <p className="mt-1 text-sm text-muted-foreground">{author.credentials}</p>
               )}
+              <div className="mt-3 flex flex-col gap-1.5">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <GraduationCap className="h-4 w-4 shrink-0 text-primary" />
+                  <span>{author.education.degree} — {author.education.institution}</span>
+                </div>
+                {author.hasCredential?.map((c) => (
+                  <div key={c} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Award className="h-4 w-4 shrink-0 text-primary" />
+                    <span>{c}</span>
+                  </div>
+                ))}
+              </div>
               {(author.bioFull ?? author.bio).split("\n\n").map((para, i) => (<p key={i} className="mt-4 text-muted-foreground leading-7">{para}</p>))}
               <div className="mt-6 flex flex-wrap gap-2">
                 {author.expertise.map((skill) => (

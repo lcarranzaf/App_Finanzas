@@ -25,8 +25,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/calculadoras/divisas",               date: "2026-03-16", priority: 0.7,  changeFrequency: "monthly" as const },
     { path: "/sobre-nosotros",                     date: "2026-03-06", priority: 0.5,  changeFrequency: "yearly"  as const },
     { path: "/contacto",                           date: "2026-02-01", priority: 0.4,  changeFrequency: "yearly"  as const },
-    { path: "/privacidad",                         date: "2026-02-01", priority: 0.3,  changeFrequency: "yearly"  as const },
-    { path: "/terminos",                           date: "2026-02-01", priority: 0.3,  changeFrequency: "yearly"  as const },
+    { path: "/privacidad",                         date: "2026-04-09", priority: 0.4,  changeFrequency: "yearly"  as const },
+    { path: "/politica-de-cookies",               date: "2026-04-09", priority: 0.4,  changeFrequency: "yearly"  as const },
+    { path: "/aviso-legal",                       date: "2026-04-09", priority: 0.4,  changeFrequency: "yearly"  as const },
+    { path: "/terminos",                           date: "2026-04-09", priority: 0.3,  changeFrequency: "yearly"  as const },
   ]
 
   const blogPages = blogPosts.map((post) => ({

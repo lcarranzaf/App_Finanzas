@@ -4,9 +4,11 @@ import { Mail } from "lucide-react"
 export default function Footer() {
 
   const quickLinks = [
-    { name: "Política de Privacidad", href: "/privacidad" },
-    { name: "Términos y Condiciones", href: "/terminos" },
     { name: "Sobre Nosotros", href: "/sobre-nosotros" },
+    { name: "Aviso Legal", href: "/aviso-legal" },
+    { name: "Política de Privacidad", href: "/privacidad" },
+    { name: "Política de Cookies", href: "/politica-de-cookies" },
+    { name: "Términos y Condiciones", href: "/terminos" },
   ]
 
   const categories = [

@@ -7,6 +7,8 @@ export interface Author {
   bioFull?: string
   expertise: string[]
   image: string
+  education: { degree: string; institution: string }
+  hasCredential?: string[]
 }
 
 export const authors: Author[] = [
@@ -15,6 +17,11 @@ export const authors: Author[] = [
     name: "Carlos Sánchez",
     role: "Analista de Inversiones",
     credentials: "Licenciado en Economía · 12 años en mercados financieros",
+    education: {
+      degree: "Licenciado en Economía",
+      institution: "Universidad Autónoma de Madrid",
+    },
+    hasCredential: ["Analista financiero en gestora de fondos institucional (8 años)", "Especialización en renta variable y fondos indexados europeos"],
     bio: "Carlos es economista especializado en mercados de renta variable, fondos indexados y planificación de jubilación. Trabajó ocho años como analista en una gestora de fondos antes de dedicarse a la educación financiera. Su enfoque se basa en estrategias pasivas de largo plazo accesibles para cualquier inversor.",
     bioFull: `Carlos Sánchez es economista y analista de inversiones con más de doce años de experiencia en mercados financieros europeos. Licenciado en Economía por la Universidad Autónoma de Madrid, inició su carrera en el área de análisis cuantitativo de una gestora de fondos, donde durante ocho años fue responsable de evaluar carteras de renta variable española y europea, así como de elaborar informes sobre fondos indexados referenciados al MSCI World y al MSCI Europe.
 
@@ -33,8 +40,13 @@ Carlos defiende que la inversión exitosa no se basa en predecir el mercado, sin
     name: "María López",
     role: "Planificadora Financiera Personal",
     credentials: "Máster en Finanzas Personales · Consultora financiera independiente",
+    education: {
+      degree: "Máster en Finanzas Personales",
+      institution: "Universidad Complutense de Madrid",
+    },
+    hasCredential: ["Consultora financiera independiente (10+ años)", "Ex asesora de banca minorista"],
     bio: "María es consultora financiera independiente con más de 10 años ayudando a familias y jóvenes profesionales españoles a sanear sus finanzas. Experta en presupuestos, eliminación de deudas y fondos de emergencia, cree que el primer paso hacia la libertad financiera es entender a dónde va cada euro que ganas.",
-    bioFull: `María López es planificadora financiera personal con Máster en Finanzas Personales y más de diez años de experiencia ayudando a familias, parejas y jóvenes profesionales españoles a recuperar el control de su dinero. A lo largo de su carrera ha trabajado como consultora financiera independiente, asesorando a cientos de personas en situaciones que van desde la gestión de una hipoteca a tipo variable hasta la planificación del ahorro para la educación de sus hijos.
+    bioFull: `María López es planificadora financiera personal con Máster en Finanzas Personales por la Universidad Complutense de Madrid y más de diez años de experiencia ayudando a familias, parejas y jóvenes profesionales españoles a recuperar el control de su dinero. A lo largo de su carrera ha trabajado como consultora financiera independiente, asesorando a cientos de personas en situaciones que van desde la gestión de una hipoteca a tipo variable hasta la planificación del ahorro para la educación de sus hijos.
 
 Su especialidad es la economía doméstica real: no la teoría de los libros de texto, sino las decisiones financieras del día a día. Presupuestos familiares que funcionan, estrategias para eliminar deudas de tarjetas de crédito con el método de la avalancha de intereses, y fondos de emergencia adaptados al contexto español, donde los imprevistos más frecuentes son reparaciones del hogar, periodos de desempleo o gastos no cubiertos plenamente por la Seguridad Social.
 
@@ -50,9 +62,14 @@ María defiende que la libertad financiera no está reservada a personas con ing
     slug: "alejandro-torres",
     name: "Alejandro Torres",
     role: "Especialista en Tecnología Financiera",
-    credentials: "Ingeniero en Sistemas · Certificado en Blockchain y Fintech",
+    credentials: "Ingeniería en Sistemas · Certificado en Blockchain y Fintech",
+    education: {
+      degree: "Ingeniería en Sistemas de Información",
+      institution: "Universidad Politécnica de Madrid",
+    },
+    hasCredential: ["Certificado en Blockchain y Fintech", "7+ años analizando plataformas fintech europeas"],
     bio: "Alejandro combina su formación técnica con una profunda pasión por las finanzas personales. Ha analizado más de 50 plataformas fintech, apps de inversión y activos digitales, y su misión es ayudar a los españoles a distinguir las oportunidades reales de los riesgos en el ecosistema fintech europeo.",
-    bioFull: `Alejandro Torres es especialista en tecnología financiera con formación en Ingeniería en Sistemas y certificación en Blockchain y Fintech. Lleva más de siete años analizando plataformas digitales de inversión, aplicaciones de gestión financiera personal y activos digitales, habiendo evaluado en profundidad más de cincuenta herramientas del ecosistema fintech europeo y español.
+    bioFull: `Alejandro Torres es especialista en tecnología financiera con formación en Ingeniería en Sistemas de Información por la Universidad Politécnica de Madrid y certificación en Blockchain y Fintech. Lleva más de siete años analizando plataformas digitales de inversión, aplicaciones de gestión financiera personal y activos digitales, habiendo evaluado en profundidad más de cincuenta herramientas del ecosistema fintech europeo y español.
 
 Comenzó su carrera como desarrollador de software para entidades financieras, lo que le dio una perspectiva única sobre el funcionamiento interno de las plataformas de banca digital, los robo-advisors y los sistemas de pago instantáneo. Esta visión técnica le permite analizar no solo la experiencia de usuario de una aplicación financiera, sino también su arquitectura de seguridad, su modelo de negocio y los riesgos reales que puede implicar para el usuario particular.
 

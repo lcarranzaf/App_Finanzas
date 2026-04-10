@@ -36,6 +36,8 @@ interface PersonStructuredData {
   description: string
   knowsAbout: string[]
   worksFor: { "@id": string }
+  alumniOf?: { "@type": "EducationalOrganization"; name: string }
+  hasCredential?: { "@type": "EducationalOccupationalCredential"; name: string }[]
 }
 
 export default function StructuredData({ type, data }: StructuredDataProps) {
@@ -173,6 +175,10 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
             description: a.bio,
             knowsAbout: a.expertise,
             worksFor: { "@id": ORG_ID },
+            alumniOf: { "@type": "EducationalOrganization", name: a.education.institution },
+            ...(a.hasCredential
+              ? { hasCredential: a.hasCredential.map((c) => ({ "@type": "EducationalOccupationalCredential", name: c })) }
+              : {}),
           }
         })
         .filter((person): person is PersonStructuredData => person !== null)

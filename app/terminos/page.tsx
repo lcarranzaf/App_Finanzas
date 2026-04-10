@@ -4,7 +4,6 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Términos y Condiciones | Finanzas Digitales",
   description: "Términos y condiciones de uso de Finanzas Digitales. Información sobre el uso del sitio y sus contenidos.",
-  robots: { index: false, follow: true },
   alternates: {
     canonical: "https://www.finanzasdigitales.es/terminos",
   },
