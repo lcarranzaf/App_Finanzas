@@ -10,7 +10,7 @@ import AdSense from "@/components/AdSense"
 export const metadata: Metadata = {
   title: `Fondos Indexados en España ${new Date().getFullYear()} — Guía Completa para Empezar`,
   description:
-    "Qué son los fondos indexados, cómo funcionan y los mejores para invertir en España en 2026. Compara MyInvestor, Indexa Capital y Trade Republic. Guía paso a paso para principiantes.",
+    "Qué son los fondos indexados y cómo invertir en España en 2026. Compara MyInvestor, Indexa Capital y Trade Republic. Guía paso a paso para principiantes.",
   keywords: [
     "fondos indexados España",
     "mejores fondos indexados España 2026",

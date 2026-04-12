@@ -19,7 +19,7 @@ import { AffiliateDisclosure } from "@/components/affiliate-disclosure"
 export const metadata: Metadata = {
   title: `Guía de Inversiones para Principiantes ${new Date().getFullYear()} - Fondos Indexados, ETFs y Acciones`,
   description:
-    "Aprende a invertir desde cero con nuestra guía completa. Compara fondos indexados, ETFs, acciones y bonos. Descubre cuánto necesitas para empezar y qué estrategia se adapta a tu perfil de riesgo.",
+    "Aprende a invertir desde cero en España. Compara fondos indexados, ETFs, acciones y bonos. Descubre qué estrategia se adapta a tu perfil de riesgo.",
   keywords: ["inversiones para principiantes", "fondos indexados", "ETFs", "acciones", "bonos", "cómo invertir", "bolsa de valores", "S&P 500", "inversión a largo plazo"],
   alternates: {
     canonical: "https://www.finanzasdigitales.es/inversiones",

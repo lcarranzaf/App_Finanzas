@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 export const metadata: Metadata = {
   title: "Comparativas Financieras en Espana 2026 | Cuentas, Brokers y Pensiones",
   description:
-    "Compara las mejores opciones financieras en Espana en 2026: cuentas remuneradas, fondos monetarios, brokers y planes de pensiones. Guias practicas para decidir mejor.",
+    "Compara las mejores opciones financieras en España 2026: cuentas remuneradas, fondos monetarios, brokers y planes de pensiones. Guías para decidir mejor.",
   alternates: {
     canonical: "https://www.finanzasdigitales.es/comparativas-espana-2026",
   },

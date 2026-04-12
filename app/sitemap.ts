@@ -16,6 +16,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/cuentas-remuneradas-espana-2026",             date: "2026-04-04", priority: 0.8,  changeFrequency: "monthly" as const },
     { path: "/mejores-fondos-monetarios-espana-2026",       date: "2026-04-04", priority: 0.8,  changeFrequency: "monthly" as const },
     { path: "/mejores-brokers-espana-2026",                 date: "2026-04-04", priority: 0.8,  changeFrequency: "monthly" as const },
+    { path: "/declaracion-renta-espana-2026",               date: "2026-04-12", priority: 0.9,  changeFrequency: "monthly" as const },
+    { path: "/mejores-etf-espana-2026",                     date: "2026-04-12", priority: 0.8,  changeFrequency: "monthly" as const },
+    { path: "/como-invertir-en-bolsa-espana",               date: "2026-04-12", priority: 0.8,  changeFrequency: "monthly" as const },
     { path: "/jovenes",                            date: "2026-02-01", priority: 0.7,  changeFrequency: "monthly" as const },
     { path: "/recursos",                           date: "2026-03-06", priority: 0.7,  changeFrequency: "monthly" as const },
     { path: "/calculadoras",                       date: "2026-03-16", priority: 0.8,  changeFrequency: "monthly" as const },
@@ -33,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogPages = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.publishedAt),
+    lastModified: new Date(post.updatedAt ?? post.publishedAt),
     priority: 0.8,
     changeFrequency: "monthly" as const,
   }))

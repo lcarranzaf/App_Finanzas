@@ -11,7 +11,7 @@ import { CategoryArticles } from "@/components/category-articles"
 export const metadata: Metadata = {
   title: `Finanzas para Jóvenes en España ${new Date().getFullYear()} - Primer Sueldo, Ahorro e Inversión`,
   description:
-    "Guía práctica de finanzas para jóvenes y estudiantes en España. Cómo gestionar tu primer sueldo, ahorrar con poco dinero, empezar a invertir en fondos indexados desde 50€ y planificar tu futuro.",
+    "Guía de finanzas para jóvenes en España: gestiona tu primer sueldo, ahorra con poco dinero e invierte en fondos indexados desde 50€ con Trade Republic.",
   keywords: ["finanzas para jóvenes", "primer sueldo España", "estudiantes universitarios", "cómo invertir siendo joven", "ahorro jóvenes España", "MyInvestor jóvenes", "Trade Republic España", "fondos indexados jóvenes"],
   alternates: {
     canonical: "https://www.finanzasdigitales.es/jovenes",

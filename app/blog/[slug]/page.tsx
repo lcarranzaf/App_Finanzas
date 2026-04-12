@@ -72,7 +72,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       siteName: "Finanzas Digitales",
       type: "article",
       publishedTime: `${post.publishedAt}T00:00:00+00:00`,
-      modifiedTime: `${post.publishedAt}T00:00:00+00:00`,
+      modifiedTime: `${post.updatedAt ?? post.publishedAt}T00:00:00+00:00`,
       authors: [post.author],
       section: post.category,
       tags: post.tags,
@@ -134,9 +134,17 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         description: post.description,
         image: post.image,
         publishedAt: post.publishedAt,
+        updatedAt: post.updatedAt,
         author: post.author,
         category: post.category,
         tags: post.tags
+      }} />
+      <StructuredData type="breadcrumbs" data={{
+        breadcrumbs: [
+          { name: "Inicio", url: "https://www.finanzasdigitales.es" },
+          { name: "Blog", url: "https://www.finanzasdigitales.es/blog" },
+          { name: post.title, url: `https://www.finanzasdigitales.es/blog/${post.slug}` },
+        ]
       }} />
       <div className="py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
@@ -163,9 +171,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <span className="text-xs text-muted-foreground">Actualizado:</span>
-                <time dateTime={post.publishedAt}>
-                  {new Date(post.publishedAt).toLocaleDateString("es-ES", {
+                <span className="text-xs text-muted-foreground">
+                  {post.updatedAt ? "Actualizado:" : "Publicado:"}
+                </span>
+                <time dateTime={post.updatedAt ?? post.publishedAt}>
+                  {new Date(post.updatedAt ?? post.publishedAt).toLocaleDateString("es-ES", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
@@ -362,6 +372,56 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           currentTags={post.tags}
           currentCategory={post.category}
         />
+
+        {/* Hub links por categoría */}
+        {(() => {
+          const hubLinks: Record<string, { href: string; label: string }[]> = {
+            "Inversión": [
+              { href: "/fondos-indexados", label: "Guía de fondos indexados en España" },
+              { href: "/mejores-brokers-espana-2026", label: "Mejores brokers España 2026" },
+              { href: "/mejores-etf-espana-2026", label: "Mejores ETF en España 2026" },
+            ],
+            "Ahorro": [
+              { href: "/cuentas-remuneradas-espana-2026", label: "Mejores cuentas remuneradas 2026" },
+              { href: "/mejores-fondos-monetarios-espana-2026", label: "Mejores fondos monetarios España" },
+              { href: "/calculadoras/meta-ahorro", label: "Calculadora de objetivo de ahorro" },
+            ],
+            "Fiscalidad": [
+              { href: "/declaracion-renta-espana-2026", label: "Declaración de la renta 2026" },
+              { href: "/mejores-planes-de-pensiones-espana-2026", label: "Mejores planes de pensiones 2026" },
+            ],
+            "Planificación": [
+              { href: "/calculadoras/interes-compuesto", label: "Calculadora de interés compuesto" },
+              { href: "/fondos-indexados", label: "Fondos indexados: guía completa" },
+              { href: "/declaracion-renta-espana-2026", label: "Optimiza tu declaración de la renta" },
+            ],
+            "Criptomonedas": [
+              { href: "/mejores-brokers-espana-2026", label: "Plataformas para invertir en España" },
+              { href: "/declaracion-renta-espana-2026", label: "Cómo tributan las criptomonedas en la renta" },
+            ],
+          }
+          const links = hubLinks[post.category]
+          if (!links) return null
+          return (
+            <div className="mt-10 pt-8 border-t border-border">
+              <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-3">
+                Guías relacionadas
+              </p>
+              <div className="grid gap-2 sm:grid-cols-2">
+                {links.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    className="flex items-center justify-between p-3 rounded-lg border bg-muted/30 hover:bg-muted/60 transition-colors text-sm font-medium"
+                  >
+                    {l.label}
+                    <ArrowRight className="h-4 w-4 text-muted-foreground shrink-0 ml-2" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )
+        })()}
 
         {/* Article Sources */}
         <ArticleSources category={post.category} />

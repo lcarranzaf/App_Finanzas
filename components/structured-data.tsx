@@ -11,18 +11,25 @@ function toISODateTime(dateStr: string): string {
   return `${dateStr}T00:00:00+00:00`
 }
 
+interface BreadcrumbItem {
+  name: string
+  url: string
+}
+
 interface StructuredDataProps {
-  type: "website" | "article" | "organization" | "financeguide" | "persons"
+  type: "website" | "article" | "organization" | "financeguide" | "persons" | "breadcrumbs"
   data?: {
     slug?: string
     title?: string
     description?: string
     image?: string
     publishedAt?: string
+    updatedAt?: string
     author?: string
     category?: string
     tags?: string[]
     authorSlugs?: string[]
+    breadcrumbs?: BreadcrumbItem[]
   }
 }
 
@@ -118,7 +125,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
               height: 630,
             },
             datePublished: toISODateTime(post.publishedAt),
-            dateModified: toISODateTime(post.publishedAt),
+            dateModified: toISODateTime(data?.updatedAt ?? post.publishedAt),
             author: (() => {
               const authorData = getAuthorByName(post.author)
               return authorData ? {
@@ -193,6 +200,27 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
             />
           ))}
         </>
+      )
+    }
+    case "breadcrumbs": {
+      const items = data?.breadcrumbs ?? []
+      if (items.length === 0) return null
+      const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: items.map((item, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: item.name,
+          item: item.url,
+        })),
+      }
+      return (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+          suppressHydrationWarning
+        />
       )
     }
   }

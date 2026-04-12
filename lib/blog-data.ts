@@ -6,6 +6,7 @@ export interface BlogPost {
   description: string
   content: string
   publishedAt: string
+  updatedAt?: string
   readTime: string
   category: string
   tags: string[]
@@ -217,6 +218,7 @@ El interés compuesto es la herramienta más poderosa que tienes para construir 
 Recuerda: no se trata de cuánto inviertes, sino de cuánto tiempo dejas que el interés compuesto trabaje para ti. Cada día cuenta.
     `,
     publishedAt: "2026-02-12",
+    updatedAt: "2026-04-04",
     readTime: "15 min",
     category: "Educación Financiera",
     tags: ["interés compuesto", "inversiones", "ahorro", "crecimiento patrimonial", "largo plazo", "fondos indexados"],
@@ -964,6 +966,7 @@ El presupuesto perfecto no existe. Existe el que tú mantendrás de forma consis
 **El control de tu dinero empieza con saber adónde va. Ese es el único secreto.**
     `,
     publishedAt: "2026-01-15",
+    updatedAt: "2026-04-02",
     readTime: "15 min",
     category: "Presupuesto",
     tags: [
@@ -5353,6 +5356,7 @@ Los planes de pensiones no son ni la trampa que algunos dicen ni el producto mil
 Si el banco te recomienda un plan de pensiones con comisiones del 1,5% como única estrategia de jubilación, busca otra opinión. Si combinas un plan indexado barato con fondos de inversión y disciplina de ahorro, estarás en una posición mucho mejor para la jubilación que la gran mayoría de españoles.
     `,
     publishedAt: "2026-03-20",
+    updatedAt: "2026-04-02",
     readTime: "15 min",
     category: "Inversiones",
     tags: [
@@ -5772,6 +5776,7 @@ Cuando lees que "la inflación en España es del 2,7%", ese número no te dice q
 Lo que sí es universal: el dinero parado en cuenta corriente pierde valor con cualquier tipo de inflación. La respuesta siempre pasa por invertir en activos que la superen. Y para eso, entender qué tipo de inflación estás combatiendo marca la diferencia.
     `,
     publishedAt: "2026-03-25",
+    updatedAt: "2026-04-02",
     readTime: "17 min",
     category: "Inversiones",
     tags: [
@@ -5994,6 +5999,7 @@ La inflación en España no es un fenómeno simple ni uniforme. Es el resultado 
 Lo que no puedes hacer es ignorarla. El dinero parado pierde valor de forma silenciosa pero implacable. La respuesta está en entender el fenómeno y actuar en consecuencia.
     `,
     publishedAt: "2026-03-25",
+    updatedAt: "2026-04-02",
     readTime: "17 min",
     category: "Ahorro",
     tags: [

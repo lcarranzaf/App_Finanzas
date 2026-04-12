@@ -11,7 +11,7 @@ import { CategoryArticles } from "@/components/category-articles"
 export const metadata: Metadata = {
   title: `Cómo Ahorrar Dinero en España ${new Date().getFullYear()} - Métodos Probados y Fondo de Emergencia`,
   description:
-    "Aprende a ahorrar dinero en España con el método 50/30/20, ahorro automático y el reto 52 semanas. Cómo crear tu fondo de emergencia desde cero, incluso con ingresos bajos. Guía práctica actualizada.",
+    "Aprende a ahorrar en España con el método 50/30/20 y ahorro automático. Crea tu fondo de emergencia desde cero, incluso con ingresos bajos. Cuentas remuneradas y más.",
   keywords: ["cómo ahorrar dinero", "ahorro España", "método 50/30/20", "fondo de emergencia España", "estrategias ahorro", "reto 52 semanas", "cuentas remuneradas", "ahorrar con poco dinero", "finanzas personales España"],
   alternates: {
     canonical: "https://www.finanzasdigitales.es/ahorro",
