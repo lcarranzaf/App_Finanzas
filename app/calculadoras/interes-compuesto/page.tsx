@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import dynamic from "next/dynamic"
 import Link from "next/link"
-import { TrendingUp, CheckCircle, Clock, Zap, PiggyBank, CreditCard, ArrowLeftRight, ChevronRight } from "lucide-react"
+import { TrendingUp, CheckCircle, Clock, Zap, PiggyBank, CreditCard, ChevronRight, Home } from "lucide-react"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { Badge } from "@/components/ui/badge"
 
@@ -27,10 +27,16 @@ export const metadata: Metadata = {
   keywords: [
     "calculadora interés compuesto",
     "interés compuesto calculadora",
+    "fórmula interés compuesto",
+    "fórmula del interés compuesto",
+    "formula del interes compuesto",
+    "interés compuesto fórmula",
+    "cálculo interés compuesto",
+    "intereses calculo",
+    "calculadora de interés",
     "simulador inversión",
-    "calculadora inversiones España",
-    "interés compuesto España",
     "calcular interés compuesto",
+    "interés compuesto España",
     "simulador interés compuesto",
     "calculadora rentabilidad inversión",
   ],
@@ -111,9 +117,9 @@ const faqs = [
 ]
 
 const related = [
+  { title: "Calculadora Hipoteca", href: "/calculadoras/hipoteca", icon: Home, color: "text-violet-500", bg: "bg-violet-500/10", desc: "Cuota mensual, amortización y gastos de compra" },
   { title: "Meta de Ahorro", href: "/calculadoras/meta-ahorro", icon: PiggyBank, color: "text-green-500", bg: "bg-green-500/10", desc: "¿Cuánto necesitas ahorrar cada mes?" },
   { title: "Pago de Deuda", href: "/calculadoras/pago-deuda", icon: CreditCard, color: "text-red-500", bg: "bg-red-500/10", desc: "Calcula cuándo estarás libre de deudas" },
-  { title: "Divisas", href: "/calculadoras/divisas", icon: ArrowLeftRight, color: "text-yellow-500", bg: "bg-yellow-500/10", desc: "Convierte entre 20+ monedas al instante" },
 ]
 
 export default function InteresCompuestoPage() {
@@ -181,6 +187,81 @@ export default function InteresCompuestoPage() {
 
       {/* CALCULADORA */}
       <ProjectionCalculator />
+
+      {/* FÓRMULA DEL INTERÉS COMPUESTO */}
+      <section className="py-16 bg-muted/30">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-foreground sm:text-3xl mb-2">Fórmula del interés compuesto</h2>
+          <p className="text-muted-foreground mb-10">
+            Entiende el cálculo detrás de la calculadora: dos fórmulas, una para capital único y otra con aportaciones periódicas.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            {/* Fórmula básica */}
+            <div className="rounded-xl border border-blue-500/20 bg-blue-500/5 p-6">
+              <p className="text-xs font-semibold text-blue-400 uppercase tracking-wide mb-3">Capital único (sin aportaciones)</p>
+              <div className="rounded-lg bg-background border border-border p-4 text-center mb-4">
+                <p className="text-2xl font-mono font-bold text-foreground tracking-wide">
+                  M = C × (1 + r)<sup>n</sup>
+                </p>
+              </div>
+              <ul className="space-y-1.5 text-sm text-muted-foreground">
+                <li><span className="font-mono font-semibold text-foreground">M</span> — Capital final acumulado</li>
+                <li><span className="font-mono font-semibold text-foreground">C</span> — Capital inicial invertido</li>
+                <li><span className="font-mono font-semibold text-foreground">r</span> — Tasa de interés por período (anual / 12 si es mensual)</li>
+                <li><span className="font-mono font-semibold text-foreground">n</span> — Número de períodos (años × 12 si es mensual)</li>
+              </ul>
+            </div>
+
+            {/* Fórmula con aportaciones */}
+            <div className="rounded-xl border border-blue-500/20 bg-blue-500/5 p-6">
+              <p className="text-xs font-semibold text-blue-400 uppercase tracking-wide mb-3">Con aportaciones periódicas (DCA)</p>
+              <div className="rounded-lg bg-background border border-border p-4 text-center mb-4">
+                <p className="text-lg font-mono font-bold text-foreground leading-tight">
+                  M = C₀(1+r)<sup>n</sup> + A × <span className="text-blue-400">[(1+r)<sup>n</sup> − 1]</span> / r
+                </p>
+              </div>
+              <ul className="space-y-1.5 text-sm text-muted-foreground">
+                <li><span className="font-mono font-semibold text-foreground">M</span> — Capital final acumulado</li>
+                <li><span className="font-mono font-semibold text-foreground">C₀</span> — Capital inicial</li>
+                <li><span className="font-mono font-semibold text-foreground">A</span> — Aportación periódica (mensual)</li>
+                <li><span className="font-mono font-semibold text-foreground">r</span> — Tasa mensual (TIN anual ÷ 12)</li>
+                <li><span className="font-mono font-semibold text-foreground">n</span> — Número total de meses</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Ejemplo paso a paso */}
+          <div className="rounded-xl border border-border bg-card p-6">
+            <h3 className="font-semibold text-foreground mb-4">Ejemplo práctico: cálculo paso a paso</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Situación: inviertes <strong className="text-foreground">5.000 €</strong> hoy y aportas <strong className="text-foreground">200 €/mes</strong> durante <strong className="text-foreground">10 años</strong> a una rentabilidad del <strong className="text-foreground">8% anual</strong>.
+            </p>
+            <div className="space-y-3 text-sm">
+              <div className="flex items-start gap-3">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-blue-400 font-bold text-xs">1</span>
+                <p className="text-muted-foreground"><strong className="text-foreground">Tasa mensual:</strong> r = 8% ÷ 12 = <span className="font-mono text-foreground">0,00667</span></p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-blue-400 font-bold text-xs">2</span>
+                <p className="text-muted-foreground"><strong className="text-foreground">Períodos:</strong> n = 10 × 12 = <span className="font-mono text-foreground">120 meses</span></p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-blue-400 font-bold text-xs">3</span>
+                <p className="text-muted-foreground"><strong className="text-foreground">Capital inicial capitalizado:</strong> 5.000 × (1,00667)¹²⁰ = <span className="font-mono text-foreground">11.098 €</span></p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-blue-400 font-bold text-xs">4</span>
+                <p className="text-muted-foreground"><strong className="text-foreground">Aportaciones capitalizadas:</strong> 200 × [(1,00667)¹²⁰ − 1] / 0,00667 = <span className="font-mono text-foreground">36.589 €</span></p>
+              </div>
+              <div className="flex items-start gap-3 pt-3 border-t border-border">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold text-xs">M</span>
+                <p className="text-foreground font-semibold"><strong>Total acumulado:</strong> 11.098 + 36.589 = <span className="text-blue-400 text-base">47.687 €</span> <span className="text-muted-foreground font-normal text-xs">(aportado: 29.000 €, ganado: 18.687 €)</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* NOSCRIPT fallback */}
       <noscript>

@@ -1,13 +1,13 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Calculator, PiggyBank, CreditCard, TrendingUp, ArrowLeftRight, ChevronRight, Users, Star, Zap } from "lucide-react"
+import { Calculator, PiggyBank, CreditCard, TrendingUp, ArrowLeftRight, ChevronRight, Users, Star, Zap, Home } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export const metadata: Metadata = {
-  title: `Calculadoras Financieras Gratuitas ${new Date().getFullYear()} — Interés Compuesto, Ahorro y Deuda`,
+  title: `Calculadoras Financieras Gratuitas ${new Date().getFullYear()} — Hipoteca, Interés Compuesto, Ahorro y Deuda`,
   description:
-    "4 calculadoras financieras interactivas y gratuitas: interés compuesto, meta de ahorro, pago de deuda y divisas. Sin registro. Resultados en tiempo real para tomar mejores decisiones con tu dinero.",
+    "5 calculadoras financieras interactivas y gratuitas: hipoteca, interés compuesto, meta de ahorro, pago de deuda y divisas. Sin registro. Resultados en tiempo real para tomar mejores decisiones con tu dinero.",
   keywords: [
     "calculadoras financieras gratis",
     "calculadora interés compuesto",
@@ -22,13 +22,27 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Calculadoras Financieras Gratuitas — Finanzas Digitales",
-    description: "4 herramientas interactivas para simular inversiones, planificar ahorro, liquidar deudas y convertir divisas. Sin registro.",
+    description: "5 calculadoras financieras interactivas: hipoteca, interés compuesto, meta de ahorro, pago de deuda y divisas. Sin registro.",
     url: "https://www.finanzasdigitales.es/calculadoras",
     type: "website",
   },
 }
 
 const calculators = [
+  {
+    title: "Calculadora de Hipoteca",
+    description:
+      "Simula tu cuota mensual hipotecaria, el total de intereses y accede a la tabla de amortización completa. Incluye estimación de gastos de compraventa (ITP/AJD, notaría, gestoría) y gráfico de evolución del préstamo.",
+    href: "/calculadoras/hipoteca",
+    icon: Home,
+    color: "text-violet-400",
+    bg: "bg-violet-500/10",
+    border: "border-violet-500/20 hover:border-violet-400/50",
+    badge: "Más buscada",
+    badgeColor: "bg-violet-500/10 text-violet-400",
+    tag: "Vivienda",
+    features: ["Tabla amortización", "Gráfico interactivo", "Gastos compra"],
+  },
   {
     title: "Calculadora de Interés Compuesto",
     description: "Visualiza cómo crece tu inversión a lo largo del tiempo. Simula aportes mensuales, distintas tasas de retorno y plazos de hasta 40 años. La herramienta esencial para planificar tu jubilación.",
@@ -87,6 +101,12 @@ const BASE = "https://www.finanzasdigitales.es"
 const ORG_REF = { "@id": `${BASE}/#organization` }
 
 const calculatorApps = [
+  {
+    id: "calc-hipoteca",
+    name: "Calculadora de Hipoteca",
+    description: "Calcula tu cuota mensual hipotecaria, tabla de amortización y gastos de compraventa en España.",
+    url: `${BASE}/calculadoras/hipoteca`,
+  },
   {
     id: "calc-interes-compuesto",
     name: "Calculadora de Interés Compuesto",
@@ -171,7 +191,7 @@ export default function CalculadorasPage() {
               <span className="text-primary">Gratuitas</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted-foreground text-pretty">
-              4 herramientas interactivas para tomar mejores decisiones con tu dinero.
+              5 herramientas interactivas para tomar mejores decisiones con tu dinero.
               Sin registros, sin trucos, sin coste. Solo resultados.
             </p>
 
@@ -179,7 +199,7 @@ export default function CalculadorasPage() {
             <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               {[
                 { icon: Zap, text: "Resultados en tiempo real" },
-                { icon: Star, text: "4 herramientas especializadas" },
+                { icon: Star, text: "5 herramientas especializadas" },
                 { icon: Users, text: "Para inversores y ahorradores" },
               ].map((s) => (
                 <div key={s.text} className="flex items-center gap-2">

@@ -8,19 +8,24 @@ import { FAQSection, type FAQItem } from "@/components/faq-section"
 import AdSense from "@/components/AdSense"
 
 export const metadata: Metadata = {
-  title: `Fondos Indexados en España ${new Date().getFullYear()} — Guía Completa para Empezar`,
+  title: `Mejores Fondos Indexados España 2026 — Qué Son, Cómo Invertir y Cuáles Elegir`,
   description:
-    "Qué son los fondos indexados y cómo invertir en España en 2026. Compara MyInvestor, Indexa Capital y Trade Republic. Guía paso a paso para principiantes.",
+    "Los mejores fondos indexados en España 2026: compara MSCI World, S&P 500 y fondos de BBVA, Caixabank y Santander vs alternativas. MyInvestor, Trade Republic e Indexa Capital. Guía completa.",
   keywords: [
-    "fondos indexados España",
     "mejores fondos indexados España 2026",
+    "fondo indexado",
+    "fondos indexados sp500",
+    "fondo indexado sp500",
+    "fondo indexado BBVA",
+    "fondos indexados BBVA",
+    "fondo indexado Caixabank",
+    "fondos indexados Santander",
+    "diferencia ETF fondo indexado",
     "cómo invertir fondos indexados",
     "fondo indexado MSCI World",
     "MyInvestor fondos indexados",
-    "Indexa Capital",
-    "fondos indexados vs ETFs",
     "invertir indexados principiantes",
-    "S&P 500 España",
+    "mejor fondo indexado",
     "fondo Amundi MSCI World",
   ],
   alternates: {
@@ -196,6 +201,22 @@ const faqs: FAQItem[] = [
   },
 ]
 
+const fondosSP500 = [
+  { fondo: "Amundi S&P 500 UCITS ETF", ter: "0,07%", donde: "Trade Republic, Degiro", tipo: "ETF" },
+  { fondo: "iShares Core S&P 500 UCITS ETF", ter: "0,07%", donde: "Trade Republic, Degiro", tipo: "ETF" },
+  { fondo: "Vanguard S&P 500 UCITS ETF", ter: "0,07%", donde: "MyInvestor (ETF)", tipo: "ETF" },
+  { fondo: "Amundi IS S&P 500 ESG (Fondo)", ter: "0,12%", donde: "MyInvestor", tipo: "Fondo" },
+]
+
+const comparativaBancos = [
+  { entidad: "BBVA", fondo: "BBVA Bolsa EEUU FI", indice: "S&P 500", ter: "0,60%", nota: "6-8x más caro" },
+  { entidad: "CaixaBank", fondo: "CaixaBank Index Mundial Plus", indice: "MSCI World", ter: "1,00%", nota: "8-13x más caro" },
+  { entidad: "Santander", fondo: "MI Fondo Santander EEUU Índice", indice: "S&P 500", ter: "0,80%", nota: "11x más caro" },
+  { entidad: "MyInvestor", fondo: "Amundi MSCI World UCITS", indice: "MSCI World", ter: "0,12%", nota: "⭐ Recomendado" },
+  { entidad: "MyInvestor", fondo: "Vanguard Global Stock Index", indice: "MSCI World", ter: "0,18%", nota: "⭐ Recomendado" },
+  { entidad: "Trade Republic", fondo: "Amundi S&P 500 UCITS ETF", indice: "S&P 500", ter: "0,07%", nota: "⭐ Recomendado" },
+]
+
 export default function FondosIndexadosPage() {
   return (
     <>
@@ -224,8 +245,8 @@ export default function FondosIndexadosPage() {
                 <span className="text-sm font-medium text-emerald-600">Guía completa 2026</span>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance leading-tight">
-                Fondos Indexados en España:{" "}
-                <span className="text-emerald-600">la inversión más inteligente para principiantes</span>
+                Mejores Fondos Indexados en España 2026:{" "}
+                <span className="text-emerald-600">guía completa para empezar</span>
               </h1>
               <p className="mt-6 text-xl leading-8 text-muted-foreground text-pretty">
                 Qué son, cómo funcionan, cuáles son los mejores en España y cómo empezar a invertir paso a paso. Sin tecnicismos ni letra pequeña.
@@ -308,6 +329,43 @@ export default function FondosIndexadosPage() {
           </div>
         </section>
 
+        {/* Fondos indexados S&P 500 */}
+        <section className="py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-4xl">
+              <h2 className="text-3xl font-bold text-foreground mb-4">Fondos indexados S&P 500 en España</h2>
+              <p className="text-muted-foreground leading-8 mb-8">
+                El <strong className="text-foreground">S&P 500</strong> agrupa las 500 mayores empresas de Estados Unidos: Apple, Microsoft, Amazon, Nvidia, Google... Es el índice más seguido del mundo y ha generado una rentabilidad histórica de aproximadamente el <strong className="text-foreground">10% anual</strong>. En España puedes acceder a él a través de fondos y ETFs con comisiones muy bajas.
+              </p>
+              <div className="overflow-x-auto rounded-xl border border-border">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/50">
+                    <tr>
+                      <th className="text-left p-4 font-semibold">Fondo / ETF</th>
+                      <th className="text-left p-4 font-semibold">TER anual</th>
+                      <th className="text-left p-4 font-semibold">Tipo</th>
+                      <th className="text-left p-4 font-semibold">Dónde contratar</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-border">
+                    {fondosSP500.map((f) => (
+                      <tr key={f.fondo} className="hover:bg-muted/30">
+                        <td className="p-4 font-medium text-foreground">{f.fondo}</td>
+                        <td className="p-4 text-emerald-600 font-semibold">{f.ter}</td>
+                        <td className="p-4 text-muted-foreground">{f.tipo}</td>
+                        <td className="p-4 text-muted-foreground">{f.donde}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-4 text-xs text-muted-foreground">
+                Nota: los ETFs no tienen ventaja fiscal de traspaso en España. Si inviertes a largo plazo, considera un fondo indexado en MyInvestor para diferir la tributación.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Dónde invertir en España */}
         <section className="py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -353,6 +411,49 @@ export default function FondosIndexadosPage() {
           </div>
         </section>
 
+        {/* ETF vs Fondo Indexado */}
+        <section className="py-16 sm:py-20 bg-muted/30">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-4xl">
+              <h2 className="text-3xl font-bold text-foreground mb-4">Diferencia entre ETF y fondo indexado</h2>
+              <p className="text-muted-foreground leading-8 mb-8">
+                Ambos replican índices y tienen comisiones bajas, pero funcionan de forma diferente. En España, la clave está en la <strong className="text-foreground">ventaja fiscal</strong>: los fondos indexados permiten traspasar dinero entre fondos sin pagar impuestos hasta el reembolso final. Los ETFs no tienen esa ventaja.
+              </p>
+              <div className="overflow-x-auto rounded-xl border border-border">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/50">
+                    <tr>
+                      <th className="text-left p-4 font-semibold">Característica</th>
+                      <th className="text-left p-4 font-semibold text-blue-400">ETF</th>
+                      <th className="text-left p-4 font-semibold text-emerald-500">Fondo Indexado</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-border">
+                    {[
+                      ["Cotiza en bolsa", "Sí, en tiempo real", "No, precio al cierre del día"],
+                      ["Inversión mínima", "1 acción (~5–100 €)", "Desde 1 € (MyInvestor)"],
+                      ["Traspaso sin tributar", "No — pagas impuestos al vender", "✅ Sí — ventaja fiscal clave en España"],
+                      ["Comisiones", "0,07%–0,20% anual", "0,10%–0,30% anual"],
+                      ["Dónde contratar", "Broker (Trade Republic, Degiro)", "Banco/Roboadvisor (MyInvestor, Indexa)"],
+                      ["Mejor para", "Inversión puntual o activa", "Ahorro periódico a largo plazo"],
+                    ].map(([car, etf, fi]) => (
+                      <tr key={car} className="hover:bg-muted/30">
+                        <td className="p-4 font-medium text-foreground">{car}</td>
+                        <td className="p-4 text-muted-foreground">{etf}</td>
+                        <td className="p-4 text-muted-foreground">{fi}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="mt-6 rounded-xl bg-emerald-500/10 border border-emerald-500/20 p-5">
+                <p className="text-sm text-foreground font-medium mb-1">Recomendación para inversores en España:</p>
+                <p className="text-sm text-muted-foreground">Si tu objetivo es ahorro a largo plazo con aportaciones mensuales, elige un <strong className="text-foreground">fondo indexado en MyInvestor o Indexa Capital</strong> para aprovechar el traspaso sin tributación. Si prefieres operar de forma más flexible o puntual, los ETFs de <strong className="text-foreground">Trade Republic</strong> son la opción más barata.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* AdSense */}
         <section className="py-8">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -381,6 +482,59 @@ export default function FondosIndexadosPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* BBVA / Caixabank / Santander vs alternativas */}
+        <section className="py-16 sm:py-20 bg-muted/30">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-4xl">
+              <h2 className="text-3xl font-bold text-foreground mb-4">Fondo indexado BBVA, Caixabank y Santander: ¿merecen la pena?</h2>
+              <p className="text-muted-foreground leading-8 mb-8">
+                Muchos inversores buscan fondos indexados directamente en su banco habitual. La buena noticia: BBVA, CaixaBank y Santander sí ofrecen fondos indexados. La mala noticia: sus <strong className="text-foreground">comisiones son entre 4 y 13 veces más altas</strong> que las de las plataformas especializadas. Esta diferencia de coste tiene un impacto enorme a largo plazo.
+              </p>
+              <div className="overflow-x-auto rounded-xl border border-border mb-6">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/50">
+                    <tr>
+                      <th className="text-left p-4 font-semibold">Entidad</th>
+                      <th className="text-left p-4 font-semibold">Fondo</th>
+                      <th className="text-left p-4 font-semibold">Índice</th>
+                      <th className="text-left p-4 font-semibold">TER anual</th>
+                      <th className="text-left p-4 font-semibold">Comparativa</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-border">
+                    {comparativaBancos.map((f) => (
+                      <tr
+                        key={f.fondo}
+                        className={
+                          f.nota.includes("⭐")
+                            ? "bg-emerald-500/5 hover:bg-emerald-500/10"
+                            : "hover:bg-muted/30"
+                        }
+                      >
+                        <td className="p-4 font-semibold text-foreground">{f.entidad}</td>
+                        <td className="p-4 text-muted-foreground">{f.fondo}</td>
+                        <td className="p-4 text-muted-foreground">{f.indice}</td>
+                        <td className={`p-4 font-bold ${f.nota.includes("⭐") ? "text-emerald-600" : "text-destructive"}`}>
+                          {f.ter}
+                        </td>
+                        <td className={`p-4 text-sm ${f.nota.includes("⭐") ? "text-emerald-600 font-medium" : "text-amber-500"}`}>
+                          {f.nota}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="rounded-xl bg-amber-500/10 border border-amber-500/20 p-5">
+                <p className="text-sm font-semibold text-foreground mb-2">¿Cuánto supone la diferencia en euros reales?</p>
+                <p className="text-sm text-muted-foreground">
+                  Invirtiendo 200 €/mes durante 20 años al 8% anual: con un TER del <strong className="text-foreground">0,12%</strong> (Amundi MSCI World en MyInvestor) acumularías aproximadamente <strong className="text-foreground">117.000 €</strong>. Con un TER del <strong className="text-foreground">1,00%</strong> (CaixaBank Index Mundial Plus), el resultado bajaría a unos <strong className="text-foreground">104.000 €</strong>. Una diferencia de <strong className="text-amber-600">~13.000 € solo por las comisiones</strong>.
+                </p>
+              </div>
             </div>
           </div>
         </section>
