@@ -145,9 +145,24 @@ const brokers = [
   },
 ]
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
+    { "@type": "ListItem", position: 2, name: "Mejores ETF España 2026", item: "https://www.finanzasdigitales.es/mejores-etf-espana-2026" },
+  ],
+}
+
 export default function MejoresETFPage() {
   return (
-    <div className="py-16 sm:py-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        suppressHydrationWarning
+      />
+      <div className="py-16 sm:py-20">
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
         <Breadcrumbs
           customItems={[
@@ -334,5 +349,6 @@ export default function MejoresETFPage() {
         </section>
       </div>
     </div>
+    </>
   )
 }

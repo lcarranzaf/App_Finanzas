@@ -217,9 +217,23 @@ const comparativaBancos = [
   { entidad: "Trade Republic", fondo: "Amundi S&P 500 UCITS ETF", indice: "S&P 500", ter: "0,07%", nota: "⭐ Recomendado" },
 ]
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
+    { "@type": "ListItem", position: 2, name: "Fondos Indexados", item: "https://www.finanzasdigitales.es/fondos-indexados" },
+  ],
+}
+
 export default function FondosIndexadosPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        suppressHydrationWarning
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}

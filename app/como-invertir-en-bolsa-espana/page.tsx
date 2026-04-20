@@ -113,9 +113,24 @@ const errores = [
   { error: "Operar con frecuencia intentando ganar a corto plazo", solucion: "El trading activo pierde dinero para la mayoría de inversores particulares. La inversión pasiva y periódica supera al 90% de gestores activos a largo plazo." },
 ]
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
+    { "@type": "ListItem", position: 2, name: "Cómo invertir en bolsa en España", item: "https://www.finanzasdigitales.es/como-invertir-en-bolsa-espana" },
+  ],
+}
+
 export default function ComoInvertirBolsaPage() {
   return (
-    <div className="py-16 sm:py-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        suppressHydrationWarning
+      />
+      <div className="py-16 sm:py-20">
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
         <Breadcrumbs
           customItems={[
@@ -279,5 +294,6 @@ export default function ComoInvertirBolsaPage() {
         </section>
       </div>
     </div>
+    </>
   )
 }

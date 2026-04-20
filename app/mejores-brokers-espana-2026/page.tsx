@@ -72,6 +72,16 @@ const brokerProfiles = [
   },
 ]
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
+    { "@type": "ListItem", position: 2, name: "Inversiones", item: "https://www.finanzasdigitales.es/inversiones" },
+    { "@type": "ListItem", position: 3, name: "Mejores brokers 2026", item: "https://www.finanzasdigitales.es/mejores-brokers-espana-2026" },
+  ],
+}
+
 export default function MejoresBrokersPage() {
   const faqSchema = {
     "@context": "https://schema.org",
@@ -85,6 +95,11 @@ export default function MejoresBrokersPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        suppressHydrationWarning
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

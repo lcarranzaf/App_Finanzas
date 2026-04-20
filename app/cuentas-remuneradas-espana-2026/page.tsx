@@ -72,6 +72,16 @@ const accountCards = [
   },
 ]
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
+    { "@type": "ListItem", position: 2, name: "Ahorro", item: "https://www.finanzasdigitales.es/ahorro" },
+    { "@type": "ListItem", position: 3, name: "Mejores cuentas remuneradas 2026", item: "https://www.finanzasdigitales.es/cuentas-remuneradas-espana-2026" },
+  ],
+}
+
 export default function CuentasRemuneradasPage() {
   const faqSchema = {
     "@context": "https://schema.org",
@@ -85,6 +95,11 @@ export default function CuentasRemuneradasPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        suppressHydrationWarning
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

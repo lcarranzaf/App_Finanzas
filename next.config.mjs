@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
+const isDev = process.env.NODE_ENV === "development"
+
 const nextConfig = {
+  transpilePackages: ["recharts"],
   poweredByHeader: false,
   images: {
     remotePatterns: [
@@ -47,11 +50,11 @@ const nextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.google-analytics.com https://adservice.google.com https://googleads.g.doubleclick.net https://fundingchoicesmessages.google.com https://*.adtrafficquality.google https://*.disqus.com https://disqus.com https://disquscdn.com https://*.disquscdn.com",
+              `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.google-analytics.com https://adservice.google.com https://googleads.g.doubleclick.net https://fundingchoicesmessages.google.com https://*.adtrafficquality.google https://*.disqus.com https://disqus.com https://disquscdn.com https://*.disquscdn.com https://va.vercel-scripts.com`,
               "style-src 'self' 'unsafe-inline' https://disquscdn.com https://*.disquscdn.com",
               "img-src 'self' data: blob: https://images.unsplash.com https://images.pexels.com https://hebbkx1anhila5yf.public.blob.vercel-storage.com https://pagead2.googlesyndication.com https://www.google.com https://www.gstatic.com https://*.adtrafficquality.google https://*.disqus.com https://disquscdn.com https://*.disquscdn.com https://referrer.disqus.com",
               "font-src 'self' data: https://disquscdn.com https://*.disquscdn.com",
-              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://vitals.vercel-insights.com https://vercel.live https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://*.disqus.com https://disqus.com",
+              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://vitals.vercel-insights.com https://vercel.live https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://*.disqus.com https://disqus.com https://www.google.com https://va.vercel-scripts.com",
               "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://*.adtrafficquality.google",
               "worker-src 'self'",
               "frame-ancestors 'none'",
