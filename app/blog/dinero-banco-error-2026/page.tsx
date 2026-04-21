@@ -381,7 +381,7 @@ export default function DineroBancoError2026() {
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-white sm:text-3xl mb-6">2026: el año en que ya no hay excusa para no actuar</h2>
           <p className="text-zinc-300 leading-8 mb-5">
-            Durante años, el argumento para no mover el dinero era que "todo paga lo mismo". Con tipos en cero, los fondos monetarios o las Letras del Tesoro apenas diferían del banco. Ese argumento murió en 2022 y sigue muerto en 2026.
+            Durante años, el argumento para no mover el dinero era que &ldquo;todo paga lo mismo&rdquo;. Con tipos en cero, los fondos monetarios o las Letras del Tesoro apenas diferían del banco. Ese argumento murió en 2022 y sigue muerto en 2026.
           </p>
           <p className="text-zinc-300 leading-8 mb-5">
             Las <strong className="text-white">Letras del Tesoro a 12 meses</strong> ofrecen actualmente entre el 2,8% y el 3,5% TAE. Se compran directamente en <strong className="text-white">tesoro.es</strong> sin intermediarios, sin comisiones de custodia si las domicilias en el Banco de España, y con la garantía total del Estado español —teóricamente más seguro que cualquier banco. El proceso completo, desde el registro hasta la compra, lleva menos de 30 minutos.
