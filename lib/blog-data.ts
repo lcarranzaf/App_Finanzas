@@ -7532,6 +7532,83 @@ En algunos casos, los contratos de temporada no entran en la regulación de alqu
       },
     ],
   },
+  // ── NUEVOS POSTS POLÉMICOS 2026 ──────────────────────────────────────────
+  {
+    slug: "dinero-banco-error-2026",
+    title: "Por qué tener el dinero en el banco en 2026 es el peor error financiero que puedes cometer",
+    seoTitle: "Dinero en el banco 2026: el error que te cuesta miles",
+    description:
+      "Con la inflación al 3% y los bancos pagando un 0,1% en depósitos, mantener el dinero parado equivale a perder poder adquisitivo cada mes. Calculamos cuánto pierdes realmente y las 5 mejores alternativas en España para 2026.",
+    image: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=1200&h=630&fit=crop",
+    content: `# Por qué tener el dinero en el banco en 2026 es el peor error financiero que puedes cometer\n\nCon la inflación al 3% y los bancos pagando un 0,1% en depósitos, mantener el dinero parado equivale a perder poder adquisitivo cada mes.`,
+    publishedAt: "2026-04-20",
+    updatedAt: "2026-04-20",
+    readTime: "9 min",
+    category: "Ahorro",
+    tags: ["ahorro", "bancos", "inflación", "letras del tesoro", "finanzas personales", "España", "2026"],
+    author: "María López",
+    faqs: [
+      { question: "¿Es seguro sacar el dinero del banco?", answer: "El FGD (Fondo de Garantía de Depósitos) cubre hasta 100.000 € por titular y entidad. Por encima de esa cantidad sí existe riesgo. Para la mayoría de ahorradores, el riesgo real no es el banco sino la inflación que erosiona su poder adquisitivo año a año." },
+      { question: "¿Qué rentabilidad ofrecen las Letras del Tesoro en 2026?", answer: "Las Letras del Tesoro a 12 meses ofrecen actualmente en torno al 2,8–3,5% TAE, con plena garantía del Estado español. Son la alternativa más sencilla y segura para superar la rentabilidad de una cuenta corriente." },
+    ],
+  },
+  {
+    slug: "aranceles-trump-bolsillo-2026",
+    title: "Cómo los aranceles de Trump te van a costar $1,300 extra este año (y qué hacer con tu dinero)",
+    seoTitle: "Aranceles Trump 2026: $1,300 más al año — qué hacer",
+    description:
+      "El Yale Budget Lab estima que los aranceles de 2026 costarán entre $650 y $1,340 por hogar. JPMorgan advierte que los consumidores absorberán el 80% del coste. Así te afecta y esto es lo que puedes hacer ahora.",
+    image: "https://images.unsplash.com/photo-1569025743873-ea3a9ade89f9?w=1200&h=630&fit=crop",
+    content: `# Cómo los aranceles de Trump te van a costar $1,300 extra este año\n\nEl Yale Budget Lab estima entre $650 y $1,340 de coste adicional por hogar en 2026.`,
+    publishedAt: "2026-04-20",
+    updatedAt: "2026-04-20",
+    readTime: "8 min",
+    category: "Economía",
+    tags: ["aranceles", "Trump", "EEUU", "inflación", "economía", "finanzas personales", "2026"],
+    author: "Carlos Sánchez",
+    faqs: [
+      { question: "¿Qué productos se encarecerán más por los aranceles?", answer: "Los más afectados son la electrónica (smartphones, laptops), ropa y calzado importados de Asia, electrodomésticos, automóviles y sus piezas. Los alimentos también pueden subir si los socios comerciales aplican aranceles de represalia a productos agrícolas americanos." },
+      { question: "¿Pueden los aranceles provocar una recesión en EEUU?", answer: "JPMorgan elevó la probabilidad de recesión en EEUU al 60% para finales de 2026. El FMI ya rebajó el crecimiento americano y alertó sobre el impacto inflacionario. No es certeza, pero el riesgo está sobre la mesa." },
+    ],
+  },
+  {
+    slug: "deuda-tarjetas-eeuu-2026",
+    title: "Los americanos deben $1.27 billones en tarjetas de crédito — y los bancos quieren que sigas así",
+    seoTitle: "Deuda tarjetas crédito EEUU 2026: $1.27 billones",
+    description:
+      "La deuda en tarjetas de crédito en EEUU alcanzó un récord histórico de $1.277 billones. El 61% lleva más de un año sin salir. Así funciona la trampa del pago mínimo y cómo escapar de ella.",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=630&fit=crop",
+    content: `# Los americanos deben $1.27 billones en tarjetas de crédito\n\nLa Reserva Federal de Nueva York confirma el récord histórico. El 61% de los deudores lleva más de un año sin poder salir.`,
+    publishedAt: "2026-04-20",
+    updatedAt: "2026-04-20",
+    readTime: "7 min",
+    category: "Deudas",
+    tags: ["tarjetas de crédito", "deuda", "EEUU", "intereses", "finanzas personales", "2026"],
+    author: "Alejandro Torres",
+    faqs: [
+      { question: "¿Cuál es el interés promedio de las tarjetas en EEUU en 2026?", answer: "La APR (tasa anual) promedio de las tarjetas de crédito en EEUU ronda el 21–24% en 2026, según la Reserva Federal. Algunas tarjetas store-branded llegan al 28–30%. Es el tipo de deuda más caro que existe para el consumidor promedio." },
+      { question: "¿Qué pasa si solo pago el mínimo en mi tarjeta?", answer: "Pagar solo el mínimo es la trampa diseñada por los bancos. En una deuda de $5,000 al 22% APR con pago mínimo del 2%, tardarías más de 20 años en liquidarla y pagarías más de $8,000 en intereses — más que la deuda original. El banco gana el triple." },
+    ],
+  },
+  {
+    slug: "embargo-salarios-estudiantiles-2026",
+    title: "El gobierno americano empieza a embargar salarios por deudas estudiantiles — lo que nadie te dijo antes de pedir el préstamo",
+    seoTitle: "Embargo salarios préstamos estudiantiles EEUU 2026",
+    description:
+      "Desde enero de 2026, el Departamento de Educación de EEUU retiene hasta el 15% del salario neto de deudores en mora. Quiénes están afectados, cómo funciona el proceso y qué puedes hacer si estás en default.",
+    image: "https://images.unsplash.com/photo-1627556592933-ffe99c1cd9eb?w=1200&h=630&fit=crop",
+    content: `# El gobierno americano empieza a embargar salarios por deudas estudiantiles\n\nDesde enero de 2026, el Departamento de Educación retiene hasta el 15% del salario de deudores en mora.`,
+    publishedAt: "2026-04-20",
+    updatedAt: "2026-04-20",
+    readTime: "8 min",
+    category: "Deudas",
+    tags: ["préstamos estudiantiles", "embargo", "EEUU", "deuda", "educación", "finanzas personales", "2026"],
+    author: "Alejandro Torres",
+    faqs: [
+      { question: "¿Cuánto pueden embargar de mi salario?", answer: "El gobierno puede retener hasta el 15% de tu ingreso disponible (el que queda después de deducciones obligatorias). Sin embargo, siempre se garantiza que te quede al menos 30 veces el salario mínimo federal por semana (actualmente $217.50/semana). En salarios bajos, esto limita mucho lo que pueden retener." },
+      { question: "¿Qué opciones tengo si estoy en default?", answer: "Las principales opciones son: (1) Rehabilitación del préstamo — haces 9 pagos consecutivos acordados, sale del default y tu crédito mejora. (2) Consolidación del préstamo — unifica el préstamo en uno nuevo y sale del default inmediatamente. (3) Planes IDR (Income-Driven Repayment) — pagos basados en tu ingreso, desde $0/mes si ganas poco. Actúa antes de que inicien el embargo." },
+    ],
+  },
 ]
 
 export function getBlogPost(slug: string): BlogPost | undefined {
