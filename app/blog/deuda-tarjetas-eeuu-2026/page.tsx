@@ -365,11 +365,11 @@ export default function DeudaTarjetasPage() {
             El pago mínimo, que parece una concesión al cliente, es en realidad el mecanismo más rentable del producto. Al fijar el mínimo como un porcentaje pequeño del saldo (típicamente 1–2%), los bancos garantizan que el saldo se reduzca muy lentamente y que los intereses se acumulen durante años. En una deuda de $5,000 al 22% APR, el banco recupera su principal en menos de dos años de pagos mínimos —y luego cobra intereses durante décadas más.
           </p>
           <p className="text-neutral-300 leading-8 mb-5">
-            Los programas de recompensas —puntos, millas, cashback— funcionan como un incentivo para usar más la tarjeta y, en muchos casos, para gastar más de lo planeado. El cashback promedio es del 1–2%, pero si pagas intereses al 22%, el banco recupera ese "regalo" en menos de un mes de intereses acumulados. Las recompensas solo son un verdadero beneficio para quien paga el saldo completo cada mes —exactamente el cliente que menos rentabilidad genera al banco.
+            Los programas de recompensas —puntos, millas, cashback— funcionan como un incentivo para usar más la tarjeta y, en muchos casos, para gastar más de lo planeado. El cashback promedio es del 1–2%, pero si pagas intereses al 22%, el banco recupera ese &ldquo;regalo&rdquo; en menos de un mes de intereses acumulados. Las recompensas solo son un verdadero beneficio para quien paga el saldo completo cada mes —exactamente el cliente que menos rentabilidad genera al banco.
           </p>
           <div className="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6 mt-4">
             <p className="text-sm text-neutral-400 leading-7 italic border-l-2 border-violet-500/40 pl-4">
-              "Si pagas el mínimo en tu tarjeta, no estás pagando tu deuda. Estás pagando el alquiler del dinero que ya gastaste, indefinidamente."
+              &ldquo;Si pagas el mínimo en tu tarjeta, no estás pagando tu deuda. Estás pagando el alquiler del dinero que ya gastaste, indefinidamente.&rdquo;
             </p>
           </div>
         </div>

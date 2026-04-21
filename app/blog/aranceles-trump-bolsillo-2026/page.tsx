@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { AlertTriangle, DollarSign, ShoppingCart, Cpu, Car, Shirt, ChevronRight, Calendar, Clock, TrendingUp, Shield, PiggyBank } from "lucide-react"
+import { AlertTriangle, ShoppingCart, Cpu, Car, Shirt, ChevronRight, Calendar, Clock, TrendingUp, Shield, PiggyBank } from "lucide-react"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { FAQNative } from "@/components/faq-native"
 import { ReadingProgressBar } from "@/components/reading-progress"

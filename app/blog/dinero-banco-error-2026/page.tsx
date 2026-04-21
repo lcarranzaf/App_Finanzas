@@ -364,7 +364,7 @@ export default function DineroBancoError2026() {
             </table>
           </div>
           <p className="mt-3 text-xs text-zinc-600 font-mono px-1">
-            * "Resultado real" = ganancia nominal − pérdida por inflación (3% anual · 5 años = −1.424 €). Fondos indexados: rentabilidad histórica, sin garantía futura.
+            * &ldquo;Resultado real&rdquo; = ganancia nominal − pérdida por inflación (3% anual · 5 años = −1.424 €). Fondos indexados: rentabilidad histórica, sin garantía futura.
           </p>
         </div>
       </section>
@@ -394,7 +394,7 @@ export default function DineroBancoError2026() {
           </p>
           <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 mt-6">
             <p className="text-zinc-400 text-sm leading-7 italic border-l-2 border-zinc-600 pl-4">
-              "El mayor riesgo no es perder dinero en bolsa. Es no perderlo en el banco mientras la inflación lo erosiona despacio, sin que nadie te mande un aviso."
+              &ldquo;El mayor riesgo no es perder dinero en bolsa. Es no perderlo en el banco mientras la inflación lo erosiona despacio, sin que nadie te mande un aviso.&rdquo;
             </p>
           </div>
         </div>
