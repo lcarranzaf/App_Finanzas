@@ -58,7 +58,7 @@ export default function Image({ params }: { params: { slug: string } }) {
               width: "560px",
               height: "420px",
               borderRadius: "50%",
-              background: `radial-gradient(ellipse, ${accentColor}44 0%, transparent 70%)`,
+              backgroundImage: `radial-gradient(ellipse at center, ${accentColor}55 0%, transparent 70%)`,
             }}
           />
           {/* Glow dorado — esquina inferior izquierda */}
@@ -70,7 +70,7 @@ export default function Image({ params }: { params: { slug: string } }) {
               width: "480px",
               height: "360px",
               borderRadius: "50%",
-              background: "radial-gradient(ellipse, rgba(244,162,30,0.15) 0%, transparent 70%)",
+              backgroundImage: "radial-gradient(ellipse at center, rgba(244,162,30,0.18) 0%, transparent 70%)",
             }}
           />
 
