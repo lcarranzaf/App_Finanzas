@@ -123,6 +123,26 @@ const related = [
 ]
 
 export default function InteresCompuestoPage() {
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Calculadora de Interés Compuesto",
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Web",
+    url: "https://www.finanzasdigitales.es/calculadoras/interes-compuesto",
+    description: "Calcula gratis cómo crece tu dinero con el interés compuesto. Simula aportes mensuales, tasas de retorno y plazos hasta 40 años.",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+    inLanguage: "es",
+  }
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
+      { "@type": "ListItem", position: 2, name: "Calculadoras", item: "https://www.finanzasdigitales.es/calculadoras" },
+      { "@type": "ListItem", position: 3, name: "Interés Compuesto", item: "https://www.finanzasdigitales.es/calculadoras/interes-compuesto" },
+    ],
+  }
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -135,6 +155,8 @@ export default function InteresCompuestoPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* HERO */}

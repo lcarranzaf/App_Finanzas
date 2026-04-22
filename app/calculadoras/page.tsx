@@ -7,7 +7,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs"
 export const metadata: Metadata = {
   title: `Calculadoras Financieras Gratuitas ${new Date().getFullYear()} — Hipoteca, Interés Compuesto, Ahorro y Deuda`,
   description:
-    "5 calculadoras financieras interactivas y gratuitas: hipoteca, interés compuesto, meta de ahorro, pago de deuda y divisas. Sin registro. Resultados en tiempo real para tomar mejores decisiones con tu dinero.",
+    "5 calculadoras financieras gratis: hipoteca, interés compuesto, meta de ahorro, pago de deuda y divisas. Sin registro. Resultados en tiempo real para España.",
   keywords: [
     "calculadoras financieras gratis",
     "calculadora interés compuesto",
@@ -25,6 +25,13 @@ export const metadata: Metadata = {
     description: "5 calculadoras financieras interactivas: hipoteca, interés compuesto, meta de ahorro, pago de deuda y divisas. Sin registro.",
     url: "https://www.finanzasdigitales.es/calculadoras",
     type: "website",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Calculadoras Financieras Gratuitas" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Calculadoras Financieras Gratuitas — Finanzas Digitales",
+    description: "5 calculadoras financieras interactivas: hipoteca, interés compuesto, meta de ahorro, pago de deuda y divisas. Sin registro.",
+    images: ["/og-image.jpg"],
   },
 }
 
@@ -138,7 +145,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `${BASE}/calculadoras#webpage`,
   name: "Calculadoras Financieras Gratuitas",
-  description: "4 calculadoras financieras interactivas: interés compuesto, meta de ahorro, pago de deuda y divisas.",
+  description: "5 calculadoras financieras interactivas: hipoteca, interés compuesto, meta de ahorro, pago de deuda y divisas.",
   url: `${BASE}/calculadoras`,
   inLanguage: "es",
   isAccessibleForFree: true,

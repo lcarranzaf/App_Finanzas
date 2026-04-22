@@ -165,6 +165,24 @@ export default function AhorroPage() {
     },
   ]
 
+  const ahorroFAQSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: ahorroFAQs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  }
+  const ahorroFAQBreadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
+      { "@type": "ListItem", position: 2, name: "Ahorro", item: "https://www.finanzasdigitales.es/ahorro" },
+    ],
+  }
+
   return (
     <>
       <script
@@ -172,6 +190,8 @@ export default function AhorroPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ahorroPageSchema) }}
         suppressHydrationWarning
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ahorroFAQSchema) }} suppressHydrationWarning />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ahorroFAQBreadcrumb) }} suppressHydrationWarning />
     <div className="flex flex-col">
       {/* Breadcrumbs */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-6">

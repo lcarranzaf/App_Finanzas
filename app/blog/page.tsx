@@ -17,10 +17,10 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   const validCategories = new Set(getBlogPosts().map((post) => post.category))
   const hasValidCategory = category ? validCategories.has(category) : true
 
-  const params = new URLSearchParams()
-  if (category && hasValidCategory) params.set("category", category)
-  if (page > 1) params.set("page", String(page))
-  const canonical = params.toString() ? `${BASE_URL}/blog?${params.toString()}` : `${BASE_URL}/blog`
+  // Canonical nunca incluye ?category= (evita duplicados) — solo paginación
+  const canonicalParams = new URLSearchParams()
+  if (page > 1) canonicalParams.set("page", String(page))
+  const canonical = canonicalParams.toString() ? `${BASE_URL}/blog?${canonicalParams.toString()}` : `${BASE_URL}/blog`
 
   if (!hasValidCategory) {
     return {
@@ -56,6 +56,21 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     description,
     alternates: { canonical },
     robots: page > 1 ? { index: false, follow: true } : { index: true, follow: true },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: "Finanzas Digitales",
+      locale: "es_ES",
+      type: "website",
+      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Blog de Finanzas Personales" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/og-image.jpg"],
+    },
   }
 }
 

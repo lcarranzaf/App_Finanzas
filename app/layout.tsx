@@ -80,13 +80,6 @@ export const metadata: Metadata = {
   verification: {
     google: "iEJ6MlVtNjqHEUl7GbUfm-q8mzcHCTXNEA7_7hzwVPU",
   },
-  alternates: {
-    canonical: "https://www.finanzasdigitales.es",
-    languages: {
-      "es": "https://www.finanzasdigitales.es",
-      "x-default": "https://www.finanzasdigitales.es",
-    },
-  },
   category: "finance",
 }
 

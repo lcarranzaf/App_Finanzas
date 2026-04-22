@@ -91,9 +91,33 @@ const faqSchema = {
   })),
 }
 
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Calculadora de Hipoteca España",
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Web",
+  url: "https://www.finanzasdigitales.es/calculadoras/hipoteca",
+  description: "Calcula tu cuota hipotecaria mensual, el total de intereses y la tabla de amortización completa. Simulador gratuito adaptado al mercado español.",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+  inLanguage: "es",
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
+    { "@type": "ListItem", position: 2, name: "Calculadoras", item: "https://www.finanzasdigitales.es/calculadoras" },
+    { "@type": "ListItem", position: 3, name: "Hipoteca", item: "https://www.finanzasdigitales.es/calculadoras/hipoteca" },
+  ],
+}
+
 export default function HipotecaPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

@@ -2675,15 +2675,16 @@ Recuerda: la tecnología es solo una herramienta. El éxito financiero depende d
   },
   {
     slug: "invertir-fondos-indexados-principiantes",
-    title: "Invertir en fondos indexados: Guía completa para principiantes",
+    title: "Invertir en fondos indexados para principiantes en España: Guía completa 2026",
+    seoTitle: "Fondos Indexados para Principiantes en España 2026",
     description:
-      "Todo lo que necesitas saber sobre S&P 500, MSCI World y cómo empezar a invertir con solo $100. Estrategia de Warren Buffett explicada.",
+      "Guía completa para invertir en fondos indexados en España en 2026. Comparativa de plataformas (Trade Republic, MyInvestor, Indexa), fiscalidad IRPF y estrategia DCA paso a paso.",
     content: `
-# Invertir en fondos indexados: Guía completa para principiantes
+# Invertir en fondos indexados para principiantes en España: Guía completa 2026
 
-Los fondos indexados representan una de las estrategias de inversión más efectivas y accesibles para construir riqueza a largo plazo. Recomendados por inversores legendarios como Warren Buffett, estos instrumentos financieros permiten que cualquier persona, incluso con solo $100, pueda participar en el crecimiento del mercado de valores de manera diversificada y con costos mínimos.
+Los fondos indexados son la estrategia de inversión más recomendada para principiantes en España. Puedes empezar desde 1€ en plataformas como Trade Republic o MyInvestor, sin conocimientos previos y con comisiones casi inexistentes.
 
-En esta guía completa, exploraremos desde los conceptos fundamentales hasta las estrategias prácticas para comenzar tu viaje de inversión con fondos indexados.
+En esta guía encontrarás todo lo que necesitas: qué son, dónde contratarlos en España, cuánto tributan en la declaración de la renta y cómo construir una cartera diversificada paso a paso.
 
 ## ¿Qué son los fondos indexados?
 
@@ -2815,24 +2816,29 @@ Invertir en fondos indexados es más simple de lo que imaginas. Sigue estos paso
 
 Un broker es la plataforma que te permite comprar y vender ETFs. La elección del broker correcto puede ahorrarte dinero y facilitar tu experiencia de inversión.
 
-**Opciones recomendadas según tu ubicación:**
+**Comparativa de plataformas para invertir en fondos indexados en España (2026):**
 
-**Para inversores en Europa:**
-- **Degiro**: Popular en Europa, sin comisiones en muchos ETFs, regulado y seguro
-- **Interactive Brokers**: Acceso global a mercados, comisiones muy bajas, ideal para inversores serios
-- **eToro**: Interfaz muy amigable, buena para principiantes, aunque con algunas limitaciones
+| Plataforma | Inv. mínima | Comisión ETF | Custodia | Ideal para |
+|------------|-------------|--------------|----------|------------|
+| Trade Republic | 1€ | 0€ | 0€ | Empezar desde cero |
+| MyInvestor | 150€ | 0€ | 0€ | Fondos indexados |
+| Indexa Capital | 3.000€ | Incluida | 0€ | Automatizar todo |
+| Degiro | 1€ | ~2€ | 0€ | ETFs frecuentes |
+| Interactive Brokers | 1€ | Desde 1.25€ | 0€ | Perfil avanzado |
 
-**Para inversores en Estados Unidos:**
-- **Vanguard**: El creador de los fondos indexados, comisiones ultra bajas
-- **Fidelity**: Excelente servicio al cliente, sin comisiones en muchos ETFs
-- **Charles Schwab**: Buena plataforma, sin comisiones en ETFs propios
+**Detalle de cada plataforma:**
 
-**Factores a considerar al elegir:**
-- Comisiones por operación (busca $0 o muy bajas)
-- Comisiones de mantenimiento de cuenta
-- Facilidad de uso de la plataforma
-- Disponibilidad de los ETFs que quieres
-- Regulación y seguridad de tus fondos
+- **Trade Republic**: Neobróker regulado en España (CNMV). Permite comprar ETFs UCITS desde 1€ con cero comisiones. Ofrece planes de ahorro automáticos mensuales. El MSCI World de iShares está disponible sin comisión. Ideal para principiantes.
+- **MyInvestor**: Banco digital español supervisado por el Banco de España. Ofrece fondos indexados de Amundi, Vanguard y BlackRock sin comisiones de suscripción ni de custodia. El fondo Amundi MSCI World tiene un TER de solo 0.18% anual. Mínimo 150€.
+- **Indexa Capital**: Gestor automatizado (robo-advisor) español, pionero en España desde 2015. Construye y gestiona tu cartera de fondos indexados por ti según tu perfil de riesgo. Requiere un mínimo de 3.000€. Comisión de gestión ~0.45% anual.
+- **Degiro**: Bróker holandés con presencia y regulación en España. Comisión ~2€ por operación en ETFs de la lista de ETFs gratuitos. Sin comisión de custodia anual. Amplia gama de ETFs UCITS compatibles con normativa europea (MiFID II).
+- **Interactive Brokers**: La plataforma más completa para inversores avanzados. Acceso a todos los mercados mundiales. Comisión mínima de 1.25€ por operación. Sin comisión de mantenimiento si tienes más de 100.000€ o activas más de una operación al mes.
+
+**Factores clave al elegir en España:**
+- Regulación: debe estar registrado en la CNMV o banco europeo (pasaporte MiFID II)
+- Acceso a ETFs UCITS (versión europea de los ETFs, obligatorio para residentes en España)
+- Comisiones totales: suma comisión por operación + TER del fondo + custodia anual
+- Facilidad de uso y soporte en español
 
 ### Paso 2: Selecciona tus ETFs
 
@@ -3135,31 +3141,32 @@ Los fondos indexados son la forma más simple y efectiva de construir riqueza a 
 Recuerda: **tiempo en el mercado > timing del mercado**. Empieza hoy, aunque sea con $50.
     `,
     publishedAt: "2026-01-03",
+    updatedAt: "2026-04-21",
     readTime: "15 min",
     category: "Inversiones",
-    tags: ["fondos indexados", "ETF", "S&P 500", "inversiones", "Warren Buffett"],
+    tags: ["fondos indexados", "ETF", "S&P 500", "MSCI World", "inversiones España", "Trade Republic", "MyInvestor", "Indexa Capital", "principiantes", "Warren Buffett"],
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80",
     author: "Carlos Sánchez",
     faqs: [
       {
-        question: "¿Qué son los fondos indexados y cómo funcionan?",
-        answer: "Un fondo indexado es un fondo de inversión que replica automáticamente el comportamiento de un índice bursátil, como el S&P 500. En lugar de intentar 'ganarle al mercado', simplemente compra todas las acciones del índice en las mismas proporciones. Esto reduce costos de gestión y, estadísticamente, supera al 80% de los fondos activos a largo plazo.",
+        question: "¿Con cuánto dinero puedo empezar a invertir en fondos indexados en España?",
+        answer: "En España puedes empezar desde 1€ con plataformas como Trade Republic, que permite comprar ETFs UCITS fraccionados sin comisiones. MyInvestor requiere un mínimo de 150€ para fondos indexados tradicionales como el Amundi MSCI World. Indexa Capital tiene un mínimo de 3.000€. Lo importante no es el monto inicial sino la constancia: 100€/mes durante 20 años al 7% generan más de 52.000€.",
       },
       {
-        question: "¿Cuánto dinero necesito para empezar a invertir en fondos indexados?",
-        answer: "Con brókers modernos puedes empezar con tan solo $1-10 comprando ETFs fraccionados (como Vanguard VTI, iShares CSPX o Amundi MSCI World). Muchos fondos indexados tradicionales tienen mínimos de $100-1,000. Lo más importante no es el monto inicial sino invertir con regularidad, aprovechando el promedio del costo en dólares.",
+        question: "¿Qué fondo indexado es mejor para un principiante en España en 2026?",
+        answer: "Para la mayoría de principiantes en España, el fondo Amundi MSCI World (disponible en MyInvestor sin comisión) o el ETF iShares Core MSCI World UCITS (en Trade Republic o Degiro) son excelentes opciones. Ambos replican las ~1.500 empresas más grandes de países desarrollados con comisiones de gestión inferiores al 0.20% anual. Con un solo fondo obtienes diversificación global en más de 20 países.",
       },
       {
-        question: "¿Son seguros los fondos indexados?",
-        answer: "Son relativamente seguros a largo plazo, pero no están exentos de volatilidad. En el corto plazo pueden perder un 30-50% de su valor (como ocurrió en 2008 o 2020). Sin embargo, históricamente el mercado siempre se ha recuperado y ha marcado nuevos máximos. La clave es mantener la inversión sin vender en los momentos de pánico.",
+        question: "¿Cuándo debo vender mis fondos indexados?",
+        answer: "Idealmente, solo cuando necesites el dinero para un objetivo concreto (jubilación, compra de vivienda, etc.) y nunca por miedo a las caídas del mercado. Las caídas temporales del 20-40% son normales: el S&P 500 ha caído así 6 veces desde 2000, pero siempre se ha recuperado y superado máximos anteriores. Vender en mínimos es el error más costoso que puede cometer un inversor a largo plazo.",
       },
       {
-        question: "¿Cuál es la diferencia entre un ETF y un fondo indexado?",
-        answer: "Ambos replican índices, pero con diferencias operativas: los ETFs cotizan en bolsa en tiempo real como acciones y puedes comprar desde una sola participación. Los fondos indexados tradicionales se valoran una vez al día y suelen requerir un mínimo de inversión. Para pequeños inversores, los ETFs son más accesibles; para grandes capitales, los fondos indexados pueden tener menores gastos.",
+        question: "¿Cómo tributan los fondos indexados en la declaración de la renta?",
+        answer: "En España, las ganancias al vender fondos indexados tributan como rendimientos del capital mobiliario en la base del ahorro: 19% hasta 6.000€ de ganancia, 21% entre 6.000€ y 50.000€, 23% entre 50.000€ y 200.000€, y 27% por encima. Ventaja fiscal clave: puedes traspasar entre fondos de inversión sin tributar hasta el reembolso final. Esto no aplica a los ETFs (que sí tributan al vender como acciones).",
       },
       {
-        question: "¿Cuándo es el mejor momento para empezar a invertir en fondos indexados?",
-        answer: "El mejor momento fue hace 10 años; el segundo mejor momento es hoy. Intentar adivinar el 'momento perfecto' para entrar al mercado (market timing) generalmente perjudica el rendimiento. Estudios demuestran que invertir una cantidad fija mensual (dollar-cost averaging) independientemente del mercado produce mejores resultados que esperar el momento ideal en el largo plazo.",
+        question: "¿Es seguro invertir en fondos indexados?",
+        answer: "Los fondos indexados regulados en España están protegidos por el Fondo de Garantía de Inversiones (FOGAIN) hasta 100.000€ por entidad en caso de insolvencia del bróker. El riesgo real no es que el bróker quiebre, sino la volatilidad del mercado: en el corto plazo puedes perder un 30-40%. A largo plazo (10+ años), ningún período de inversión en el S&P 500 o MSCI World ha terminado en negativo históricamente.",
       },
     ],
   },
@@ -5833,6 +5840,7 @@ Con las herramientas adecuadas — fondos monetarios para el corto plazo, fondos
 El único requisito es empezar. Hoy, no mañana.
     `,
     publishedAt: "2026-03-20",
+    updatedAt: "2026-04-21",
     readTime: "13 min",
     category: "Ahorro",
     tags: ["inflación", "proteger ahorros", "inflación España", "fondos indexados", "ahorro", "poder adquisitivo"],

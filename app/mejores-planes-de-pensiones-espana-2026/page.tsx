@@ -199,6 +199,89 @@ export default function MejoresPlanesPensionesPage() {
           </section>
 
           <section className="mb-10">
+            <h2 className="text-2xl font-bold mb-4">Comparativa de planes de pensiones en España 2026</h2>
+            <p className="text-sm text-muted-foreground mb-5 leading-7">
+              Datos orientativos basados en información pública de las gestoras. Comprueba siempre las condiciones vigentes en la entidad antes de contratar.
+            </p>
+            <div className="overflow-x-auto rounded-xl border">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-muted">
+                    <th className="p-3 text-left border font-semibold">Plan</th>
+                    <th className="p-3 text-left border font-semibold">Gestora</th>
+                    <th className="p-3 text-center border font-semibold">Com. gestión</th>
+                    <th className="p-3 text-center border font-semibold">Com. depósito</th>
+                    <th className="p-3 text-center border font-semibold">Rent. hist. 3 años</th>
+                    <th className="p-3 text-left border font-semibold">Ideal para</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { plan: "Plan Pensión Bolsa Mundial", gestora: "MyInvestor", gestion: "0,30%", deposito: "0%", rent: "~12,5%", ideal: "Bajo coste / principiantes" },
+                    { plan: "Más Rentabilidad Bolsa", gestora: "Indexa Capital", gestion: "0,41%", deposito: "0%", rent: "~11,8%", ideal: "Gestión automatizada" },
+                    { plan: "Naranja Estándar 100", gestora: "ING", gestion: "1,25%", deposito: "0,20%", rent: "~9,2%", ideal: "Clientes ING con descuento" },
+                    { plan: "Ambición 100", gestora: "CaixaBank", gestion: "1,50%", deposito: "0,20%", rent: "~8,7%", ideal: "Clientes CaixaBank" },
+                    { plan: "Plan Mixto", gestora: "BBVA", gestion: "1,30%", deposito: "0,20%", rent: "~7,3%", ideal: "Perfil moderado conservador" },
+                  ].map((row, i) => (
+                    <tr key={row.plan} className={i % 2 === 0 ? "" : "bg-muted/30"}>
+                      <td className="p-3 border font-medium">{row.plan}</td>
+                      <td className="p-3 border">{row.gestora}</td>
+                      <td className="p-3 border text-center">{row.gestion}</td>
+                      <td className="p-3 border text-center">{row.deposito}</td>
+                      <td className="p-3 border text-center font-medium text-emerald-600 dark:text-emerald-400">{row.rent}</td>
+                      <td className="p-3 border text-muted-foreground">{row.ideal}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-muted-foreground mt-3">Rentabilidad histórica a 3 años no garantiza resultados futuros. La comisión máxima legal de gestión es el 1,50% y de depósito el 0,20%.</p>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-2xl font-bold mb-4">Fiscalidad de los planes de pensiones en el IRPF 2026</h2>
+            <Card className="border-blue-500/30 bg-blue-500/5 mb-5">
+              <CardContent className="pt-5">
+                <p className="text-sm leading-7 text-foreground font-medium mb-3">Límite de aportación deducible en 2026:</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• <strong className="text-foreground">Plan individual:</strong> el menor entre 1.500€/año o el 30% de los rendimientos netos del trabajo y actividades económicas</li>
+                  <li>• <strong className="text-foreground">Plan de empleo:</strong> hasta 8.500€ adicionales si la empresa aporta (total máximo 10.000€/año)</li>
+                  <li>• <strong className="text-foreground">Cónyuge:</strong> hasta 1.000€ adicionales si sus ingresos son inferiores a 8.000€/año</li>
+                </ul>
+              </CardContent>
+            </Card>
+            <div className="overflow-x-auto rounded-xl border">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-muted">
+                    <th className="p-3 text-left border font-semibold">Tramo IRPF</th>
+                    <th className="p-3 text-center border font-semibold">Tipo marginal</th>
+                    <th className="p-3 text-left border font-semibold">Ahorro fiscal por 1.500€ aportados</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { tramo: "Hasta 12.450€", tipo: "19%", ahorro: "285€" },
+                    { tramo: "12.450€ – 20.200€", tipo: "24%", ahorro: "360€" },
+                    { tramo: "20.200€ – 35.200€", tipo: "30%", ahorro: "450€" },
+                    { tramo: "35.200€ – 60.000€", tipo: "37%", ahorro: "555€" },
+                    { tramo: "Más de 60.000€", tipo: "45%", ahorro: "675€" },
+                  ].map((row, i) => (
+                    <tr key={row.tramo} className={i % 2 === 0 ? "" : "bg-muted/30"}>
+                      <td className="p-3 border">{row.tramo}</td>
+                      <td className="p-3 border text-center font-medium">{row.tipo}</td>
+                      <td className="p-3 border text-emerald-600 dark:text-emerald-400 font-medium">{row.ahorro}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-muted-foreground mt-3">
+              <strong>Importante:</strong> El ahorro fiscal al aportar es un diferimiento, no una exención. Al rescatar el plan, el importe tributa íntegramente como rendimiento del trabajo. Planifica el rescate en años con menor renta para minimizar el impacto fiscal.
+            </p>
+          </section>
+
+          <section className="mb-10">
             <h2 className="text-2xl font-bold mb-4">Tipos de opciones que más conviene revisar</h2>
             <div className="grid gap-4 md:grid-cols-3">
               {planCards.map((card) => (

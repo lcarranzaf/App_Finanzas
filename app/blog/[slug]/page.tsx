@@ -241,6 +241,21 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         image: post.image, publishedAt: post.publishedAt, updatedAt: post.updatedAt,
         author: post.author, category: post.category, tags: post.tags
       }} />
+      {post.faqs && post.faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: post.faqs.map((f) => ({
+              "@type": "Question",
+              name: f.question,
+              acceptedAnswer: { "@type": "Answer", text: f.answer },
+            })),
+          }) }}
+          suppressHydrationWarning
+        />
+      )}
       <StructuredData type="breadcrumbs" data={{
         breadcrumbs: [
           { name: "Inicio", url: "https://www.finanzasdigitales.es" },

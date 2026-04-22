@@ -88,6 +88,26 @@ const related = [
 ]
 
 export default function DivisasPage() {
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Convertidor de Divisas",
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Web",
+    url: "https://www.finanzasdigitales.es/calculadoras/divisas",
+    description: "Convierte entre Euro, Dólar, Libra y más de 20 monedas en tiempo real. Gratis y sin registro.",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+    inLanguage: "es",
+  }
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
+      { "@type": "ListItem", position: 2, name: "Calculadoras", item: "https://www.finanzasdigitales.es/calculadoras" },
+      { "@type": "ListItem", position: 3, name: "Divisas", item: "https://www.finanzasdigitales.es/calculadoras/divisas" },
+    ],
+  }
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -100,6 +120,8 @@ export default function DivisasPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* HERO */}

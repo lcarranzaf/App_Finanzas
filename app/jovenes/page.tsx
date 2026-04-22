@@ -113,6 +113,24 @@ export default function JovenesPage() {
     },
   ]
 
+  const jovenesFAQSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: jovenesFAQs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  }
+  const jovenesBreadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
+      { "@type": "ListItem", position: 2, name: "Finanzas para Jóvenes", item: "https://www.finanzasdigitales.es/jovenes" },
+    ],
+  }
+
   return (
     <div className="py-16 sm:py-20">
       <script
@@ -120,6 +138,8 @@ export default function JovenesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jovenesPageSchema) }}
         suppressHydrationWarning
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jovenesFAQSchema) }} suppressHydrationWarning />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jovenesBreadcrumb) }} suppressHydrationWarning />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Breadcrumbs */}
         <Breadcrumbs />

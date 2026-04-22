@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Slider } from "@/components/ui/slider"
-import { Home, TrendingDown, Euro, AlertCircle } from "lucide-react"
+import { Home, TrendingDown, Euro, AlertCircle, ChevronDown, ChevronUp } from "lucide-react"
 import {
   AreaChart,
   Area,
@@ -21,10 +21,20 @@ function formatEur(n: number) {
   return n.toLocaleString("es-ES", { style: "currency", currency: "EUR", maximumFractionDigits: 0 })
 }
 
+type MortgageType = "fija" | "variable" | "mixta"
+
 interface AmortRow {
   month: number
   principal: number
   interest: number
+  balance: number
+}
+
+interface AnnualRow {
+  year: number
+  annualPayment: number
+  principalPaid: number
+  interestPaid: number
   balance: number
 }
 
@@ -40,6 +50,7 @@ interface MortgageResult {
   totalInterest: number
   loanAmount: number
   table: AmortRow[]
+  annualTable: AnnualRow[]
   chartData: ChartPoint[]
 }
 
@@ -78,6 +89,28 @@ function calcMortgage(
     })
   }
 
+  // Annual amortization table — full term
+  const annualTable: AnnualRow[] = []
+  let annBalance = loanAmount
+  for (let y = 1; y <= years; y++) {
+    let yearPrincipal = 0
+    let yearInterest = 0
+    for (let m = 0; m < 12; m++) {
+      const interest = annBalance * r
+      const principal = monthlyPayment - interest
+      yearInterest += interest
+      yearPrincipal += principal
+      annBalance = Math.max(annBalance - principal, 0)
+    }
+    annualTable.push({
+      year: y,
+      annualPayment: Math.round(monthlyPayment * 12),
+      principalPaid: Math.round(yearPrincipal),
+      interestPaid: Math.round(yearInterest),
+      balance: Math.round(annBalance),
+    })
+  }
+
   // Chart data — annual
   const chartData: ChartPoint[] = []
   let chartBalance = loanAmount
@@ -102,6 +135,7 @@ function calcMortgage(
     totalInterest: Math.round(totalInterest),
     loanAmount: Math.round(loanAmount),
     table,
+    annualTable,
     chartData,
   }
 }
@@ -111,6 +145,8 @@ export default function MortgageCalculator() {
   const [downPct, setDownPct] = useState([20])
   const [annualRate, setAnnualRate] = useState([3.5])
   const [years, setYears] = useState([25])
+  const [mortgageType, setMortgageType] = useState<MortgageType>("fija")
+  const [showAnnualTable, setShowAnnualTable] = useState(false)
 
   const result = useMemo(
     () => calcMortgage(propertyPrice, downPct[0], annualRate[0], years[0]),
@@ -135,6 +171,36 @@ export default function MortgageCalculator() {
                 <CardDescription>Ajusta los parámetros para simular tu préstamo hipotecario</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
+                {/* Tipo de hipoteca */}
+                <div className="space-y-2">
+                  <Label>Tipo de hipoteca</Label>
+                  <div className="grid grid-cols-3 gap-2">
+                    {(["fija", "variable", "mixta"] as MortgageType[]).map((t) => (
+                      <button
+                        key={t}
+                        onClick={() => setMortgageType(t)}
+                        className={`py-2 px-3 rounded-lg text-sm font-medium border transition-all capitalize ${
+                          mortgageType === t
+                            ? "bg-violet-500/15 border-violet-500/50 text-violet-400"
+                            : "border-border text-muted-foreground hover:border-violet-500/30"
+                        }`}
+                      >
+                        {t.charAt(0).toUpperCase() + t.slice(1)}
+                      </button>
+                    ))}
+                  </div>
+                  {mortgageType === "variable" && (
+                    <p className="text-xs text-blue-400 bg-blue-500/8 rounded p-2">
+                      Variable: Euribor (~2,5% en 2026) + diferencial del banco. Revisa con tu entidad.
+                    </p>
+                  )}
+                  {mortgageType === "mixta" && (
+                    <p className="text-xs text-amber-400 bg-amber-500/8 rounded p-2">
+                      Mixta: tipo fijo los primeros 5-10 años, después referenciada a Euribor.
+                    </p>
+                  )}
+                </div>
+
                 {/* Precio vivienda */}
                 <div className="space-y-2">
                   <Label htmlFor="price">Precio de la vivienda</Label>
@@ -358,7 +424,7 @@ export default function MortgageCalculator() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-base">Tabla de amortización</CardTitle>
+                <CardTitle className="text-base">Tabla de amortización mensual</CardTitle>
                 <CardDescription>Primeros 24 meses — desglose cuota a cuota</CardDescription>
               </CardHeader>
               <CardContent>
@@ -392,6 +458,56 @@ export default function MortgageCalculator() {
                 )}
               </CardContent>
             </Card>
+
+            {/* Annual amortization table — collapsible */}
+            {result && result.annualTable.length > 0 && (
+              <Card>
+                <CardHeader>
+                  <button
+                    onClick={() => setShowAnnualTable((v) => !v)}
+                    className="flex items-center justify-between w-full text-left"
+                  >
+                    <div>
+                      <CardTitle className="text-base">Tabla de amortización anual completa</CardTitle>
+                      <CardDescription>Año a año durante los {years[0]} años del préstamo</CardDescription>
+                    </div>
+                    {showAnnualTable ? (
+                      <ChevronUp className="h-5 w-5 text-muted-foreground shrink-0" />
+                    ) : (
+                      <ChevronDown className="h-5 w-5 text-muted-foreground shrink-0" />
+                    )}
+                  </button>
+                </CardHeader>
+                {showAnnualTable && (
+                  <CardContent>
+                    <div className="max-h-[420px] overflow-y-auto">
+                      <table className="w-full text-sm">
+                        <thead className="sticky top-0 bg-card border-b border-border">
+                          <tr>
+                            <th className="text-left py-2 pr-2 font-semibold text-xs">Año</th>
+                            <th className="text-right py-2 pr-2 font-semibold text-xs">Cuota anual</th>
+                            <th className="text-right py-2 pr-2 font-semibold text-xs text-violet-400">Capital</th>
+                            <th className="text-right py-2 pr-2 font-semibold text-xs text-destructive">Intereses</th>
+                            <th className="text-right py-2 font-semibold text-xs">Saldo pendiente</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {result.annualTable.map((row) => (
+                            <tr key={row.year} className="border-b border-border/40 hover:bg-muted/30">
+                              <td className="py-1.5 pr-2 font-medium">{row.year}</td>
+                              <td className="py-1.5 pr-2 text-right">{formatEur(row.annualPayment)}</td>
+                              <td className="py-1.5 pr-2 text-right text-violet-400">{formatEur(row.principalPaid)}</td>
+                              <td className="py-1.5 pr-2 text-right text-destructive">{formatEur(row.interestPaid)}</td>
+                              <td className="py-1.5 text-right font-medium">{formatEur(row.balance)}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </CardContent>
+                )}
+              </Card>
+            )}
           </div>
         </div>
       </div>

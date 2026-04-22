@@ -227,6 +227,24 @@ export default function InversionesPage() {
     },
   ]
 
+  const inversionesFAQSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: inversionesFAQs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  }
+  const inversionesBreadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
+      { "@type": "ListItem", position: 2, name: "Inversiones", item: "https://www.finanzasdigitales.es/inversiones" },
+    ],
+  }
+
   return (
     <>
       <script
@@ -234,6 +252,8 @@ export default function InversionesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(inversionesPageSchema) }}
         suppressHydrationWarning
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(inversionesFAQSchema) }} suppressHydrationWarning />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(inversionesBreadcrumb) }} suppressHydrationWarning />
     <div className="flex flex-col">
       {/* Breadcrumbs */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-6">

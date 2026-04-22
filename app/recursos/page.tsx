@@ -9,10 +9,10 @@ import { TrackedLink } from "@/components/tracked-link"
 import { AffiliateDisclosure } from "@/components/affiliate-disclosure"
 
 export const metadata: Metadata = {
-  title: `Mejores Apps y Herramientas Financieras ${new Date().getFullYear()} - Recursos Recomendados`,
+  title: `Mejores Herramientas de Control de Gastos y Apps Financieras ${new Date().getFullYear()} — Comparativa España`,
   description:
-    "Las mejores apps de presupuesto, brokers para invertir, bancos digitales y herramientas financieras gratuitas. Comparativa actualizada con pros, contras y calificaciones para gestionar tu dinero.",
-  keywords: ["apps financieras", "mejores brokers", "bancos digitales", "herramientas presupuesto", "apps para ahorrar", "plataformas inversión", "YNAB", "Fintonic", "Mobills"],
+    "Herramientas de control de gastos y apps financieras para España 2026: Fintonic, YNAB, Trade Republic, Degiro y más. Comparativa actualizada gratis.",
+  keywords: ["herramientas control gastos", "mejores bonos herramientas control gastos 2026", "apps financieras España", "mejores brokers", "bancos digitales", "apps para ahorrar", "plataformas inversión", "YNAB", "Fintonic"],
   alternates: {
     canonical: "https://www.finanzasdigitales.es/recursos",
   },
