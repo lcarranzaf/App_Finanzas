@@ -27,7 +27,7 @@ export default function Image({ params }: { params: { slug: string } }) {
   const title       = post ? truncate(post.title, 80) : "Finanzas Digitales"
   const description = post ? truncate(post.description, 115) : ""
   const category    = post?.category ?? "Finanzas"
-  const readTime    = post?.readTime ?? 0
+  const readTime    = Number(post?.readTime ?? 0)
   const color       = categoryColors[category] ?? "#6366f1"
   const fontSize    = title.length > 65 ? 46 : title.length > 50 ? 52 : 58
 
