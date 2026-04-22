@@ -1,5 +1,14 @@
 import type { FAQItem } from "@/components/faq-section"
 
+export interface OgStat {
+  numberHighlight: string          // parte coloreada, e.g. "$1.27"
+  numberSuffix: string             // resto, e.g. " billones"
+  label: string                    // subtítulo bajo el número
+  pills?: string[]                 // badges de datos clave
+  stats?: Array<{ val: string; lbl: string }>  // barra inferior con 3 métricas
+  accentColor?: string             // color de acento, default #E63946
+}
+
 export interface BlogPost {
   slug: string
   title: string
@@ -14,6 +23,7 @@ export interface BlogPost {
   author: string
   faqs?: FAQItem[]
   seoTitle?: string
+  ogStat?: OgStat
 }
 
 export interface BlogSearchPost {
@@ -7597,6 +7607,18 @@ En algunos casos, los contratos de temporada no entran en la regulación de alqu
       { question: "¿Cuál es el interés promedio de las tarjetas en EEUU en 2026?", answer: "La APR (tasa anual) promedio de las tarjetas de crédito en EEUU ronda el 21–24% en 2026, según la Reserva Federal. Algunas tarjetas store-branded llegan al 28–30%. Es el tipo de deuda más caro que existe para el consumidor promedio." },
       { question: "¿Qué pasa si solo pago el mínimo en mi tarjeta?", answer: "Pagar solo el mínimo es la trampa diseñada por los bancos. En una deuda de $5,000 al 22% APR con pago mínimo del 2%, tardarías más de 20 años en liquidarla y pagarías más de $8,000 en intereses — más que la deuda original. El banco gana el triple." },
     ],
+    ogStat: {
+      numberHighlight: "$1.27",
+      numberSuffix: " billones",
+      label: "Deuda en tarjetas — récord histórico Q4 2025",
+      pills: ["21–24% APR", "61% atrapados +1 año", "Plan de escape en 5 pasos"],
+      stats: [
+        { val: "+54%",    lbl: "Deuda desde 2021" },
+        { val: "28 años", lbl: "Pagando solo el mínimo" },
+        { val: "$8,300",  lbl: "Intereses en $5k al mínimo" },
+      ],
+      accentColor: "#E63946",
+    },
   },
   {
     slug: "embargo-salarios-estudiantiles-2026",
