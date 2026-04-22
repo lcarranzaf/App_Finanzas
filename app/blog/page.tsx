@@ -63,13 +63,11 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
       siteName: "Finanzas Digitales",
       locale: "es_ES",
       type: "website",
-      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Blog de Finanzas Personales" }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/og-image.jpg"],
     },
   }
 }

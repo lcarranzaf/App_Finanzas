@@ -45,7 +45,6 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     openGraph: {
       title: post.seoTitle ?? post.title,
       description: post.description,
-      images: [{ url: post.image, width: 1200, height: 630, alt: post.title }],
       url: `https://www.finanzasdigitales.es/blog/${post.slug}`,
       siteName: "Finanzas Digitales",
       type: "article",
@@ -60,7 +59,6 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       card: "summary_large_image",
       title: post.seoTitle ?? post.title,
       description: post.description,
-      images: [post.image],
     },
     alternates: {
       canonical: `https://www.finanzasdigitales.es/blog/${post.slug}`,

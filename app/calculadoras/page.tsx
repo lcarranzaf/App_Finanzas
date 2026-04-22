@@ -25,13 +25,11 @@ export const metadata: Metadata = {
     description: "5 calculadoras financieras interactivas: hipoteca, interés compuesto, meta de ahorro, pago de deuda y divisas. Sin registro.",
     url: "https://www.finanzasdigitales.es/calculadoras",
     type: "website",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Calculadoras Financieras Gratuitas" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Calculadoras Financieras Gratuitas — Finanzas Digitales",
     description: "5 calculadoras financieras interactivas: hipoteca, interés compuesto, meta de ahorro, pago de deuda y divisas. Sin registro.",
-    images: ["/og-image.jpg"],
   },
 }
 
