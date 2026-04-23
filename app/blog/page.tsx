@@ -55,7 +55,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     title,
     description,
     alternates: { canonical },
-    robots: page > 1 ? { index: false, follow: true } : { index: true, follow: true },
+    robots: page > 1 || !!category ? { index: false, follow: true } : { index: true, follow: true },
     openGraph: {
       title,
       description,
@@ -128,6 +128,18 @@ export default function BlogPage({ searchParams }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+        suppressHydrationWarning
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
+            { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.finanzasdigitales.es/blog" },
+          ],
+        }) }}
         suppressHydrationWarning
       />
       <BlogPostsGrid

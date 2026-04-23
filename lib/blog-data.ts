@@ -24,6 +24,8 @@ export interface BlogPost {
   faqs?: FAQItem[]
   seoTitle?: string
   ogStat?: OgStat
+  noindex?: boolean
+  howToSteps?: { name: string; text: string }[]
 }
 
 export interface BlogSearchPost {
@@ -1105,6 +1107,14 @@ El presupuesto perfecto no existe. Existe el que tú mantendrás de forma consis
       "método del sobre",
     ],
     author: "María López",
+    howToSteps: [
+      { name: "Calcula tus ingresos netos mensuales", text: "Anota el salario neto que recibes en cuenta cada mes tras el IRPF y la Seguridad Social. Incluye ingresos extra estables como alquileres o trabajo freelance." },
+      { name: "Registra todos tus gastos fijos", text: "Lista todos los gastos que pagas sí o sí cada mes: alquiler o hipoteca, suministros, seguros, suscripciones y préstamos. Son inamovibles a corto plazo." },
+      { name: "Identifica y categoriza los gastos variables", text: "Revisa tus últimos 3 meses de extractos bancarios y agrupa los gastos en categorías: alimentación, transporte, ocio, ropa y salud." },
+      { name: "Aplica la regla 50/30/20", text: "Destina el 50% de tus ingresos a necesidades, el 30% a deseos y el 20% a ahorro e inversión. Ajusta los porcentajes si tu situación es diferente." },
+      { name: "Crea una hoja de seguimiento mensual", text: "Usa Google Sheets o Excel para registrar ingresos y gastos cada mes. Compara lo planificado con lo real al cierre del mes." },
+      { name: "Revisa y ajusta cada mes", text: "Dedica 15 minutos al mes a revisar tu presupuesto, identificar desviaciones y ajustar las categorías según tu situación real." },
+    ],
     faqs: [
       {
         question: "¿Qué es un presupuesto personal y para qué sirve?",
@@ -2374,6 +2384,14 @@ Abre esa cuenta hoy. Tu yo del futuro no lo lamentará.
      tags: ["inversiones", "principiantes", "fondos indexados", "bolsa"],
      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop",
      author: "Carlos Sánchez",
+    howToSteps: [
+      { name: "Salda las deudas de alto interés", text: "Antes de invertir, cancela cualquier deuda con interés superior al 8%: tarjetas de crédito, créditos al consumo. Pagar una deuda al 22% es equivalente a obtener una rentabilidad garantizada del 22%." },
+      { name: "Crea un fondo de emergencia", text: "Reserva entre 3 y 6 meses de gastos en una cuenta de fácil acceso. Este colchón evita que tengas que vender inversiones en el peor momento si surge un imprevisto." },
+      { name: "Define tu perfil de riesgo y horizonte temporal", text: "Si no necesitas el dinero en más de 10 años, puedes asumir más riesgo. Si es dinero que puedes necesitar antes, opta por opciones más conservadoras." },
+      { name: "Elige una plataforma regulada en España", text: "Para empezar, Trade Republic (0€ comisiones, ETFs desde 1€) o MyInvestor (fondos indexados, regulado por Banco de España) son las opciones más recomendadas para principiantes." },
+      { name: "Selecciona un fondo indexado global o ETF diversificado", text: "Un fondo indexado MSCI World o S&P 500 con TER inferior al 0,25% anual es la opción más sencilla y probada para principiantes con horizonte de largo plazo." },
+      { name: "Automatiza aportaciones periódicas con DCA", text: "Configura una aportación automática mensual fija. La estrategia DCA te permite invertir sin depender del momento del mercado y construir el hábito de ahorro." },
+    ],
     faqs: [
       {
         question: "¿Con cuánto dinero puedo empezar a invertir en España?",
@@ -2503,7 +2521,7 @@ El primer paso es siempre el más difícil, pero una vez que desarrolles el háb
     ],
   },
   {
-    slug: "mejores-apps-finanzas-personales-2025",
+    slug: "mejores-apps-finanzas-personales-2026",
     title: "Las 7 mejores apps de finanzas personales en 2026",
     description:
       "Análisis completo de Fintonic, Revolut, Nubank y otras apps que revolucionarán tu gestión financiera este año.",
@@ -2656,8 +2674,8 @@ Recuerda: la tecnología es solo una herramienta. El éxito financiero depende d
     `,
     publishedAt: "2026-01-08",
     readTime: "12 min",
-    category: "Tecnología",
-     tags: ["apps", "tecnología", "fintech", "herramientas"],
+    category: "Tecnología Financiera",
+    tags: ["apps", "tecnología", "fintech", "herramientas"],
      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&h=630&fit=crop",
      author: "Alejandro Torres",
     faqs: [
@@ -3157,6 +3175,14 @@ Recuerda: **tiempo en el mercado > timing del mercado**. Empieza hoy, aunque sea
     tags: ["fondos indexados", "ETF", "S&P 500", "MSCI World", "inversiones España", "Trade Republic", "MyInvestor", "Indexa Capital", "principiantes", "Warren Buffett"],
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80",
     author: "Carlos Sánchez",
+    howToSteps: [
+      { name: "Entiende qué es un fondo indexado", text: "Un fondo indexado replica automáticamente un índice de mercado (S&P 500, MSCI World) comprando todas sus acciones. No requiere gestión activa, tiene comisiones mínimas y históricamente supera al 85% de los fondos gestionados." },
+      { name: "Elige el índice que quieres replicar", text: "Para máxima diversificación global, el MSCI World (1.500 empresas de 23 países desarrollados) o el MSCI ACWI (mercados emergentes incluidos) son las opciones más recomendadas para principiantes." },
+      { name: "Compara las plataformas disponibles en España", text: "Trade Republic permite ETFs desde 1€ con 0€ de comisión. MyInvestor ofrece fondos indexados de Amundi y Vanguard sin comisiones (mínimo 150€). Indexa Capital gestiona la cartera automáticamente desde 3.000€." },
+      { name: "Abre una cuenta y completa la verificación de identidad", text: "El proceso de registro es 100% online y tarda entre 10 y 30 minutos. Necesitarás DNI o pasaporte, datos bancarios y responder un cuestionario de perfil inversor (obligatorio por MiFID II)." },
+      { name: "Selecciona el fondo y realiza la primera aportación", text: "Busca el fondo por nombre o ISIN. Para un fondo MSCI World en MyInvestor, el Amundi IS MSCI World UCITS ETF ACC (ISIN: LU1681043599) tiene un TER de solo 0,18% anual." },
+      { name: "Configura aportaciones periódicas automáticas", text: "Establece una transferencia automática mensual el día de cobro de nómina. Aunque sean 50€/mes, la consistencia y el interés compuesto hacen el resto con el paso de los años." },
+    ],
     faqs: [
       {
         question: "¿Con cuánto dinero puedo empezar a invertir en fondos indexados en España?",
@@ -7584,6 +7610,7 @@ En algunos casos, los contratos de temporada no entran en la regulación de alqu
     category: "Economía",
     tags: ["aranceles", "Trump", "EEUU", "inflación", "economía", "finanzas personales", "2026"],
     author: "Carlos Sánchez",
+    noindex: true,
     faqs: [
       { question: "¿Qué productos se encarecerán más por los aranceles?", answer: "Los más afectados son la electrónica (smartphones, laptops), ropa y calzado importados de Asia, electrodomésticos, automóviles y sus piezas. Los alimentos también pueden subir si los socios comerciales aplican aranceles de represalia a productos agrícolas americanos." },
       { question: "¿Pueden los aranceles provocar una recesión en EEUU?", answer: "JPMorgan elevó la probabilidad de recesión en EEUU al 60% para finales de 2026. El FMI ya rebajó el crecimiento americano y alertó sobre el impacto inflacionario. No es certeza, pero el riesgo está sobre la mesa." },
@@ -7603,6 +7630,7 @@ En algunos casos, los contratos de temporada no entran en la regulación de alqu
     category: "Deudas",
     tags: ["tarjetas de crédito", "deuda", "EEUU", "intereses", "finanzas personales", "2026"],
     author: "Alejandro Torres",
+    noindex: true,
     faqs: [
       { question: "¿Cuál es el interés promedio de las tarjetas en EEUU en 2026?", answer: "La APR (tasa anual) promedio de las tarjetas de crédito en EEUU ronda el 21–24% en 2026, según la Reserva Federal. Algunas tarjetas store-branded llegan al 28–30%. Es el tipo de deuda más caro que existe para el consumidor promedio." },
       { question: "¿Qué pasa si solo pago el mínimo en mi tarjeta?", answer: "Pagar solo el mínimo es la trampa diseñada por los bancos. En una deuda de $5,000 al 22% APR con pago mínimo del 2%, tardarías más de 20 años en liquidarla y pagarías más de $8,000 en intereses — más que la deuda original. El banco gana el triple." },
@@ -7634,6 +7662,7 @@ En algunos casos, los contratos de temporada no entran en la regulación de alqu
     category: "Deudas",
     tags: ["préstamos estudiantiles", "embargo", "EEUU", "deuda", "educación", "finanzas personales", "2026"],
     author: "Alejandro Torres",
+    noindex: true,
     faqs: [
       { question: "¿Cuánto pueden embargar de mi salario?", answer: "El gobierno puede retener hasta el 15% de tu ingreso disponible (el que queda después de deducciones obligatorias). Sin embargo, siempre se garantiza que te quede al menos 30 veces el salario mínimo federal por semana (actualmente $217.50/semana). En salarios bajos, esto limita mucho lo que pueden retener." },
       { question: "¿Qué opciones tengo si estoy en default?", answer: "Las principales opciones son: (1) Rehabilitación del préstamo — haces 9 pagos consecutivos acordados, sale del default y tu crédito mejora. (2) Consolidación del préstamo — unifica el préstamo en uno nuevo y sale del default inmediatamente. (3) Planes IDR (Income-Driven Repayment) — pagos basados en tu ingreso, desde $0/mes si ganas poco. Actúa antes de que inicien el embargo." },

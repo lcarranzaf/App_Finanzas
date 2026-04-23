@@ -179,25 +179,25 @@ export default function HomePageClient() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                href: "/cuentas-remuneradas-espana-2026",
+                href: "/cuentas-remuneradas-espana",
                 category: "Ahorro",
                 title: "Mejores cuentas remuneradas en España 2026",
                 description: "Para guardar liquidez con algo de rentabilidad y sin complicarte.",
               },
               {
-                href: "/mejores-fondos-monetarios-espana-2026",
+                href: "/mejores-fondos-monetarios-espana",
                 category: "Liquidez",
                 title: "Mejores fondos monetarios en España 2026",
                 description: "Una alternativa fiscalmente más eficiente para dinero a corto plazo.",
               },
               {
-                href: "/mejores-brokers-espana-2026",
+                href: "/mejores-brokers-espana",
                 category: "Inversión",
                 title: "Mejores brokers en España 2026",
                 description: "Compara plataformas para ETFs, acciones y fondos indexados.",
               },
               {
-                href: "/mejores-planes-de-pensiones-espana-2026",
+                href: "/mejores-planes-de-pensiones-espana",
                 category: "Jubilación",
                 title: "Mejores planes de pensiones en España 2026",
                 description: "Fiscalidad, comisiones y cuándo compensa frente a un fondo indexado.",

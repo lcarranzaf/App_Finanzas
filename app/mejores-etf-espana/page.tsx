@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   description:
     "Guía completa de los mejores ETF para invertir en España en 2026: MSCI World, S&P 500, emergentes. Dónde comprarlos, fiscalidad, diferencias con fondos indexados y errores frecuentes.",
   alternates: {
-    canonical: "https://www.finanzasdigitales.es/mejores-etf-espana-2026",
+    canonical: "https://www.finanzasdigitales.es/mejores-etf-espana",
   },
   openGraph: {
     title: "Mejores ETF en España 2026",
     description:
       "Qué ETFs son más populares entre inversores españoles, cómo comprarlos, fiscalidad y diferencias clave con los fondos indexados.",
-    url: "https://www.finanzasdigitales.es/mejores-etf-espana-2026",
+    url: "https://www.finanzasdigitales.es/mejores-etf-espana",
     type: "article",
   },
   twitter: {
@@ -150,7 +150,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
-    { "@type": "ListItem", position: 2, name: "Mejores ETF España 2026", item: "https://www.finanzasdigitales.es/mejores-etf-espana-2026" },
+    { "@type": "ListItem", position: 2, name: "Mejores ETF España 2026", item: "https://www.finanzasdigitales.es/mejores-etf-espana" },
   ],
 }
 
@@ -167,7 +167,7 @@ export default function MejoresETFPage() {
         <Breadcrumbs
           customItems={[
             { label: "Inicio", href: "/" },
-            { label: "Mejores ETF España 2026", href: "/mejores-etf-espana-2026", isActive: true },
+            { label: "Mejores ETF España 2026", href: "/mejores-etf-espana", isActive: true },
           ]}
         />
 
@@ -310,7 +310,7 @@ export default function MejoresETFPage() {
                     </Link>
                   </Button>
                   <Button asChild size="sm" variant="outline">
-                    <Link href="/mejores-brokers-espana-2026">
+                    <Link href="/mejores-brokers-espana">
                       Comparar brokers
                     </Link>
                   </Button>
@@ -332,8 +332,8 @@ export default function MejoresETFPage() {
           <div className="grid gap-3 sm:grid-cols-2">
             {[
               { href: "/fondos-indexados", label: "Fondos indexados en España" },
-              { href: "/mejores-brokers-espana-2026", label: "Mejores brokers España 2026" },
-              { href: "/declaracion-renta-espana-2026", label: "Fiscalidad: declaración de la renta" },
+              { href: "/mejores-brokers-espana", label: "Mejores brokers España 2026" },
+              { href: "/declaracion-renta-espana", label: "Fiscalidad: declaración de la renta" },
               { href: "/blog/interes-compuesto-como-funciona", label: "El poder del interés compuesto" },
             ].map((l) => (
               <Link

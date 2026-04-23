@@ -38,10 +38,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     authors: [{ name: post.author, url: "https://www.finanzasdigitales.es" }],
     creator: post.author,
     publisher: "Finanzas Digitales",
-    robots: {
-      index: true, follow: true,
-      googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
-    },
+    robots: post.noindex
+      ? { index: false, follow: true }
+      : { index: true, follow: true, googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 } },
     openGraph: {
       title: post.seoTitle ?? post.title,
       description: post.description,
@@ -201,35 +200,35 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   const hubLinks: Record<string, { href: string; label: string }[]> = {
     "Inversión": [
       { href: "/fondos-indexados", label: "Guía de fondos indexados en España" },
-      { href: "/mejores-brokers-espana-2026", label: "Mejores brokers España 2026" },
-      { href: "/mejores-etf-espana-2026", label: "Mejores ETF en España 2026" },
+      { href: "/mejores-brokers-espana", label: "Mejores brokers España 2026" },
+      { href: "/mejores-etf-espana", label: "Mejores ETF en España 2026" },
     ],
     "Inversiones": [
       { href: "/fondos-indexados", label: "Guía de fondos indexados en España" },
-      { href: "/mejores-brokers-espana-2026", label: "Mejores brokers España 2026" },
-      { href: "/mejores-etf-espana-2026", label: "Mejores ETF en España 2026" },
+      { href: "/mejores-brokers-espana", label: "Mejores brokers España 2026" },
+      { href: "/mejores-etf-espana", label: "Mejores ETF en España 2026" },
     ],
     "Ahorro": [
-      { href: "/cuentas-remuneradas-espana-2026", label: "Mejores cuentas remuneradas 2026" },
-      { href: "/mejores-fondos-monetarios-espana-2026", label: "Mejores fondos monetarios España" },
+      { href: "/cuentas-remuneradas-espana", label: "Mejores cuentas remuneradas 2026" },
+      { href: "/mejores-fondos-monetarios-espana", label: "Mejores fondos monetarios España" },
       { href: "/calculadoras/meta-ahorro", label: "Calculadora de objetivo de ahorro" },
     ],
     "Fiscalidad": [
-      { href: "/declaracion-renta-espana-2026", label: "Declaración de la renta 2026" },
-      { href: "/mejores-planes-de-pensiones-espana-2026", label: "Mejores planes de pensiones 2026" },
+      { href: "/declaracion-renta-espana", label: "Declaración de la renta 2026" },
+      { href: "/mejores-planes-de-pensiones-espana", label: "Mejores planes de pensiones 2026" },
     ],
     "Planificación": [
       { href: "/calculadoras/interes-compuesto", label: "Calculadora de interés compuesto" },
       { href: "/fondos-indexados", label: "Fondos indexados: guía completa" },
-      { href: "/declaracion-renta-espana-2026", label: "Optimiza tu declaración de la renta" },
+      { href: "/declaracion-renta-espana", label: "Optimiza tu declaración de la renta" },
     ],
     "Criptomonedas": [
-      { href: "/mejores-brokers-espana-2026", label: "Plataformas para invertir en España" },
-      { href: "/declaracion-renta-espana-2026", label: "Cómo tributan las criptomonedas en la renta" },
+      { href: "/mejores-brokers-espana", label: "Plataformas para invertir en España" },
+      { href: "/declaracion-renta-espana", label: "Cómo tributan las criptomonedas en la renta" },
     ],
     "Deudas": [
       { href: "/calculadoras/interes-compuesto", label: "Simulador de interés compuesto" },
-      { href: "/cuentas-remuneradas-espana-2026", label: "Cuentas para tu fondo de emergencia" },
+      { href: "/cuentas-remuneradas-espana", label: "Cuentas para tu fondo de emergencia" },
     ],
   }
 
@@ -241,16 +240,19 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         image: post.image, publishedAt: post.publishedAt, updatedAt: post.updatedAt,
         author: post.author, category: post.category, tags: post.tags
       }} />
-      {post.faqs && post.faqs.length > 0 && (
+      {post.howToSteps && post.howToSteps.length > 0 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: post.faqs.map((f) => ({
-              "@type": "Question",
-              name: f.question,
-              acceptedAnswer: { "@type": "Answer", text: f.answer },
+            "@type": "HowTo",
+            name: post.title,
+            description: post.description,
+            step: post.howToSteps.map((step, i) => ({
+              "@type": "HowToStep",
+              position: i + 1,
+              name: step.name,
+              text: step.text,
             })),
           }) }}
           suppressHydrationWarning

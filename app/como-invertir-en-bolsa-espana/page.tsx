@@ -255,7 +255,7 @@ export default function ComoInvertirBolsaPage() {
                     </Link>
                   </Button>
                   <Button asChild size="sm" variant="outline">
-                    <Link href="/mejores-brokers-espana-2026">
+                    <Link href="/mejores-brokers-espana">
                       Ver comparativa de brokers
                     </Link>
                   </Button>
@@ -276,10 +276,10 @@ export default function ComoInvertirBolsaPage() {
           <h2 className="text-xl font-bold text-foreground mb-4">Guías relacionadas</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             {[
-              { href: "/mejores-etf-espana-2026", label: "Mejores ETFs en España 2026" },
+              { href: "/mejores-etf-espana", label: "Mejores ETFs en España 2026" },
               { href: "/fondos-indexados", label: "Fondos indexados: guía completa" },
-              { href: "/mejores-brokers-espana-2026", label: "Mejores brokers España 2026" },
-              { href: "/declaracion-renta-espana-2026", label: "Cómo tributan tus inversiones" },
+              { href: "/mejores-brokers-espana", label: "Mejores brokers España 2026" },
+              { href: "/declaracion-renta-espana", label: "Cómo tributan tus inversiones" },
             ].map((l) => (
               <Link
                 key={l.href}

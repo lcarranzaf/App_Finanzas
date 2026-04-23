@@ -326,7 +326,7 @@ export default function SobreNosotrosPage() {
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
               {[
                 { value: "2022", label: "Año de fundación" },
-                { value: "28+", label: "Artículos publicados" },
+                { value: "38+", label: "Artículos publicados" },
                 { value: "3", label: "Especialistas del equipo" },
                 { value: "100%", label: "Contenido gratuito" },
               ].map((stat) => (

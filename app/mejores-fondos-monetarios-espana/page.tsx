@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   description:
     "Guía sobre fondos monetarios en España en 2026: cuándo pueden encajar, qué mirar antes de contratarlos y cómo compararlos frente a cuentas remuneradas o depósitos.",
   alternates: {
-    canonical: "https://www.finanzasdigitales.es/mejores-fondos-monetarios-espana-2026",
+    canonical: "https://www.finanzasdigitales.es/mejores-fondos-monetarios-espana",
   },
   openGraph: {
     title: "Mejores fondos monetarios en España 2026",
     description:
       "Qué son los fondos monetarios, cómo se usan en España y cuándo pueden ser más interesantes que una cuenta remunerada o un depósito.",
-    url: "https://www.finanzasdigitales.es/mejores-fondos-monetarios-espana-2026",
+    url: "https://www.finanzasdigitales.es/mejores-fondos-monetarios-espana",
     type: "article",
   },
   twitter: {
@@ -78,7 +78,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
     { "@type": "ListItem", position: 2, name: "Ahorro", item: "https://www.finanzasdigitales.es/ahorro" },
-    { "@type": "ListItem", position: 3, name: "Mejores fondos monetarios 2026", item: "https://www.finanzasdigitales.es/mejores-fondos-monetarios-espana-2026" },
+    { "@type": "ListItem", position: 3, name: "Mejores fondos monetarios 2026", item: "https://www.finanzasdigitales.es/mejores-fondos-monetarios-espana" },
   ],
 }
 
@@ -113,7 +113,7 @@ export default function MejoresFondosMonetariosPage() {
               { label: "Ahorro", href: "/ahorro" },
               {
                 label: "Mejores fondos monetarios 2026",
-                href: "/mejores-fondos-monetarios-espana-2026",
+                href: "/mejores-fondos-monetarios-espana",
                 isActive: true,
               },
             ]}
@@ -250,7 +250,7 @@ export default function MejoresFondosMonetariosPage() {
           <section className="mt-10 pt-8 border-t">
             <h2 className="text-xl font-bold mb-4">Siguiente paso</h2>
             <div className="grid gap-4 md:grid-cols-3">
-              <Link href="/cuentas-remuneradas-espana-2026" className="block rounded-xl border p-4 hover:border-primary/40 hover:bg-primary/5 transition-colors">
+              <Link href="/cuentas-remuneradas-espana" className="block rounded-xl border p-4 hover:border-primary/40 hover:bg-primary/5 transition-colors">
                 <PiggyBank className="h-5 w-5 text-primary mb-2" />
                 <p className="font-semibold text-foreground">Cuentas remuneradas</p>
                 <p className="mt-2 text-sm text-muted-foreground">La referencia más simple para liquidez diaria.</p>

@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   description:
     "Comparativa práctica de cuentas remuneradas en España en 2026. Qué mirar antes de contratar: TAE, condiciones, límites de saldo, liquidez y alternativas.",
   alternates: {
-    canonical: "https://www.finanzasdigitales.es/cuentas-remuneradas-espana-2026",
+    canonical: "https://www.finanzasdigitales.es/cuentas-remuneradas-espana",
   },
   openGraph: {
     title: "Mejores cuentas remuneradas en España 2026",
     description:
       "Dónde guardar liquidez en España en 2026: cuentas remuneradas, condiciones, límites y diferencias frente a depósitos o fondos monetarios.",
-    url: "https://www.finanzasdigitales.es/cuentas-remuneradas-espana-2026",
+    url: "https://www.finanzasdigitales.es/cuentas-remuneradas-espana",
     type: "article",
   },
   twitter: {
@@ -78,7 +78,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
     { "@type": "ListItem", position: 2, name: "Ahorro", item: "https://www.finanzasdigitales.es/ahorro" },
-    { "@type": "ListItem", position: 3, name: "Mejores cuentas remuneradas 2026", item: "https://www.finanzasdigitales.es/cuentas-remuneradas-espana-2026" },
+    { "@type": "ListItem", position: 3, name: "Mejores cuentas remuneradas 2026", item: "https://www.finanzasdigitales.es/cuentas-remuneradas-espana" },
   ],
 }
 
@@ -113,7 +113,7 @@ export default function CuentasRemuneradasPage() {
               { label: "Ahorro", href: "/ahorro" },
               {
                 label: "Mejores cuentas remuneradas 2026",
-                href: "/cuentas-remuneradas-espana-2026",
+                href: "/cuentas-remuneradas-espana",
                 isActive: true,
               },
             ]}
@@ -257,7 +257,7 @@ export default function CuentasRemuneradasPage() {
                 <p className="font-semibold text-foreground">Cómo ahorrar en España</p>
                 <p className="mt-2 text-sm text-muted-foreground">Métodos y hábitos para mejorar tu margen de ahorro.</p>
               </Link>
-              <Link href="/mejores-fondos-monetarios-espana-2026" className="block rounded-xl border p-4 hover:border-primary/40 hover:bg-primary/5 transition-colors">
+              <Link href="/mejores-fondos-monetarios-espana" className="block rounded-xl border p-4 hover:border-primary/40 hover:bg-primary/5 transition-colors">
                 <ShieldCheck className="h-5 w-5 text-primary mb-2" />
                 <p className="font-semibold text-foreground">Fondos monetarios 2026</p>
                 <p className="mt-2 text-sm text-muted-foreground">La alternativa más natural si comparas liquidez y fiscalidad.</p>

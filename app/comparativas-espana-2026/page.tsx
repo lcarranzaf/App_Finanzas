@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 const featuredComparisons = [
   {
-    href: "/cuentas-remuneradas-espana-2026",
+    href: "/cuentas-remuneradas-espana",
     icon: PiggyBank,
     badge: "Ahorro",
     title: "Mejores cuentas remuneradas en Espana 2026",
@@ -33,7 +33,7 @@ const featuredComparisons = [
     cta: "Ver comparativa",
   },
   {
-    href: "/mejores-fondos-monetarios-espana-2026",
+    href: "/mejores-fondos-monetarios-espana",
     icon: ShieldCheck,
     badge: "Liquidez",
     title: "Mejores fondos monetarios en Espana 2026",
@@ -42,7 +42,7 @@ const featuredComparisons = [
     cta: "Explorar fondos",
   },
   {
-    href: "/mejores-brokers-espana-2026",
+    href: "/mejores-brokers-espana",
     icon: LineChart,
     badge: "Inversion",
     title: "Mejores brokers en Espana 2026",
@@ -51,7 +51,7 @@ const featuredComparisons = [
     cta: "Comparar brokers",
   },
   {
-    href: "/mejores-planes-de-pensiones-espana-2026",
+    href: "/mejores-planes-de-pensiones-espana",
     icon: Landmark,
     badge: "Jubilacion",
     title: "Mejores planes de pensiones en Espana 2026",

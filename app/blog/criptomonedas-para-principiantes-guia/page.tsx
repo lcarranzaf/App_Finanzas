@@ -549,7 +549,7 @@ export default function CriptomonedasPrincipiantes() {
               <Link href="/fondos-indexados">Guía de fondos indexados <ArrowRight className="ml-1.5 h-3.5 w-3.5" /></Link>
             </Button>
             <Button variant="outline" size="sm" asChild>
-              <Link href="/mejores-brokers-espana-2026">Ver mejores brokers</Link>
+              <Link href="/mejores-brokers-espana">Ver mejores brokers</Link>
             </Button>
           </div>
         </div>
@@ -566,10 +566,10 @@ export default function CriptomonedasPrincipiantes() {
           <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4">Guías relacionadas</p>
           <div className="grid sm:grid-cols-2 gap-2">
             {[
-              { href: "/mejores-brokers-espana-2026", label: "Mejores brokers España 2026" },
-              { href: "/declaracion-renta-espana-2026", label: "Cómo declarar criptos en la renta" },
+              { href: "/mejores-brokers-espana", label: "Mejores brokers España 2026" },
+              { href: "/declaracion-renta-espana", label: "Cómo declarar criptos en la renta" },
               { href: "/fondos-indexados", label: "Fondos indexados: alternativa más segura" },
-              { href: "/mejores-etf-espana-2026", label: "Mejores ETF en España 2026" },
+              { href: "/mejores-etf-espana", label: "Mejores ETF en España 2026" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="flex items-center justify-between p-3.5 rounded-xl border bg-muted/30 hover:bg-muted/60 transition-all text-sm font-medium group">
                 {l.label}

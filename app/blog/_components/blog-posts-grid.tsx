@@ -91,22 +91,22 @@ export default function BlogPostsGrid({
           <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {[
               {
-                href: "/cuentas-remuneradas-espana-2026",
+                href: "/cuentas-remuneradas-espana",
                 title: "Cuentas remuneradas en Espana 2026",
                 description: "Para liquidez y fondo de emergencia.",
               },
               {
-                href: "/mejores-fondos-monetarios-espana-2026",
+                href: "/mejores-fondos-monetarios-espana",
                 title: "Fondos monetarios en Espana 2026",
                 description: "Alternativa a cuentas y depositos.",
               },
               {
-                href: "/mejores-brokers-espana-2026",
+                href: "/mejores-brokers-espana",
                 title: "Mejores brokers en Espana 2026",
                 description: "Para ETFs, fondos y acciones.",
               },
               {
-                href: "/mejores-planes-de-pensiones-espana-2026",
+                href: "/mejores-planes-de-pensiones-espana",
                 title: "Planes de pensiones en Espana 2026",
                 description: "Fiscalidad, comisiones y comparativa.",
               },

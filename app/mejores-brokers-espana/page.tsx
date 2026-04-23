@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   description:
     "Comparativa actualizada de los mejores brokers para invertir en España en 2026: Trade Republic, MyInvestor, Degiro, Interactive Brokers, eToro e Indexa Capital. Comisiones, regulación y para quién es cada uno.",
   alternates: {
-    canonical: "https://www.finanzasdigitales.es/mejores-brokers-espana-2026",
+    canonical: "https://www.finanzasdigitales.es/mejores-brokers-espana",
   },
   openGraph: {
     title: "Mejores Brokers en España 2026 — Comparativa Real",
     description:
       "Comparativa honesta de brokers para invertir en España: Trade Republic, MyInvestor, Degiro, IBKR, eToro e Indexa Capital. Datos reales de comisiones y regulación.",
-    url: "https://www.finanzasdigitales.es/mejores-brokers-espana-2026",
+    url: "https://www.finanzasdigitales.es/mejores-brokers-espana",
     type: "article",
   },
   twitter: {
@@ -204,13 +204,114 @@ const brokers = [
   },
 ]
 
+const financialProductSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Mejores Brokers en España 2026",
+  description: "Comparativa de los mejores brokers para invertir en España: Trade Republic, MyInvestor, Degiro, Interactive Brokers, eToro e Indexa Capital.",
+  url: "https://www.finanzasdigitales.es/mejores-brokers-espana",
+  numberOfItems: 6,
+  itemListElement: [
+    {
+      "@type": "ListItem", position: 1,
+      item: {
+        "@type": "FinancialProduct",
+        name: "Trade Republic",
+        description: "Neobróker alemán regulado por BaFin. ETFs y acciones desde 1€ sin comisión. Planes de ahorro automáticos.",
+        url: "https://www.traderepublic.com",
+        provider: { "@type": "FinancialService", name: "Trade Republic Bank GmbH" },
+        review: {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "4.5", bestRating: "5", worstRating: "1" },
+          author: { "@type": "Organization", name: "Finanzas Digitales", url: "https://www.finanzasdigitales.es" },
+        },
+      },
+    },
+    {
+      "@type": "ListItem", position: 2,
+      item: {
+        "@type": "FinancialProduct",
+        name: "MyInvestor",
+        description: "Banco digital español regulado por el Banco de España. Fondos indexados de Amundi, Vanguard y BlackRock sin comisiones.",
+        url: "https://myinvestor.es",
+        provider: { "@type": "FinancialService", name: "MyInvestor Bank" },
+        review: {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "4.5", bestRating: "5", worstRating: "1" },
+          author: { "@type": "Organization", name: "Finanzas Digitales", url: "https://www.finanzasdigitales.es" },
+        },
+      },
+    },
+    {
+      "@type": "ListItem", position: 3,
+      item: {
+        "@type": "FinancialProduct",
+        name: "Degiro",
+        description: "Bróker online regulado por AFM (Holanda). Acceso a más de 50 bolsas mundiales y 5.000+ ETFs con comisiones competitivas.",
+        url: "https://www.degiro.es",
+        provider: { "@type": "FinancialService", name: "flatexDEGIRO Bank AG" },
+        review: {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "4.2", bestRating: "5", worstRating: "1" },
+          author: { "@type": "Organization", name: "Finanzas Digitales", url: "https://www.finanzasdigitales.es" },
+        },
+      },
+    },
+    {
+      "@type": "ListItem", position: 4,
+      item: {
+        "@type": "FinancialProduct",
+        name: "Interactive Brokers",
+        description: "Bróker profesional regulado por SEC, FCA y BaFin. Acceso a todos los mercados mundiales con comisiones mínimas.",
+        url: "https://www.interactivebrokers.com",
+        provider: { "@type": "FinancialService", name: "Interactive Brokers LLC" },
+        review: {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "4.3", bestRating: "5", worstRating: "1" },
+          author: { "@type": "Organization", name: "Finanzas Digitales", url: "https://www.finanzasdigitales.es" },
+        },
+      },
+    },
+    {
+      "@type": "ListItem", position: 5,
+      item: {
+        "@type": "FinancialProduct",
+        name: "eToro",
+        description: "Plataforma social con 35 millones de usuarios. Copy trading y 0% comisión en acciones y ETFs reales.",
+        url: "https://www.etoro.com",
+        provider: { "@type": "FinancialService", name: "eToro Europe Ltd" },
+        review: {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "4.0", bestRating: "5", worstRating: "1" },
+          author: { "@type": "Organization", name: "Finanzas Digitales", url: "https://www.finanzasdigitales.es" },
+        },
+      },
+    },
+    {
+      "@type": "ListItem", position: 6,
+      item: {
+        "@type": "FinancialProduct",
+        name: "Indexa Capital",
+        description: "Robo-advisor pionero en España regulado por la CNMV. Gestión automatizada de carteras indexadas desde 3.000€.",
+        url: "https://indexacapital.com",
+        provider: { "@type": "FinancialService", name: "Indexa Capital AV, S.A." },
+        review: {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "4.4", bestRating: "5", worstRating: "1" },
+          author: { "@type": "Organization", name: "Finanzas Digitales", url: "https://www.finanzasdigitales.es" },
+        },
+      },
+    },
+  ],
+}
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
     { "@type": "ListItem", position: 2, name: "Inversiones", item: "https://www.finanzasdigitales.es/inversiones" },
-    { "@type": "ListItem", position: 3, name: "Mejores brokers 2026", item: "https://www.finanzasdigitales.es/mejores-brokers-espana-2026" },
+    { "@type": "ListItem", position: 3, name: "Mejores brokers 2026", item: "https://www.finanzasdigitales.es/mejores-brokers-espana" },
   ],
 }
 
@@ -228,7 +329,7 @@ export default function MejoresBrokersPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} suppressHydrationWarning />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} suppressHydrationWarning />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(financialProductSchema) }} suppressHydrationWarning />
 
       <div className="min-h-screen bg-background">
         <div className="mx-auto max-w-5xl px-4 py-8">
@@ -236,7 +337,7 @@ export default function MejoresBrokersPage() {
             customItems={[
               { label: "Inicio", href: "/" },
               { label: "Inversiones", href: "/inversiones" },
-              { label: "Mejores brokers 2026", href: "/mejores-brokers-espana-2026", isActive: true },
+              { label: "Mejores brokers 2026", href: "/mejores-brokers-espana", isActive: true },
             ]}
           />
 

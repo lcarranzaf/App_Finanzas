@@ -70,6 +70,19 @@ export default function AuthorPage({ params }: AuthorPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         suppressHydrationWarning
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
+            { "@type": "ListItem", position: 2, name: "Autores", item: "https://www.finanzasdigitales.es/autores" },
+            { "@type": "ListItem", position: 3, name: author.name, item: `https://www.finanzasdigitales.es/autores/${author.slug}` },
+          ],
+        }) }}
+        suppressHydrationWarning
+      />
       <div className="py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           {/* Perfil del autor */}

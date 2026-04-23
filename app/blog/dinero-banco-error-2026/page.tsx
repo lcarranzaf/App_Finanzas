@@ -487,7 +487,7 @@ export default function DineroBancoError2026() {
               Calcular mi plan de ahorro <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              href="/mejores-fondos-monetarios-espana-2026"
+              href="/mejores-fondos-monetarios-espana"
               className="inline-flex items-center gap-2 rounded-xl border border-zinc-700 px-5 py-3 text-sm font-semibold text-zinc-300 hover:border-zinc-500 transition-colors"
             >
               Ver fondos monetarios 2026 <ChevronRight className="h-4 w-4" />
@@ -525,8 +525,8 @@ export default function DineroBancoError2026() {
           <h2 className="text-lg font-bold text-zinc-300 mb-6">También te puede interesar</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { href: "/mejores-fondos-monetarios-espana-2026", label: "Mejores fondos monetarios España 2026" },
-              { href: "/cuentas-remuneradas-espana-2026", label: "Cuentas remuneradas España 2026" },
+              { href: "/mejores-fondos-monetarios-espana", label: "Mejores fondos monetarios España 2026" },
+              { href: "/cuentas-remuneradas-espana", label: "Cuentas remuneradas España 2026" },
               { href: "/blog/como-proteger-ahorros-inflacion-espana", label: "Cómo proteger tus ahorros de la inflación" },
             ].map((r) => (
               <Link

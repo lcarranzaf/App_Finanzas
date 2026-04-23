@@ -150,7 +150,11 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
             url: `${BASE_URL}/blog/${post.slug}`,
             keywords: post.tags.join(", "),
             articleSection: post.category,
-            wordCount: post.content.split(" ").length,
+            wordCount: post.content
+              .replace(/```[\s\S]*?```/g, '')
+              .replace(/[#*`|_~>\[\]()!]/g, ' ')
+              .split(/\s+/)
+              .filter((w) => w.length > 0).length,
             inLanguage: "es",
             isAccessibleForFree: true,
             about: {

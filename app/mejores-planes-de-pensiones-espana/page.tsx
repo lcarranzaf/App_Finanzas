@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   description:
     "Guía práctica para comparar planes de pensiones en España en 2026: comisiones, perfil de riesgo, ventaja fiscal y cuándo puede compensar frente a un fondo indexado.",
   alternates: {
-    canonical: "https://www.finanzasdigitales.es/mejores-planes-de-pensiones-espana-2026",
+    canonical: "https://www.finanzasdigitales.es/mejores-planes-de-pensiones-espana",
   },
   openGraph: {
     title: "Mejores planes de pensiones en España 2026",
     description:
       "Qué mirar antes de contratar un plan de pensiones en España: comisiones, fiscalidad, liquidez y comparativa frente a fondos indexados.",
-    url: "https://www.finanzasdigitales.es/mejores-planes-de-pensiones-espana-2026",
+    url: "https://www.finanzasdigitales.es/mejores-planes-de-pensiones-espana",
     type: "article",
   },
   twitter: {
@@ -93,7 +93,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
     { "@type": "ListItem", position: 2, name: "Inversiones", item: "https://www.finanzasdigitales.es/inversiones" },
-    { "@type": "ListItem", position: 3, name: "Mejores planes de pensiones 2026", item: "https://www.finanzasdigitales.es/mejores-planes-de-pensiones-espana-2026" },
+    { "@type": "ListItem", position: 3, name: "Mejores planes de pensiones 2026", item: "https://www.finanzasdigitales.es/mejores-planes-de-pensiones-espana" },
   ],
 }
 
@@ -131,7 +131,7 @@ export default function MejoresPlanesPensionesPage() {
               { label: "Inversiones", href: "/inversiones" },
               {
                 label: "Mejores planes de pensiones 2026",
-                href: "/mejores-planes-de-pensiones-espana-2026",
+                href: "/mejores-planes-de-pensiones-espana",
                 isActive: true,
               },
             ]}

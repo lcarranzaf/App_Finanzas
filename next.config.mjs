@@ -52,9 +52,9 @@ const nextConfig = {
               "default-src 'self'",
               `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.google-analytics.com https://adservice.google.com https://googleads.g.doubleclick.net https://fundingchoicesmessages.google.com https://*.adtrafficquality.google https://*.disqus.com https://disqus.com https://disquscdn.com https://*.disquscdn.com https://va.vercel-scripts.com`,
               "style-src 'self' 'unsafe-inline' https://disquscdn.com https://*.disquscdn.com",
-              "img-src 'self' data: blob: https://images.unsplash.com https://images.pexels.com https://hebbkx1anhila5yf.public.blob.vercel-storage.com https://pagead2.googlesyndication.com https://www.google.com https://www.gstatic.com https://*.adtrafficquality.google https://*.disqus.com https://disquscdn.com https://*.disquscdn.com https://referrer.disqus.com",
+              "img-src 'self' data: blob: https://images.unsplash.com https://images.pexels.com https://hebbkx1anhila5yf.public.blob.vercel-storage.com https://pagead2.googlesyndication.com https://www.google.com https://www.gstatic.com https://*.adtrafficquality.google https://*.disqus.com https://disquscdn.com https://*.disquscdn.com https://referrer.disqus.com https://stats.g.doubleclick.net https://www.googleadservices.com",
               "font-src 'self' data: https://disquscdn.com https://*.disquscdn.com",
-              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://vitals.vercel-insights.com https://vercel.live https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://*.disqus.com https://disqus.com https://www.google.com https://va.vercel-scripts.com https://open.er-api.com",
+              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://vitals.vercel-insights.com https://vercel.live https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://*.disqus.com https://disqus.com https://www.google.com https://va.vercel-scripts.com https://open.er-api.com https://stats.g.doubleclick.net",
               "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://*.adtrafficquality.google",
               "worker-src 'self'",
               "frame-ancestors 'none'",
@@ -98,6 +98,42 @@ const nextConfig = {
         source: "/curso",
         destination: "/",
         permanent: false,
+      },
+      // M1 — Migración URLs con año a evergreen (abril 2026)
+      {
+        source: "/mejores-brokers-espana-2026",
+        destination: "/mejores-brokers-espana",
+        permanent: true,
+      },
+      {
+        source: "/mejores-etf-espana-2026",
+        destination: "/mejores-etf-espana",
+        permanent: true,
+      },
+      {
+        source: "/cuentas-remuneradas-espana-2026",
+        destination: "/cuentas-remuneradas-espana",
+        permanent: true,
+      },
+      {
+        source: "/mejores-planes-de-pensiones-espana-2026",
+        destination: "/mejores-planes-de-pensiones-espana",
+        permanent: true,
+      },
+      {
+        source: "/mejores-fondos-monetarios-espana-2026",
+        destination: "/mejores-fondos-monetarios-espana",
+        permanent: true,
+      },
+      {
+        source: "/declaracion-renta-espana-2026",
+        destination: "/declaracion-renta-espana",
+        permanent: true,
+      },
+      {
+        source: "/blog/mejores-apps-finanzas-personales-2025",
+        destination: "/blog/mejores-apps-finanzas-personales-2026",
+        permanent: true,
       },
     ];
   },

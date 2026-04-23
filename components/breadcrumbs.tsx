@@ -79,27 +79,8 @@ export function Breadcrumbs({ items, customItems }: BreadcrumbsProps) {
 
   const breadcrumbItems = items || generateBreadcrumbs()
 
-  // Generate structured data
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": breadcrumbItems.map((item, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "name": item.label,
-      "item": `https://www.finanzasdigitales.es${item.href}`
-    }))
-  }
-
   return (
     <>
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        suppressHydrationWarning
-      />
-
       {/* Breadcrumb Navigation */}
       <nav aria-label="Breadcrumb" className="flex items-center space-x-1 text-sm text-muted-foreground mb-6">
         <ol className="flex items-center space-x-1">

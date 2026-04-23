@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   description:
     "Guía completa de la declaración de la renta 2025-2026 en España: plazos, tramos IRPF actualizados, deducciones autonómicas, cómo presentarla por internet y errores frecuentes.",
   alternates: {
-    canonical: "https://www.finanzasdigitales.es/declaracion-renta-espana-2026",
+    canonical: "https://www.finanzasdigitales.es/declaracion-renta-espana",
   },
   openGraph: {
     title: "Declaración de la Renta 2026 en España",
     description:
       "Todo lo que necesitas saber para hacer la renta 2025-2026: plazos, tramos IRPF, deducciones y cómo evitar los errores más comunes.",
-    url: "https://www.finanzasdigitales.es/declaracion-renta-espana-2026",
+    url: "https://www.finanzasdigitales.es/declaracion-renta-espana",
     type: "article",
   },
   twitter: {
@@ -130,7 +130,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.finanzasdigitales.es" },
-    { "@type": "ListItem", position: 2, name: "Declaración de la Renta 2026", item: "https://www.finanzasdigitales.es/declaracion-renta-espana-2026" },
+    { "@type": "ListItem", position: 2, name: "Declaración de la Renta 2026", item: "https://www.finanzasdigitales.es/declaracion-renta-espana" },
   ],
 }
 
@@ -147,7 +147,7 @@ export default function DeclaracionRentaPage() {
         <Breadcrumbs
           customItems={[
             { label: "Inicio", href: "/" },
-            { label: "Declaración de la Renta 2026", href: "/declaracion-renta-espana-2026", isActive: true },
+            { label: "Declaración de la Renta 2026", href: "/declaracion-renta-espana", isActive: true },
           ]}
         />
 
@@ -312,7 +312,7 @@ export default function DeclaracionRentaPage() {
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild size="sm">
-                    <Link href="/mejores-planes-de-pensiones-espana-2026">
+                    <Link href="/mejores-planes-de-pensiones-espana">
                       Ver planes de pensiones <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -338,9 +338,9 @@ export default function DeclaracionRentaPage() {
           <h2 className="text-xl font-bold text-foreground mb-4">Guías relacionadas</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             {[
-              { href: "/mejores-planes-de-pensiones-espana-2026", label: "Mejores planes de pensiones 2026" },
+              { href: "/mejores-planes-de-pensiones-espana", label: "Mejores planes de pensiones 2026" },
               { href: "/fondos-indexados", label: "Fondos indexados en España" },
-              { href: "/mejores-brokers-espana-2026", label: "Mejores brokers para invertir" },
+              { href: "/mejores-brokers-espana", label: "Mejores brokers para invertir" },
               { href: "/blog/interes-compuesto-como-funciona", label: "Cómo funciona el interés compuesto" },
             ].map((l) => (
               <Link

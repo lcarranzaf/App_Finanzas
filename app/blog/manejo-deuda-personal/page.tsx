@@ -464,9 +464,9 @@ export default function ManeoDeudaPersonalPage() {
           <div className="grid sm:grid-cols-2 gap-2">
             {[
               { href: "/calculadoras/interes-compuesto", label: "Calculadora de interés compuesto" },
-              { href: "/cuentas-remuneradas-espana-2026", label: "Mejores cuentas remuneradas 2026" },
+              { href: "/cuentas-remuneradas-espana", label: "Mejores cuentas remuneradas 2026" },
               { href: "/fondos-indexados", label: "Fondos indexados: guía completa" },
-              { href: "/declaracion-renta-espana-2026", label: "Declaración de la renta 2026" },
+              { href: "/declaracion-renta-espana", label: "Declaración de la renta 2026" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="flex items-center justify-between p-3.5 rounded-xl border bg-muted/30 hover:bg-muted/60 transition-all text-sm font-medium group">
                 {l.label}
