@@ -117,10 +117,10 @@ export default function RootLayout({
             });
           `}
         </Script>
-        {/* Google AdSense */}
-        <Script
+        {/* Google AdSense — script nativo para evitar warning data-nscript */}
+        <script
+          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4657042320327960"
-          strategy="lazyOnload"
           crossOrigin="anonymous"
         />
         {/* AdSense verification helper (solo en desarrollo) */}
