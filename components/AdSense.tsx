@@ -18,9 +18,8 @@ interface AdSenseProps {
 const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
   const [mounted, setMounted] = useState(false);
   const [viewportSize, setViewportSize] = useState<'mobile' | 'tablet' | 'desktop'>('desktop');
-  const [unfilled, setUnfilled] = useState(false);
+  const [pushed, setPushed] = useState(false);
   const pushedRef = useRef(false);
-  const insRef = useRef<HTMLModElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -50,6 +49,7 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
         if (ags && typeof (ags as { push: (c: object) => void }).push === 'function') {
           (ags as { push: (c: object) => void }).push({});
           pushedRef.current = true;
+          setPushed(true); // quitar min-height para que AdSense controle el tamaño
           return true;
         }
         return false;
@@ -79,14 +79,6 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
       return () => { if (intervalId) clearInterval(intervalId); };
     }
 
-    // Detectar unfilled: AdSense pone data-ad-status="unfilled" cuando no hay anuncio
-    const statusObserver = new MutationObserver(() => {
-      if (element.getAttribute('data-ad-status') === 'unfilled') {
-        setUnfilled(true);
-      }
-    });
-    statusObserver.observe(element, { attributes: true, attributeFilter: ['data-ad-status'] });
-
     // Lazy loading: el anuncio se empuja solo cuando entra al viewport
     const observer = new IntersectionObserver(
       (entries) => {
@@ -102,7 +94,6 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
 
     return () => {
       observer.disconnect();
-      statusObserver.disconnect();
       if (intervalId) clearInterval(intervalId);
     };
   }, [slot, mounted]);
@@ -128,25 +119,24 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
     if (fmt === 'vertical') return '600px';
     if (fmt === 'rectangle') return '280px';
     if (fmt === 'horizontal') return '100px';
-    return '280px'; // auto
+    return '280px';
   };
 
-  // Ocultar completamente cuando AdSense confirma que no hay anuncio
-  if (unfilled) return null;
+  // Antes del push: reserva espacio para evitar layout shift
+  // Después del push: min-height 0 para que AdSense colapse si no hay anuncio
+  const containerMinHeight = pushed ? '0px' : getMinHeight(adFormat);
 
   if (!mounted) {
     return <div className={`ad-container ${className || ''}`} style={{ width: '100%', minHeight: getMinHeight(adFormat), margin: '20px 0' }} />;
   }
 
   return (
-    <div className={`ad-container ${className || ''}`} style={{ width: '100%', minHeight: getMinHeight(adFormat), margin: '20px 0' }}>
+    <div className={`ad-container ${className || ''}`} style={{ width: '100%', minHeight: containerMinHeight, margin: '20px 0' }}>
       <ins
-        ref={insRef}
         className="adsbygoogle"
         style={style || {
           display: 'block',
           textAlign: 'center',
-          minHeight: getMinHeight(adFormat),
           width: '100%',
         }}
         data-ad-client="ca-pub-4657042320327960"
