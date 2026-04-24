@@ -18,7 +18,9 @@ interface AdSenseProps {
 const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
   const [mounted, setMounted] = useState(false);
   const [viewportSize, setViewportSize] = useState<'mobile' | 'tablet' | 'desktop'>('desktop');
+  const [unfilled, setUnfilled] = useState(false);
   const pushedRef = useRef(false);
+  const insRef = useRef<HTMLModElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -77,6 +79,14 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
       return () => { if (intervalId) clearInterval(intervalId); };
     }
 
+    // Detectar unfilled: AdSense pone data-ad-status="unfilled" cuando no hay anuncio
+    const statusObserver = new MutationObserver(() => {
+      if (element.getAttribute('data-ad-status') === 'unfilled') {
+        setUnfilled(true);
+      }
+    });
+    statusObserver.observe(element, { attributes: true, attributeFilter: ['data-ad-status'] });
+
     // Lazy loading: el anuncio se empuja solo cuando entra al viewport
     const observer = new IntersectionObserver(
       (entries) => {
@@ -92,6 +102,7 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
 
     return () => {
       observer.disconnect();
+      statusObserver.disconnect();
       if (intervalId) clearInterval(intervalId);
     };
   }, [slot, mounted]);
@@ -111,11 +122,6 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
     }
   };
 
-  // Don't render <ins> during SSR or first client render.
-  // Ad blockers remove <ins class="adsbygoogle"> from the DOM before React
-  // hydrates, which causes hydration mismatch errors (#418/#425).
-  // Rendering only after mount means hydration completes first, then the ad
-  // element is inserted client-side where the ad blocker can remove it safely.
   const adFormat = getAdFormat();
 
   const getMinHeight = (fmt: string) => {
@@ -125,6 +131,9 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
     return '280px'; // auto
   };
 
+  // Ocultar completamente cuando AdSense confirma que no hay anuncio
+  if (unfilled) return null;
+
   if (!mounted) {
     return <div className={`ad-container ${className || ''}`} style={{ width: '100%', minHeight: getMinHeight(adFormat), margin: '20px 0' }} />;
   }
@@ -132,6 +141,7 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
   return (
     <div className={`ad-container ${className || ''}`} style={{ width: '100%', minHeight: getMinHeight(adFormat), margin: '20px 0' }}>
       <ins
+        ref={insRef}
         className="adsbygoogle"
         style={style || {
           display: 'block',
