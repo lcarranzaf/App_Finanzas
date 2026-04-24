@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 declare global {
   interface Window {
-    adsbygoogle?: unknown[];
+    adsbygoogle?: { push: (config: object) => void } | unknown[];
   }
 }
 
@@ -44,8 +44,9 @@ const AdSense = ({ slot, style, format = 'auto', className }: AdSenseProps) => {
     const pushAd = () => {
       if (pushedRef.current) return true;
       try {
-        if (window.adsbygoogle && Array.isArray(window.adsbygoogle)) {
-          window.adsbygoogle.push({});
+        const ags = window.adsbygoogle;
+        if (ags && typeof (ags as { push: (c: object) => void }).push === 'function') {
+          (ags as { push: (c: object) => void }).push({});
           pushedRef.current = true;
           return true;
         }
