@@ -47,6 +47,10 @@ const nextConfig = {
             value: "https://www.finanzasdigitales.es",
           },
           {
+            key: "Cross-Origin-Resource-Policy",
+            value: "cross-origin",
+          },
+          {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
