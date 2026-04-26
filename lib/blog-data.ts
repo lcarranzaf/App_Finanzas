@@ -1,42 +1,20 @@
-import type { FAQItem } from "@/components/faq-section"
+// Tipos centralizados — no modificar aquí, editar lib/blog-types.ts
+export type { OgStat, BlogPost, BlogSearchPost } from "@/lib/blog-types"
+import type { BlogPost, BlogSearchPost } from "@/lib/blog-types"
 
-export interface OgStat {
-  numberHighlight: string          // parte coloreada, e.g. "$1.27"
-  numberSuffix: string             // resto, e.g. " billones"
-  label: string                    // subtítulo bajo el número
-  pills?: string[]                 // badges de datos clave
-  stats?: Array<{ val: string; lbl: string }>  // barra inferior con 3 métricas
-  accentColor?: string             // color de acento, default #E63946
-}
+// ─── Posts individuales (lib/posts/) ────────────────────────────────────────
+import { post as postDeduccionesIRPF2026 } from "@/lib/posts/deducciones-irpf-2026-lista-completa"
+import { post as postBonoAlquilerJoven2026 } from "@/lib/posts/bono-alquiler-joven-2026"
+import { post as postVivirConSMI2026 } from "@/lib/posts/vivir-con-smi-espana-2026"
+// Añade aquí los nuevos posts: import { post as postXxx } from "@/lib/posts/xxx"
+// ────────────────────────────────────────────────────────────────────────────
 
-export interface BlogPost {
-  slug: string
-  title: string
-  description: string
-  content: string
-  publishedAt: string
-  updatedAt?: string
-  readTime: string
-  category: string
-  tags: string[]
-  image: string
-  author: string
-  faqs?: FAQItem[]
-  seoTitle?: string
-  ogStat?: OgStat
-  noindex?: boolean
-  howToSteps?: { name: string; text: string }[]
-}
-
-export interface BlogSearchPost {
-  slug: string
-  title: string
-  description: string
-  readTime: string
-  category: string
-  tags: string[]
-  image: string
-}
+const externalPosts: BlogPost[] = [
+  postDeduccionesIRPF2026,
+  postBonoAlquilerJoven2026,
+  postVivirConSMI2026,
+  // Añade aquí: postXxx,
+]
 
 export const blogPosts: BlogPost[] = [
   {
@@ -7668,6 +7646,7 @@ En algunos casos, los contratos de temporada no entran en la regulación de alqu
       { question: "¿Qué opciones tengo si estoy en default?", answer: "Las principales opciones son: (1) Rehabilitación del préstamo — haces 9 pagos consecutivos acordados, sale del default y tu crédito mejora. (2) Consolidación del préstamo — unifica el préstamo en uno nuevo y sale del default inmediatamente. (3) Planes IDR (Income-Driven Repayment) — pagos basados en tu ingreso, desde $0/mes si ganas poco. Actúa antes de que inicien el embargo." },
     ],
   },
+  ...externalPosts,
 ]
 
 export function getBlogPost(slug: string): BlogPost | undefined {
