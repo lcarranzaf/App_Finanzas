@@ -7,16 +7,19 @@ export const contentType = "image/png"
 
 // Colores para el diseño genérico (sin ogStat)
 const categoryColors: Record<string, string> = {
-  "Inversión":      "#10b981",
-  "Inversiones":    "#10b981",
-  "Ahorro":         "#3b82f6",
-  "Inflación":      "#f97316",
-  "Criptomonedas":  "#f59e0b",
-  "Tecnología":     "#8b5cf6",
-  "Vivienda":       "#14b8a6",
-  "Deuda":          "#ef4444",
-  "Deudas":         "#ef4444",
-  "Economía":       "#6366f1",
+  "Inversión":             "#10b981",
+  "Inversiones":           "#10b981",
+  "Ahorro":                "#3b82f6",
+  "Inflación":             "#f97316",
+  "Criptomonedas":         "#f59e0b",
+  "Tecnología":            "#8b5cf6",
+  "Tecnología Financiera": "#8b5cf6",
+  "Vivienda":              "#14b8a6",
+  "Deuda":                 "#ef4444",
+  "Deudas":                "#ef4444",
+  "Economía":              "#6366f1",
+  "Fiscalidad":            "#f59e0b",
+  "Planificación":         "#a855f7",
 }
 
 function truncate(str: string, max: number) {
@@ -248,7 +251,8 @@ export default function Image({ params }: { params: { slug: string } }) {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f2744 100%)",
+          backgroundColor: "#0f172a",
+          backgroundImage: "linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f2744 100%)",
           padding: "64px 72px",
           fontFamily: "sans-serif",
           position: "relative",
