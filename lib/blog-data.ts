@@ -4466,6 +4466,7 @@ Compra un cuaderno hoy. Tu versión futura con más dinero en el banco te lo agr
   },
   {
     slug: "ciberseguridad-financiera-proteger-dinero",
+    noindex: true,
     title: "Ciberseguridad Financiera: 10 Formas en que los Hackers Roban tu Dinero (y Cómo Protegerte)",
     seoTitle: "Ciberseguridad financiera: protege tu dinero online",
     description:
@@ -6925,6 +6926,7 @@ Una vez al año, revisa si tu asignación de activos sigue siendo la correcta se
   },
   {
     slug: "bono-emancipate-2026-guia-completa",
+    noindex: true,
     title: "Bono Emancípate 2026 en Galicia: hasta 3.000€ para amueblar tu primera vivienda",
     seoTitle: "Bono Emancípate 2026: hasta 3.000€ para tu piso",
     description:
@@ -7557,6 +7559,7 @@ En algunos casos, los contratos de temporada no entran en la regulación de alqu
   // ── NUEVOS POSTS POLÉMICOS 2026 ──────────────────────────────────────────
   {
     slug: "dinero-banco-error-2026",
+    noindex: true,
     title: "Por qué tener el dinero en el banco en 2026 es el peor error financiero que puedes cometer",
     seoTitle: "Dinero en el banco 2026: el error que te cuesta miles",
     description:
