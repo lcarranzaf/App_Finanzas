@@ -31,7 +31,7 @@ export default function Image() {
             left: 0,
             right: 0,
             height: "5px",
-            background: "linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7)",
+            backgroundImage: "linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7)",
           }}
         />
 

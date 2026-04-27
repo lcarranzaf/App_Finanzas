@@ -24,12 +24,19 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: "Criptomonedas para principiantes: guía completa 2026",
       description: "Aprende a invertir en criptomonedas desde España con seguridad.",
+      images: [{ url: "https://www.finanzasdigitales.es/blog/criptomonedas-para-principiantes-guia/opengraph-image", width: 1200, height: 630, alt: "Criptomonedas para principiantes: guía completa 2026" }],
       url: "https://www.finanzasdigitales.es/blog/criptomonedas-para-principiantes-guia",
       siteName: "Finanzas Digitales",
       type: "article",
       publishedTime: "2026-02-15T00:00:00+00:00",
       modifiedTime: "2026-04-19T00:00:00+00:00",
       locale: "es_ES",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Criptomonedas para principiantes: guía completa 2026",
+      description: "Aprende a invertir en criptomonedas desde España con seguridad.",
+      images: ["https://www.finanzasdigitales.es/blog/criptomonedas-para-principiantes-guia/opengraph-image"],
     },
     alternates: {
       canonical: "https://www.finanzasdigitales.es/blog/criptomonedas-para-principiantes-guia",

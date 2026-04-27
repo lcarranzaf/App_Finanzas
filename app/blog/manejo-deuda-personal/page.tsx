@@ -24,12 +24,19 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: "Cómo salir de deudas en España 2026: guía paso a paso",
       description: "Guía completa para salir de deudas en España con ejemplos reales en euros.",
+      images: [{ url: "https://www.finanzasdigitales.es/blog/manejo-deuda-personal/opengraph-image", width: 1200, height: 630, alt: "Cómo salir de deudas en España 2026" }],
       url: "https://www.finanzasdigitales.es/blog/manejo-deuda-personal",
       siteName: "Finanzas Digitales",
       type: "article",
       publishedTime: "2026-01-20T00:00:00+00:00",
       modifiedTime: "2026-04-19T00:00:00+00:00",
       locale: "es_ES",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Cómo salir de deudas en España 2026: guía paso a paso",
+      description: "Guía completa para salir de deudas en España con ejemplos reales en euros.",
+      images: ["https://www.finanzasdigitales.es/blog/manejo-deuda-personal/opengraph-image"],
     },
     alternates: {
       canonical: "https://www.finanzasdigitales.es/blog/manejo-deuda-personal",
