@@ -113,14 +113,15 @@ export default function RootLayout({
               page_title: document.title,
               page_location: window.location.href,
               content_group1: 'finance',
-              content_group2: 'blog'
+              content_group2: 'blog',
+              allow_google_signals: false
             });
           `}
         </Script>
-        {/* Google AdSense — lazyOnload para no bloquear FCP/LCP */}
-        <Script
+        {/* Google AdSense — script nativo para evitar warning data-nscript */}
+        <script
+          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4657042320327960"
-          strategy="lazyOnload"
           crossOrigin="anonymous"
         />
         {/* AdSense verification helper (solo en desarrollo) */}
